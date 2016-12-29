@@ -56,8 +56,24 @@ return [
     */
 
     'from' => [
-        'address' => 'hello@example.com',
-        'name' => 'Example',
+        'address' => env('MAIL_FROM_ADDRESS', 'help@rinvex.com'),
+        'name'    => env('MAIL_FROM_NAME', 'Rinvex LLC'),
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Global "To" Address
+    |--------------------------------------------------------------------------
+    |
+    | You may wish for all e-mails sent by your application to be CCed to a
+    | specific address. Here, you may specify a that email address that
+    | is CCed globally for all e-mails sent by your application.
+    |
+    */
+
+    'to' => [
+        'address' => env('MAIL_TO_ADDRESS', null),
+        'name'    => env('MAIL_TO_NAME', null),
     ],
 
     /*
