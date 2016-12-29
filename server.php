@@ -1,10 +1,16 @@
 <?php
 
-/**
- * Laravel - A PHP Framework For Web Artisans
+/*
+ * NOTICE OF LICENSE
  *
- * @package  Laravel
- * @author   Taylor Otwell <taylor@laravel.com>
+ * Part of the Rinvex Cortex Application.
+ *
+ * This source file is subject to The MIT License (MIT)
+ * that is bundled with this package in the LICENSE file.
+ *
+ * Package: Rinvex Cortex Application
+ * License: The MIT License (MIT)
+ * Link:    https://rinvex.com
  */
 
 $uri = urldecode(
