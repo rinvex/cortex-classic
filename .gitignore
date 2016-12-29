@@ -1,7 +1,11 @@
-/node_modules
-/public/storage
-/vendor
-/.idea
+build/
+vendor/
+node_modules/
+public/storage/
 Homestead.json
 Homestead.yaml
+storage/*.key
+composer.lock
+composer.phar
+phpunit.xml
 .env
