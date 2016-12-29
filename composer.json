@@ -5,10 +5,15 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": ">=5.6.4",
-        "laravel/framework": "5.3.*"
+        "php": "^7.0.0",
+        "rinvex/fort": "dev-develop",
+        "laravel/framework": "^5.3.0",
+        "cortex/foundation": "dev-develop",
+        "mcamara/laravel-localization": "^1.1"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^2.3.0",
+        "barryvdh/laravel-ide-helper": "^2.2.0",
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~5.0",
@@ -37,6 +42,9 @@
         ]
     },
     "config": {
-        "preferred-install": "dist"
-    }
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
