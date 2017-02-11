@@ -1,9 +1,4 @@
-
-// Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
-
-// Variables
-@import "variables";
-
-// Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../../../node_modules/admin-lte/dist/css/AdminLTE.css";
+@import "../../../node_modules/admin-lte/dist/css/skins/skin-blue.css";
+@import "../../../node_modules/admin-lte/dist/css/skins/skin-blue-light.css";
+@import "custom";
