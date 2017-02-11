@@ -34,6 +34,7 @@ return [
         \Spatie\Activitylog\ActivitylogServiceProvider::class,
         \Yajra\Datatables\DatatablesServiceProvider::class,
         \Yajra\Datatables\ButtonsServiceProvider::class,
+        \Maatwebsite\Excel\ExcelServiceProvider::class,
         \Spatie\Fractal\FractalServiceProvider::class,
         \Laravel\Tinker\TinkerServiceProvider::class,
         \Lord\Laroute\LarouteServiceProvider::class,
@@ -55,9 +56,10 @@ return [
     'aliases' => [
 
         'LaravelLocalization' => \Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
-        'PDF' => \Barryvdh\Snappy\Facades\SnappyPdf::class,
         'SnappyImage' => \Barryvdh\Snappy\Facades\SnappyImage::class,
         'Alert' => \Krucas\Notification\Facades\Notification::class,
+        'PDF' => \Barryvdh\Snappy\Facades\SnappyPdf::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
 
     ],
 
