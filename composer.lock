@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "75d0ed5eb6ccbc9d7467348bf89259ac",
+    "content-hash": "19895ad74e7b4506fd923bf84f3afeb3",
     "packages": [
         {
             "name": "anahkiasen/underscore-php",
@@ -290,23 +290,37 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-foundation.git",
-                "reference": "2ba46f243d0717251fb7ae90c60178fe81618917"
+                "reference": "c89905283450962afa0f0816e2f6c9fa9f6f898f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-foundation/zipball/2ba46f243d0717251fb7ae90c60178fe81618917",
-                "reference": "2ba46f243d0717251fb7ae90c60178fe81618917",
+                "url": "https://api.github.com/repos/rinvex/cortex-foundation/zipball/c89905283450962afa0f0816e2f6c9fa9f6f898f",
+                "reference": "c89905283450962afa0f0816e2f6c9fa9f6f898f",
                 "shasum": ""
             },
             "require": {
+                "barryvdh/laravel-snappy": "^0.3.1",
+                "edvinaskrucas/notification": "^5.1",
+                "h4cc/wkhtmltoimage-amd64": "0.12.x",
+                "h4cc/wkhtmltopdf-amd64": "0.12.x",
                 "laravel/framework": "~5.4.0",
                 "laravelcollective/html": "~5.4.0",
+                "lord/laroute": "^2.3",
                 "mcamara/laravel-localization": "^1.2.0",
                 "php": "^7.0.0",
+                "rinvex/cacheable": "dev-develop",
+                "rinvex/category": "dev-develop",
                 "rinvex/composer": "dev-develop",
                 "rinvex/fort": "dev-develop",
                 "rinvex/module": "dev-develop",
-                "spatie/laravel-translatable": "^1.2.0"
+                "rinvex/sparse": "dev-develop",
+                "rinvex/tag": "dev-develop",
+                "spatie/laravel-activitylog": "^1.10",
+                "spatie/laravel-fractal": "^3.2",
+                "spatie/laravel-translatable": "^1.2.0",
+                "watson/validating": "^3.0.1",
+                "yajra/laravel-datatables-buttons": "^1.0.0",
+                "yajra/laravel-datatables-oracle": "^7.0.0"
             },
             "type": "cortex-module",
             "extra": {
@@ -368,7 +382,7 @@
                 "module",
                 "rinvex"
             ],
-            "time": "2017-02-11 05:01:20"
+            "time": "2017-02-11T14:41:53+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1409,16 +1423,16 @@
         },
         {
             "name": "kalnoy/nestedset",
-            "version": "v4.2.1",
+            "version": "v4.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lazychaser/laravel-nestedset.git",
-                "reference": "8f08b8c6a56282e4414edd0a0138cc18f02cae24"
+                "reference": "621b224480b28c63cf04d48a217b514b632aaba0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lazychaser/laravel-nestedset/zipball/8f08b8c6a56282e4414edd0a0138cc18f02cae24",
-                "reference": "8f08b8c6a56282e4414edd0a0138cc18f02cae24",
+                "url": "https://api.github.com/repos/lazychaser/laravel-nestedset/zipball/621b224480b28c63cf04d48a217b514b632aaba0",
+                "reference": "621b224480b28c63cf04d48a217b514b632aaba0",
                 "shasum": ""
             },
             "require": {
@@ -1459,7 +1473,7 @@
                 "nested sets",
                 "nsm"
             ],
-            "time": "2017-01-25T12:10:19+00:00"
+            "time": "2017-02-11T08:05:48+00:00"
         },
         {
             "name": "knplabs/knp-snappy",
@@ -3279,12 +3293,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/category.git",
-                "reference": "853a4b43def84d84f7da45cea38b64094d718cf9"
+                "reference": "6ce8bc666fe08f5103a29627a168c82e0b6963ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/category/zipball/853a4b43def84d84f7da45cea38b64094d718cf9",
-                "reference": "853a4b43def84d84f7da45cea38b64094d718cf9",
+                "url": "https://api.github.com/repos/rinvex/category/zipball/6ce8bc666fe08f5103a29627a168c82e0b6963ae",
+                "reference": "6ce8bc666fe08f5103a29627a168c82e0b6963ae",
                 "shasum": ""
             },
             "require": {
@@ -3348,7 +3362,7 @@
                 "taxonomy",
                 "translatable"
             ],
-            "time": "2017-02-08T01:14:02+00:00"
+            "time": "2017-02-11T05:53:05+00:00"
         },
         {
             "name": "rinvex/composer",
@@ -3423,7 +3437,7 @@
                 "plugin",
                 "rinvex"
             ],
-            "time": "2017-01-27 02:34:05"
+            "time": "2017-01-27T02:34:05+00:00"
         },
         {
             "name": "rinvex/country",
@@ -3907,12 +3921,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/tag.git",
-                "reference": "02c05d8c3e19c9985bbabb008453fd07c6c8a74a"
+                "reference": "d30ac59079251b26131c569434deb5d22e4b516a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/tag/zipball/02c05d8c3e19c9985bbabb008453fd07c6c8a74a",
-                "reference": "02c05d8c3e19c9985bbabb008453fd07c6c8a74a",
+                "url": "https://api.github.com/repos/rinvex/tag/zipball/d30ac59079251b26131c569434deb5d22e4b516a",
+                "reference": "d30ac59079251b26131c569434deb5d22e4b516a",
                 "shasum": ""
             },
             "require": {
@@ -3977,7 +3991,7 @@
                 "taxonomy",
                 "translatable"
             ],
-            "time": "2017-02-08T01:18:53+00:00"
+            "time": "2017-02-11T05:52:27+00:00"
         },
         {
             "name": "spatie/eloquent-sortable",
@@ -7387,13 +7401,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "cortex/foundation": 20,
-        "rinvex/cacheable": 20,
-        "rinvex/category": 20,
-        "rinvex/fort": 20,
-        "rinvex/module": 20,
-        "rinvex/sparse": 20,
-        "rinvex/tag": 20
+        "cortex/foundation": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
