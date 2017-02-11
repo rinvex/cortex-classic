@@ -45,23 +45,38 @@
     ],
     "require": {
         "php": "^7.0.0",
-        "laravel/framework": "^5.4.0",
-        "mcamara/laravel-localization": "^1.1.0",
+        "aws/aws-sdk-php": "~3.0",
+        "barryvdh/laravel-snappy": "^0.3.1",
         "cortex/foundation": "dev-develop",
-        "rinvex/module": "dev-develop",
-        "rinvex/fort": "dev-develop",
-        "aws/aws-sdk-php": "^3.0.0",
+        "doctrine/dbal": "^2.5",
+        "edvinaskrucas/notification": "^5.1",
+        "h4cc/wkhtmltoimage-amd64": "0.12.x",
+        "h4cc/wkhtmltopdf-amd64": "0.12.x",
+        "laravel/framework": "~5.4.0",
+        "laravel/tinker": "^1.0.0",
+        "laravelcollective/html": "~5.4.0",
+        "lord/laroute": "^2.3",
+        "mcamara/laravel-localization": "^1.2.0",
         "predis/predis": "^1.1.0",
-        "doctrine/dbal": "^2.5.0"
+        "rinvex/cacheable": "dev-develop",
+        "rinvex/category": "dev-develop",
+        "rinvex/fort": "dev-develop",
+        "rinvex/module": "dev-develop",
+        "rinvex/sparse": "dev-develop",
+        "rinvex/tag": "dev-develop",
+        "spatie/laravel-activitylog": "^1.10",
+        "spatie/laravel-fractal": "^3.2",
+        "watson/validating": "^3.0.1",
+        "yajra/laravel-datatables-buttons": "^1.0.0",
+        "yajra/laravel-datatables-oracle": "^7.0.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^5.4.0",
-        "fzaninotto/faker": "^1.4.0",
-        "mockery/mockery": "^0.9.5",
-        "symfony/dom-crawler": "^3.1.0",
-        "symfony/css-selector": "^3.1.0",
+        "barryvdh/laravel-ide-helper": "^2.2",
+        "itsgoingd/clockwork": "^1.12",
+        "phpunit/phpunit": "^5.7.0",
         "barryvdh/laravel-debugbar": "^2.3.0",
-        "barryvdh/laravel-ide-helper": "^2.2.0"
+        "fzaninotto/faker": "~1.4",
+        "mockery/mockery": "0.9.*"
     },
     "autoload-dev": {
         "psr-4": {
@@ -77,10 +92,12 @@
         ],
         "post-install-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postInstall",
+            "php artisan ide-helper:generate",
             "php artisan optimize"
         ],
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "php artisan ide-helper:generate",
             "php artisan optimize"
         ]
     },
