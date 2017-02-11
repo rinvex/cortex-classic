@@ -45,7 +45,7 @@
     ],
     "require": {
         "php": "^7.0.0",
-        "laravel/framework": "^5.3.0",
+        "laravel/framework": "^5.4.0",
         "mcamara/laravel-localization": "^1.1.0",
         "cortex/foundation": "dev-develop",
         "rinvex/module": "dev-develop",
@@ -64,9 +64,9 @@
         "barryvdh/laravel-ide-helper": "^2.2.0"
     },
     "autoload-dev": {
-        "classmap": [
-            "tests/TestCase.php"
-        ]
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
     },
     "scripts": {
         "post-root-package-install": [
