@@ -177,7 +177,21 @@ module.exports.resolve = {
     extensions: ['*', '.js', '.jsx', '.vue'],
 
     alias: {
-        'vue$': 'vue/dist/vue.common.js'
+        'vue$': 'vue/dist/vue.common.js',
+
+        /* Start fix jquery.inputmask build issues: https://gist.github.com/ksrb/47f9124c2f5be13f39dc645405a12608 */
+        // jquery is NOT a peer dependency in jquery.inputmask so a alias
+        // is used here to force jquery.inputmask to use your jquery version
+        'jquery': path.join(__dirname, 'node_modules/jquery/dist/jquery'),
+        // Switch dependency lib accordingly (this one uses jquery)
+        'inputmask.dependencyLib': path.join(__dirname, 'node_modules/jquery.inputmask/dist/inputmask/inputmask.dependencyLib'),
+        // Core library (order of these aliases shouldn't matter FYI)
+        'inputmask' : path.join(__dirname, 'node_modules/jquery.inputmask/dist/inputmask/inputmask'),
+        // Allows use of jquery input mask via jquery chaining api/$('selector').inputmask(...)
+        'jquery.inputmask': path.join(__dirname, 'node_modules/jquery.inputmask/dist/inputmask/jquery.inputmask'),
+        // Add extensions following the pattern below remember to import them as necessary in your .js files
+        'inputmask.numeric.extensions': path.join(__dirname, 'node_modules/jquery.inputmask/dist/inputmask/inputmask.numeric.extensions')
+        /* End fix jquery.inputmask build issues: https://gist.github.com/ksrb/47f9124c2f5be13f39dc645405a12608 */
     }
 };
 

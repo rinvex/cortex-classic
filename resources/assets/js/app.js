@@ -37,6 +37,7 @@ require('./vendor/datatables.net-buttons.server-side');
 require('datatables.net-responsive');
 require('datatables.net-responsive-bs');
 require('datatables.net-keytable');
+require('jquery.inputmask');
 require('fastclick');
 require('select2');
 require('icheck');
