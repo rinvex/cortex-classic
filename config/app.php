@@ -172,6 +172,24 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+        // Packages Service Providers...
+        Cortex\Foundation\Overrides\Lord\Laroute\LarouteServiceProvider::class,
+        Dusterio\AwsWorker\Integrations\LaravelServiceProvider::class,
+        Rinvex\Fort\Providers\FortDeferredServiceProvider::class,
+        Cortex\Foundation\Providers\FortServiceProvider::class,
+        Krucas\Notification\NotificationServiceProvider::class,
+        Rinvex\Sparse\Providers\SparseServiceProvider::class,
+        Spatie\Activitylog\ActivitylogServiceProvider::class,
+        Fideloper\Proxy\TrustedProxyServiceProvider::class,
+        Yajra\Datatables\DatatablesServiceProvider::class,
+        Yajra\Datatables\ButtonsServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
+        Spatie\Fractal\FractalServiceProvider::class,
+        Laravel\Tinker\TinkerServiceProvider::class,
+        Lord\Laroute\LarouteServiceProvider::class,
+        Barryvdh\Snappy\ServiceProvider::class,
+        Aws\Laravel\AwsServiceProvider::class,
+
     ],
 
     /*
@@ -219,6 +237,14 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        // Packages Aliases...
+        'LaravelLocalization' => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
+        'SnappyImage' => Barryvdh\Snappy\Facades\SnappyImage::class,
+        'Alert' => Krucas\Notification\Facades\Notification::class,
+        'PDF' => Barryvdh\Snappy\Facades\SnappyPdf::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+        'AWS' => Aws\Laravel\AwsFacade::class,
 
     ],
 
