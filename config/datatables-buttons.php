@@ -1,16 +1,16 @@
 <?php
 
 return [
-    /**
+    /*
      * DataTables internal index id response column name.
      */
     'index_column'    => 'DT_Row_Index',
 
-    /**
+    /*
      * Namespaces used by the generator.
      */
     'namespace'       => [
-        /**
+        /*
          * Base namespace/directory to create the new file.
          * This is appended on default Laravel namespace.
          * Usage: php artisan datatables:make User
@@ -20,7 +20,7 @@ return [
          */
         'base'  => 'DataTables',
 
-        /**
+        /*
          * Base namespace/directory where your model's are located.
          * This is appended on default Laravel namespace.
          * Usage: php artisan datatables:make Post --model
@@ -31,7 +31,7 @@ return [
         'model' => '',
     ],
 
-    /**
+    /*
      * PDF generator to be used when converting the table to pdf.
      * Available generators: excel, snappy
      * Snappy package: barryvdh/laravel-snappy
@@ -39,7 +39,7 @@ return [
      */
     'pdf_generator'   => 'snappy',
 
-    /**
+    /*
      * Snappy PDF options.
      */
     'snappy'          => [
