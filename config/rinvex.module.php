@@ -55,7 +55,7 @@ return [
     */
 
     'enabled' => [
-        //
+        'cortex/fort',
     ],
 
 ];
