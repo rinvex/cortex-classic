@@ -70,7 +70,7 @@ return [
 
     'from' => [
         'address' => env('MAIL_FROM_ADDRESS', 'help@rinvex.com'),
-        'name'    => env('MAIL_FROM_NAME', 'Rinvex LLC'),
+        'name' => env('MAIL_FROM_NAME', 'Rinvex LLC'),
     ],
 
     /*
@@ -86,7 +86,7 @@ return [
 
     'to' => [
         'address' => env('MAIL_TO_ADDRESS', null),
-        'name'    => env('MAIL_TO_NAME', null),
+        'name' => env('MAIL_TO_NAME', null),
     ],
 
     /*

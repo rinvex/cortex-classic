@@ -18,7 +18,7 @@ return [
     // Uncomment the languages that your site supports - or add new ones.
     // These are sorted by the native name, which is the order you might show them in a language selector.
     // Regional languages are sorted by their base languge, so 'British English' sorts as 'English, British'
-    'supportedLocales'        => file_exists(base_path('bootstrap/cache/cluster_localization_languages.json')) ? json_decode(file_get_contents(base_path('bootstrap/cache/cluster_localization_languages.json')), true) : [
+    'supportedLocales' => file_exists(base_path('bootstrap/cache/cluster_localization_languages.json')) ? json_decode(file_get_contents(base_path('bootstrap/cache/cluster_localization_languages.json')), true) : [
         //'ace'         => ['name' => 'Achinese',               'script' => 'Latn', 'native' => 'Aceh'],
         //'af'          => ['name' => 'Afrikaans',              'script' => 'Latn', 'native' => 'Afrikaans'],
         //'agq'         => ['name' => 'Aghem',                  'script' => 'Latn', 'native' => 'Aghem'],
@@ -320,6 +320,6 @@ return [
     // IMPORTANT - When hideDefaultLocaleInURL is set to true, the unlocalized root is treated as the applications default locale 'app.locale'.
     // Because of this language negotiation using the Accept-Language header will NEVER occur when hideDefaultLocaleInURL is true.
     //
-    'hideDefaultLocaleInURL'  => false,
+    'hideDefaultLocaleInURL' => false,
 
 ];
