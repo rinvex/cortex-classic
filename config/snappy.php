@@ -1,5 +1,6 @@
 <?php
 
+declare(strict_types=1);
 /*
  * NOTICE OF LICENSE
  *
@@ -17,17 +18,17 @@ return [
 
     'pdf' => [
         'enabled' => true,
-        'binary'  => '/usr/local/bin/wkhtmltopdf-amd64',
+        'binary' => '/usr/local/bin/wkhtmltopdf-amd64',
         'timeout' => false,
         'options' => [],
-        'env'     => [],
+        'env' => [],
     ],
     'image' => [
         'enabled' => true,
-        'binary'  => '/usr/local/bin/wkhtmltoimage-amd64',
+        'binary' => '/usr/local/bin/wkhtmltoimage-amd64',
         'timeout' => false,
         'options' => [],
-        'env'     => [],
+        'env' => [],
     ],
 
 ];
