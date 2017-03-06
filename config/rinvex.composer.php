@@ -1,5 +1,6 @@
 <?php
 
+declare(strict_types=1);
 /*
  * NOTICE OF LICENSE
  *
@@ -31,8 +32,8 @@ return [
     |
     */
 
-    'base'      => __DIR__.'/../',
-    'app'       => __DIR__.'/../app/',
+    'base' => __DIR__.'/../',
+    'app' => __DIR__.'/../app/',
     'bootstrap' => __DIR__.'/../bootstrap/',
 
 ];

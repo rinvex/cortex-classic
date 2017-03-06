@@ -1,15 +1,17 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     /*
      * DataTables search options.
      */
-    'search'  => [
+    'search' => [
         /*
          * Smart search will enclose search keyword with wildcard string "%keyword%".
          * SQL: column LIKE "%keyword%"
          */
-        'smart'            => true,
+        'smart' => true,
 
         /*
          * Case insensitive will search the keyword in lower case format.
@@ -21,7 +23,7 @@ return [
          * Wild card will add "%" in between every characters of the keyword.
          * SQL: column LIKE "%k%e%y%w%o%r%d%"
          */
-        'use_wildcards'    => false,
+        'use_wildcards' => false,
     ],
 
     /*
@@ -36,7 +38,7 @@ return [
         /*
          * Request key name to parse includes on fractal.
          */
-        'includes'   => 'include',
+        'includes' => 'include',
 
         /*
          * Default fractal serializer.
@@ -49,8 +51,8 @@ return [
      * This is where you can register your custom datatables engine.
      */
     'engines' => [
-        'eloquent'   => Yajra\Datatables\Engines\EloquentEngine::class,
-        'query'      => Yajra\Datatables\Engines\QueryBuilderEngine::class,
+        'eloquent' => Yajra\Datatables\Engines\EloquentEngine::class,
+        'query' => Yajra\Datatables\Engines\QueryBuilderEngine::class,
         'collection' => Yajra\Datatables\Engines\CollectionEngine::class,
     ],
 
@@ -59,9 +61,9 @@ return [
      */
     'builders' => [
         Illuminate\Database\Eloquent\Relations\HasMany::class => 'eloquent',
-        Illuminate\Database\Eloquent\Builder::class           => 'eloquent',
-        Illuminate\Database\Query\Builder::class              => 'query',
-        Illuminate\Support\Collection::class                  => 'collection',
+        Illuminate\Database\Eloquent\Builder::class => 'eloquent',
+        Illuminate\Database\Query\Builder::class => 'query',
+        Illuminate\Support\Collection::class => 'collection',
     ],
 
     /*

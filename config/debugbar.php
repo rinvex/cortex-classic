@@ -1,5 +1,6 @@
 <?php
 
+declare(strict_types=1);
 /*
  * NOTICE OF LICENSE
  *
@@ -41,9 +42,9 @@ return [
     */
 
     'storage' => [
-        'enabled'    => true,
-        'driver'     => 'file', // redis, file, pdo
-        'path'       => storage_path('debugbar'), // For file driver
+        'enabled' => true,
+        'driver' => 'file', // redis, file, pdo
+        'path' => storage_path('debugbar'), // For file driver
         'connection' => null,   // Leave null for default connection (Redis/PDO)
     ],
 
@@ -84,26 +85,26 @@ return [
     |
     */
 
-    'collectors'      => [
-        'phpinfo'         => true,  // Php version
-        'messages'        => true,  // Messages
-        'time'            => true,  // Time Datalogger
-        'memory'          => true,  // Memory usage
-        'exceptions'      => true,  // Exception displayer
-        'log'             => true,  // Logs from Monolog (merged in messages if enabled)
-        'db'              => true,  // Show database (PDO) queries and bindings
-        'views'           => true,  // Views with their data
-        'route'           => true,  // Current route information
-        'laravel'         => true, // Laravel version and environment
-        'events'          => true, // All events fired
+    'collectors' => [
+        'phpinfo' => true,  // Php version
+        'messages' => true,  // Messages
+        'time' => true,  // Time Datalogger
+        'memory' => true,  // Memory usage
+        'exceptions' => true,  // Exception displayer
+        'log' => true,  // Logs from Monolog (merged in messages if enabled)
+        'db' => true,  // Show database (PDO) queries and bindings
+        'views' => true,  // Views with their data
+        'route' => true,  // Current route information
+        'laravel' => true, // Laravel version and environment
+        'events' => true, // All events fired
         'default_request' => true, // Regular or special Symfony request logger
         'symfony_request' => true,  // Only one can be enabled..
-        'mail'            => true,  // Catch mail messages
-        'logs'            => true, // Add the latest log messages
-        'files'           => true, // Show the included files
-        'config'          => true, // Display config settings
-        'auth'            => true, // Display Laravel authentication status
-        'session'         => true, // Display session data in a separate tab
+        'mail' => true,  // Catch mail messages
+        'logs' => true, // Add the latest log messages
+        'files' => true, // Show the included files
+        'config' => true, // Display config settings
+        'auth' => true, // Display Laravel authentication status
+        'session' => true, // Display session data in a separate tab
     ],
 
     /*
@@ -117,23 +118,23 @@ return [
 
     'options' => [
 
-        'auth'  => [
+        'auth' => [
             'show_name' => false,   // Also show the users name/email in the debugbar
         ],
 
-        'db'    => [
+        'db' => [
             'with_params' => true,   // Render SQL with the parameters substituted
-            'timeline'    => false,  // Add the queries to the timeline
-            'backtrace'   => false,  // EXPERIMENTAL: Use a backtrace to find the origin of the query in your files.
+            'timeline' => false,  // Add the queries to the timeline
+            'backtrace' => false,  // EXPERIMENTAL: Use a backtrace to find the origin of the query in your files.
 
             // EXPERIMENTAL: Show EXPLAIN output on queries
-            'explain'     => [
+            'explain' => [
                 'enabled' => false,
-                'types'   => ['SELECT'],
+                'types' => ['SELECT'],
                 // array('SELECT', 'INSERT', 'UPDATE', 'DELETE'); for MySQL 5.6.3+
             ],
 
-            'hints'       => true,    // Show hints for common mistakes
+            'hints' => true,    // Show hints for common mistakes
         ],
 
         'mail' => [
