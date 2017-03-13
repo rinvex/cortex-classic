@@ -14,6 +14,8 @@
  * Link:    https://rinvex.com
  */
 
+declare(strict_types=1);
+
 /*
 |--------------------------------------------------------------------------
 | Register The Auto Loader

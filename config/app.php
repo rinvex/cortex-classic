@@ -150,9 +150,7 @@ return [
 
     'providers' => [
 
-        /*
-         * Laravel Framework Service Providers...
-         */
+        // Laravel Framework Service Providers...
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
@@ -174,9 +172,23 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
-        /*
-         * Package Service Providers...
-         */
+        // Packages Service Providers...
+        Cortex\Foundation\Overrides\Lord\Laroute\LarouteServiceProvider::class,
+        Dusterio\AwsWorker\Integrations\LaravelServiceProvider::class,
+        Rinvex\Fort\Providers\FortDeferredServiceProvider::class,
+        Cortex\Foundation\Providers\FortServiceProvider::class,
+        Krucas\Notification\NotificationServiceProvider::class,
+        Rinvex\Sparse\Providers\SparseServiceProvider::class,
+        Spatie\Activitylog\ActivitylogServiceProvider::class,
+        Fideloper\Proxy\TrustedProxyServiceProvider::class,
+        Yajra\Datatables\DatatablesServiceProvider::class,
+        Yajra\Datatables\ButtonsServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
+        Spatie\Fractal\FractalServiceProvider::class,
+        Laravel\Tinker\TinkerServiceProvider::class,
+        Lord\Laroute\LarouteServiceProvider::class,
+        Barryvdh\Snappy\ServiceProvider::class,
+        Aws\Laravel\AwsServiceProvider::class,
 
     ],
 
@@ -197,6 +209,7 @@ return [
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
         'Auth' => Illuminate\Support\Facades\Auth::class,
         'Blade' => Illuminate\Support\Facades\Blade::class,
+        'Broadcast' => Illuminate\Support\Facades\Broadcast::class,
         'Bus' => Illuminate\Support\Facades\Bus::class,
         'Cache' => Illuminate\Support\Facades\Cache::class,
         'Config' => Illuminate\Support\Facades\Config::class,
@@ -212,7 +225,6 @@ return [
         'Log' => Illuminate\Support\Facades\Log::class,
         'Mail' => Illuminate\Support\Facades\Mail::class,
         'Notification' => Illuminate\Support\Facades\Notification::class,
-        'Password' => Illuminate\Support\Facades\Password::class,
         'Queue' => Illuminate\Support\Facades\Queue::class,
         'Redirect' => Illuminate\Support\Facades\Redirect::class,
         'Redis' => Illuminate\Support\Facades\Redis::class,
@@ -225,7 +237,14 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        // Packages Aliases...
         'LaravelLocalization' => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
+        'SnappyImage' => Barryvdh\Snappy\Facades\SnappyImage::class,
+        'Alert' => Krucas\Notification\Facades\Notification::class,
+        'PDF' => Barryvdh\Snappy\Facades\SnappyPdf::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+        'AWS' => Aws\Laravel\AwsFacade::class,
 
     ],
 

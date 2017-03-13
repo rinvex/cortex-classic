@@ -12,3 +12,5 @@
  * License: The MIT License (MIT)
  * Link:    https://rinvex.com
  */
+
+declare(strict_types=1);
