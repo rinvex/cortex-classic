@@ -8,7 +8,7 @@
             rootUrl: 'http://cortex.rinvex.app',
             routes: [{"uri": "worker\/schedule", "name": null}, {"uri": "worker\/queue", "name": null}, {
                 "uri": "\/",
-                "name": "home"
+                "name": "frontend.home"
             }, {"uri": "auth\/login", "name": "frontend.auth.login"}, {
                 "uri": "auth\/login",
                 "name": "frontend.auth.login.process"
