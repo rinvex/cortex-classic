@@ -79,12 +79,12 @@
         ],
         "post-install-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postInstall",
-            "php artisan ide-helper:generate",
             "php artisan optimize"
         ],
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
             "php artisan ide-helper:generate",
+            "php artisan laroute:generate",
             "php artisan optimize"
         ]
     },

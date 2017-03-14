@@ -16,9 +16,6 @@ mix
     .sass('resources/assets/sass/vendor.scss', 'public/css/vendor.css')
     .sass('resources/assets/sass/app.scss', 'public/css/app.css')
     .js('resources/assets/js/app.js', 'public/js/app.js')
-    // Prevents Mix's automatic configuring of jQuery
-    // https://github.com/JeffreyWay/laravel-mix/issues/229#issuecomment-276230983
-    .autoload({})
     .extract([
         'datatables.net',
         'datatables.net-bs',

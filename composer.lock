@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.24.2",
+            "version": "3.24.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "2b252f300de442cdb5cde18ddc118c2477972e30"
+                "reference": "2823e0a0742505f655b0cb3bcdb10844f60e6078"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/2b252f300de442cdb5cde18ddc118c2477972e30",
-                "reference": "2b252f300de442cdb5cde18ddc118c2477972e30",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/2823e0a0742505f655b0cb3bcdb10844f60e6078",
+                "reference": "2823e0a0742505f655b0cb3bcdb10844f60e6078",
                 "shasum": ""
             },
             "require": {
@@ -134,7 +134,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-03-10T21:09:41+00:00"
+            "time": "2017-03-14T00:56:44+00:00"
         },
         {
             "name": "aws/aws-sdk-php-laravel",
@@ -346,12 +346,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-fort.git",
-                "reference": "8304d92d2a047a6bc39519d21859b1b75f0d92dd"
+                "reference": "46b82cae5813e780863da2b7fda5b30acce67a47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-fort/zipball/8304d92d2a047a6bc39519d21859b1b75f0d92dd",
-                "reference": "8304d92d2a047a6bc39519d21859b1b75f0d92dd",
+                "url": "https://api.github.com/repos/rinvex/cortex-fort/zipball/46b82cae5813e780863da2b7fda5b30acce67a47",
+                "reference": "46b82cae5813e780863da2b7fda5b30acce67a47",
                 "shasum": ""
             },
             "require": {
@@ -428,7 +428,7 @@
                 "twofactor",
                 "verification"
             ],
-            "time": "2017-03-12T14:41:36+00:00"
+            "time": "2017-03-14T07:52:57+00:00"
         },
         {
             "name": "cortex/foundation",
@@ -436,20 +436,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-foundation.git",
-                "reference": "433d08f3937e0d999d2df6709c675d18c59edc7a"
+                "reference": "6145cf2fde8da3ad5f3ceea8bfcac5fa2ca68f3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-foundation/zipball/433d08f3937e0d999d2df6709c675d18c59edc7a",
-                "reference": "433d08f3937e0d999d2df6709c675d18c59edc7a",
+                "url": "https://api.github.com/repos/rinvex/cortex-foundation/zipball/6145cf2fde8da3ad5f3ceea8bfcac5fa2ca68f3c",
+                "reference": "6145cf2fde8da3ad5f3ceea8bfcac5fa2ca68f3c",
                 "shasum": ""
             },
             "require": {
                 "barryvdh/laravel-snappy": "^0.3.1",
                 "edvinaskrucas/notification": "^5.1",
                 "fideloper/proxy": "^3.2",
-                "h4cc/wkhtmltoimage-amd64": "0.12.x",
-                "h4cc/wkhtmltopdf-amd64": "0.12.x",
                 "laravel/framework": "~5.4.0",
                 "laravelcollective/html": "~5.4.0",
                 "lord/laroute": "^2.3",
@@ -528,7 +526,7 @@
                 "module",
                 "rinvex"
             ],
-            "time": "2017-03-12T14:51:11+00:00"
+            "time": "2017-03-14T07:42:20+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1407,86 +1405,6 @@
                 "url"
             ],
             "time": "2017-02-27T10:51:17+00:00"
-        },
-        {
-            "name": "h4cc/wkhtmltoimage-amd64",
-            "version": "0.12.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/h4cc/wkhtmltoimage-amd64.git",
-                "reference": "f5d85706fbb41dbfbe62ace2edf0e380fff084ad"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/h4cc/wkhtmltoimage-amd64/zipball/f5d85706fbb41dbfbe62ace2edf0e380fff084ad",
-                "reference": "f5d85706fbb41dbfbe62ace2edf0e380fff084ad",
-                "shasum": ""
-            },
-            "bin": [
-                "bin/wkhtmltoimage-amd64"
-            ],
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL Version 3"
-            ],
-            "authors": [
-                {
-                    "name": "Julius Beckmann",
-                    "email": "github@h4cc.de"
-                }
-            ],
-            "description": "Convert html to image using webkit (qtwebkit). Static linked linux binary for amd64 systems.",
-            "homepage": "http://wkhtmltopdf.org/",
-            "keywords": [
-                "binary",
-                "convert",
-                "image",
-                "snapshot",
-                "thumbnail",
-                "wkhtmltoimage"
-            ],
-            "time": "2016-02-02T19:39:01+00:00"
-        },
-        {
-            "name": "h4cc/wkhtmltopdf-amd64",
-            "version": "0.12.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/h4cc/wkhtmltopdf-amd64.git",
-                "reference": "b80ce6720349e98cebac7e8a19426455805fa7e1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/h4cc/wkhtmltopdf-amd64/zipball/b80ce6720349e98cebac7e8a19426455805fa7e1",
-                "reference": "b80ce6720349e98cebac7e8a19426455805fa7e1",
-                "shasum": ""
-            },
-            "bin": [
-                "bin/wkhtmltopdf-amd64"
-            ],
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL Version 3"
-            ],
-            "authors": [
-                {
-                    "name": "Julius Beckmann",
-                    "email": "github@h4cc.de"
-                }
-            ],
-            "description": "Convert html to pdf using webkit (qtwebkit). Static linked linux binary for amd64 systems.",
-            "homepage": "http://wkhtmltopdf.org/",
-            "keywords": [
-                "binary",
-                "convert",
-                "pdf",
-                "snapshot",
-                "thumbnail",
-                "wkhtmltopdf"
-            ],
-            "time": "2016-02-02T19:38:55+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -2868,16 +2786,16 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v2.0.9",
+            "version": "v2.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "6968531206671f94377b01dc7888d5d1b858a01b"
+                "reference": "634bae8e911eefa89c1abfbf1b66da679ac8f54d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/6968531206671f94377b01dc7888d5d1b858a01b",
-                "reference": "6968531206671f94377b01dc7888d5d1b858a01b",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/634bae8e911eefa89c1abfbf1b66da679ac8f54d",
+                "reference": "634bae8e911eefa89c1abfbf1b66da679ac8f54d",
                 "shasum": ""
             },
             "require": {
@@ -2912,7 +2830,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2017-03-03T20:43:42+00:00"
+            "time": "2017-03-13T16:27:32+00:00"
         },
         {
             "name": "patchwork/utf8",
@@ -3634,12 +3552,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/fort.git",
-                "reference": "34f41a9131212e0d9c8a851d52a92fc32587855b"
+                "reference": "6134bcafbf2bfc48671acaf1c6042708ae536b77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/fort/zipball/34f41a9131212e0d9c8a851d52a92fc32587855b",
-                "reference": "34f41a9131212e0d9c8a851d52a92fc32587855b",
+                "url": "https://api.github.com/repos/rinvex/fort/zipball/6134bcafbf2bfc48671acaf1c6042708ae536b77",
+                "reference": "6134bcafbf2bfc48671acaf1c6042708ae536b77",
                 "shasum": ""
             },
             "require": {
@@ -3719,7 +3637,7 @@
                 "twofactor",
                 "verification"
             ],
-            "time": "2017-03-12T14:37:00+00:00"
+            "time": "2017-03-14T07:53:49+00:00"
         },
         {
             "name": "rinvex/laravel-authy",
