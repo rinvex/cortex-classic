@@ -8,7 +8,7 @@ This project is currently under heavy development, and may not have the level of
 
 To install Rinvex Cortex, just run the following command on your terminal:
 ```php
-composer create-project cortex
+composer create-project rinvex/cortex
 ```
 
 This will create a new project based on Rinvex Cortex, install the default modules, and prepare the project for your development.
