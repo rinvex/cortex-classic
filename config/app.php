@@ -64,7 +64,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://cortex.rinvex.app'),
+    'url' => env('APP_URL', 'http://cortex.rinvex.ext'),
 
     /*
     |--------------------------------------------------------------------------
