@@ -436,12 +436,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-foundation.git",
-                "reference": "6145cf2fde8da3ad5f3ceea8bfcac5fa2ca68f3c"
+                "reference": "0bf41ca583c7bca8f10d7fbbc3a3789f8c9a8be8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-foundation/zipball/6145cf2fde8da3ad5f3ceea8bfcac5fa2ca68f3c",
-                "reference": "6145cf2fde8da3ad5f3ceea8bfcac5fa2ca68f3c",
+                "url": "https://api.github.com/repos/rinvex/cortex-foundation/zipball/0bf41ca583c7bca8f10d7fbbc3a3789f8c9a8be8",
+                "reference": "0bf41ca583c7bca8f10d7fbbc3a3789f8c9a8be8",
                 "shasum": ""
             },
             "require": {
@@ -526,7 +526,7 @@
                 "module",
                 "rinvex"
             ],
-            "time": "2017-03-14T07:42:20+00:00"
+            "time": "2017-03-14T16:17:06+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -3330,12 +3330,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cacheable.git",
-                "reference": "b6171ba075fe9116f1e89646a1a731567d093f94"
+                "reference": "2b93f9a03674616f20215721f52814cf1ed080b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cacheable/zipball/b6171ba075fe9116f1e89646a1a731567d093f94",
-                "reference": "b6171ba075fe9116f1e89646a1a731567d093f94",
+                "url": "https://api.github.com/repos/rinvex/cacheable/zipball/2b93f9a03674616f20215721f52814cf1ed080b9",
+                "reference": "2b93f9a03674616f20215721f52814cf1ed080b9",
                 "shasum": ""
             },
             "require": {
@@ -3395,7 +3395,7 @@
                 "rinvex",
                 "trait"
             ],
-            "time": "2017-03-06T20:44:51+00:00"
+            "time": "2017-03-14T16:51:38+00:00"
         },
         {
             "name": "rinvex/composer",
@@ -3403,12 +3403,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/composer.git",
-                "reference": "c6082bab3ece0247bb8581f654e6fbd2529825d0"
+                "reference": "0c6296f0b9f09d9b23be9bb9bb6d15210c35e9c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/composer/zipball/c6082bab3ece0247bb8581f654e6fbd2529825d0",
-                "reference": "c6082bab3ece0247bb8581f654e6fbd2529825d0",
+                "url": "https://api.github.com/repos/rinvex/composer/zipball/0c6296f0b9f09d9b23be9bb9bb6d15210c35e9c5",
+                "reference": "0c6296f0b9f09d9b23be9bb9bb6d15210c35e9c5",
                 "shasum": ""
             },
             "require": {
@@ -3470,7 +3470,7 @@
                 "plugin",
                 "rinvex"
             ],
-            "time": "2017-03-08T01:20:10+00:00"
+            "time": "2017-03-14T16:53:01+00:00"
         },
         {
             "name": "rinvex/country",
@@ -3478,12 +3478,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/country.git",
-                "reference": "6d2109b4e7c490e17d95d00bafc235dec80bcc55"
+                "reference": "8bdda813af66564be56345b2b8e5768d4597840c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/country/zipball/6d2109b4e7c490e17d95d00bafc235dec80bcc55",
-                "reference": "6d2109b4e7c490e17d95d00bafc235dec80bcc55",
+                "url": "https://api.github.com/repos/rinvex/country/zipball/8bdda813af66564be56345b2b8e5768d4597840c",
+                "reference": "8bdda813af66564be56345b2b8e5768d4597840c",
                 "shasum": ""
             },
             "require": {
@@ -3544,7 +3544,7 @@
                 "rinvex",
                 "svg"
             ],
-            "time": "2017-03-08T01:20:23+00:00"
+            "time": "2017-03-14T15:48:51+00:00"
         },
         {
             "name": "rinvex/fort",
@@ -3552,12 +3552,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/fort.git",
-                "reference": "6134bcafbf2bfc48671acaf1c6042708ae536b77"
+                "reference": "07b7288762a7be03bb54f1ee23166057b7860ee8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/fort/zipball/6134bcafbf2bfc48671acaf1c6042708ae536b77",
-                "reference": "6134bcafbf2bfc48671acaf1c6042708ae536b77",
+                "url": "https://api.github.com/repos/rinvex/fort/zipball/07b7288762a7be03bb54f1ee23166057b7860ee8",
+                "reference": "07b7288762a7be03bb54f1ee23166057b7860ee8",
                 "shasum": ""
             },
             "require": {
@@ -3637,7 +3637,7 @@
                 "twofactor",
                 "verification"
             ],
-            "time": "2017-03-14T07:53:49+00:00"
+            "time": "2017-03-14T15:53:51+00:00"
         },
         {
             "name": "rinvex/laravel-authy",
@@ -3721,12 +3721,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/module.git",
-                "reference": "89b4213a0ca600ae193b928242c5c24c76791e1d"
+                "reference": "274da4e96e5f05f9ba2ff5299247ed664a666f47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/module/zipball/89b4213a0ca600ae193b928242c5c24c76791e1d",
-                "reference": "89b4213a0ca600ae193b928242c5c24c76791e1d",
+                "url": "https://api.github.com/repos/rinvex/module/zipball/274da4e96e5f05f9ba2ff5299247ed664a666f47",
+                "reference": "274da4e96e5f05f9ba2ff5299247ed664a666f47",
                 "shasum": ""
             },
             "require": {
@@ -3787,7 +3787,7 @@
                 "plugin",
                 "rinvex"
             ],
-            "time": "2017-03-06T20:13:28+00:00"
+            "time": "2017-03-14T16:54:50+00:00"
         },
         {
             "name": "rinvex/sparse",
@@ -3795,12 +3795,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/sparse.git",
-                "reference": "04e6f8fe95a9d62b8ef52da023d060231ef66b25"
+                "reference": "bd8a6a785d6d8e058cc8e6aba35a54f3109088fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/sparse/zipball/04e6f8fe95a9d62b8ef52da023d060231ef66b25",
-                "reference": "04e6f8fe95a9d62b8ef52da023d060231ef66b25",
+                "url": "https://api.github.com/repos/rinvex/sparse/zipball/bd8a6a785d6d8e058cc8e6aba35a54f3109088fd",
+                "reference": "bd8a6a785d6d8e058cc8e6aba35a54f3109088fd",
                 "shasum": ""
             },
             "require": {
@@ -3872,7 +3872,7 @@
                 "schema",
                 "value"
             ],
-            "time": "2017-03-06T20:11:03+00:00"
+            "time": "2017-03-14T17:01:33+00:00"
         },
         {
             "name": "rinvex/support",
@@ -3880,12 +3880,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/support.git",
-                "reference": "691cb935b1ac8e43d32dda27dab6b08a0339eec8"
+                "reference": "635f60c2eec52389f2bab96da83cec0f42962d02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/support/zipball/691cb935b1ac8e43d32dda27dab6b08a0339eec8",
-                "reference": "691cb935b1ac8e43d32dda27dab6b08a0339eec8",
+                "url": "https://api.github.com/repos/rinvex/support/zipball/635f60c2eec52389f2bab96da83cec0f42962d02",
+                "reference": "635f60c2eec52389f2bab96da83cec0f42962d02",
                 "shasum": ""
             },
             "require": {
@@ -3946,7 +3946,7 @@
                 "trait",
                 "validator"
             ],
-            "time": "2017-03-06T20:10:15+00:00"
+            "time": "2017-03-14T17:05:32+00:00"
         },
         {
             "name": "rinvex/tag",
@@ -3954,12 +3954,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/tag.git",
-                "reference": "ac85ecb16c904a8ffc8b63619f44fb55c2259e64"
+                "reference": "d8e95b187d8c5deab2ee250d01d7349ac42fe4a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/tag/zipball/ac85ecb16c904a8ffc8b63619f44fb55c2259e64",
-                "reference": "ac85ecb16c904a8ffc8b63619f44fb55c2259e64",
+                "url": "https://api.github.com/repos/rinvex/tag/zipball/d8e95b187d8c5deab2ee250d01d7349ac42fe4a4",
+                "reference": "d8e95b187d8c5deab2ee250d01d7349ac42fe4a4",
                 "shasum": ""
             },
             "require": {
@@ -4024,7 +4024,7 @@
                 "taxonomy",
                 "translatable"
             ],
-            "time": "2017-03-07T07:12:20+00:00"
+            "time": "2017-03-14T17:13:10+00:00"
         },
         {
             "name": "spatie/eloquent-sortable",
