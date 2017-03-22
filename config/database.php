@@ -92,7 +92,7 @@ return [
     |
     */
 
-    'migrations' => 'cortex_migrations',
+    'migrations' => 'migrations',
 
     /*
     |--------------------------------------------------------------------------
