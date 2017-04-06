@@ -26,7 +26,7 @@ const pace = require('./vendor/pace');
 require('bootstrap-sass');
 require('moment-timezone');
 require('bootstrap-notify');
-require('bootstrap-datepicker');
+require('bootstrap-daterangepicker');
 require('./vendor/jquery.chained');
 require('jquery-slimscroll');
 require('datatables.net');
@@ -49,9 +49,12 @@ $(function () {
         placeholder: "Select Option"
     });
 
-    $('.datepicker').datepicker({
-        format: 'yyyy-mm-dd',
-        autoclose: true
+    $('#daterangepicker').attr('readonly', true);
+    $('#daterangepicker').daterangepicker({
+        autoApply: true,
+        showDropdowns: true,
+        singleDatePicker: true,
+        locale: {format: 'MMM Do, YYYY'},
     });
 
     // Custom Datatables length change select menu
