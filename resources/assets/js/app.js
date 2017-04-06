@@ -18,11 +18,13 @@ window.$ = window.jQuery = require('jquery');
 
 // Bind routes to window object
 window.routes = require('./routes');
+window.moment = require('moment');
 
 // Populate pace object
 const pace = require('./vendor/pace');
 
 require('bootstrap-sass');
+require('moment-timezone');
 require('bootstrap-notify');
 require('bootstrap-datepicker');
 require('./vendor/jquery.chained');
