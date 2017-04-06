@@ -13,10 +13,8 @@ window._ = require('lodash');
  * code may be modified to fit the specific needs of your application.
  */
 
+// Bind variables to window object
 window.$ = window.jQuery = require('jquery');
-
-
-// Bind routes to window object
 window.routes = require('./routes');
 window.moment = require('moment');
 
