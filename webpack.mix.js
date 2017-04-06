@@ -19,6 +19,9 @@ mix
     .extract([
         'moment',
         'moment-timezone',
+        'bootstrap-sass',
+        'bootstrap-notify',
+        'bootstrap-daterangepicker',
         'datatables.net',
         'datatables.net-bs',
         'datatables.net-buttons',
