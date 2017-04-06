@@ -47,12 +47,12 @@ $(function () {
         placeholder: "Select Option"
     });
 
-    $('#daterangepicker').attr('readonly', true);
-    $('#daterangepicker').daterangepicker({
+    $('.datepicker').attr('readonly', true);
+    $('.datepicker').daterangepicker({
         autoApply: true,
         showDropdowns: true,
         singleDatePicker: true,
-        locale: {format: 'MMM Do, YYYY'},
+        locale: {format: 'YYYY-MM-DD'},
     });
 
     // Custom Datatables length change select menu
