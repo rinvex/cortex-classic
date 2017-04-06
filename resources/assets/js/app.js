@@ -43,9 +43,6 @@ require('select2');
 require('icheck');
 require('admin-lte');
 
-let attachFastClick = require('fastclick');
-attachFastClick(document.body);
-
 $(function () {
     // Bind Select2 menus
     $('.select2').select2({
