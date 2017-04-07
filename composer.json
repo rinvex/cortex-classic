@@ -45,17 +45,17 @@
     ],
     "require": {
         "php": "^7.0.0",
-        "laravel/envoy": "~1.0",
-        "doctrine/dbal": "^2.5",
         "aws/aws-sdk-php": "~3.0",
-        "predis/predis": "^1.1.0",
-        "fideloper/proxy": "^3.2",
-        "laravel/tinker": "^1.0.0",
-        "cortex/fort": "dev-develop",
-        "laravel/framework": "~5.4.0",
         "aws/aws-sdk-php-laravel": "~3.0",
+        "cortex/fort": "dev-develop",
         "cortex/foundation": "dev-develop",
-        "dusterio/laravel-aws-worker": "~0.1"
+        "doctrine/dbal": "^2.5",
+        "dusterio/laravel-aws-worker": "~0.1",
+        "fideloper/proxy": "^3.2",
+        "laravel/envoy": "~1.0",
+        "laravel/framework": "~5.4.0",
+        "laravel/tinker": "^1.0.0",
+        "predis/predis": "^1.1.0"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.2",
