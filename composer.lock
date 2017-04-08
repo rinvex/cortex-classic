@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.25.5",
+            "version": "3.25.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "6874b16a262b4e368a25a6991461fce11cff4415"
+                "reference": "fe98140a4811abbe9104477b167dc3c7f9a8391b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/6874b16a262b4e368a25a6991461fce11cff4415",
-                "reference": "6874b16a262b4e368a25a6991461fce11cff4415",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/fe98140a4811abbe9104477b167dc3c7f9a8391b",
+                "reference": "fe98140a4811abbe9104477b167dc3c7f9a8391b",
                 "shasum": ""
             },
             "require": {
@@ -134,7 +134,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-04-06T20:54:52+00:00"
+            "time": "2017-04-07T20:21:45+00:00"
         },
         {
             "name": "aws/aws-sdk-php-laravel",
@@ -346,21 +346,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-fort.git",
-                "reference": "54616f53619b253f6fba8e99eb78cbbc8d8732d7"
+                "reference": "8e6a595cadbe48f3cea2b67cdeac9565575e8200"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-fort/zipball/54616f53619b253f6fba8e99eb78cbbc8d8732d7",
-                "reference": "54616f53619b253f6fba8e99eb78cbbc8d8732d7",
+                "url": "https://api.github.com/repos/rinvex/cortex-fort/zipball/8e6a595cadbe48f3cea2b67cdeac9565575e8200",
+                "reference": "8e6a595cadbe48f3cea2b67cdeac9565575e8200",
                 "shasum": ""
             },
             "require": {
                 "laravel/framework": "~5.4.0",
                 "php": "^7.0.0",
                 "rinvex/cacheable": "dev-develop",
-                "rinvex/composer": "dev-develop",
+                "rinvex/composable": "dev-develop",
                 "rinvex/fort": "dev-develop",
-                "rinvex/module": "dev-develop"
+                "rinvex/modulable": "dev-develop"
             },
             "type": "cortex-module",
             "extra": {
@@ -428,7 +428,7 @@
                 "twofactor",
                 "verification"
             ],
-            "time": "2017-04-07T19:40:59+00:00"
+            "time": "2017-04-08T09:22:36+00:00"
         },
         {
             "name": "cortex/foundation",
@@ -436,12 +436,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-foundation.git",
-                "reference": "4adf584559b915a6ba8a970cf586da044860d6c0"
+                "reference": "de381f7c53419c0bbd2b622903ba2790a431602f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-foundation/zipball/4adf584559b915a6ba8a970cf586da044860d6c0",
-                "reference": "4adf584559b915a6ba8a970cf586da044860d6c0",
+                "url": "https://api.github.com/repos/rinvex/cortex-foundation/zipball/de381f7c53419c0bbd2b622903ba2790a431602f",
+                "reference": "de381f7c53419c0bbd2b622903ba2790a431602f",
                 "shasum": ""
             },
             "require": {
@@ -453,12 +453,12 @@
                 "lord/laroute": "^2.3",
                 "mcamara/laravel-localization": "^1.2.0",
                 "php": "^7.0.0",
+                "rinvex/attributable": "dev-develop",
                 "rinvex/cacheable": "dev-develop",
-                "rinvex/composer": "dev-develop",
+                "rinvex/composable": "dev-develop",
                 "rinvex/fort": "dev-develop",
-                "rinvex/module": "dev-develop",
-                "rinvex/sparse": "dev-develop",
-                "rinvex/tag": "dev-develop",
+                "rinvex/modulable": "dev-develop",
+                "rinvex/taggable": "dev-develop",
                 "spatie/laravel-activitylog": "^1.10",
                 "spatie/laravel-fractal": "^3.2",
                 "spatie/laravel-translatable": "^1.2.0",
@@ -526,7 +526,7 @@
                 "module",
                 "rinvex"
             ],
-            "time": "2017-04-07T19:35:24+00:00"
+            "time": "2017-04-08T09:23:25+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -3253,6 +3253,94 @@
             "time": "2017-03-26T20:37:53+00:00"
         },
         {
+            "name": "rinvex/attributable",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rinvex/attributable.git",
+                "reference": "093cbea894986c8fe78b6d0cf367653229a0979a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rinvex/attributable/zipball/093cbea894986c8fe78b6d0cf367653229a0979a",
+                "reference": "093cbea894986c8fe78b6d0cf367653229a0979a",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "~5.4.0",
+                "illuminate/support": "~5.4.0",
+                "jeremeamia/superclosure": "^2.3.0",
+                "php": "^7.0.0",
+                "rinvex/cacheable": "dev-develop",
+                "spatie/eloquent-sortable": "^3.0.0",
+                "spatie/laravel-sluggable": "^1.3.0",
+                "spatie/laravel-translatable": "^1.1.0",
+                "watson/validating": "^3.0.1"
+            },
+            "require-dev": {
+                "illuminate/container": "~5.4.0",
+                "phpunit/phpunit": "^5.7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "database"
+                ],
+                "psr-4": {
+                    "Rinvex\\Attributable\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Israel Ortuño",
+                    "email": "israel@devio.es"
+                },
+                {
+                    "name": "Rinvex LLC",
+                    "email": "help@rinvex.com",
+                    "homepage": "https://rinvex.com"
+                },
+                {
+                    "name": "Abdelrahman Omran",
+                    "email": "me@omranic.com",
+                    "homepage": "https://omranic.com",
+                    "role": "Project Lead"
+                },
+                {
+                    "name": "The Generous Laravel Community",
+                    "homepage": "https://github.com/rinvex/attributable/contributors"
+                }
+            ],
+            "description": "Rinvex Attributable is a robust, intelligent, and integrated Entity-Attribute-Value model (EAV) implementation for Laravel Eloquent, with powerful underlying for managing entity attributes implicitly as relations with ease. It utilizes the power of Laravel Eloquent, with smooth and seamless integration.",
+            "homepage": "https://rinvex.com",
+            "keywords": [
+                "Integrated",
+                "attribute",
+                "database",
+                "dynamic",
+                "eav",
+                "eloquent",
+                "entity",
+                "entity-attribute-value",
+                "intelligent",
+                "laravel",
+                "model",
+                "robust",
+                "schema",
+                "value"
+            ],
+            "time": "2017-04-08T08:57:16+00:00"
+        },
+        {
             "name": "rinvex/authy",
             "version": "v2.1.1",
             "source": {
@@ -3332,12 +3420,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cacheable.git",
-                "reference": "41d934fc36f5647336b555988386a23f66b0d4c8"
+                "reference": "7efb94aa02ab2a131dbcd63c8523d1f25e2abb78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cacheable/zipball/41d934fc36f5647336b555988386a23f66b0d4c8",
-                "reference": "41d934fc36f5647336b555988386a23f66b0d4c8",
+                "url": "https://api.github.com/repos/rinvex/cacheable/zipball/7efb94aa02ab2a131dbcd63c8523d1f25e2abb78",
+                "reference": "7efb94aa02ab2a131dbcd63c8523d1f25e2abb78",
                 "shasum": ""
             },
             "require": {
@@ -3348,7 +3436,7 @@
             },
             "require-dev": {
                 "illuminate/container": "~5.4.0",
-                "phpunit/phpunit": "^5.4.0"
+                "phpunit/phpunit": "^5.7.0"
             },
             "type": "library",
             "extra": {
@@ -3397,32 +3485,32 @@
                 "rinvex",
                 "trait"
             ],
-            "time": "2017-03-22T13:48:39+00:00"
+            "time": "2017-04-08T09:13:56+00:00"
         },
         {
-            "name": "rinvex/composer",
+            "name": "rinvex/composable",
             "version": "dev-develop",
             "source": {
                 "type": "git",
-                "url": "https://github.com/rinvex/composer.git",
-                "reference": "42197eb1cdce561d91f4e16af09d7b2d15a47fe0"
+                "url": "https://github.com/rinvex/composable.git",
+                "reference": "1c90ee28271b569ccc825dcc2676b06d29783d63"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/composer/zipball/42197eb1cdce561d91f4e16af09d7b2d15a47fe0",
-                "reference": "42197eb1cdce561d91f4e16af09d7b2d15a47fe0",
+                "url": "https://api.github.com/repos/rinvex/composable/zipball/1c90ee28271b569ccc825dcc2676b06d29783d63",
+                "reference": "1c90ee28271b569ccc825dcc2676b06d29783d63",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^1.0.0",
-                "illuminate/contracts": "~5.1.0|~5.2.0|~5.3.0|~5.4.0",
-                "illuminate/support": "~5.1.0|~5.2.0|~5.3.0|~5.4.0",
+                "illuminate/contracts": "~5.4.0",
+                "illuminate/support": "~5.4.0",
                 "php": "^7.0.0",
-                "rinvex/module": "dev-develop"
+                "rinvex/modulable": "dev-develop"
             },
             "require-dev": {
-                "illuminate/container": "~5.1.0|~5.2.0|~5.3.0|~5.4.0",
-                "phpunit/phpunit": "^5.4.0"
+                "illuminate/container": "~5.4.0",
+                "phpunit/phpunit": "^5.7.0"
             },
             "type": "composer-plugin",
             "extra": {
@@ -3430,13 +3518,13 @@
                     "dev-master": "1.0-dev"
                 },
                 "class": [
-                    "Rinvex\\Composer\\Plugins\\ModulePlugin",
-                    "Rinvex\\Composer\\Plugins\\CustomPlugin"
+                    "Rinvex\\Composable\\Plugins\\ModulePlugin",
+                    "Rinvex\\Composable\\Plugins\\CustomPlugin"
                 ]
             },
             "autoload": {
                 "psr-4": {
-                    "Rinvex\\Composer\\": "src/"
+                    "Rinvex\\Composable\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3457,22 +3545,25 @@
                 },
                 {
                     "name": "The Generous Laravel Community",
-                    "homepage": "https://github.com/rinvex/composer/contributors"
+                    "homepage": "https://github.com/rinvex/composable/contributors"
                 }
             ],
-            "description": "An intuitive package that utilizes Composer Plugin API to support additional actions during installation, such as installing packages outside of the default vendor library and running custom scripts during install, update, and uninstall processes.",
+            "description": "Rinvex Composable is an intuitive package that utilizes Composer Plugin API to support additional actions during installation, such as installing packages outside of the default vendor library and running custom scripts during install, update, and uninstall processes.",
             "homepage": "https://rinvex.com",
             "keywords": [
+                "composable",
                 "composer",
                 "cortex",
                 "extension",
                 "installer",
                 "laravel",
+                "modulable",
                 "module",
+                "package",
                 "plugin",
                 "rinvex"
             ],
-            "time": "2017-03-22T13:49:05+00:00"
+            "time": "2017-04-08T09:15:29+00:00"
         },
         {
             "name": "rinvex/country",
@@ -3789,103 +3880,27 @@
             "time": "2017-03-06T18:20:50+00:00"
         },
         {
-            "name": "rinvex/module",
+            "name": "rinvex/modulable",
             "version": "dev-develop",
             "source": {
                 "type": "git",
-                "url": "https://github.com/rinvex/module.git",
-                "reference": "1d924252f8599971836b36a51537d8cc77846707"
+                "url": "https://github.com/rinvex/modulable.git",
+                "reference": "abfe5909fe9bad550c74db17dd2fe7903b5881f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/module/zipball/1d924252f8599971836b36a51537d8cc77846707",
-                "reference": "1d924252f8599971836b36a51537d8cc77846707",
+                "url": "https://api.github.com/repos/rinvex/modulable/zipball/abfe5909fe9bad550c74db17dd2fe7903b5881f0",
+                "reference": "abfe5909fe9bad550c74db17dd2fe7903b5881f0",
                 "shasum": ""
             },
             "require": {
-                "illuminate/config": "~5.1.0|~5.2.0|~5.3.0|~5.4.0",
-                "illuminate/contracts": "~5.1.0|~5.2.0|~5.3.0|~5.4.0",
-                "illuminate/database": "~5.1.0|~5.2.0|~5.3.0|~5.4.0",
-                "illuminate/filesystem": "~5.1.0|~5.2.0|~5.3.0|~5.4.0",
-                "illuminate/support": "~5.1.0|~5.2.0|~5.3.0|~5.4.0",
+                "illuminate/config": "~5.4.0",
+                "illuminate/contracts": "~5.4.0",
+                "illuminate/database": "~5.4.0",
+                "illuminate/filesystem": "~5.4.0",
+                "illuminate/support": "~5.4.0",
                 "marcj/topsort": "^1.0.0",
                 "php": "^7.0.0"
-            },
-            "require-dev": {
-                "illuminate/container": "~5.1.0|~5.2.0|~5.3.0|~5.4.0",
-                "phpunit/phpunit": "^5.4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Rinvex\\Module\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Rinvex LLC",
-                    "email": "help@rinvex.com",
-                    "homepage": "https://rinvex.com"
-                },
-                {
-                    "name": "Abdelrahman Omran",
-                    "email": "me@omranic.com",
-                    "homepage": "https://omranic.com",
-                    "role": "Project Lead"
-                },
-                {
-                    "name": "The Generous Laravel Community",
-                    "homepage": "https://github.com/rinvex/module/contributors"
-                }
-            ],
-            "description": "A modern and intuitive modular system that allows you to architect and build modular applications with first class citizen modules from the ground up.",
-            "homepage": "https://rinvex.com",
-            "keywords": [
-                "application",
-                "cortex",
-                "extension",
-                "intuitive",
-                "laravel",
-                "modular",
-                "module",
-                "plugin",
-                "rinvex"
-            ],
-            "time": "2017-03-22T13:50:07+00:00"
-        },
-        {
-            "name": "rinvex/sparse",
-            "version": "dev-develop",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/rinvex/sparse.git",
-                "reference": "39a87e48b2d89d2f7beac4d6c191234830caeedc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/sparse/zipball/39a87e48b2d89d2f7beac4d6c191234830caeedc",
-                "reference": "39a87e48b2d89d2f7beac4d6c191234830caeedc",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/database": "~5.4.0",
-                "illuminate/support": "~5.4.0",
-                "jeremeamia/superclosure": "^2.3.0",
-                "php": "^7.0.0",
-                "rinvex/cacheable": "dev-develop",
-                "spatie/eloquent-sortable": "^3.0.0",
-                "spatie/laravel-sluggable": "^1.3.0",
-                "spatie/laravel-translatable": "^1.1.0",
-                "watson/validating": "^3.0.1"
             },
             "require-dev": {
                 "illuminate/container": "~5.4.0",
@@ -3898,11 +3913,8 @@
                 }
             },
             "autoload": {
-                "classmap": [
-                    "database"
-                ],
                 "psr-4": {
-                    "Rinvex\\Sparse\\": "src"
+                    "Rinvex\\Modulable\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3910,10 +3922,6 @@
                 "MIT"
             ],
             "authors": [
-                {
-                    "name": "Israel Ortuño",
-                    "email": "israel@devio.es"
-                },
                 {
                     "name": "Rinvex LLC",
                     "email": "help@rinvex.com",
@@ -3927,28 +3935,24 @@
                 },
                 {
                     "name": "The Generous Laravel Community",
-                    "homepage": "https://github.com/rinvex/tag/contributors"
+                    "homepage": "https://github.com/rinvex/modulable/contributors"
                 }
             ],
-            "description": "Rinvex Sparse is a robust, intelligent, and integrated Entity-Attribute-Value model (EAV) implementation for laravel Eloquent, with powerful underlying for managing entity attributes implicitly as relations with ease. It utilizes the power of Laravel Eloquent, with smooth and seamless integration.",
+            "description": "Rinvex Modulable is a modern and intuitive modular system that allows you to architect and build modular applications with first class citizen modules from the ground up.",
             "homepage": "https://rinvex.com",
             "keywords": [
-                "Integrated",
-                "attribute",
-                "database",
-                "dynamic",
-                "eav",
-                "eloquent",
-                "entity",
-                "entity-attribute-value",
-                "intelligent",
+                "application",
+                "cortex",
+                "extension",
+                "intuitive",
                 "laravel",
-                "model",
-                "robust",
-                "schema",
-                "value"
+                "modulable",
+                "modular",
+                "module",
+                "plugin",
+                "rinvex"
             ],
-            "time": "2017-04-07T19:32:57+00:00"
+            "time": "2017-04-08T09:17:04+00:00"
         },
         {
             "name": "rinvex/support",
@@ -3956,22 +3960,22 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/support.git",
-                "reference": "1ef1f17bb7aaadb4bcda512bc95895dba8861e4a"
+                "reference": "8199a6151eaa8fe23895fbdcbe3a7107c7592119"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/support/zipball/1ef1f17bb7aaadb4bcda512bc95895dba8861e4a",
-                "reference": "1ef1f17bb7aaadb4bcda512bc95895dba8861e4a",
+                "url": "https://api.github.com/repos/rinvex/support/zipball/8199a6151eaa8fe23895fbdcbe3a7107c7592119",
+                "reference": "8199a6151eaa8fe23895fbdcbe3a7107c7592119",
                 "shasum": ""
             },
             "require": {
-                "illuminate/auth": "~5.1.0|~5.2.0|~5.3.0|~5.4.0",
-                "illuminate/bus": "~5.1.0|~5.2.0|~5.3.0|~5.4.0",
-                "illuminate/contracts": "~5.1.0|~5.2.0|~5.3.0|~5.4.0",
-                "illuminate/http": "~5.1.0|~5.2.0|~5.3.0|~5.4.0",
-                "illuminate/routing": "~5.1.0|~5.2.0|~5.3.0|~5.4.0",
-                "illuminate/support": "~5.1.0|~5.2.0|~5.3.0|~5.4.0",
-                "illuminate/validation": "~5.1.0|~5.2.0|~5.3.0|~5.4.0",
+                "illuminate/auth": "~5.4.0",
+                "illuminate/bus": "~5.4.0",
+                "illuminate/contracts": "~5.4.0",
+                "illuminate/http": "~5.4.0",
+                "illuminate/routing": "~5.4.0",
+                "illuminate/support": "~5.4.0",
+                "illuminate/validation": "~5.4.0",
                 "php": "^7.0.0"
             },
             "type": "library",
@@ -4022,20 +4026,20 @@
                 "trait",
                 "validator"
             ],
-            "time": "2017-04-06T03:43:45+00:00"
+            "time": "2017-04-08T09:15:11+00:00"
         },
         {
-            "name": "rinvex/tag",
+            "name": "rinvex/taggable",
             "version": "dev-develop",
             "source": {
                 "type": "git",
-                "url": "https://github.com/rinvex/tag.git",
-                "reference": "81e9bdbebbc2444646847a7f5464fc2b3ef562d5"
+                "url": "https://github.com/rinvex/taggable.git",
+                "reference": "678f8e95306832757d72d0f0fbcef7bccdbccaf5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/tag/zipball/81e9bdbebbc2444646847a7f5464fc2b3ef562d5",
-                "reference": "81e9bdbebbc2444646847a7f5464fc2b3ef562d5",
+                "url": "https://api.github.com/repos/rinvex/taggable/zipball/678f8e95306832757d72d0f0fbcef7bccdbccaf5",
+                "reference": "678f8e95306832757d72d0f0fbcef7bccdbccaf5",
                 "shasum": ""
             },
             "require": {
@@ -4063,7 +4067,7 @@
                     "database"
                 ],
                 "psr-4": {
-                    "Rinvex\\Tag\\": "src/"
+                    "Rinvex\\Taggable\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -4084,17 +4088,16 @@
                 },
                 {
                     "name": "The Generous Laravel Community",
-                    "homepage": "https://github.com/rinvex/tag/contributors"
+                    "homepage": "https://github.com/rinvex/taggable/contributors"
                 }
             ],
-            "description": "Rinvex Tag is a polymorphic Laravel package, for tag management. You can tag any eloquent model with ease, and utilize the awesomeness of Sluggable, and Translatable models out of the box.",
+            "description": "Rinvex Taggable is a polymorphic Laravel package, for tag management. You can tag any eloquent model with ease, and utilize the awesomeness of Sluggable, and Translatable models out of the box.",
             "homepage": "https://rinvex.com",
             "keywords": [
                 "Taggable",
                 "eloquent",
                 "laravel",
                 "model",
-                "nested-set",
                 "polymorphic",
                 "rinvex",
                 "sluggable",
@@ -4103,7 +4106,7 @@
                 "taxonomy",
                 "translatable"
             ],
-            "time": "2017-04-06T12:27:25+00:00"
+            "time": "2017-04-08T01:24:58+00:00"
         },
         {
             "name": "spatie/eloquent-sortable",
