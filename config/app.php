@@ -178,7 +178,6 @@ return [
         Rinvex\Fort\Providers\FortDeferredServiceProvider::class,
         Cortex\Foundation\Providers\FortServiceProvider::class,
         Krucas\Notification\NotificationServiceProvider::class,
-        Rinvex\Sparse\Providers\SparseServiceProvider::class,
         Spatie\Activitylog\ActivitylogServiceProvider::class,
         Fideloper\Proxy\TrustedProxyServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
