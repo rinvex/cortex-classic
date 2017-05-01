@@ -47,6 +47,8 @@ $(function () {
         placeholder: "Select Option"
     });
 
+
+    // Configure datepicker
     $('.datepicker').attr('readonly', true);
     $('.datepicker').daterangepicker({
         autoApply: true,
@@ -54,6 +56,15 @@ $(function () {
         singleDatePicker: true,
         locale: {format: 'YYYY-MM-DD'},
     });
+
+    $('.datepicker').on('apply.daterangepicker', function (ev, picker) {
+        $(this).val(picker.startDate.format('YYYY-MM-DD'));
+    });
+
+    $('.datepicker').on('cancel.daterangepicker', function (ev, picker) {
+        $(this).val('');
+    });
+
 
     // Custom Datatables length change select menu
     oTable = $('#dataTableBuilder').DataTable();
