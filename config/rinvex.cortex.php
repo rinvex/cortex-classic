@@ -1,73 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 return [
 
-    /*
-    |--------------------------------------------------------------------------
-    | Application Basic Configuration
-    |--------------------------------------------------------------------------
-    |
-    | Basic Rinvex Cortex application configuration.
-    |
-    */
-
-    'app' => [
-
-        /*
-        |--------------------------------------------------------------------------
-        | Application Version
-        |--------------------------------------------------------------------------
-        |
-        | Rinvex Cortex follows semantic versioning (Major.Minor.Patch).
-        |
-        */
-
-        'version' => '1.0.0',
-
-        /*
-        |--------------------------------------------------------------------------
-        | Application Title
-        |--------------------------------------------------------------------------
-        |
-        | Specify the title of the Rinvex Cortex application.
-        |
-        */
-
-        'title' => 'Rinvex Cortex',
-
-        /*
-        |--------------------------------------------------------------------------
-        | Application Tagline
-        |--------------------------------------------------------------------------
-        |
-        | Specify the tagline of the Rinvex Cortex application.
-        |
-        */
-
-        'tagline' => 'Rinvex Cortex is a solid foundation for enterprise solutions, that provides a flexible and extensible architecture for building multi-lingual, multi-tenant applications with content management, themeable views, application modules and much more.',
-
-        /*
-        |--------------------------------------------------------------------------
-        | Application Copyright
-        |--------------------------------------------------------------------------
-        |
-        | Specify the copyright clause for the Rinvex Cortex application.
-        |
-        */
-
-        'copyright' => '&copy; 2016-2017, Rinvex LLC',
-
-    ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Global Route Override
-    |--------------------------------------------------------------------------
-    |
-    | Here you can modify Route behavior globaly application-wide.
-    |
-    */
-
+    // Global Route Override
     'route' => [
 
         // Prefix routes with {locale} whenever applicable
@@ -83,26 +20,10 @@ return [
 
     ],
 
-    /*
-    |--------------------------------------------------------------------------
-    | Application Backend Configuration
-    |--------------------------------------------------------------------------
-    |
-    | Specify the Rinvex Cortex application backend configuration.
-    |
-    */
-
+    // Backend Configuration
     'backend' => [
 
-        /*
-        |--------------------------------------------------------------------------
-        | Application Backend Idle Timeout
-        |--------------------------------------------------------------------------
-        |
-        | Specify the Rinvex Cortex dashboard idle timeout options.
-        |
-        */
-
+        // Backend Idle Timeout
         'idle_timeout' => [
 
             'enforce' => false,
