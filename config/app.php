@@ -26,7 +26,7 @@ return [
     'tagline' => 'Rinvex Cortex is a solid foundation for enterprise solutions, that provides a flexible and extensible architecture for building multi-lingual, multi-tenant applications with content management, themeable views, application modules and much more.',
 
     // Application Copyright
-    'copyright' => 'Copyright &copy; 2016-'.date("Y").', Rinvex LLC',
+    'copyright' => 'Copyright &copy; 2016-'.date('Y').', Rinvex LLC',
 
     /*
     |--------------------------------------------------------------------------
