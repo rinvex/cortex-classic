@@ -25,7 +25,19 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Laravel',
+    'name' => 'Cortex',
+
+    // Application Date Format
+    'date_format' => 'M jS, Y',
+
+    // Application Version
+    'version' => '1.0.0',
+
+    // Application Tagline
+    'tagline' => 'Rinvex Cortex is a solid foundation for enterprise solutions, that provides a flexible and extensible architecture for building multi-lingual, multi-tenant applications with content management, themeable views, application modules and much more.',
+
+    // Application Copyright
+    'copyright' => 'Copyright &copy; 2016-'.date("Y").', Rinvex LLC',
 
     /*
     |--------------------------------------------------------------------------
