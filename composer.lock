@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.25.6",
+            "version": "3.26.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "fe98140a4811abbe9104477b167dc3c7f9a8391b"
+                "reference": "5fd52d91aa168134f13a57df7fbf7d1f7b7a85ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/fe98140a4811abbe9104477b167dc3c7f9a8391b",
-                "reference": "fe98140a4811abbe9104477b167dc3c7f9a8391b",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/5fd52d91aa168134f13a57df7fbf7d1f7b7a85ca",
+                "reference": "5fd52d91aa168134f13a57df7fbf7d1f7b7a85ca",
                 "shasum": ""
             },
             "require": {
@@ -89,7 +89,7 @@
                 "ext-simplexml": "*",
                 "ext-spl": "*",
                 "nette/neon": "^2.3",
-                "phpunit/phpunit": "~4.0|~5.0",
+                "phpunit/phpunit": "^4.8.35|^5.4.0",
                 "psr/cache": "^1.0"
             },
             "suggest": {
@@ -134,7 +134,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-04-07T20:21:45+00:00"
+            "time": "2017-04-28T23:15:22+00:00"
         },
         {
             "name": "aws/aws-sdk-php-laravel",
@@ -346,12 +346,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-fort.git",
-                "reference": "8e6a595cadbe48f3cea2b67cdeac9565575e8200"
+                "reference": "6bafcadeb35a61d3bfe69f1b8607791261652395"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-fort/zipball/8e6a595cadbe48f3cea2b67cdeac9565575e8200",
-                "reference": "8e6a595cadbe48f3cea2b67cdeac9565575e8200",
+                "url": "https://api.github.com/repos/rinvex/cortex-fort/zipball/6bafcadeb35a61d3bfe69f1b8607791261652395",
+                "reference": "6bafcadeb35a61d3bfe69f1b8607791261652395",
                 "shasum": ""
             },
             "require": {
@@ -380,6 +380,9 @@
                 }
             },
             "autoload": {
+                "classmap": [
+                    "database"
+                ],
                 "psr-4": {
                     "Cortex\\Fort\\": "src/"
                 }
@@ -428,7 +431,7 @@
                 "twofactor",
                 "verification"
             ],
-            "time": "2017-04-08T09:22:36+00:00"
+            "time": "2017-05-01T14:22:28+00:00"
         },
         {
             "name": "cortex/foundation",
@@ -436,12 +439,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-foundation.git",
-                "reference": "de381f7c53419c0bbd2b622903ba2790a431602f"
+                "reference": "580b5a95cc82bd68bcfe357b55d119930e50e32b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-foundation/zipball/de381f7c53419c0bbd2b622903ba2790a431602f",
-                "reference": "de381f7c53419c0bbd2b622903ba2790a431602f",
+                "url": "https://api.github.com/repos/rinvex/cortex-foundation/zipball/580b5a95cc82bd68bcfe357b55d119930e50e32b",
+                "reference": "580b5a95cc82bd68bcfe357b55d119930e50e32b",
                 "shasum": ""
             },
             "require": {
@@ -484,9 +487,6 @@
                 }
             },
             "autoload": {
-                "classmap": [
-                    "database"
-                ],
                 "psr-4": {
                     "Cortex\\Foundation\\": "src/"
                 }
@@ -526,7 +526,7 @@
                 "module",
                 "rinvex"
             ],
-            "time": "2017-04-08T09:23:25+00:00"
+            "time": "2017-05-01T12:58:41+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1738,16 +1738,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.4.17",
+            "version": "v5.4.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "f7675d59e3863a58ecdff1a5ee1dcd0cff788f4b"
+                "reference": "2ed668f96d1a6ca42f50d5c87ee9ceecfc0a6eee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/f7675d59e3863a58ecdff1a5ee1dcd0cff788f4b",
-                "reference": "f7675d59e3863a58ecdff1a5ee1dcd0cff788f4b",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/2ed668f96d1a6ca42f50d5c87ee9ceecfc0a6eee",
+                "reference": "2ed668f96d1a6ca42f50d5c87ee9ceecfc0a6eee",
                 "shasum": ""
             },
             "require": {
@@ -1863,20 +1863,20 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-04-03T13:07:39+00:00"
+            "time": "2017-04-28T15:40:01+00:00"
         },
         {
             "name": "laravel/socialite",
-            "version": "v3.0.4",
+            "version": "v3.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/socialite.git",
-                "reference": "441e0d467319044e4913b1748382d427795416e9"
+                "reference": "2771ab96004b6149d0974f8a469e08c8e54474a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/socialite/zipball/441e0d467319044e4913b1748382d427795416e9",
-                "reference": "441e0d467319044e4913b1748382d427795416e9",
+                "url": "https://api.github.com/repos/laravel/socialite/zipball/2771ab96004b6149d0974f8a469e08c8e54474a5",
+                "reference": "2771ab96004b6149d0974f8a469e08c8e54474a5",
                 "shasum": ""
             },
             "require": {
@@ -1917,7 +1917,7 @@
                 "laravel",
                 "oauth"
             ],
-            "time": "2017-03-27T19:43:19+00:00"
+            "time": "2017-04-20T16:24:07+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -2033,16 +2033,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.37",
+            "version": "1.0.40",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "78b5cc4feb61a882302df4fbaf63b7662e5e4ccd"
+                "reference": "3828f0b24e2c1918bb362d57a53205d6dc8fde61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/78b5cc4feb61a882302df4fbaf63b7662e5e4ccd",
-                "reference": "78b5cc4feb61a882302df4fbaf63b7662e5e4ccd",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/3828f0b24e2c1918bb362d57a53205d6dc8fde61",
+                "reference": "3828f0b24e2c1918bb362d57a53205d6dc8fde61",
                 "shasum": ""
             },
             "require": {
@@ -2064,12 +2064,12 @@
                 "league/flysystem-azure": "Allows you to use Windows Azure Blob storage",
                 "league/flysystem-cached-adapter": "Flysystem adapter decorator for metadata caching",
                 "league/flysystem-copy": "Allows you to use Copy.com storage",
-                "league/flysystem-dropbox": "Allows you to use Dropbox storage",
                 "league/flysystem-eventable-filesystem": "Allows you to use EventableFilesystem",
                 "league/flysystem-rackspace": "Allows you to use Rackspace Cloud Files",
                 "league/flysystem-sftp": "Allows you to use SFTP server storage via phpseclib",
                 "league/flysystem-webdav": "Allows you to use WebDAV storage",
-                "league/flysystem-ziparchive": "Allows you to use ZipArchive adapter"
+                "league/flysystem-ziparchive": "Allows you to use ZipArchive adapter",
+                "spatie/flysystem-dropbox": "Allows you to use Dropbox storage"
             },
             "type": "library",
             "extra": {
@@ -2112,7 +2112,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2017-03-22T15:43:14+00:00"
+            "time": "2017-04-28T10:15:08+00:00"
         },
         {
             "name": "league/fractal",
@@ -2408,16 +2408,16 @@
         },
         {
             "name": "mcamara/laravel-localization",
-            "version": "1.2.3",
+            "version": "v1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mcamara/laravel-localization.git",
-                "reference": "beb1244a4ce2fe793f37696ec0d89eed015f385e"
+                "reference": "29f9ea25bbb97888aa4e0c0e36787b0f80b9920f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mcamara/laravel-localization/zipball/beb1244a4ce2fe793f37696ec0d89eed015f385e",
-                "reference": "beb1244a4ce2fe793f37696ec0d89eed015f385e",
+                "url": "https://api.github.com/repos/mcamara/laravel-localization/zipball/29f9ea25bbb97888aa4e0c0e36787b0f80b9920f",
+                "reference": "29f9ea25bbb97888aa4e0c0e36787b0f80b9920f",
                 "shasum": ""
             },
             "require": {
@@ -2453,7 +2453,7 @@
                 "localization",
                 "php"
             ],
-            "time": "2017-02-18T20:52:38+00:00"
+            "time": "2017-04-25T15:27:29+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -3258,12 +3258,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/attributable.git",
-                "reference": "093cbea894986c8fe78b6d0cf367653229a0979a"
+                "reference": "c1d8e463ce1f6451906359efbb60fc7b8658b183"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/attributable/zipball/093cbea894986c8fe78b6d0cf367653229a0979a",
-                "reference": "093cbea894986c8fe78b6d0cf367653229a0979a",
+                "url": "https://api.github.com/repos/rinvex/attributable/zipball/c1d8e463ce1f6451906359efbb60fc7b8658b183",
+                "reference": "c1d8e463ce1f6451906359efbb60fc7b8658b183",
                 "shasum": ""
             },
             "require": {
@@ -3338,7 +3338,7 @@
                 "schema",
                 "value"
             ],
-            "time": "2017-04-08T08:57:16+00:00"
+            "time": "2017-04-11T03:38:11+00:00"
         },
         {
             "name": "rinvex/authy",
@@ -3420,12 +3420,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cacheable.git",
-                "reference": "7efb94aa02ab2a131dbcd63c8523d1f25e2abb78"
+                "reference": "9120995e9aa8f2c7b69a5e859df9dbb44c58595f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cacheable/zipball/7efb94aa02ab2a131dbcd63c8523d1f25e2abb78",
-                "reference": "7efb94aa02ab2a131dbcd63c8523d1f25e2abb78",
+                "url": "https://api.github.com/repos/rinvex/cacheable/zipball/9120995e9aa8f2c7b69a5e859df9dbb44c58595f",
+                "reference": "9120995e9aa8f2c7b69a5e859df9dbb44c58595f",
                 "shasum": ""
             },
             "require": {
@@ -3485,7 +3485,7 @@
                 "rinvex",
                 "trait"
             ],
-            "time": "2017-04-08T09:13:56+00:00"
+            "time": "2017-04-16T22:44:12+00:00"
         },
         {
             "name": "rinvex/composable",
@@ -3571,12 +3571,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/country.git",
-                "reference": "2e260d8c7e3df1f9209a90f20b90846ef26044fa"
+                "reference": "ae87d12f48164b8612f3c3ed5d09c1cbe79443a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/country/zipball/2e260d8c7e3df1f9209a90f20b90846ef26044fa",
-                "reference": "2e260d8c7e3df1f9209a90f20b90846ef26044fa",
+                "url": "https://api.github.com/repos/rinvex/country/zipball/ae87d12f48164b8612f3c3ed5d09c1cbe79443a4",
+                "reference": "ae87d12f48164b8612f3c3ed5d09c1cbe79443a4",
                 "shasum": ""
             },
             "require": {
@@ -3637,7 +3637,7 @@
                 "rinvex",
                 "svg"
             ],
-            "time": "2017-04-07T19:33:53+00:00"
+            "time": "2017-04-16T22:44:29+00:00"
         },
         {
             "name": "rinvex/fort",
@@ -3645,12 +3645,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/fort.git",
-                "reference": "ee88443c1334add5791889630a4432f4a23df8bc"
+                "reference": "99f241c82854f445de33702b48e862909249c75d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/fort/zipball/ee88443c1334add5791889630a4432f4a23df8bc",
-                "reference": "ee88443c1334add5791889630a4432f4a23df8bc",
+                "url": "https://api.github.com/repos/rinvex/fort/zipball/99f241c82854f445de33702b48e862909249c75d",
+                "reference": "99f241c82854f445de33702b48e862909249c75d",
                 "shasum": ""
             },
             "require": {
@@ -3731,7 +3731,7 @@
                 "twofactor",
                 "verification"
             ],
-            "time": "2017-04-07T19:39:12+00:00"
+            "time": "2017-05-01T12:57:49+00:00"
         },
         {
             "name": "rinvex/language",
@@ -3739,12 +3739,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/language.git",
-                "reference": "edf21121d37e26dd712a678aea0cc46183f825ff"
+                "reference": "588aa210c978b61fcb3d8cea3f8c5955de085ccd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/language/zipball/edf21121d37e26dd712a678aea0cc46183f825ff",
-                "reference": "edf21121d37e26dd712a678aea0cc46183f825ff",
+                "url": "https://api.github.com/repos/rinvex/language/zipball/588aa210c978b61fcb3d8cea3f8c5955de085ccd",
+                "reference": "588aa210c978b61fcb3d8cea3f8c5955de085ccd",
                 "shasum": ""
             },
             "require": {
@@ -3801,7 +3801,7 @@
                 "rinvex",
                 "scripts"
             ],
-            "time": "2017-03-22T13:51:57+00:00"
+            "time": "2017-04-16T22:43:41+00:00"
         },
         {
             "name": "rinvex/laravel-authy",
@@ -3960,12 +3960,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/support.git",
-                "reference": "8199a6151eaa8fe23895fbdcbe3a7107c7592119"
+                "reference": "273d8760b3bbd6bdaa822d8e41932b51f353fda8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/support/zipball/8199a6151eaa8fe23895fbdcbe3a7107c7592119",
-                "reference": "8199a6151eaa8fe23895fbdcbe3a7107c7592119",
+                "url": "https://api.github.com/repos/rinvex/support/zipball/273d8760b3bbd6bdaa822d8e41932b51f353fda8",
+                "reference": "273d8760b3bbd6bdaa822d8e41932b51f353fda8",
                 "shasum": ""
             },
             "require": {
@@ -4026,7 +4026,7 @@
                 "trait",
                 "validator"
             ],
-            "time": "2017-04-08T09:15:11+00:00"
+            "time": "2017-04-16T22:42:55+00:00"
         },
         {
             "name": "rinvex/taggable",
@@ -4034,12 +4034,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/taggable.git",
-                "reference": "678f8e95306832757d72d0f0fbcef7bccdbccaf5"
+                "reference": "b2ad810c11df308dfa5cd7b0f9fb0e8a6accefda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/taggable/zipball/678f8e95306832757d72d0f0fbcef7bccdbccaf5",
-                "reference": "678f8e95306832757d72d0f0fbcef7bccdbccaf5",
+                "url": "https://api.github.com/repos/rinvex/taggable/zipball/b2ad810c11df308dfa5cd7b0f9fb0e8a6accefda",
+                "reference": "b2ad810c11df308dfa5cd7b0f9fb0e8a6accefda",
                 "shasum": ""
             },
             "require": {
@@ -4106,20 +4106,20 @@
                 "taxonomy",
                 "translatable"
             ],
-            "time": "2017-04-08T01:24:58+00:00"
+            "time": "2017-04-11T03:37:32+00:00"
         },
         {
             "name": "spatie/eloquent-sortable",
-            "version": "3.2.1",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/eloquent-sortable.git",
-                "reference": "16c9828fa2cd50b720b03d647a8fc37b64a8fb95"
+                "reference": "09326d99be72c3121d43c1c1f1442502765b388f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/eloquent-sortable/zipball/16c9828fa2cd50b720b03d647a8fc37b64a8fb95",
-                "reference": "16c9828fa2cd50b720b03d647a8fc37b64a8fb95",
+                "url": "https://api.github.com/repos/spatie/eloquent-sortable/zipball/09326d99be72c3121d43c1c1f1442502765b388f",
+                "reference": "09326d99be72c3121d43c1c1f1442502765b388f",
                 "shasum": ""
             },
             "require": {
@@ -4157,7 +4157,7 @@
                 "sort",
                 "sortable"
             ],
-            "time": "2017-01-23T09:32:16+00:00"
+            "time": "2017-04-16T10:11:46+00:00"
         },
         {
             "name": "spatie/fractalistic",
@@ -4212,22 +4212,22 @@
         },
         {
             "name": "spatie/laravel-activitylog",
-            "version": "1.12.2",
+            "version": "1.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-activitylog.git",
-                "reference": "47f2d327bc09bc6203f5721b356ce9051cfcb3bb"
+                "reference": "eadf905df11f8bb93852fa77e1bbc8cd8a1669c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-activitylog/zipball/47f2d327bc09bc6203f5721b356ce9051cfcb3bb",
-                "reference": "47f2d327bc09bc6203f5721b356ce9051cfcb3bb",
+                "url": "https://api.github.com/repos/spatie/laravel-activitylog/zipball/eadf905df11f8bb93852fa77e1bbc8cd8a1669c4",
+                "reference": "eadf905df11f8bb93852fa77e1bbc8cd8a1669c4",
                 "shasum": ""
             },
             "require": {
-                "illuminate/config": "~5.3.0|~5.4.0",
-                "illuminate/database": "~5.3.0|~5.4.0",
-                "illuminate/support": "~5.3.0|~5.4.0",
+                "illuminate/config": "~5.1.0|~5.2.0|~5.3.0|~5.4.0",
+                "illuminate/database": "~5.1.0|~5.2.0|~5.3.0|~5.4.0",
+                "illuminate/support": "~5.1.0|~5.2.0|~5.3.0|~5.4.0",
                 "php": "^7.0",
                 "spatie/string": "^2.1"
             },
@@ -4272,7 +4272,7 @@
                 "spatie",
                 "user"
             ],
-            "time": "2017-03-22T18:29:56+00:00"
+            "time": "2017-04-28T19:42:36+00:00"
         },
         {
             "name": "spatie/laravel-fractal",
@@ -4334,16 +4334,16 @@
         },
         {
             "name": "spatie/laravel-sluggable",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-sluggable.git",
-                "reference": "582eb1554384a3911f5c91ff96b99621be582118"
+                "reference": "5f61739587510e3035e00cc34cb18314ee63e8e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-sluggable/zipball/582eb1554384a3911f5c91ff96b99621be582118",
-                "reference": "582eb1554384a3911f5c91ff96b99621be582118",
+                "url": "https://api.github.com/repos/spatie/laravel-sluggable/zipball/5f61739587510e3035e00cc34cb18314ee63e8e3",
+                "reference": "5f61739587510e3035e00cc34cb18314ee63e8e3",
                 "shasum": ""
             },
             "require": {
@@ -4380,7 +4380,7 @@
                 "laravel-sluggable",
                 "spatie"
             ],
-            "time": "2017-01-24T19:28:56+00:00"
+            "time": "2017-04-13T14:48:58+00:00"
         },
         {
             "name": "spatie/laravel-translatable",
@@ -4503,16 +4503,16 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v5.4.6",
+            "version": "v5.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "81fdccfaf8bdc5d5d7a1ef6bb3a61bbb1a6c4a3e"
+                "reference": "56db4ed32a6d5c9824c3ecc1d2e538f663f47eb4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/81fdccfaf8bdc5d5d7a1ef6bb3a61bbb1a6c4a3e",
-                "reference": "81fdccfaf8bdc5d5d7a1ef6bb3a61bbb1a6c4a3e",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/56db4ed32a6d5c9824c3ecc1d2e538f663f47eb4",
+                "reference": "56db4ed32a6d5c9824c3ecc1d2e538f663f47eb4",
                 "shasum": ""
             },
             "require": {
@@ -4553,7 +4553,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2017-02-13T07:52:53+00:00"
+            "time": "2017-04-20T17:32:18+00:00"
         },
         {
             "name": "symfony/console",
@@ -5542,16 +5542,16 @@
         },
         {
             "name": "yajra/laravel-datatables-buttons",
-            "version": "v1.2.1",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yajra/laravel-datatables-buttons.git",
-                "reference": "93a786e018460a564eb790189607e777ad602f44"
+                "reference": "23854ae69f77b4ca587669f15febda1ed1ad8629"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yajra/laravel-datatables-buttons/zipball/93a786e018460a564eb790189607e777ad602f44",
-                "reference": "93a786e018460a564eb790189607e777ad602f44",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables-buttons/zipball/23854ae69f77b4ca587669f15febda1ed1ad8629",
+                "reference": "23854ae69f77b4ca587669f15febda1ed1ad8629",
                 "shasum": ""
             },
             "require": {
@@ -5597,7 +5597,7 @@
                 "jquery",
                 "laravel"
             ],
-            "time": "2017-03-28T06:40:34+00:00"
+            "time": "2017-04-20T05:11:01+00:00"
         },
         {
             "name": "yajra/laravel-datatables-html",
@@ -5655,16 +5655,16 @@
         },
         {
             "name": "yajra/laravel-datatables-oracle",
-            "version": "v7.3.0",
+            "version": "v7.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yajra/laravel-datatables.git",
-                "reference": "ed5b5908c505f89b815a1ef5bcc7cc3f9731d397"
+                "reference": "0ce81393cbc6c6c47aa00e4d7d53eebc101266ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/ed5b5908c505f89b815a1ef5bcc7cc3f9731d397",
-                "reference": "ed5b5908c505f89b815a1ef5bcc7cc3f9731d397",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/0ce81393cbc6c6c47aa00e4d7d53eebc101266ef",
+                "reference": "0ce81393cbc6c6c47aa00e4d7d53eebc101266ef",
                 "shasum": ""
             },
             "require": {
@@ -5712,7 +5712,7 @@
                 "jquery",
                 "laravel"
             ],
-            "time": "2017-02-23T03:11:23+00:00"
+            "time": "2017-05-01T04:09:32+00:00"
         }
     ],
     "packages-dev": [
@@ -6143,12 +6143,12 @@
             "version": "0.9.9",
             "source": {
                 "type": "git",
-                "url": "https://github.com/padraic/mockery.git",
+                "url": "https://github.com/mockery/mockery.git",
                 "reference": "6fdb61243844dc924071d3404bb23994ea0b6856"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/padraic/mockery/zipball/6fdb61243844dc924071d3404bb23994ea0b6856",
+                "url": "https://api.github.com/repos/mockery/mockery/zipball/6fdb61243844dc924071d3404bb23994ea0b6856",
                 "reference": "6fdb61243844dc924071d3404bb23994ea0b6856",
                 "shasum": ""
             },
@@ -6205,16 +6205,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.6.0",
+            "version": "1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "5a5a9fc8025a08d8919be87d6884d5a92520cefe"
+                "reference": "8e6e04167378abf1ddb4d3522d8755c5fd90d102"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/5a5a9fc8025a08d8919be87d6884d5a92520cefe",
-                "reference": "5a5a9fc8025a08d8919be87d6884d5a92520cefe",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/8e6e04167378abf1ddb4d3522d8755c5fd90d102",
+                "reference": "8e6e04167378abf1ddb4d3522d8755c5fd90d102",
                 "shasum": ""
             },
             "require": {
@@ -6243,7 +6243,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2017-01-26T22:05:40+00:00"
+            "time": "2017-04-12T18:52:22+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
