@@ -13,7 +13,7 @@
  * Link:    https://rinvex.com
  */
 
-use Rinvex\Fort\Models\User;
+use Cortex\Fort\Models\User;
 
 return [
 

@@ -39,8 +39,8 @@ return [
 
     'models' => [
 
-        'ability' => Rinvex\Fort\Models\Ability::class,
-        'role' => Rinvex\Fort\Models\Role::class,
+        'ability' => Cortex\Fort\Models\Ability::class,
+        'role' => Cortex\Fort\Models\Role::class,
         'persistence' => Rinvex\Fort\Models\Persistence::class,
         'socialite' => Rinvex\Fort\Models\Socialite::class,
 
