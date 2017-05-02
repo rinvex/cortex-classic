@@ -74,7 +74,7 @@
                 "name": "frontend.verification.email.send"
             }, {"uri": "verification\/email\/verify", "name": "frontend.verification.email.verify"}, {
                 "uri": "backend",
-                "name": "backend.dashboard.home"
+                "name": "backend.home"
             }, {"uri": "backend\/abilities", "name": "backend.abilities.index"}, {
                 "uri": "backend\/abilities\/create",
                 "name": "backend.abilities.create"
@@ -87,6 +87,9 @@
             }, {
                 "uri": "backend\/abilities\/{ability}",
                 "name": "backend.abilities.update"
+            }, {
+                "uri": "backend\/abilities\/{ability}\/logs",
+                "name": "backend.abilities.logs"
             }, {"uri": "backend\/abilities\/{ability}", "name": "backend.abilities.delete"}, {
                 "uri": "backend\/roles",
                 "name": "backend.roles.index"
@@ -96,19 +99,22 @@
             }, {"uri": "backend\/roles\/{role}", "name": "backend.roles.edit"}, {
                 "uri": "backend\/roles\/{role}",
                 "name": "backend.roles.update"
-            }, {"uri": "backend\/roles\/{role}", "name": "backend.roles.delete"}, {
-                "uri": "backend\/users",
-                "name": "backend.users.index"
-            }, {"uri": "backend\/users\/create", "name": "backend.users.create"}, {
+            }, {"uri": "backend\/roles\/{role}\/logs", "name": "backend.roles.logs"}, {
+                "uri": "backend\/roles\/{role}",
+                "name": "backend.roles.delete"
+            }, {"uri": "backend\/users", "name": "backend.users.index"}, {
                 "uri": "backend\/users\/create",
-                "name": "backend.users.store"
-            }, {"uri": "backend\/users\/{user}", "name": "backend.users.edit"}, {
+                "name": "backend.users.create"
+            }, {"uri": "backend\/users\/create", "name": "backend.users.store"}, {
+                "uri": "backend\/users\/{user}",
+                "name": "backend.users.edit"
+            }, {
                 "uri": "backend\/users\/{user}",
                 "name": "backend.users.update"
-            }, {"uri": "backend\/users\/{user}", "name": "backend.users.delete"}, {
-                "uri": "__clockwork\/{id}",
-                "name": null
-            }],
+            }, {"uri": "backend\/users\/{user}\/logs", "name": "backend.users.logs"}, {
+                "uri": "backend\/users\/{user}",
+                "name": "backend.users.delete"
+            }, {"uri": "__clockwork\/{id}", "name": null}],
             prefix: '',
 
             route: function (name, parameters, route) {
