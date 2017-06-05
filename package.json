@@ -27,6 +27,7 @@
     "datatables.net-responsive": "^2.1.1",
     "datatables.net-responsive-bs": "^2.1.1",
     "font-awesome": "^4.7.0",
+    "fuelux": "^3.16.0",
     "fullcalendar": "^3.2.0",
     "icheck": "^1.0.2",
     "jquery": "^3.1.1",

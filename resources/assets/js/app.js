@@ -34,6 +34,7 @@ require('datatables.net-buttons-bs');
 require('datatables.net-buttons/js/buttons.html5');
 require('datatables.net-buttons/js/buttons.colVis');
 require('./vendor/datatables.net-buttons.server-side');
+require('../../../node_modules/fuelux/js/wizard');
 require('datatables.net-responsive');
 require('datatables.net-responsive-bs');
 require('datatables.net-keytable');
