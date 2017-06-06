@@ -5,8 +5,29 @@
         var routes = {
 
             absolute: false,
-            rootUrl: 'http://cortex.rinvex.app',
-            routes: [{"uri": "worker\/schedule", "name": null}, {"uri": "worker\/queue", "name": null}, {
+            rootUrl: 'http://cortex.rinvex.ext',
+            routes: [{"uri": "worker\/schedule", "name": null}, {
+                "uri": "worker\/queue",
+                "name": null
+            }, {
+                "uri": "backend\/attributes",
+                "name": "backend.attributes.index"
+            }, {
+                "uri": "backend\/attributes\/create",
+                "name": "backend.attributes.create"
+            }, {
+                "uri": "backend\/attributes\/create",
+                "name": "backend.attributes.store"
+            }, {
+                "uri": "backend\/attributes\/{attribute}",
+                "name": "backend.attributes.edit"
+            }, {
+                "uri": "backend\/attributes\/{attribute}",
+                "name": "backend.attributes.update"
+            }, {
+                "uri": "backend\/attributes\/{attribute}\/logs",
+                "name": "backend.attributes.logs"
+            }, {"uri": "backend\/attributes\/{attribute}", "name": "backend.attributes.delete"}, {
                 "uri": "\/",
                 "name": "frontend.home"
             }, {"uri": "auth\/login", "name": "frontend.auth.login"}, {
@@ -73,9 +94,12 @@
                 "uri": "verification\/email\/send",
                 "name": "frontend.verification.email.send"
             }, {"uri": "verification\/email\/verify", "name": "frontend.verification.email.verify"}, {
-                "uri": "backend",
-                "name": "backend.home"
-            }, {"uri": "backend\/abilities", "name": "backend.abilities.index"}, {
+                "uri": "\/",
+                "name": null
+            }, {"uri": "backend", "name": "backend.home"}, {
+                "uri": "backend\/abilities",
+                "name": "backend.abilities.index"
+            }, {
                 "uri": "backend\/abilities\/create",
                 "name": "backend.abilities.create"
             }, {
@@ -114,7 +138,25 @@
             }, {"uri": "backend\/users\/{user}\/logs", "name": "backend.users.logs"}, {
                 "uri": "backend\/users\/{user}",
                 "name": "backend.users.delete"
-            }, {"uri": "__clockwork\/{id}", "name": null}],
+            }, {"uri": "backend\/tenants", "name": "backend.tenants.index"}, {
+                "uri": "backend\/tenants\/create",
+                "name": "backend.tenants.create"
+            }, {
+                "uri": "backend\/tenants\/create",
+                "name": "backend.tenants.store"
+            }, {
+                "uri": "backend\/tenants\/{tenant}",
+                "name": "backend.tenants.edit"
+            }, {
+                "uri": "backend\/tenants\/{tenant}",
+                "name": "backend.tenants.update"
+            }, {
+                "uri": "backend\/tenants\/{tenant}\/logs",
+                "name": "backend.tenants.logs"
+            }, {"uri": "backend\/tenants\/{tenant}", "name": "backend.tenants.delete"}, {
+                "uri": "__clockwork\/{id}",
+                "name": null
+            }],
             prefix: '',
 
             route: function (name, parameters, route) {
