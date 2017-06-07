@@ -27,7 +27,28 @@
             }, {
                 "uri": "backend\/attributes\/{attribute}\/logs",
                 "name": "backend.attributes.logs"
-            }, {"uri": "backend\/attributes\/{attribute}", "name": "backend.attributes.delete"}, {
+            }, {
+                "uri": "backend\/attributes\/{attribute}",
+                "name": "backend.attributes.delete"
+            }, {
+                "uri": "backend\/categories",
+                "name": "backend.categories.index"
+            }, {
+                "uri": "backend\/categories\/create",
+                "name": "backend.categories.create"
+            }, {
+                "uri": "backend\/categories\/create",
+                "name": "backend.categories.store"
+            }, {
+                "uri": "backend\/categories\/{category}",
+                "name": "backend.categories.edit"
+            }, {
+                "uri": "backend\/categories\/{category}",
+                "name": "backend.categories.update"
+            }, {
+                "uri": "backend\/categories\/{category}\/logs",
+                "name": "backend.categories.logs"
+            }, {"uri": "backend\/categories\/{category}", "name": "backend.categories.delete"}, {
                 "uri": "\/",
                 "name": "frontend.home"
             }, {"uri": "auth\/login", "name": "frontend.auth.login"}, {
@@ -138,7 +159,19 @@
             }, {"uri": "backend\/users\/{user}\/logs", "name": "backend.users.logs"}, {
                 "uri": "backend\/users\/{user}",
                 "name": "backend.users.delete"
-            }, {"uri": "backend\/tenants", "name": "backend.tenants.index"}, {
+            }, {"uri": "backend\/tags", "name": "backend.tags.index"}, {
+                "uri": "backend\/tags\/create",
+                "name": "backend.tags.create"
+            }, {"uri": "backend\/tags\/create", "name": "backend.tags.store"}, {
+                "uri": "backend\/tags\/{tag}",
+                "name": "backend.tags.edit"
+            }, {"uri": "backend\/tags\/{tag}", "name": "backend.tags.update"}, {
+                "uri": "backend\/tags\/{tag}\/logs",
+                "name": "backend.tags.logs"
+            }, {"uri": "backend\/tags\/{tag}", "name": "backend.tags.delete"}, {
+                "uri": "backend\/tenants",
+                "name": "backend.tenants.index"
+            }, {
                 "uri": "backend\/tenants\/create",
                 "name": "backend.tenants.create"
             }, {
