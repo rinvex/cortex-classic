@@ -45,8 +45,10 @@ return [
 
     'enabled' => [
         'cortex/fort',
+        'cortex/taggable',
         'cortex/tenantable',
         'cortex/attributable',
+        'cortex/categorizable',
     ],
 
 ];
