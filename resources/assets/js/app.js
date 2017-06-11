@@ -26,6 +26,7 @@ require('moment-timezone');
 require('bootstrap-notify');
 require('bootstrap-daterangepicker');
 require('./vendor/jquery.chained');
+require('./vendor/jsvalidation');
 require('jquery-slimscroll');
 require('datatables.net');
 require('datatables.net-bs');

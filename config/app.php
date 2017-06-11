@@ -176,6 +176,7 @@ return [
         // Packages Service Providers...
         Cortex\Foundation\Overrides\Lord\Laroute\LarouteServiceProvider::class,
         Dusterio\AwsWorker\Integrations\LaravelServiceProvider::class,
+        Proengsoft\JsValidation\JsValidationServiceProvider::class,
         Rinvex\Fort\Providers\FortDeferredServiceProvider::class,
         Cortex\Foundation\Providers\FortServiceProvider::class,
         Krucas\Notification\NotificationServiceProvider::class,
@@ -240,6 +241,7 @@ return [
 
         // Packages Aliases...
         'LaravelLocalization' => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
+        'JsValidator' => Proengsoft\JsValidation\Facades\JsValidatorFacade::class,
         'SnappyImage' => Barryvdh\Snappy\Facades\SnappyImage::class,
         'Alert' => Krucas\Notification\Facades\Notification::class,
         'PDF' => Barryvdh\Snappy\Facades\SnappyPdf::class,
