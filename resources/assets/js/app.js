@@ -44,6 +44,13 @@ require('icheck');
 require('admin-lte');
 
 $(function () {
+    // Highlight first tab that has errored inputs
+    if ($('.tab-pane .has-error').length) {
+        var erroredTabId = $('.tab-pane .has-error').closest('.tab-pane').attr('id');
+        $('.nav a[href="#' + erroredTabId + '"]').tab('show');
+    }
+
+
     // Bind Select2 menus
     $('.select2').select2({
         placeholder: "Select Option"
