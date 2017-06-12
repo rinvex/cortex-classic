@@ -14,7 +14,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Cortex',
+    'name' => env('APP_NAME', 'Cortex'),
 
     // Application Date Format
     'date_format' => 'M jS, Y',

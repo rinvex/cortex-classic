@@ -1,5 +1,7 @@
 /build
 /vendor
+/.idea
+/.vagrant
 /public/hot
 /node_modules
 /storage/*.key
@@ -7,4 +9,5 @@
 Homestead.json
 Homestead.yaml
 composer.phar
+npm-debug.log
 .env
