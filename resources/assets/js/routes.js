@@ -115,12 +115,9 @@
                 "uri": "verification\/email\/send",
                 "name": "frontend.verification.email.send"
             }, {"uri": "verification\/email\/verify", "name": "frontend.verification.email.verify"}, {
-                "uri": "\/",
-                "name": null
-            }, {"uri": "backend", "name": "backend.home"}, {
-                "uri": "backend\/abilities",
-                "name": "backend.abilities.index"
-            }, {
+                "uri": "backend",
+                "name": "backend.home"
+            }, {"uri": "backend\/abilities", "name": "backend.abilities.index"}, {
                 "uri": "backend\/abilities\/create",
                 "name": "backend.abilities.create"
             }, {
