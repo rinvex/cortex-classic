@@ -6,187 +6,323 @@
 
             absolute: false,
             rootUrl: 'http://cortex.rinvex.ext',
-            routes: [{"uri": "worker\/schedule", "name": null}, {
+            routes: [{"host": null, "uri": "worker\/schedule", "name": null}, {
+                "host": null,
                 "uri": "worker\/queue",
                 "name": null
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/attributes",
                 "name": "backend.attributes.index"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/attributes\/create",
                 "name": "backend.attributes.create"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/attributes\/create",
                 "name": "backend.attributes.store"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/attributes\/{attribute}",
                 "name": "backend.attributes.edit"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/attributes\/{attribute}",
                 "name": "backend.attributes.update"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/attributes\/{attribute}\/logs",
                 "name": "backend.attributes.logs"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/attributes\/{attribute}",
                 "name": "backend.attributes.delete"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/categories",
                 "name": "backend.categories.index"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/categories\/create",
                 "name": "backend.categories.create"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/categories\/create",
                 "name": "backend.categories.store"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/categories\/{category}",
                 "name": "backend.categories.edit"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/categories\/{category}",
                 "name": "backend.categories.update"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/categories\/{category}\/logs",
                 "name": "backend.categories.logs"
-            }, {"uri": "backend\/categories\/{category}", "name": "backend.categories.delete"}, {
-                "uri": "\/",
-                "name": "frontend.home"
-            }, {"uri": "auth\/login", "name": "frontend.auth.login"}, {
+            }, {
+                "host": "cortex.rinvex.ext",
+                "uri": "backend\/categories\/{category}",
+                "name": "backend.categories.delete"
+            }, {"host": "cortex.rinvex.ext", "uri": "\/", "name": "frontend.home"}, {
+                "host": "cortex.rinvex.ext",
+                "uri": "auth\/login",
+                "name": "frontend.auth.login"
+            }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "auth\/login",
                 "name": "frontend.auth.login.process"
-            }, {"uri": "auth\/logout", "name": "frontend.auth.logout"}, {
+            }, {
+                "host": "cortex.rinvex.ext",
+                "uri": "auth\/logout",
+                "name": "frontend.auth.logout"
+            }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "auth\/register",
                 "name": "frontend.auth.register"
-            }, {"uri": "auth\/register", "name": "frontend.auth.register.process"}, {
+            }, {
+                "host": "cortex.rinvex.ext",
+                "uri": "auth\/register",
+                "name": "frontend.auth.register.process"
+            }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "auth\/github",
                 "name": "frontend.auth.social.github"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "auth\/github\/callback",
                 "name": "frontend.auth.social.github.callback"
-            }, {"uri": "account\/settings", "name": "frontend.account.settings"}, {
+            }, {
+                "host": "cortex.rinvex.ext",
+                "uri": "account\/settings",
+                "name": "frontend.account.settings"
+            }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "account\/settings",
                 "name": "frontend.account.settings.update"
-            }, {"uri": "account\/sessions", "name": "frontend.account.sessions"}, {
+            }, {
+                "host": "cortex.rinvex.ext",
+                "uri": "account\/sessions",
+                "name": "frontend.account.sessions"
+            }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "account\/sessions\/{token?}",
                 "name": "frontend.account.sessions.flush"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "account\/twofactor\/totp\/enable",
                 "name": "frontend.account.twofactor.totp.enable"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "account\/twofactor\/totp\/update",
                 "name": "frontend.account.twofactor.totp.update"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "account\/twofactor\/totp\/disable",
                 "name": "frontend.account.twofactor.totp.disable"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "account\/twofactor\/totp\/backup",
                 "name": "frontend.account.twofactor.totp.backup"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "account\/twofactor\/phone\/enable",
                 "name": "frontend.account.twofactor.phone.enable"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "account\/twofactor\/phone\/disable",
                 "name": "frontend.account.twofactor.phone.disable"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "passwordreset\/request",
                 "name": "frontend.passwordreset.request"
-            }, {"uri": "passwordreset\/send", "name": "frontend.passwordreset.send"}, {
+            }, {
+                "host": "cortex.rinvex.ext",
+                "uri": "passwordreset\/send",
+                "name": "frontend.passwordreset.send"
+            }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "passwordreset\/reset",
                 "name": "frontend.passwordreset.reset"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "passwordreset\/process",
                 "name": "frontend.passwordreset.process"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "verification\/phone\/request",
                 "name": "frontend.verification.phone.request"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "verification\/phone\/send",
                 "name": "frontend.verification.phone.send"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "verification\/phone\/verify",
                 "name": "frontend.verification.phone.verify"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "verification\/phone\/process",
                 "name": "frontend.verification.phone.process"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "verification\/email\/request",
                 "name": "frontend.verification.email.request"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "verification\/email\/send",
                 "name": "frontend.verification.email.send"
-            }, {"uri": "verification\/email\/verify", "name": "frontend.verification.email.verify"}, {
-                "uri": "backend",
-                "name": "backend.home"
-            }, {"uri": "backend\/abilities", "name": "backend.abilities.index"}, {
+            }, {
+                "host": "cortex.rinvex.ext",
+                "uri": "verification\/email\/verify",
+                "name": "frontend.verification.email.verify"
+            }, {"host": "cortex.rinvex.ext", "uri": "backend", "name": "backend.home"}, {
+                "host": "cortex.rinvex.ext",
+                "uri": "backend\/abilities",
+                "name": "backend.abilities.index"
+            }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/abilities\/create",
                 "name": "backend.abilities.create"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/abilities\/create",
                 "name": "backend.abilities.store"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/abilities\/{ability}",
                 "name": "backend.abilities.edit"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/abilities\/{ability}",
                 "name": "backend.abilities.update"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/abilities\/{ability}\/logs",
                 "name": "backend.abilities.logs"
-            }, {"uri": "backend\/abilities\/{ability}", "name": "backend.abilities.delete"}, {
+            }, {
+                "host": "cortex.rinvex.ext",
+                "uri": "backend\/abilities\/{ability}",
+                "name": "backend.abilities.delete"
+            }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/roles",
                 "name": "backend.roles.index"
-            }, {"uri": "backend\/roles\/create", "name": "backend.roles.create"}, {
+            }, {
+                "host": "cortex.rinvex.ext",
+                "uri": "backend\/roles\/create",
+                "name": "backend.roles.create"
+            }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/roles\/create",
                 "name": "backend.roles.store"
-            }, {"uri": "backend\/roles\/{role}", "name": "backend.roles.edit"}, {
+            }, {
+                "host": "cortex.rinvex.ext",
+                "uri": "backend\/roles\/{role}",
+                "name": "backend.roles.edit"
+            }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/roles\/{role}",
                 "name": "backend.roles.update"
-            }, {"uri": "backend\/roles\/{role}\/logs", "name": "backend.roles.logs"}, {
+            }, {
+                "host": "cortex.rinvex.ext",
+                "uri": "backend\/roles\/{role}\/logs",
+                "name": "backend.roles.logs"
+            }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/roles\/{role}",
                 "name": "backend.roles.delete"
-            }, {"uri": "backend\/users", "name": "backend.users.index"}, {
+            }, {
+                "host": "cortex.rinvex.ext",
+                "uri": "backend\/users",
+                "name": "backend.users.index"
+            }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/users\/create",
                 "name": "backend.users.create"
-            }, {"uri": "backend\/users\/create", "name": "backend.users.store"}, {
+            }, {
+                "host": "cortex.rinvex.ext",
+                "uri": "backend\/users\/create",
+                "name": "backend.users.store"
+            }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/users\/{user}",
                 "name": "backend.users.edit"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/users\/{user}",
                 "name": "backend.users.update"
-            }, {"uri": "backend\/users\/{user}\/logs", "name": "backend.users.logs"}, {
+            }, {
+                "host": "cortex.rinvex.ext",
+                "uri": "backend\/users\/{user}\/logs",
+                "name": "backend.users.logs"
+            }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/users\/{user}",
                 "name": "backend.users.delete"
-            }, {"uri": "backend\/tags", "name": "backend.tags.index"}, {
+            }, {"host": null, "uri": "_debugbar\/open", "name": "debugbar.openhandler"}, {
+                "host": null,
+                "uri": "_debugbar\/clockwork\/{id}",
+                "name": "debugbar.clockwork"
+            }, {"host": null, "uri": "_debugbar\/assets\/stylesheets", "name": "debugbar.assets.css"}, {
+                "host": null,
+                "uri": "_debugbar\/assets\/javascript",
+                "name": "debugbar.assets.js"
+            }, {"host": null, "uri": "__clockwork\/{id}", "name": null}, {
+                "host": "cortex.rinvex.ext",
+                "uri": "backend\/tags",
+                "name": "backend.tags.index"
+            }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/tags\/create",
                 "name": "backend.tags.create"
-            }, {"uri": "backend\/tags\/create", "name": "backend.tags.store"}, {
+            }, {
+                "host": "cortex.rinvex.ext",
+                "uri": "backend\/tags\/create",
+                "name": "backend.tags.store"
+            }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/tags\/{tag}",
                 "name": "backend.tags.edit"
-            }, {"uri": "backend\/tags\/{tag}", "name": "backend.tags.update"}, {
+            }, {
+                "host": "cortex.rinvex.ext",
+                "uri": "backend\/tags\/{tag}",
+                "name": "backend.tags.update"
+            }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/tags\/{tag}\/logs",
                 "name": "backend.tags.logs"
-            }, {"uri": "backend\/tags\/{tag}", "name": "backend.tags.delete"}, {
+            }, {
+                "host": "cortex.rinvex.ext",
+                "uri": "backend\/tags\/{tag}",
+                "name": "backend.tags.delete"
+            }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/tenants",
                 "name": "backend.tenants.index"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/tenants\/create",
                 "name": "backend.tenants.create"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/tenants\/create",
                 "name": "backend.tenants.store"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/tenants\/{tenant}",
                 "name": "backend.tenants.edit"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/tenants\/{tenant}",
                 "name": "backend.tenants.update"
             }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/tenants\/{tenant}\/logs",
                 "name": "backend.tenants.logs"
-            }, {"uri": "backend\/tenants\/{tenant}", "name": "backend.tenants.delete"}, {
-                "uri": "__clockwork\/{id}",
-                "name": null
-            }],
+            }, {"host": "cortex.rinvex.ext", "uri": "backend\/tenants\/{tenant}", "name": "backend.tenants.delete"}],
             prefix: '',
 
             route: function (name, parameters, route) {
