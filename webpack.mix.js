@@ -13,6 +13,7 @@ const { mix } = require('laravel-mix');
 
 
 mix
+    .autoload({'jquery': ['jQuery', '$']})
     .sass('resources/assets/sass/vendor.scss', 'public/css/vendor.css')
     .sass('resources/assets/sass/app.scss', 'public/css/app.css')
     .js('resources/assets/js/app.js', 'public/js/app.js')
