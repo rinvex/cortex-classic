@@ -51,6 +51,18 @@ try {
         }
 
 
+        // Javascript to enable link to tab
+        var url = document.location.toString();
+        if (url.match('#') && url.match(/\-tab/gi)) {
+            $('.nav-tabs a[href="#' + url.split('#')[1] + '"]').tab('show');
+        }
+
+        // Change URL hash for page-reload
+        $('.nav-tabs a').on('shown.bs.tab', function (e) {
+            window.location.hash = e.target.hash;
+        });
+
+
         // Bind Select2 menus
         $('.select2').select2({
             placeholder: "Select Option"
