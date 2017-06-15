@@ -13,7 +13,7 @@ declare(strict_types=1);
 |
 */
 
-$app = new Illuminate\Foundation\Application(
+$app = new Cortex\Foundation\Overrides\Illuminate\Foundation\Application(
     realpath(__DIR__.'/../')
 );
 
