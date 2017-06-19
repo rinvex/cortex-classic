@@ -69,3 +69,8 @@ div.dt-button-background {
     /* W3C Markup, IE10 Release Preview */
     z-index: 2001;
 }
+
+// Style select2 error
+.has-error .select2-selection {
+    border: 1px solid #a94442;
+}
