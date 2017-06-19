@@ -20,17 +20,16 @@ return [
     | Defaults:
     | - Rinvex\Fort\Models\Ability::class
     | - Rinvex\Fort\Models\Role::class
-    | - Rinvex\Fort\Models\User::class
-    | - Rinvex\Fort\Models\Persistence::class
+    | - Rinvex\Fort\Models\Session::class
     | - Rinvex\Fort\Models\Socialite::class
     |
     */
 
     'models' => [
 
-        'ability' => Cortex\Fort\Models\Ability::class,
-        'role' => Cortex\Fort\Models\Role::class,
-        'persistence' => Rinvex\Fort\Models\Persistence::class,
+        'ability' => Rinvex\Fort\Models\Ability::class,
+        'role' => Rinvex\Fort\Models\Role::class,
+        'session' => Rinvex\Fort\Models\Session::class,
         'socialite' => Rinvex\Fort\Models\Socialite::class,
 
     ],
@@ -45,8 +44,11 @@ return [
     | you may use whatever you like. The table you want to use
     | must have the same structure as of the default ones.
     |
-    | Note: Password resets table is defined in the default Laravel configuration file:
-    |       config/auth.php (Check 'table' key inside the 'passwords' array)
+    | Notes: - Password resets table is defined in the default Laravel configuration file:
+    |          config/auth.php (Check 'table' key inside the 'passwords' array)
+    |
+    |        - Sessions table is defined in the default Laravel configuration file:
+    |          config/session.php (Check 'table' key)
     |
     | Defaults:
     | - abilities
@@ -56,7 +58,6 @@ return [
     | - role_user
     | - ability_role
     | - email_verifications
-    | - persistences
     | - socialites
     |
     */
@@ -70,7 +71,6 @@ return [
         'role_user' => 'role_user',
         'ability_role' => 'ability_role',
         'email_verifications' => 'email_verifications',
-        'persistences' => 'persistences',
         'socialites' => 'socialites',
 
     ],
@@ -95,7 +95,7 @@ return [
         'moderated' => false,
 
         // Default Role For New User Registrations (slug)
-        'default_role' => 'member',
+        'default_role' => 'registered',
 
         // Send Welcome Email Upon Registration Success
         'welcome_email' => true,
@@ -168,12 +168,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Two-Factor authentication
+    | TwoFactor authentication
     |--------------------------------------------------------------------------
     |
-    | Rinvex Fort supports a variety of Two-Factor authentication backends through
+    | Rinvex Fort supports a variety of TwoFactor authentication backends through
     | unified API, giving you convenient access to each using the same syntax.
-    | Here you may set the active Two-Factor authentication providers.
+    | Here you may set the active TwoFactor authentication providers.
     |
     */
 
@@ -208,14 +208,6 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Minimum Passwords Characters
-    |--------------------------------------------------------------------------
-    */
-
-    'password_min_chars' => 8,
-
-    /*
-    |--------------------------------------------------------------------------
     | Session Persistence
     |--------------------------------------------------------------------------
     |
@@ -231,41 +223,18 @@ return [
 
     'persistence' => 'multiple',
 
-    /*
-     |--------------------------------------------------------------------------
-     | Online Users Options
-     |--------------------------------------------------------------------------
-     */
+    // Minimum Passwords Characters
+    'password_min_chars' => 8,
 
-    'online' => [
+    // Online Users Activity Interval (minutes to indicate user as active)
+    'online_interval' => 15,
 
-        /*
-        |--------------------------------------------------------------------------
-        | Online Users Activity Interval (minutes)
-        |--------------------------------------------------------------------------
-        |
-        | Minutes that indicates an active user, to be considered an online user.
-        |
-        */
-
-        'interval' => 15,
-
-    ],
-
-    /*
-     |--------------------------------------------------------------------------
-     | Backend Options
-     |--------------------------------------------------------------------------
-     */
-
-    'backend' => [
-        'items_per_page' => 2,
-        'items_per_dashboard' => 2,
-    ],
+    // List items per page (use accross data lists)
+    'items_per_page' => 10,
 
     'boot' => [
-        'override_middleware' => false,
-        'override_exceptionhandler' => false,
+        'override_middleware' => true,
+        'override_exceptionhandler' => true,
     ],
 
 ];
