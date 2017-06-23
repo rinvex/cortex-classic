@@ -27,6 +27,7 @@ try {
     require('bootstrap-daterangepicker');
     require('./vendor/jquery.chained');
     require('./vendor/jsvalidation');
+    require('./vendor/slugify');
     require('jquery-slimscroll');
     require('datatables.net');
     require('datatables.net-bs');
@@ -51,7 +52,19 @@ try {
         }
 
 
-        // Javascript to enable link to tab
+        // Slugify
+        $('[data-slugify]').on('input', function (e) {
+            if ($($(this).data('slugify')).val().length === 0) {
+                $(this).on('keyup', function () {
+                    var input = $(this).data('slugify');
+                    var slug = $(this).val().slugify();
+                    $(input).val(slug);
+                });
+            }
+        });
+
+
+        // Enable linkable to tab
         var url = document.location.toString();
         if (url.match('#') && url.match(/\-tab/gi)) {
             $('.nav-tabs a[href="#' + url.split('#')[1] + '"]').tab('show');
