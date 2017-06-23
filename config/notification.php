@@ -32,7 +32,7 @@ return [
     | These types will be added for new containers.
     |
     */
-    'default_types' => ['info', 'success', 'warning', 'error'],
+    'default_types' => ['info', 'success', 'warning', 'danger'],
 
     /*
     |--------------------------------------------------------------------------
