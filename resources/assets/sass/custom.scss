@@ -27,6 +27,7 @@
     height: 2px;
 }
 
+// DataTables
 .dataTables_processing {
     position: absolute;
     top: 50%;
@@ -68,6 +69,15 @@ div.dt-button-background {
     background: radial-gradient(ellipse farthest-corner at center, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
     /* W3C Markup, IE10 Release Preview */
     z-index: 2001;
+}
+
+td.dt-details-control {
+    background: url('../images/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+
+tr.details td.dt-details-control {
+    background: url('../images/details_close.png') no-repeat center center;
 }
 
 // Style select2 error
