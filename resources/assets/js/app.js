@@ -111,6 +111,10 @@ try {
 
         // Format Log DataTable details
         window.dtFormatLogDetails = function (data) {
+            if ($.isEmptyObject(data.attributes)) {
+                return 'Saved without any changes!';
+            }
+
             var headerDrwan = false;
             var $thead = $('<thead />');
             var $tbody = $('<tbody />');
@@ -138,7 +142,7 @@ try {
                 // Append table row
                 $tr.appendTo($tbody);
                 $tbody.appendTo($table);
-                $tr.append('<td>' + i + '</td>');
+                $tr.append('<td><strong>' + i + '</strong></td>');
 
                 $.each(item, function (i2, item2) {
                     // Check if cell value is object
