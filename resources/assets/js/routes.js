@@ -260,6 +260,10 @@
                 "name": "backend.users.logs"
             }, {
                 "host": "cortex.rinvex.ext",
+                "uri": "backend\/users\/{user}\/activities",
+                "name": "backend.users.activities"
+            }, {
+                "host": "cortex.rinvex.ext",
                 "uri": "backend\/users\/{user}",
                 "name": "backend.users.delete"
             }, {"host": null, "uri": "_debugbar\/open", "name": "debugbar.openhandler"}, {
