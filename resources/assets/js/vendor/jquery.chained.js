@@ -103,4 +103,4 @@
     /* Default settings for plugin. */
     $.fn.chained.defaults = {};
 
-})(window.jQuery || window.Zepto, window, document);
+})(jQuery || window.Zepto, window, document);
