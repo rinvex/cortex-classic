@@ -15,6 +15,7 @@ const { mix } = require('laravel-mix');
 mix
     .autoload({'jquery': ['jQuery', '$']})
     .sass('resources/assets/sass/terminal.scss', 'public/css/terminal.css')
+    .sass('app/cortex/console/resources/assets/sass/terminal.scss', 'public/css/terminal.css')
     .sass('resources/assets/sass/vendor.scss', 'public/css/vendor.css')
     .sass('resources/assets/sass/theme.scss', 'public/css/theme.css')
     .sass('resources/assets/sass/app.scss', 'public/css/app.css')
@@ -25,6 +26,13 @@ mix
         'bootstrap-sass',
         'bootstrap-notify',
         'bootstrap-daterangepicker',
+
+        // Terminal
+        'codemirror',
+        'jquery.terminal',
+        'jquery.terminal/js/unix_formatting',
+        './app/cortex/console/resources/assets/js/terminal',
+
         'datatables.net',
         'datatables.net-bs',
         'datatables.net-buttons',
