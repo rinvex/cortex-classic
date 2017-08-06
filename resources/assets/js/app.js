@@ -7,34 +7,51 @@ try {
 
     // Bind variables to window object
     window.$ = window.jQuery = require('jquery');
-    window.routes = require('./routes');
-    window.moment = require('moment');
 
-    // Populate pace object
-    const pace = require('./vendor/pace');
+    // // Turbolinks
+    // window.Turbolinks = require("turbolinks");
+    // Turbolinks.start();
 
+    // jQuery
+    require('jquery-mousewheel');
+    require('jquery-slimscroll');
+    require('./vendor/jquery.icheck');
+    require('./vendor/jquery.chained');
+    require('./vendor/jquery.validation');
+
+    // Bootstrap
     require('bootstrap-sass');
-    require('moment-timezone');
     require('bootstrap-notify');
     require('bootstrap-daterangepicker');
-    require('./vendor/jquery.chained');
-    require('./vendor/jsvalidation');
-    require('./vendor/slugify');
-    require('jquery-slimscroll');
+
+    // Datatables
     require('datatables.net');
     require('datatables.net-bs');
     require('datatables.net-buttons');
+    require('datatables.net-keytable');
+    require('datatables.net-responsive');
     require('datatables.net-buttons-bs');
+    require('datatables.net-responsive-bs');
     require('datatables.net-buttons/js/buttons.html5');
     require('datatables.net-buttons/js/buttons.colVis');
     require('./vendor/datatables.net-buttons.server-side');
-    require('../../../node_modules/fuelux/js/wizard');
-    require('datatables.net-responsive');
-    require('datatables.net-responsive-bs');
-    require('datatables.net-keytable');
+
+    // Misc
     require('select2');
-    require('icheck');
+    require('moment-timezone');
+    require('./vendor/slugify');
+    window.moment = require('moment');
+    window.routes = require('./routes');
+    window.pace = require('./vendor/pace');
+
+    // Terminal
+    require('jquery.terminal');
+    require('jquery.terminal/js/unix_formatting');
+    window.Terminal = require('../../../app/cortex/console/resources/assets/js/terminal');
+
+    // Theme
     require('admin-lte');
+
 
     $(function () {
         // Highlight first tab that has errored inputs
