@@ -1,12 +1,5 @@
-@import "variables";
-@import "../../../node_modules/animate.css/animate";
-@import "../../../node_modules/select2/dist/css/select2";
-@import "../../../resources/assets/css/icheck-square-blue.css";
-@import "../../../node_modules/datatables.net-bs/css/dataTables.bootstrap";
-@import "../../../node_modules/datatables.net-buttons-bs/css/buttons.bootstrap";
-@import "../../../node_modules/datatables.net-keytable-bs/css/keyTable.bootstrap";
-@import "../../../node_modules/datatables.net-responsive-bs/css/responsive.bootstrap";
-@import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-@import "../../../node_modules/bootstrap-daterangepicker/daterangepicker";
+@import "bootstrap";
 @import "../../../node_modules/font-awesome/scss/font-awesome";
-@import "../../../node_modules/fuelux/dist/css/fuelux.min.css";
+@import "../../../resources/assets/css/icheck-square-blue.css";
+@import "../../../node_modules/select2/dist/css/select2";
+@import "../../../node_modules/animate.css/animate";

@@ -1,0 +1,54 @@
+@import "../../../node_modules/jquery.terminal/css/jquery.terminal";
+@import "../../../node_modules/codemirror/lib/codemirror";
+@import "../../../node_modules/codemirror/addon/dialog/dialog";
+@import "../../../node_modules/codemirror/addon/display/fullscreen";
+@import "../../../node_modules/codemirror/theme/monokai";
+
+.terminal iframe {
+    position: absolute;
+    left: 0;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    margin: 1px 0 0;
+    border: none;
+    opacity: 0;
+    pointer-events: none;
+    box-sizing: border-box
+}
+
+.terminal, .terminal iframe {
+    padding: 10px
+}
+
+#terminal-shell {
+    padding: 10px 10px !important;
+    min-width: 480px;
+    overflow: auto;
+}
+
+.terminal-panel {
+    padding: 10px 10px !important;
+    color: rgb(170, 170, 170) !important;
+    font-family: monospace !important;
+    font-style: normal !important;
+    font-variant: normal !important;
+    font-weight: normal !important;
+    font-size: 12px;
+    overflow: hidden;
+    a {
+        color: #0f60ff !important;
+        &:hover {
+            color: red !important;
+            text-decoration: underline !important;
+        }
+    }
+
+    .prompt {
+        display: inline;
+    }
+}
+
+.CodeMirror-fullscreen {
+    z-index: 50000 !important;
+}
