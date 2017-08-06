@@ -13,16 +13,22 @@ const { mix } = require('laravel-mix');
 
 
 mix
-    .autoload({'jquery': ['jQuery', '$']})
-    .sass('resources/assets/sass/terminal.scss', 'public/css/terminal.css')
+    .autoload({jquery: ['$', 'jQuery']})
     .sass('app/cortex/console/resources/assets/sass/terminal.scss', 'public/css/terminal.css')
     .sass('resources/assets/sass/vendor.scss', 'public/css/vendor.css')
     .sass('resources/assets/sass/theme.scss', 'public/css/theme.css')
     .sass('resources/assets/sass/app.scss', 'public/css/app.css')
     .js('resources/assets/js/app.js', 'public/js/app.js')
     .extract([
-        'moment',
-        'moment-timezone',
+        //jQuery
+        'jquery',
+        'jquery-mousewheel',
+        'jquery-slimscroll',
+        './resources/assets/js/vendor/jquery.icheck',
+        './resources/assets/js/vendor/jquery.chained',
+        './resources/assets/js/vendor/jquery.validation',
+
+        // Bootstrap
         'bootstrap-sass',
         'bootstrap-notify',
         'bootstrap-daterangepicker',
@@ -33,13 +39,27 @@ mix
         'jquery.terminal/js/unix_formatting',
         './app/cortex/console/resources/assets/js/terminal',
 
+        // Datatables
         'datatables.net',
         'datatables.net-bs',
         'datatables.net-buttons',
+        'datatables.net-keytable',
         'datatables.net-buttons-bs',
-        'datatables.net-buttons/js/buttons.colVis.js',
         'datatables.net-responsive',
         'datatables.net-responsive-bs',
-        'datatables.net-keytable'
+        'datatables.net-buttons/js/buttons.html5',
+        'datatables.net-buttons/js/buttons.colVis',
+        './resources/assets/js/vendor/datatables.net-buttons.server-side',
+
+        // Misc
+        'moment',
+        'select2',
+        'moment-timezone',
+        './resources/assets/js/vendor/pace',
+        './resources/assets/js/vendor/slugify',
+
+        // Theme
+        'admin-lte',
+
     ], 'public/js/vendor.js')
     .version();
