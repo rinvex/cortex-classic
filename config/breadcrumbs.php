@@ -18,7 +18,7 @@ return [
     |
     */
 
-    'view' => 'cortex/foundation::common.bootstrap3',
+    'view' => 'cortex/foundation::common.breadcrumbs',
 
     /*
     |--------------------------------------------------------------------------
