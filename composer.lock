@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "09cb0f6eab68259ba55292b3a9a507de",
+    "content-hash": "015c3015600e8e4ba5c6e5ef1e70b50d",
     "packages": [
         {
             "name": "anahkiasen/underscore-php",
@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.32.3",
+            "version": "3.32.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "d34a5779803ae7bc3efd3c6cab6e4e6f3b7409dd"
+                "reference": "9e2ad0ee0a1269190e411b7409e9b64361626e0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/d34a5779803ae7bc3efd3c6cab6e4e6f3b7409dd",
-                "reference": "d34a5779803ae7bc3efd3c6cab6e4e6f3b7409dd",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/9e2ad0ee0a1269190e411b7409e9b64361626e0a",
+                "reference": "9e2ad0ee0a1269190e411b7409e9b64361626e0a",
                 "shasum": ""
             },
             "require": {
@@ -134,7 +134,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-08-01T21:51:56+00:00"
+            "time": "2017-08-11T21:16:28+00:00"
         },
         {
             "name": "aws/aws-sdk-php-laravel",
@@ -349,16 +349,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "1.5.0",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "6f3310c762b658bca64e060262ea2b1d4a1ec4b0"
+                "reference": "d60a1ff0cb421fcd2811c3f2b57f7e3e2b6c9d0e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/6f3310c762b658bca64e060262ea2b1d4a1ec4b0",
-                "reference": "6f3310c762b658bca64e060262ea2b1d4a1ec4b0",
+                "url": "https://api.github.com/repos/composer/composer/zipball/d60a1ff0cb421fcd2811c3f2b57f7e3e2b6c9d0e",
+                "reference": "d60a1ff0cb421fcd2811c3f2b57f7e3e2b6c9d0e",
                 "shasum": ""
             },
             "require": {
@@ -422,7 +422,7 @@
                 "dependency",
                 "package"
             ],
-            "time": "2017-08-08T09:08:05+00:00"
+            "time": "2017-08-09T14:07:22+00:00"
         },
         {
             "name": "composer/semver",
@@ -553,20 +553,33 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-attributable.git",
-                "reference": "afa52fb863a43667f5f90a07da1a4465304cce56"
+                "reference": "868572c2b38c617e70952e44a09643c940dd1dde"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-attributable/zipball/afa52fb863a43667f5f90a07da1a4465304cce56",
-                "reference": "afa52fb863a43667f5f90a07da1a4465304cce56",
+                "url": "https://api.github.com/repos/rinvex/cortex-attributable/zipball/868572c2b38c617e70952e44a09643c940dd1dde",
+                "reference": "868572c2b38c617e70952e44a09643c940dd1dde",
                 "shasum": ""
             },
             "require": {
+                "barryvdh/laravel-snappy": "^0.3.0",
+                "cortex/fort": "dev-develop",
                 "cortex/foundation": "dev-develop",
-                "laravel/framework": "~5.5.0",
+                "davejamesmiller/laravel-breadcrumbs": "4.x-dev",
+                "illuminate/auth": "~5.5.0",
+                "illuminate/console": "~5.5.0",
+                "illuminate/http": "~5.5.0",
+                "illuminate/routing": "~5.5.0",
+                "illuminate/support": "~5.5.0",
+                "laravelcollective/html": "^5.4.0",
+                "league/fractal": "^0.16.0",
                 "php": "^7.0.0",
+                "proengsoft/laravel-jsvalidation": "dev-master",
                 "rinvex/attributable": "dev-develop",
-                "rinvex/composable": "dev-develop"
+                "rinvex/composable": "dev-develop",
+                "rinvex/support": "dev-develop",
+                "spatie/laravel-activitylog": "^1.15.0",
+                "spatie/laravel-menu": "^2.1.0"
             },
             "type": "cortex-module",
             "extra": {
@@ -634,7 +647,7 @@
                 "schema",
                 "value"
             ],
-            "time": "2017-08-06T16:02:39+00:00"
+            "time": "2017-08-13T05:40:34+00:00"
         },
         {
             "name": "cortex/categorizable",
@@ -642,20 +655,34 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-categorizable.git",
-                "reference": "a2264501abb62f8cf8b55ccbc776c089b46ce06a"
+                "reference": "ef864420a34d6e70eaf09074cba4804a19a1a1c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-categorizable/zipball/a2264501abb62f8cf8b55ccbc776c089b46ce06a",
-                "reference": "a2264501abb62f8cf8b55ccbc776c089b46ce06a",
+                "url": "https://api.github.com/repos/rinvex/cortex-categorizable/zipball/ef864420a34d6e70eaf09074cba4804a19a1a1c2",
+                "reference": "ef864420a34d6e70eaf09074cba4804a19a1a1c2",
                 "shasum": ""
             },
             "require": {
+                "barryvdh/laravel-snappy": "^0.3.0",
+                "cortex/fort": "dev-develop",
                 "cortex/foundation": "dev-develop",
-                "laravel/framework": "~5.5.0",
+                "davejamesmiller/laravel-breadcrumbs": "4.x-dev",
+                "illuminate/auth": "~5.5.0",
+                "illuminate/console": "~5.5.0",
+                "illuminate/http": "~5.5.0",
+                "illuminate/routing": "~5.5.0",
+                "illuminate/support": "~5.5.0",
+                "kalnoy/nestedset": "^4.2.0",
+                "laravelcollective/html": "^5.4.0",
+                "league/fractal": "^0.16.0",
                 "php": "^7.0.0",
+                "proengsoft/laravel-jsvalidation": "dev-master",
                 "rinvex/categorizable": "dev-develop",
-                "rinvex/composable": "dev-develop"
+                "rinvex/composable": "dev-develop",
+                "rinvex/support": "dev-develop",
+                "spatie/laravel-activitylog": "^1.15.0",
+                "spatie/laravel-menu": "^2.1.0"
             },
             "type": "cortex-module",
             "extra": {
@@ -721,7 +748,7 @@
                 "taxonomy",
                 "translatable"
             ],
-            "time": "2017-08-06T16:02:46+00:00"
+            "time": "2017-08-13T05:40:04+00:00"
         },
         {
             "name": "cortex/console",
@@ -729,15 +756,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-console.git",
-                "reference": "95e9828f4c4cd1ebf8f7d32344b087397171d0b5"
+                "reference": "24afac5c58a09a6f80170972dd428aad21f0f684"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-console/zipball/95e9828f4c4cd1ebf8f7d32344b087397171d0b5",
-                "reference": "95e9828f4c4cd1ebf8f7d32344b087397171d0b5",
+                "url": "https://api.github.com/repos/rinvex/cortex-console/zipball/24afac5c58a09a6f80170972dd428aad21f0f684",
+                "reference": "24afac5c58a09a6f80170972dd428aad21f0f684",
                 "shasum": ""
             },
             "require": {
+                "barryvdh/laravel-snappy": "^0.3.0",
                 "composer/composer": "^1.4",
                 "cortex/foundation": "dev-develop",
                 "illuminate/console": "~5.5.0",
@@ -746,7 +774,9 @@
                 "illuminate/http": "~5.5.0",
                 "illuminate/support": "~5.5.0",
                 "laravel/framework": "~5.5.0",
+                "laravelcollective/html": "^5.4.0",
                 "php": "^7.0.0",
+                "proengsoft/laravel-jsvalidation": "dev-master",
                 "rinvex/composable": "dev-develop",
                 "symfony/console": "~2.8|~3.0"
             },
@@ -809,7 +839,108 @@
                 "rinvex",
                 "system"
             ],
-            "time": "2017-08-08T15:22:19+00:00"
+            "time": "2017-08-13T05:40:25+00:00"
+        },
+        {
+            "name": "cortex/contacts",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rinvex/cortex-contacts.git",
+                "reference": "d5b59f82a2ee634c6edb5937b8f561be381d507e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rinvex/cortex-contacts/zipball/d5b59f82a2ee634c6edb5937b8f561be381d507e",
+                "reference": "d5b59f82a2ee634c6edb5937b8f561be381d507e",
+                "shasum": ""
+            },
+            "require": {
+                "barryvdh/laravel-snappy": "^0.3.0",
+                "cortex/fort": "dev-develop",
+                "cortex/foundation": "dev-develop",
+                "davejamesmiller/laravel-breadcrumbs": "4.x-dev",
+                "illuminate/auth": "~5.5.0",
+                "illuminate/console": "~5.5.0",
+                "illuminate/http": "~5.5.0",
+                "illuminate/routing": "~5.5.0",
+                "illuminate/support": "~5.5.0",
+                "laravelcollective/html": "^5.4.0",
+                "league/fractal": "^0.16.0",
+                "php": "^7.0.0",
+                "proengsoft/laravel-jsvalidation": "dev-master",
+                "rinvex/composable": "dev-develop",
+                "rinvex/contacts": "dev-develop",
+                "rinvex/support": "dev-develop",
+                "spatie/laravel-activitylog": "^1.15.0",
+                "spatie/laravel-menu": "^2.1.0"
+            },
+            "type": "cortex-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Cortex\\Contacts\\Providers\\ContactsServiceProvider"
+                    ]
+                },
+                "cortex-module": {
+                    "autoinstall": false,
+                    "icon": {
+                        "color": "#2196f3",
+                        "name": "heartbeat",
+                        "background-size": "cover",
+                        "background-color": "#e3f2fd",
+                        "background-position": "center",
+                        "background-repeat": "no-repeat"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Cortex\\Contacts\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rinvex LLC",
+                    "email": "help@rinvex.com",
+                    "homepage": "https://rinvex.com"
+                },
+                {
+                    "name": "Abdelrahman Omran",
+                    "email": "me@omranic.com",
+                    "homepage": "https://omranic.com",
+                    "role": "Project Lead"
+                },
+                {
+                    "name": "The Generous Laravel Community",
+                    "homepage": "https://github.com/rinvex/cortex-contacts/contributors"
+                }
+            ],
+            "description": "Cortex Contacts is a frontend layer for the polymorphic contact management system. You can add contacts to any eloquent model with ease.",
+            "homepage": "https://rinvex.com",
+            "keywords": [
+                "billing",
+                "contact",
+                "contacts",
+                "cortex",
+                "country",
+                "eloquent",
+                "laravel",
+                "model",
+                "module",
+                "polymorphic",
+                "primary",
+                "rinvex",
+                "shipping"
+            ],
+            "time": "2017-08-13T05:39:26+00:00"
         },
         {
             "name": "cortex/fort",
@@ -817,20 +948,37 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-fort.git",
-                "reference": "16ee77707bbff976771539d2b7872868a034cf58"
+                "reference": "80fa1cc7d0cc05e8e1cc0777a1e706f07603b6c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-fort/zipball/16ee77707bbff976771539d2b7872868a034cf58",
-                "reference": "16ee77707bbff976771539d2b7872868a034cf58",
+                "url": "https://api.github.com/repos/rinvex/cortex-fort/zipball/80fa1cc7d0cc05e8e1cc0777a1e706f07603b6c7",
+                "reference": "80fa1cc7d0cc05e8e1cc0777a1e706f07603b6c7",
                 "shasum": ""
             },
             "require": {
+                "barryvdh/laravel-snappy": "^0.3.0",
+                "cortex/fort": "dev-develop",
                 "cortex/foundation": "dev-develop",
-                "laravel/framework": "~5.5.0",
+                "davejamesmiller/laravel-breadcrumbs": "4.x-dev",
+                "illuminate/auth": "~5.5.0",
+                "illuminate/console": "~5.5.0",
+                "illuminate/database": "~5.5.0",
+                "illuminate/http": "~5.5.0",
+                "illuminate/routing": "~5.5.0",
+                "illuminate/support": "~5.5.0",
+                "laravel/socialite": "^3.0.0",
+                "laravelcollective/html": "^5.4.0",
+                "league/fractal": "^0.16.0",
+                "nesbot/carbon": "^1.22.0",
                 "php": "^7.0.0",
+                "pragmarx/google2fa": "^2.0.0",
+                "proengsoft/laravel-jsvalidation": "dev-master",
                 "rinvex/composable": "dev-develop",
-                "rinvex/fort": "dev-develop"
+                "rinvex/fort": "dev-develop",
+                "rinvex/support": "dev-develop",
+                "spatie/laravel-activitylog": "^1.15.0",
+                "spatie/laravel-menu": "^2.1.0"
             },
             "type": "cortex-module",
             "extra": {
@@ -903,7 +1051,7 @@
                 "twofactor",
                 "verification"
             ],
-            "time": "2017-08-08T14:06:15+00:00"
+            "time": "2017-08-13T05:39:57+00:00"
         },
         {
             "name": "cortex/foundation",
@@ -911,38 +1059,42 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-foundation.git",
-                "reference": "231f6c80031d7247390b3f7c2010eba4de0a2bd5"
+                "reference": "6b65dd442d722a10c8cb1f5d9a4679779734dc67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-foundation/zipball/231f6c80031d7247390b3f7c2010eba4de0a2bd5",
-                "reference": "231f6c80031d7247390b3f7c2010eba4de0a2bd5",
+                "url": "https://api.github.com/repos/rinvex/cortex-foundation/zipball/6b65dd442d722a10c8cb1f5d9a4679779734dc67",
+                "reference": "6b65dd442d722a10c8cb1f5d9a4679779734dc67",
                 "shasum": ""
             },
             "require": {
                 "barryvdh/laravel-snappy": "^0.3.0",
+                "cortex/fort": "dev-develop",
                 "davejamesmiller/laravel-breadcrumbs": "4.x-dev",
-                "edvinaskrucas/notification": "^5.1",
-                "kalnoy/nestedset": "^4.2.0",
+                "edvinaskrucas/notification": "^5.2.0",
+                "fideloper/proxy": "^3.3.0",
                 "laravel/framework": "~5.5.0",
                 "laravelcollective/html": "^5.4.0",
-                "maatwebsite/excel": "^2.1.0",
+                "league/fractal": "^0.16.0",
+                "lord/laroute": "^2.4.0",
                 "mcamara/laravel-localization": "^1.2.0",
                 "php": "^7.0.0",
                 "proengsoft/laravel-jsvalidation": "dev-master",
-                "rinvex/attributable": "dev-develop",
                 "rinvex/cacheable": "dev-develop",
                 "rinvex/composable": "dev-develop",
                 "rinvex/fort": "dev-develop",
-                "rinvex/taggable": "dev-develop",
-                "spatie/eloquent-sortable": "^3.3.0",
-                "spatie/laravel-activitylog": "^1.15",
-                "spatie/laravel-fractal": "^4.0",
-                "spatie/laravel-sluggable": "^1.5.0",
-                "spatie/laravel-translatable": "^1.3.0",
-                "watson/validating": "^3.0.1",
+                "rinvex/pages": "dev-develop",
+                "rinvex/support": "dev-develop",
+                "spatie/laravel-activitylog": "^1.15.0",
+                "spatie/laravel-menu": "^2.1.0",
+                "spatie/menu": "^2.2.0",
+                "symfony/console": "^3.0.0",
+                "symfony/finder": "^3.0.0",
+                "symfony/http-kernel": "^3.0.0",
+                "watson/validating": "^3.0.0",
                 "yajra/laravel-datatables-buttons": "^2.0.0",
-                "yajra/laravel-datatables-oracle": "^7.8.0"
+                "yajra/laravel-datatables-html": "^2.0.0",
+                "yajra/laravel-datatables-oracle": "^7.9.0"
             },
             "type": "cortex-module",
             "extra": {
@@ -954,7 +1106,10 @@
                         "Cortex\\Foundation\\Providers\\FoundationServiceProvider",
                         "Cortex\\Foundation\\Providers\\ConsoleSupportServiceProvider",
                         "Cortex\\Foundation\\Overrides\\Lord\\Laroute\\LarouteServiceProvider"
-                    ]
+                    ],
+                    "aliases": {
+                        "Menu": "Spatie\\Menu\\Laravel\\MenuFacade"
+                    }
                 },
                 "cortex-module": {
                     "autoinstall": false,
@@ -1011,7 +1166,7 @@
                 "module",
                 "rinvex"
             ],
-            "time": "2017-08-08T14:07:08+00:00"
+            "time": "2017-08-13T05:40:53+00:00"
         },
         {
             "name": "cortex/pages",
@@ -1019,20 +1174,33 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-pages.git",
-                "reference": "74853b7a8f219f1796de0a89440c34444ecbb88c"
+                "reference": "2d2d40c36fa8b73dc0096aa0eb9af6141675c8da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-pages/zipball/74853b7a8f219f1796de0a89440c34444ecbb88c",
-                "reference": "74853b7a8f219f1796de0a89440c34444ecbb88c",
+                "url": "https://api.github.com/repos/rinvex/cortex-pages/zipball/2d2d40c36fa8b73dc0096aa0eb9af6141675c8da",
+                "reference": "2d2d40c36fa8b73dc0096aa0eb9af6141675c8da",
                 "shasum": ""
             },
             "require": {
+                "barryvdh/laravel-snappy": "^0.3.0",
+                "cortex/fort": "dev-develop",
                 "cortex/foundation": "dev-develop",
-                "laravel/framework": "~5.5.0",
+                "davejamesmiller/laravel-breadcrumbs": "4.x-dev",
+                "illuminate/auth": "~5.5.0",
+                "illuminate/console": "~5.5.0",
+                "illuminate/http": "~5.5.0",
+                "illuminate/routing": "~5.5.0",
+                "illuminate/support": "~5.5.0",
+                "laravelcollective/html": "^5.4.0",
+                "league/fractal": "^0.16.0",
                 "php": "^7.0.0",
+                "proengsoft/laravel-jsvalidation": "dev-master",
                 "rinvex/composable": "dev-develop",
-                "rinvex/pages": "dev-develop"
+                "rinvex/pages": "dev-develop",
+                "rinvex/support": "dev-develop",
+                "spatie/laravel-activitylog": "^1.15.0",
+                "spatie/laravel-menu": "^2.1.0"
             },
             "type": "cortex-module",
             "extra": {
@@ -1093,7 +1261,7 @@
                 "pages",
                 "rinvex"
             ],
-            "time": "2017-08-08T15:30:09+00:00"
+            "time": "2017-08-13T05:39:46+00:00"
         },
         {
             "name": "cortex/taggable",
@@ -1101,20 +1269,33 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-taggable.git",
-                "reference": "37acc4d2e3b29498ad560a7159a5f6e6a8a98071"
+                "reference": "ed5fe9ee1d554ada221d530e04d0ffbfbe237945"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-taggable/zipball/37acc4d2e3b29498ad560a7159a5f6e6a8a98071",
-                "reference": "37acc4d2e3b29498ad560a7159a5f6e6a8a98071",
+                "url": "https://api.github.com/repos/rinvex/cortex-taggable/zipball/ed5fe9ee1d554ada221d530e04d0ffbfbe237945",
+                "reference": "ed5fe9ee1d554ada221d530e04d0ffbfbe237945",
                 "shasum": ""
             },
             "require": {
+                "barryvdh/laravel-snappy": "^0.3.0",
+                "cortex/fort": "dev-develop",
                 "cortex/foundation": "dev-develop",
-                "laravel/framework": "~5.5.0",
+                "davejamesmiller/laravel-breadcrumbs": "4.x-dev",
+                "illuminate/auth": "~5.5.0",
+                "illuminate/console": "~5.5.0",
+                "illuminate/http": "~5.5.0",
+                "illuminate/routing": "~5.5.0",
+                "illuminate/support": "~5.5.0",
+                "laravelcollective/html": "^5.4.0",
+                "league/fractal": "^0.16.0",
                 "php": "^7.0.0",
+                "proengsoft/laravel-jsvalidation": "dev-master",
                 "rinvex/composable": "dev-develop",
-                "rinvex/taggable": "dev-develop"
+                "rinvex/support": "dev-develop",
+                "rinvex/taggable": "dev-develop",
+                "spatie/laravel-activitylog": "^1.15.0",
+                "spatie/laravel-menu": "^2.1.0"
             },
             "type": "cortex-module",
             "extra": {
@@ -1180,7 +1361,7 @@
                 "taxonomy",
                 "translatable"
             ],
-            "time": "2017-08-06T15:19:01+00:00"
+            "time": "2017-08-13T05:39:18+00:00"
         },
         {
             "name": "cortex/tenantable",
@@ -1188,21 +1369,34 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-tenantable.git",
-                "reference": "af3e2d4ca5648cb879103a656f0d113bff4eeaf3"
+                "reference": "daa199488c4cddf50855bd02149f8905599dc37a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-tenantable/zipball/af3e2d4ca5648cb879103a656f0d113bff4eeaf3",
-                "reference": "af3e2d4ca5648cb879103a656f0d113bff4eeaf3",
+                "url": "https://api.github.com/repos/rinvex/cortex-tenantable/zipball/daa199488c4cddf50855bd02149f8905599dc37a",
+                "reference": "daa199488c4cddf50855bd02149f8905599dc37a",
                 "shasum": ""
             },
             "require": {
+                "barryvdh/laravel-snappy": "^0.3.0",
+                "cortex/fort": "dev-develop",
                 "cortex/foundation": "dev-develop",
-                "laravel/framework": "~5.5.0",
+                "davejamesmiller/laravel-breadcrumbs": "4.x-dev",
+                "illuminate/auth": "~5.5.0",
+                "illuminate/console": "~5.5.0",
+                "illuminate/http": "~5.5.0",
+                "illuminate/routing": "~5.5.0",
+                "illuminate/support": "~5.5.0",
+                "laravelcollective/html": "^5.4.0",
+                "league/fractal": "^0.16.0",
                 "php": "^7.0.0",
+                "proengsoft/laravel-jsvalidation": "dev-master",
+                "rinvex/attributable": "dev-develop",
                 "rinvex/composable": "dev-develop",
-                "rinvex/language": "dev-develop",
-                "rinvex/tenantable": "dev-develop"
+                "rinvex/support": "dev-develop",
+                "rinvex/tenantable": "dev-develop",
+                "spatie/laravel-activitylog": "^1.15.0",
+                "spatie/laravel-menu": "^2.1.0"
             },
             "type": "cortex-module",
             "extra": {
@@ -1267,7 +1461,7 @@
                 "tenantable",
                 "translatable"
             ],
-            "time": "2017-08-02T15:27:53+00:00"
+            "time": "2017-08-13T05:39:06+00:00"
         },
         {
             "name": "davejamesmiller/laravel-breadcrumbs",
@@ -2098,6 +2292,59 @@
             "time": "2017-06-15T17:19:42+00:00"
         },
         {
+            "name": "fluent/logger",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fluent/fluent-logger-php.git",
+                "reference": "c5a19ba8eb5e15f9ade72afeffba6b6e7eb51155"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fluent/fluent-logger-php/zipball/c5a19ba8eb5e15f9ade72afeffba6b6e7eb51155",
+                "reference": "c5a19ba8eb5e15f9ade72afeffba6b6e7eb51155",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.3",
+                "phpunit/phpunit-mock-objects": "2.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Fluent\\Logger\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache"
+            ],
+            "authors": [
+                {
+                    "name": "Shuhei Tanuma",
+                    "email": "chobieee@gmail.com"
+                },
+                {
+                    "name": "Sotaro Karasawa",
+                    "email": "sotarok@crocos.co.jp"
+                },
+                {
+                    "name": "DQNEO",
+                    "email": "dqneoo@gmail.com"
+                }
+            ],
+            "description": "a logging library for Fluentd",
+            "homepage": "http://github.com/fluent/fluent-logger-php",
+            "keywords": [
+                "log",
+                "logging"
+            ],
+            "time": "2017-02-15T07:14:53+00:00"
+        },
+        {
             "name": "guzzlehttp/guzzle",
             "version": "6.3.0",
             "source": {
@@ -2277,6 +2524,55 @@
                 "url"
             ],
             "time": "2017-03-20T17:10:46+00:00"
+        },
+        {
+            "name": "jackpopp/geodistance",
+            "version": "1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jackpopp/geodistance.git",
+                "reference": "cc8d47911e135528898676060d5235571186b946"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jackpopp/geodistance/zipball/cc8d47911e135528898676060d5235571186b946",
+                "reference": "cc8d47911e135528898676060d5235571186b946",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "*"
+            },
+            "require-dev": {
+                "illuminate/database": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Jackpopp\\GeoDistance\\": "src/Jackpopp/GeoDistance"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jack Hannigan Popp",
+                    "email": "jack@jackpopp.com"
+                }
+            ],
+            "description": "Search for locations within a radius using latitude and longitude values with your eloquent models.",
+            "keywords": [
+                "distance",
+                "kilometers",
+                "latitude",
+                "longitude",
+                "miles",
+                "radius",
+                "search",
+                "searching"
+            ],
+            "time": "2015-07-07T10:58:38+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -2776,12 +3072,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "62f89c441b05469f3ceb8baa097dfa68778516f7"
+                "reference": "e6995b8a07985c4eb116624c13ccb10eb12e3c58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/62f89c441b05469f3ceb8baa097dfa68778516f7",
-                "reference": "62f89c441b05469f3ceb8baa097dfa68778516f7",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/e6995b8a07985c4eb116624c13ccb10eb12e3c58",
+                "reference": "e6995b8a07985c4eb116624c13ccb10eb12e3c58",
                 "shasum": ""
             },
             "require": {
@@ -2900,7 +3196,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-08-08T15:14:50+00:00"
+            "time": "2017-08-12T20:48:21+00:00"
         },
         {
             "name": "laravel/socialite",
@@ -3432,20 +3728,20 @@
         },
         {
             "name": "mcamara/laravel-localization",
-            "version": "v1.2.6",
+            "version": "v1.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mcamara/laravel-localization.git",
-                "reference": "2177e05d5cf35efea3a43c0f1785a3edd816347f"
+                "reference": "5f7e0e646d5c2374b8adaf1757599e043cd0994d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mcamara/laravel-localization/zipball/2177e05d5cf35efea3a43c0f1785a3edd816347f",
-                "reference": "2177e05d5cf35efea3a43c0f1785a3edd816347f",
+                "url": "https://api.github.com/repos/mcamara/laravel-localization/zipball/5f7e0e646d5c2374b8adaf1757599e043cd0994d",
+                "reference": "5f7e0e646d5c2374b8adaf1757599e043cd0994d",
                 "shasum": ""
             },
             "require": {
-                "laravel/framework": "~5.2",
+                "laravel/framework": "~5.2, ~5.3, ~5.4",
                 "php": ">=5.6.0"
             },
             "require-dev": {
@@ -3453,6 +3749,16 @@
                 "phpunit/phpunit": "5.4.*"
             },
             "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Mcamara\\LaravelLocalization\\LaravelLocalizationServiceProvider"
+                    ],
+                    "aliases": {
+                        "LaravelLocalization": "Mcamara\\LaravelLocalization\\Facades\\LaravelLocalization"
+                    }
+                }
+            },
             "autoload": {
                 "classmap": [],
                 "psr-0": {
@@ -3477,7 +3783,7 @@
                 "localization",
                 "php"
             ],
-            "time": "2017-05-18T10:22:35+00:00"
+            "time": "2017-08-08T04:41:28+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -3809,50 +4115,6 @@
                 "php"
             ],
             "time": "2017-07-28T14:45:09+00:00"
-        },
-        {
-            "name": "packfire/php5.3-compat",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/packfire/php5.3-compatibility.git",
-                "reference": "b6f257d07b6e0891433857262435622fd4ebd56d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/packfire/php5.3-compatibility/zipball/b6f257d07b6e0891433857262435622fd4ebd56d",
-                "reference": "b6f257d07b6e0891433857262435622fd4ebd56d",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Sam-Mauris Yong",
-                    "email": "mauris@hotmail.sg",
-                    "homepage": "http://mauris.sg/",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Provides class and interface compatibility between PHP 5.3 and PHP 5.4 through autoloading.",
-            "homepage": "http://mauris.sg/packfire/",
-            "keywords": [
-                "OOP",
-                "compatibility",
-                "library"
-            ],
-            "time": "2012-10-28T05:29:18+00:00"
         },
         {
             "name": "paragonie/constant_time_encoding",
@@ -4625,12 +4887,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/attributable.git",
-                "reference": "94bf4ed151668e70b1c9012aa23edef60fdda633"
+                "reference": "6b640349de3869a89af62b7cc88293ac55d586c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/attributable/zipball/94bf4ed151668e70b1c9012aa23edef60fdda633",
-                "reference": "94bf4ed151668e70b1c9012aa23edef60fdda633",
+                "url": "https://api.github.com/repos/rinvex/attributable/zipball/6b640349de3869a89af62b7cc88293ac55d586c1",
+                "reference": "6b640349de3869a89af62b7cc88293ac55d586c1",
                 "shasum": ""
             },
             "require": {
@@ -4710,7 +4972,7 @@
                 "schema",
                 "value"
             ],
-            "time": "2017-08-02T11:26:50+00:00"
+            "time": "2017-08-13T01:13:22+00:00"
         },
         {
             "name": "rinvex/authy",
@@ -4865,12 +5127,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/categorizable.git",
-                "reference": "f03840ba5e8d481fd24050d4014fc17c2a5cb539"
+                "reference": "7563518a9fc9c3c1f96328627c9410c232b9c14c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/categorizable/zipball/f03840ba5e8d481fd24050d4014fc17c2a5cb539",
-                "reference": "f03840ba5e8d481fd24050d4014fc17c2a5cb539",
+                "url": "https://api.github.com/repos/rinvex/categorizable/zipball/7563518a9fc9c3c1f96328627c9410c232b9c14c",
+                "reference": "7563518a9fc9c3c1f96328627c9410c232b9c14c",
                 "shasum": ""
             },
             "require": {
@@ -4942,7 +5204,7 @@
                 "taxonomy",
                 "translatable"
             ],
-            "time": "2017-08-05T10:06:58+00:00"
+            "time": "2017-08-13T01:09:41+00:00"
         },
         {
             "name": "rinvex/composable",
@@ -4950,12 +5212,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/composable.git",
-                "reference": "5fa212594b79ee9318b44fef5e7dcfaa3f80e66d"
+                "reference": "81d1b4919cc0f4d318a4eab2baf94b5bebf7b80a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/composable/zipball/5fa212594b79ee9318b44fef5e7dcfaa3f80e66d",
-                "reference": "5fa212594b79ee9318b44fef5e7dcfaa3f80e66d",
+                "url": "https://api.github.com/repos/rinvex/composable/zipball/81d1b4919cc0f4d318a4eab2baf94b5bebf7b80a",
+                "reference": "81d1b4919cc0f4d318a4eab2baf94b5bebf7b80a",
                 "shasum": ""
             },
             "require": {
@@ -5024,7 +5286,89 @@
                 "plugin",
                 "rinvex"
             ],
-            "time": "2017-07-18T01:39:26+00:00"
+            "time": "2017-08-13T01:16:43+00:00"
+        },
+        {
+            "name": "rinvex/contacts",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rinvex/contacts.git",
+                "reference": "1ecabc9d877b7b5d692723a4d92e9595def1c095"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rinvex/contacts/zipball/1ecabc9d877b7b5d692723a4d92e9595def1c095",
+                "reference": "1ecabc9d877b7b5d692723a4d92e9595def1c095",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "~5.4.0|~5.5.0",
+                "illuminate/support": "~5.4.0|~5.5.0",
+                "jackpopp/geodistance": "^1.2",
+                "php": "^7.0.0",
+                "rinvex/cacheable": "dev-develop"
+            },
+            "require-dev": {
+                "illuminate/container": "~5.4.0|~5.5.0",
+                "phpunit/phpunit": "^6.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Rinvex\\Contacts\\ContactsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "database"
+                ],
+                "psr-4": {
+                    "Rinvex\\Contacts\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rinvex LLC",
+                    "email": "help@rinvex.com",
+                    "homepage": "https://rinvex.com"
+                },
+                {
+                    "name": "Abdelrahman Omran",
+                    "email": "me@omranic.com",
+                    "homepage": "https://omranic.com",
+                    "role": "Project Lead"
+                },
+                {
+                    "name": "The Generous Laravel Community",
+                    "homepage": "https://github.com/rinvex/contacts/contributors"
+                }
+            ],
+            "description": "Rinvex Contacts is a polymorphic Laravel package, for contact management system. You can add contacts to any eloquent model with ease.",
+            "homepage": "https://rinvex.com",
+            "keywords": [
+                "billing",
+                "contact",
+                "contacts",
+                "country",
+                "eloquent",
+                "laravel",
+                "model",
+                "polymorphic",
+                "primary",
+                "rinvex",
+                "shipping"
+            ],
+            "time": "2017-08-13T01:08:33+00:00"
         },
         {
             "name": "rinvex/country",
@@ -5106,12 +5450,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/fort.git",
-                "reference": "c6bc0da53380cdfa0a2622696ec317c59454c942"
+                "reference": "36b905fd0f35273b6d3d69487a79f51f91aae15a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/fort/zipball/c6bc0da53380cdfa0a2622696ec317c59454c942",
-                "reference": "c6bc0da53380cdfa0a2622696ec317c59454c942",
+                "url": "https://api.github.com/repos/rinvex/fort/zipball/36b905fd0f35273b6d3d69487a79f51f91aae15a",
+                "reference": "36b905fd0f35273b6d3d69487a79f51f91aae15a",
                 "shasum": ""
             },
             "require": {
@@ -5198,7 +5542,7 @@
                 "twofactor",
                 "verification"
             ],
-            "time": "2017-08-05T10:06:45+00:00"
+            "time": "2017-08-13T01:06:47+00:00"
         },
         {
             "name": "rinvex/language",
@@ -5276,12 +5620,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/laravel-authy.git",
-                "reference": "860abe43bb4ffed768b0a0ba69a8d3b1a72f83f6"
+                "reference": "d2f7f2e98775cd95e19719f5a8203464c731cd86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/laravel-authy/zipball/860abe43bb4ffed768b0a0ba69a8d3b1a72f83f6",
-                "reference": "860abe43bb4ffed768b0a0ba69a8d3b1a72f83f6",
+                "url": "https://api.github.com/repos/rinvex/laravel-authy/zipball/d2f7f2e98775cd95e19719f5a8203464c731cd86",
+                "reference": "d2f7f2e98775cd95e19719f5a8203464c731cd86",
                 "shasum": ""
             },
             "require": {
@@ -5354,7 +5698,7 @@
                 "twofactor",
                 "verification"
             ],
-            "time": "2017-07-18T01:38:24+00:00"
+            "time": "2017-08-13T01:14:05+00:00"
         },
         {
             "name": "rinvex/pages",
@@ -5362,12 +5706,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/pages.git",
-                "reference": "13c676c4cb6e644131073a30d955804a0100fdad"
+                "reference": "abced236913b3662a2f8cc1830045ba03dba9f64"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/pages/zipball/13c676c4cb6e644131073a30d955804a0100fdad",
-                "reference": "13c676c4cb6e644131073a30d955804a0100fdad",
+                "url": "https://api.github.com/repos/rinvex/pages/zipball/abced236913b3662a2f8cc1830045ba03dba9f64",
+                "reference": "abced236913b3662a2f8cc1830045ba03dba9f64",
                 "shasum": ""
             },
             "require": {
@@ -5434,7 +5778,7 @@
                 "pages",
                 "rinvex"
             ],
-            "time": "2017-08-07T01:20:41+00:00"
+            "time": "2017-08-13T01:05:54+00:00"
         },
         {
             "name": "rinvex/support",
@@ -5516,12 +5860,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/taggable.git",
-                "reference": "9e1970ef4bd52c3f4dcf29fd470047338fcd70cf"
+                "reference": "dd97cf073a04c74ccc83153a98fb1375c0b6f4c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/taggable/zipball/9e1970ef4bd52c3f4dcf29fd470047338fcd70cf",
-                "reference": "9e1970ef4bd52c3f4dcf29fd470047338fcd70cf",
+                "url": "https://api.github.com/repos/rinvex/taggable/zipball/dd97cf073a04c74ccc83153a98fb1375c0b6f4c8",
+                "reference": "dd97cf073a04c74ccc83153a98fb1375c0b6f4c8",
                 "shasum": ""
             },
             "require": {
@@ -5593,7 +5937,7 @@
                 "taxonomy",
                 "translatable"
             ],
-            "time": "2017-08-06T15:17:31+00:00"
+            "time": "2017-08-13T01:03:09+00:00"
         },
         {
             "name": "rinvex/tenantable",
@@ -5601,12 +5945,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/tenantable.git",
-                "reference": "80f377fe052b1e61c1a8ba600233505360aa6928"
+                "reference": "9ccd3bdf32d5c2751f7017e70910256d1b7c3762"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/tenantable/zipball/80f377fe052b1e61c1a8ba600233505360aa6928",
-                "reference": "80f377fe052b1e61c1a8ba600233505360aa6928",
+                "url": "https://api.github.com/repos/rinvex/tenantable/zipball/9ccd3bdf32d5c2751f7017e70910256d1b7c3762",
+                "reference": "9ccd3bdf32d5c2751f7017e70910256d1b7c3762",
                 "shasum": ""
             },
             "require": {
@@ -5677,33 +6021,39 @@
                 "tenantable",
                 "translatable"
             ],
-            "time": "2017-08-05T10:07:14+00:00"
+            "time": "2017-08-13T01:00:55+00:00"
         },
         {
             "name": "rollbar/rollbar",
-            "version": "v1.0.1",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rollbar/rollbar-php.git",
-                "reference": "9e3573d77fd33b3cf922af786f7e8828fea7b574"
+                "reference": "0fbaf82e8da7612e3f296d6e81ce3db1c8b3e951"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rollbar/rollbar-php/zipball/9e3573d77fd33b3cf922af786f7e8828fea7b574",
-                "reference": "9e3573d77fd33b3cf922af786f7e8828fea7b574",
+                "url": "https://api.github.com/repos/rollbar/rollbar-php/zipball/0fbaf82e8da7612e3f296d6e81ce3db1c8b3e951",
+                "reference": "0fbaf82e8da7612e3f296d6e81ce3db1c8b3e951",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
-                "packfire/php5.3-compat": "*",
+                "fluent/logger": "^1.0",
                 "psr/log": "~1.0.2"
             },
             "require-dev": {
                 "codeclimate/php-test-reporter": "dev-master",
                 "mockery/mockery": "0.9.*",
                 "monolog/monolog": "*",
+                "packfire/php5.3-compat": "*",
+                "phpmd/phpmd": "@stable",
                 "phpunit/phpunit": "4.8.*",
                 "squizlabs/php_codesniffer": "2.*"
+            },
+            "suggest": {
+                "fluent/logger": "Needed to use the 'fluent' handler for fluentd support",
+                "packfire/php5.3-compat": "for backward compatibility with PHP 5.3"
             },
             "type": "library",
             "autoload": {
@@ -5731,26 +6081,26 @@
                 "logging",
                 "monitoring"
             ],
-            "time": "2017-05-01T22:57:43+00:00"
+            "time": "2017-08-02T19:32:28+00:00"
         },
         {
             "name": "rollbar/rollbar-laravel",
-            "version": "v2.0.0",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rollbar/rollbar-php-laravel.git",
-                "reference": "bc9ac6b1d94c248016b82c0322ce1a824593a205"
+                "reference": "940779f01d9f4223287ca3ffd2999c6df017e29d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rollbar/rollbar-php-laravel/zipball/bc9ac6b1d94c248016b82c0322ce1a824593a205",
-                "reference": "bc9ac6b1d94c248016b82c0322ce1a824593a205",
+                "url": "https://api.github.com/repos/rollbar/rollbar-php-laravel/zipball/940779f01d9f4223287ca3ffd2999c6df017e29d",
+                "reference": "940779f01d9f4223287ca3ffd2999c6df017e29d",
                 "shasum": ""
             },
             "require": {
                 "illuminate/support": "^4.0|^5.0",
                 "php": ">=5.4",
-                "rollbar/rollbar": "~1.0.0"
+                "rollbar/rollbar": "^1.3.1"
             },
             "require-dev": {
                 "mockery/mockery": "^0.9",
@@ -5760,6 +6110,16 @@
                 "squizlabs/php_codesniffer": "2.*"
             },
             "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Rollbar\\Laravel\\RollbarServiceProvider"
+                    ],
+                    "aliases": {
+                        "Rollbar": "Rollbar\\Laravel\\Facades\\Rollbar"
+                    }
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Rollbar\\Laravel\\": "src/"
@@ -5789,7 +6149,7 @@
                 "monitoring",
                 "rollbar"
             ],
-            "time": "2017-04-30T09:56:38+00:00"
+            "time": "2017-08-03T04:07:19+00:00"
         },
         {
             "name": "seld/cli-prompt",
@@ -6095,57 +6455,6 @@
             "time": "2017-06-13T02:22:16+00:00"
         },
         {
-            "name": "spatie/fractalistic",
-            "version": "2.3.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/fractalistic.git",
-                "reference": "012c4182203ba9127bb0a31cec3c211ce68227d9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spatie/fractalistic/zipball/012c4182203ba9127bb0a31cec3c211ce68227d9",
-                "reference": "012c4182203ba9127bb0a31cec3c211ce68227d9",
-                "shasum": ""
-            },
-            "require": {
-                "league/fractal": "^0.16.0",
-                "php": "^5.6|^7.0"
-            },
-            "require-dev": {
-                "illuminate/pagination": "~5.3.0|~5.4.0",
-                "phpunit/phpunit": "^5.7"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Spatie\\Fractalistic\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Freek Van der Herten",
-                    "email": "freek@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A developer friendly wrapper around Fractal",
-            "homepage": "https://github.com/spatie/fractalistic",
-            "keywords": [
-                "api",
-                "fractal",
-                "fractalistic",
-                "spatie",
-                "transform"
-            ],
-            "time": "2017-07-24T08:06:12+00:00"
-        },
-        {
             "name": "spatie/laravel-activitylog",
             "version": "dev-master",
             "source": {
@@ -6289,86 +6598,6 @@
             "time": "2017-08-04T07:53:41+00:00"
         },
         {
-            "name": "spatie/laravel-fractal",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/rinvex/l55-laravel-fractal.git",
-                "reference": "d79f04da17b09c6abf72d05ed5b81c81a4304c37"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/l55-laravel-fractal/zipball/d79f04da17b09c6abf72d05ed5b81c81a4304c37",
-                "reference": "d79f04da17b09c6abf72d05ed5b81c81a4304c37",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/contracts": "~5.5.0",
-                "illuminate/support": "~5.5.0",
-                "php": "^5.6|^7.0",
-                "spatie/fractalistic": "^2.0"
-            },
-            "require-dev": {
-                "orchestra/testbench": "~3.2.0|3.3.0|~3.4.0",
-                "phpunit/phpunit": "^5.7.5"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Spatie\\Fractal\\FractalServiceProvider"
-                    ],
-                    "aliases": {
-                        "Fractal": "Spatie\\Fractal\\FractalFacade"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spatie\\Fractal\\": "src"
-                },
-                "files": [
-                    "src/helpers.php"
-                ]
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Spatie\\Fractal\\Test\\": "tests"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "phpunit"
-                ]
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Freek Van der Herten",
-                    "email": "freek@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
-                }
-            ],
-            "description": "An easy to use Fractal integration for Laravel applications",
-            "homepage": "https://github.com/spatie/laravel-fractal",
-            "keywords": [
-                "api",
-                "fractal",
-                "laravel",
-                "laravel-fractal",
-                "lumen",
-                "spatie",
-                "transform"
-            ],
-            "support": {
-                "source": "https://github.com/rinvex/l55-laravel-fractal/tree/master"
-            },
-            "time": "2017-06-29T07:10:37+00:00"
-        },
-        {
             "name": "spatie/laravel-link-checker",
             "version": "dev-master",
             "source": {
@@ -6427,6 +6656,80 @@
                 "spatie"
             ],
             "time": "2017-06-29T19:27:56+00:00"
+        },
+        {
+            "name": "spatie/laravel-menu",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rinvex/l55-laravel-menu.git",
+                "reference": "e5d3ead156771f09ffc07b51550c4679f01617b3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rinvex/l55-laravel-menu/zipball/e5d3ead156771f09ffc07b51550c4679f01617b3",
+                "reference": "e5d3ead156771f09ffc07b51550c4679f01617b3",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/auth": "~5.5.0",
+                "illuminate/contracts": "~5.5.0",
+                "illuminate/support": "~5.5.0",
+                "php": "^7.0",
+                "spatie/menu": "^2.2.2"
+            },
+            "require-dev": {
+                "fzaninotto/faker": "^1.6",
+                "orchestra/testbench": "3.3.3|~3.4.0",
+                "phpunit/phpunit": "^5.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\Menu\\Laravel\\MenuServiceProvider"
+                    ],
+                    "aliases": {
+                        "Menu": "Spatie\\Menu\\Laravel\\MenuFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Menu\\Laravel\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Spatie\\Menu\\Laravel\\Test\\": "tests"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpunit"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian De Deyne",
+                    "email": "sebastiandedeyne@gmail.com",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Html menu generator for Laravel",
+            "homepage": "https://github.com/spatie/laravel-menu",
+            "keywords": [
+                "laravel-menu",
+                "spatie"
+            ],
+            "support": {
+                "source": "https://github.com/rinvex/l55-laravel-menu/tree/master"
+            },
+            "time": "2017-08-09T00:17:52+00:00"
         },
         {
             "name": "spatie/laravel-migrate-fresh",
@@ -6630,6 +6933,54 @@
             "time": "2017-06-29T07:08:20+00:00"
         },
         {
+            "name": "spatie/menu",
+            "version": "2.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/menu.git",
+                "reference": "21c3a1f60b07a6b60e9f4104cc5993caf641548e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/menu/zipball/21c3a1f60b07a6b60e9f4104cc5993caf641548e",
+                "reference": "21c3a1f60b07a6b60e9f4104cc5993caf641548e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0",
+                "spatie/url": "^1.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.2.10"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Menu\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian De Deyne",
+                    "email": "sebastian@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Html menu generator",
+            "homepage": "https://github.com/spatie/menu",
+            "keywords": [
+                "menu",
+                "navigation",
+                "spatie"
+            ],
+            "time": "2017-07-11T06:43:55+00:00"
+        },
+        {
             "name": "spatie/string",
             "version": "2.2.1",
             "source": {
@@ -6727,6 +7078,53 @@
                 "temporary-directory"
             ],
             "time": "2017-02-02T13:08:42+00:00"
+        },
+        {
+            "name": "spatie/url",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/url.git",
+                "reference": "a052d689cb4623f74976fe08a2b09aa285a05a0b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/url/zipball/a052d689cb4623f74976fe08a2b09aa285a05a0b",
+                "reference": "a052d689cb4623f74976fe08a2b09aa285a05a0b",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0",
+                "psr/http-message": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Url\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian De Deyne",
+                    "email": "sebastian@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Parse, build and manipulate URL's",
+            "homepage": "https://github.com/spatie/url",
+            "keywords": [
+                "spatie",
+                "url"
+            ],
+            "time": "2017-07-01T07:14:51+00:00"
         },
         {
             "name": "sven/artisan-view",
@@ -10110,10 +10508,10 @@
             "package": "spatie/laravel-activitylog"
         },
         {
-            "alias": "4.0.0",
-            "alias_normalized": "4.0.0.0",
+            "alias": "2.1.4",
+            "alias_normalized": "2.1.4.0",
             "version": "9999999-dev",
-            "package": "spatie/laravel-fractal"
+            "package": "spatie/laravel-menu"
         },
         {
             "alias": "1.5.0",
@@ -10128,8 +10526,8 @@
             "package": "spatie/laravel-translatable"
         },
         {
-            "alias": "7.8.1",
-            "alias_normalized": "7.8.1.0",
+            "alias": "7.9.0",
+            "alias_normalized": "7.9.0.0",
             "version": "9999999-dev",
             "package": "yajra/laravel-datatables-oracle"
         }
@@ -10139,11 +10537,12 @@
         "barryvdh/laravel-snappy": 20,
         "cortex/attributable": 20,
         "cortex/categorizable": 20,
-        "cortex/fort": 20,
-        "cortex/pages": 20,
         "cortex/console": 20,
-        "cortex/taggable": 20,
+        "cortex/contacts": 20,
+        "cortex/fort": 20,
         "cortex/foundation": 20,
+        "cortex/pages": 20,
+        "cortex/taggable": 20,
         "cortex/tenantable": 20,
         "kalnoy/nestedset": 20,
         "laravelcollective/html": 20,
@@ -10151,11 +10550,10 @@
         "spatie/eloquent-sortable": 20,
         "spatie/laravel-activitylog": 20,
         "spatie/laravel-db-snapshots": 20,
-        "spatie/laravel-fractal": 20,
         "spatie/laravel-link-checker": 20,
+        "spatie/laravel-menu": 20,
         "spatie/laravel-sluggable": 20,
         "spatie/laravel-translatable": 20,
-        "proengsoft/laravel-jsvalidation": 20,
         "yajra/laravel-datatables-oracle": 20
     },
     "prefer-stable": true,

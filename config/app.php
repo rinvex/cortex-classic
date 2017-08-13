@@ -177,16 +177,11 @@ return [
 
         // Packages Service Providers...
         Dusterio\AwsWorker\Integrations\LaravelServiceProvider::class,
-        Proengsoft\JsValidation\JsValidationServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Krucas\Notification\NotificationServiceProvider::class,
-        Spatie\Activitylog\ActivitylogServiceProvider::class,
-        //Fideloper\Proxy\TrustedProxyServiceProvider::class,
-        Laravel\Socialite\SocialiteServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
         Yajra\Datatables\ButtonsServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
-        Spatie\Fractal\FractalServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Lord\Laroute\LarouteServiceProvider::class,
         Barryvdh\Snappy\ServiceProvider::class,
@@ -242,8 +237,6 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         // Packages Aliases...
-        'LaravelLocalization' => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
-        'JsValidator' => Proengsoft\JsValidation\Facades\JsValidatorFacade::class,
         'SnappyImage' => Barryvdh\Snappy\Facades\SnappyImage::class,
         'Alert' => Krucas\Notification\Facades\Notification::class,
         'PDF' => Barryvdh\Snappy\Facades\SnappyPdf::class,
