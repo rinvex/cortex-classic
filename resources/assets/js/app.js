@@ -123,14 +123,14 @@ $(function () {
             return 'Saved without any changes!';
         }
 
-        var headerDrwan = false;
-        var $thead = $('<thead />');
-        var $tbody = $('<tbody />');
-        var $table = $('<table class="table table-condensed table-striped table-bordered" />');
+        let headerDrwan = false;
+        let $thead = $('<thead />');
+        let $tbody = $('<tbody />');
+        let $table = $('<table class="table table-condensed table-striped table-bordered" />');
 
         $.each(data, function (i, item) {
-            var $tr = $('<tr />');
-            var $trH = $('<tr />');
+            let $tr = $('<tr />');
+            let $trH = $('<tr />');
 
             if (! headerDrwan) {
                 // Empty cell
@@ -155,7 +155,7 @@ $(function () {
             $.each(item, function (i2, item2) {
                 // Check if cell value is object
                 if (item2 && typeof item2 === 'object') {
-                    var cellValue = '';
+                    let cellValue = '';
 
                     // Loop through cell value object and append as string
                     $.each(item2, function (i3, item3) {
