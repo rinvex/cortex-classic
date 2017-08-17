@@ -68,7 +68,6 @@
         "lord/laroute": "^2.4.0",
         "maatwebsite/excel": "dev-master as 2.1.17",
         "predis/predis": "^1.1.0",
-        "rollbar/rollbar-laravel": "^2.0",
         "spatie/eloquent-sortable": "dev-master as 3.3.0",
         "spatie/laravel-activitylog": "dev-master as 1.15",
         "spatie/laravel-db-snapshots": "dev-master",
