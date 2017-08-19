@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-use Cortex\Fort\Models\User;
-
 return [
 
     /*
@@ -71,7 +69,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => User::class,
+            'model' => \Cortex\Fort\Models\User::class,
         ],
 
         // 'users' => [

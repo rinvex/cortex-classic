@@ -4,16 +4,7 @@ declare(strict_types=1);
 
 return [
 
-    /*
-    |--------------------------------------------------------------------------
-    | Attributable Database Tables
-    |--------------------------------------------------------------------------
-    |
-    | Specify database table names that should be used to store
-    | your attribute, attribute/entity relations, and value records.
-    |
-    */
-
+    // Attributable Database Tables
     'tables' => [
 
         'attributes' => 'attributes',
@@ -23,6 +14,14 @@ return [
         'attribute_integer_values' => 'attribute_integer_values',
         'attribute_text_values' => 'attribute_text_values',
         'attribute_varchar_values' => 'attribute_varchar_values',
+
+    ],
+
+    // Attributable Models
+    'models' => [
+
+        'attribute' => \Cortex\Attributable\Models\Attribute::class,
+        'attribute_entity' => \Rinvex\Attributable\Models\AttributeEntity::class,
 
     ],
 

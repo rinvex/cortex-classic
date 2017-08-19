@@ -27,10 +27,10 @@ return [
 
     'models' => [
 
-        'ability' => Rinvex\Fort\Models\Ability::class,
-        'role' => Rinvex\Fort\Models\Role::class,
-        'session' => Rinvex\Fort\Models\Session::class,
-        'socialite' => Rinvex\Fort\Models\Socialite::class,
+        'ability' => \Cortex\Fort\Models\Ability::class,
+        'role' => \Cortex\Fort\Models\Role::class,
+        'session' => \Rinvex\Fort\Models\Session::class,
+        'socialite' => \Rinvex\Fort\Models\Socialite::class,
 
     ],
 
@@ -44,10 +44,7 @@ return [
     | you may use whatever you like. The table you want to use
     | must have the same structure as of the default ones.
     |
-    | Notes: - Password resets table is defined in the default Laravel configuration file:
-    |          config/auth.php (Check 'table' key inside the 'passwords' array)
-    |
-    |        - Sessions table is defined in the default Laravel configuration file:
+    | Notes: - Sessions table is defined in the default Laravel configuration file:
     |          config/session.php (Check 'table' key)
     |
     | Defaults:
@@ -57,7 +54,6 @@ return [
     | - ability_user
     | - role_user
     | - ability_role
-    | - email_verifications
     | - socialites
     |
     */
@@ -70,7 +66,6 @@ return [
         'ability_user' => 'ability_user',
         'role_user' => 'role_user',
         'ability_role' => 'ability_role',
-        'email_verifications' => 'email_verifications',
         'socialites' => 'socialites',
 
     ],
@@ -95,7 +90,7 @@ return [
         'moderated' => false,
 
         // Default Role For New User Registrations (slug)
-        'default_role' => 'member',
+        'default_role' => 'registered',
 
         // Send Welcome Email Upon Registration Success
         'welcome_email' => true,
@@ -233,8 +228,8 @@ return [
     'items_per_page' => 10,
 
     'boot' => [
-        'override_middleware' => false,
-        'override_exceptionhandler' => false,
+        'override_middleware' => true,
+        'override_exceptionhandler' => true,
     ],
 
 ];
