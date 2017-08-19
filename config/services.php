@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-use Rinvex\Fort\Models\User;
-
 return [
 
     /*
@@ -34,7 +32,7 @@ return [
     ],
 
     'stripe' => [
-        'model' => User::class,
+        'model' => \Cortex\Fort\Models\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
