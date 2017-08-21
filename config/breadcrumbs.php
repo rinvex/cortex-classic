@@ -20,7 +20,7 @@ return [
     |
     */
 
-    'view' => 'cortex/foundation::common.breadcrumbs',
+    'view' => 'cortex/foundation::common.partials.breadcrumbs',
 
     /*
     |--------------------------------------------------------------------------
