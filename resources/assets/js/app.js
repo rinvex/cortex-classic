@@ -15,7 +15,6 @@ window.$ = window.jQuery = require('jquery');
 require('jquery-mousewheel');
 require('jquery-slimscroll');
 require('./vendor/jquery.icheck');
-require('./vendor/jquery.chained');
 require('./vendor/jquery.validation');
 
 // Bootstrap
