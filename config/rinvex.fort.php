@@ -228,8 +228,8 @@ return [
     'items_per_page' => 10,
 
     'boot' => [
-        'override_middleware' => true,
-        'override_exceptionhandler' => true,
+        'override_middleware' => false,
+        'override_exceptionhandler' => false,
     ],
 
 ];
