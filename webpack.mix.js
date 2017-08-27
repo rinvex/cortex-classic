@@ -25,7 +25,6 @@ mix
         'jquery-mousewheel',
         'jquery-slimscroll',
         './resources/assets/js/vendor/jquery.icheck',
-        './resources/assets/js/vendor/jquery.chained',
         './resources/assets/js/vendor/jquery.validation',
 
         // Bootstrap
