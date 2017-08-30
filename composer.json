@@ -47,7 +47,6 @@
         "php": "^7.0.0",
         "aws/aws-sdk-php": "~3.0",
         "aws/aws-sdk-php-laravel": "~3.0",
-        "barryvdh/laravel-snappy": "dev-master as 0.3.3",
         "cortex/attributable": "dev-develop",
         "cortex/categorizable": "dev-develop",
         "cortex/console": "dev-develop",
@@ -68,12 +67,9 @@
         "maatwebsite/excel": "dev-master as 2.1.17",
         "predis/predis": "^1.1.0",
         "spatie/eloquent-sortable": "dev-master as 3.3.0",
-        "spatie/laravel-activitylog": "dev-master as 1.15",
-        "spatie/laravel-db-snapshots": "dev-master",
-        "spatie/laravel-link-checker": "dev-master",
-        "spatie/laravel-menu": "dev-master as 2.1.4",
+        "spatie/laravel-db-snapshots": "^1.1.0",
+        "spatie/laravel-link-checker": "^2.0.0",
         "spatie/laravel-sluggable": "dev-master as 1.5.0",
-        "spatie/laravel-translatable": "dev-master as 1.3.0",
         "sven/artisan-view": "^1.3",
         "yajra/laravel-datatables-oracle": "dev-master as 7.9.0"
     },
@@ -88,15 +84,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/rinvex/l55-laravel-activitylog"
-        },
-        {
-            "type": "vcs",
             "url": "https://github.com/rinvex/l55-laravel-fractal"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/rinvex/l55-laravel-translatable"
         },
         {
             "type": "vcs",
@@ -105,10 +93,6 @@
         {
             "type": "vcs",
             "url": "https://github.com/rinvex/l55-eloquent-sortable"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/rinvex/l55-laravel-snappy"
         },
         {
             "type": "vcs",
@@ -121,14 +105,6 @@
         {
             "type": "vcs",
             "url": "https://github.com/rinvex/l55-Laravel-Excel"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/rinvex/l55-laravel-jsvalidation"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/rinvex/l55-laravel-menu"
         }
     ],
     "autoload-dev": {
