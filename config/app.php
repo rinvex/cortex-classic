@@ -176,15 +176,10 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         // Packages Service Providers...
+        //DaveJamesMiller\Breadcrumbs\BreadcrumbsServiceProvider::class,
         Dusterio\AwsWorker\Integrations\LaravelServiceProvider::class,
-        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Krucas\Notification\NotificationServiceProvider::class,
-        Yajra\Datatables\DatatablesServiceProvider::class,
-        Yajra\Datatables\ButtonsServiceProvider::class,
-        Maatwebsite\Excel\ExcelServiceProvider::class,
-        Collective\Html\HtmlServiceProvider::class,
         Lord\Laroute\LarouteServiceProvider::class,
-        Barryvdh\Snappy\ServiceProvider::class,
         Aws\Laravel\AwsServiceProvider::class,
 
     ],
@@ -237,12 +232,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         // Packages Aliases...
-        'SnappyImage' => Barryvdh\Snappy\Facades\SnappyImage::class,
         'Alert' => Krucas\Notification\Facades\Notification::class,
-        'PDF' => Barryvdh\Snappy\Facades\SnappyPdf::class,
-        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
-        'Html' => Collective\Html\HtmlFacade::class,
-        'Form' => Collective\Html\FormFacade::class,
         'AWS' => Aws\Laravel\AwsFacade::class,
 
     ],
