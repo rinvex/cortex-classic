@@ -59,16 +59,13 @@
         "doctrine/dbal": "^2.6",
         "dusterio/laravel-aws-worker": "~0.1",
         "laracademy/interactive-make": "^1.1",
-        "laravel/envoy": "~1.0",
-        "laravel/framework": "^5.4",
+        "laravel/envoy": "~1.3.0",
+        "laravel/framework": "~5.5.0",
         "laravel/tinker": "^1.0.0",
-        "laravelcollective/html": "dev-master as 5.4.8",
         "lord/laroute": "^2.4.0",
         "predis/predis": "^1.1.0",
-        "spatie/eloquent-sortable": "dev-master as 3.3.0",
         "spatie/laravel-db-snapshots": "^1.1.0",
         "spatie/laravel-link-checker": "^2.0.0",
-        "spatie/laravel-sluggable": "dev-master as 1.5.0",
         "sven/artisan-view": "^1.3"
     },
     "require-dev": {
@@ -79,20 +76,6 @@
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/rinvex/l55-laravel-sluggable"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/rinvex/l55-eloquent-sortable"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/rinvex/l55-html"
-        }
-    ],
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
