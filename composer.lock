@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "790f9a506db994ffd9a222a1cb33874d",
+    "content-hash": "2cee708b456ec1521d175033143f601d",
     "packages": [
         {
             "name": "anahkiasen/underscore-php",
@@ -560,12 +560,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-attributable.git",
-                "reference": "fda53b1158a7057aa967e3e77fee18f58364c398"
+                "reference": "d0d81dd304144dd330fc717069796574ab3834f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-attributable/zipball/fda53b1158a7057aa967e3e77fee18f58364c398",
-                "reference": "fda53b1158a7057aa967e3e77fee18f58364c398",
+                "url": "https://api.github.com/repos/rinvex/cortex-attributable/zipball/d0d81dd304144dd330fc717069796574ab3834f1",
+                "reference": "d0d81dd304144dd330fc717069796574ab3834f1",
                 "shasum": ""
             },
             "require": {
@@ -586,7 +586,11 @@
                 "rinvex/fort": "dev-develop",
                 "rinvex/support": "dev-develop",
                 "spatie/laravel-activitylog": "^2.0.0",
-                "spatie/laravel-menu": "^3.0.0"
+                "spatie/laravel-menu": "^3.0.0",
+                "yajra/laravel-datatables-buttons": "^3.0.0",
+                "yajra/laravel-datatables-fractal": "^1.0.0",
+                "yajra/laravel-datatables-html": "^3.0.0",
+                "yajra/laravel-datatables-oracle": "^8.0.0"
             },
             "type": "cortex-module",
             "extra": {
@@ -654,7 +658,7 @@
                 "schema",
                 "value"
             ],
-            "time": "2017-08-30T23:49:33+00:00"
+            "time": "2017-08-31T01:32:58+00:00"
         },
         {
             "name": "cortex/categorizable",
@@ -662,12 +666,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-categorizable.git",
-                "reference": "6b82cef250fc4793e649f92988eb80470e4dd23d"
+                "reference": "17b8158e4bbaa5b8c81267f73069b08f513b7d7a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-categorizable/zipball/6b82cef250fc4793e649f92988eb80470e4dd23d",
-                "reference": "6b82cef250fc4793e649f92988eb80470e4dd23d",
+                "url": "https://api.github.com/repos/rinvex/cortex-categorizable/zipball/17b8158e4bbaa5b8c81267f73069b08f513b7d7a",
+                "reference": "17b8158e4bbaa5b8c81267f73069b08f513b7d7a",
                 "shasum": ""
             },
             "require": {
@@ -689,7 +693,11 @@
                 "rinvex/fort": "dev-develop",
                 "rinvex/support": "dev-develop",
                 "spatie/laravel-activitylog": "^2.0.0",
-                "spatie/laravel-menu": "^3.0.0"
+                "spatie/laravel-menu": "^3.0.0",
+                "yajra/laravel-datatables-buttons": "^3.0.0",
+                "yajra/laravel-datatables-fractal": "^1.0.0",
+                "yajra/laravel-datatables-html": "^3.0.0",
+                "yajra/laravel-datatables-oracle": "^8.0.0"
             },
             "type": "cortex-module",
             "extra": {
@@ -755,7 +763,7 @@
                 "taxonomy",
                 "translatable"
             ],
-            "time": "2017-08-30T23:49:26+00:00"
+            "time": "2017-08-31T01:32:39+00:00"
         },
         {
             "name": "cortex/console",
@@ -763,12 +771,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-console.git",
-                "reference": "92ae8892eeb6bd7f0f620ad7c7094ad2054bcdb5"
+                "reference": "caa27fe065364f4c87d10a254625f643e81dc30e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-console/zipball/92ae8892eeb6bd7f0f620ad7c7094ad2054bcdb5",
-                "reference": "92ae8892eeb6bd7f0f620ad7c7094ad2054bcdb5",
+                "url": "https://api.github.com/repos/rinvex/cortex-console/zipball/caa27fe065364f4c87d10a254625f643e81dc30e",
+                "reference": "caa27fe065364f4c87d10a254625f643e81dc30e",
                 "shasum": ""
             },
             "require": {
@@ -787,7 +795,11 @@
                 "rinvex/composable": "dev-develop",
                 "rinvex/fort": "dev-develop",
                 "spatie/laravel-menu": "^3.0.0",
-                "symfony/console": "~2.8|~3.0"
+                "symfony/console": "~2.8|~3.0",
+                "yajra/laravel-datatables-buttons": "^3.0.0",
+                "yajra/laravel-datatables-fractal": "^1.0.0",
+                "yajra/laravel-datatables-html": "^3.0.0",
+                "yajra/laravel-datatables-oracle": "^8.0.0"
             },
             "type": "cortex-module",
             "extra": {
@@ -848,7 +860,7 @@
                 "rinvex",
                 "system"
             ],
-            "time": "2017-08-30T23:48:49+00:00"
+            "time": "2017-08-31T01:33:14+00:00"
         },
         {
             "name": "cortex/contacts",
@@ -856,12 +868,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-contacts.git",
-                "reference": "ac649e1e0274a76cf7e11336917961b90ba57994"
+                "reference": "b07aa3f53275fb58d65eaf8fc0987b7e61bd70cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-contacts/zipball/ac649e1e0274a76cf7e11336917961b90ba57994",
-                "reference": "ac649e1e0274a76cf7e11336917961b90ba57994",
+                "url": "https://api.github.com/repos/rinvex/cortex-contacts/zipball/b07aa3f53275fb58d65eaf8fc0987b7e61bd70cc",
+                "reference": "b07aa3f53275fb58d65eaf8fc0987b7e61bd70cc",
                 "shasum": ""
             },
             "require": {
@@ -882,7 +894,11 @@
                 "rinvex/fort": "dev-develop",
                 "rinvex/support": "dev-develop",
                 "spatie/laravel-activitylog": "^2.0.0",
-                "spatie/laravel-menu": "^3.0.0"
+                "spatie/laravel-menu": "^3.0.0",
+                "yajra/laravel-datatables-buttons": "^3.0.0",
+                "yajra/laravel-datatables-fractal": "^1.0.0",
+                "yajra/laravel-datatables-html": "^3.0.0",
+                "yajra/laravel-datatables-oracle": "^8.0.0"
             },
             "type": "cortex-module",
             "extra": {
@@ -949,7 +965,7 @@
                 "rinvex",
                 "shipping"
             ],
-            "time": "2017-08-30T23:48:57+00:00"
+            "time": "2017-08-31T01:30:28+00:00"
         },
         {
             "name": "cortex/fort",
@@ -957,12 +973,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-fort.git",
-                "reference": "28df7b2404f433b06c9974dfffbecdd518637d93"
+                "reference": "5be32195243343ab9d18799c2cb447a6550f4fab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-fort/zipball/28df7b2404f433b06c9974dfffbecdd518637d93",
-                "reference": "28df7b2404f433b06c9974dfffbecdd518637d93",
+                "url": "https://api.github.com/repos/rinvex/cortex-fort/zipball/5be32195243343ab9d18799c2cb447a6550f4fab",
+                "reference": "5be32195243343ab9d18799c2cb447a6550f4fab",
                 "shasum": ""
             },
             "require": {
@@ -987,7 +1003,11 @@
                 "rinvex/fort": "dev-develop",
                 "rinvex/support": "dev-develop",
                 "spatie/laravel-activitylog": "^2.0.0",
-                "spatie/laravel-menu": "^3.0.0"
+                "spatie/laravel-menu": "^3.0.0",
+                "yajra/laravel-datatables-buttons": "^3.0.0",
+                "yajra/laravel-datatables-fractal": "^1.0.0",
+                "yajra/laravel-datatables-html": "^3.0.0",
+                "yajra/laravel-datatables-oracle": "^8.0.0"
             },
             "type": "cortex-module",
             "extra": {
@@ -1060,7 +1080,7 @@
                 "twofactor",
                 "verification"
             ],
-            "time": "2017-08-30T23:48:42+00:00"
+            "time": "2017-08-31T01:30:20+00:00"
         },
         {
             "name": "cortex/foundation",
@@ -1068,12 +1088,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-foundation.git",
-                "reference": "e68de973d43a661255e873ed9f65ebbdc1bababa"
+                "reference": "02d948f1b32ecdda33586896accd75521b2ce1cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-foundation/zipball/e68de973d43a661255e873ed9f65ebbdc1bababa",
-                "reference": "e68de973d43a661255e873ed9f65ebbdc1bababa",
+                "url": "https://api.github.com/repos/rinvex/cortex-foundation/zipball/02d948f1b32ecdda33586896accd75521b2ce1cb",
+                "reference": "02d948f1b32ecdda33586896accd75521b2ce1cb",
                 "shasum": ""
             },
             "require": {
@@ -1100,9 +1120,10 @@
                 "symfony/finder": "^3.0.0",
                 "symfony/http-kernel": "^3.0.0",
                 "watson/validating": "^3.0.0",
-                "yajra/laravel-datatables-buttons": "^2.0.0",
-                "yajra/laravel-datatables-html": "^2.0.0",
-                "yajra/laravel-datatables-oracle": "^7.9.0"
+                "yajra/laravel-datatables-buttons": "^3.0.0",
+                "yajra/laravel-datatables-fractal": "^1.0.0",
+                "yajra/laravel-datatables-html": "^3.0.0",
+                "yajra/laravel-datatables-oracle": "^8.0.0"
             },
             "type": "cortex-module",
             "extra": {
@@ -1174,7 +1195,7 @@
                 "module",
                 "rinvex"
             ],
-            "time": "2017-08-30T23:49:04+00:00"
+            "time": "2017-08-31T01:30:05+00:00"
         },
         {
             "name": "cortex/pages",
@@ -1182,12 +1203,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-pages.git",
-                "reference": "aa44f44d8c138981a7847f759af9748570c7051e"
+                "reference": "efc7a15d6f0bedf547ea51a548302c0771a54363"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-pages/zipball/aa44f44d8c138981a7847f759af9748570c7051e",
-                "reference": "aa44f44d8c138981a7847f759af9748570c7051e",
+                "url": "https://api.github.com/repos/rinvex/cortex-pages/zipball/efc7a15d6f0bedf547ea51a548302c0771a54363",
+                "reference": "efc7a15d6f0bedf547ea51a548302c0771a54363",
                 "shasum": ""
             },
             "require": {
@@ -1208,7 +1229,11 @@
                 "rinvex/pages": "dev-develop",
                 "rinvex/support": "dev-develop",
                 "spatie/laravel-activitylog": "^2.0.0",
-                "spatie/laravel-menu": "^3.0.0"
+                "spatie/laravel-menu": "^3.0.0",
+                "yajra/laravel-datatables-buttons": "^3.0.0",
+                "yajra/laravel-datatables-fractal": "^1.0.0",
+                "yajra/laravel-datatables-html": "^3.0.0",
+                "yajra/laravel-datatables-oracle": "^8.0.0"
             },
             "type": "cortex-module",
             "extra": {
@@ -1269,7 +1294,7 @@
                 "pages",
                 "rinvex"
             ],
-            "time": "2017-08-30T23:49:11+00:00"
+            "time": "2017-08-31T01:29:33+00:00"
         },
         {
             "name": "cortex/taggable",
@@ -1277,12 +1302,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-taggable.git",
-                "reference": "114807c030841ace0e221e6465bc329d6bb4581b"
+                "reference": "1e88688862925d8812bebab1dd7f60123457e6cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-taggable/zipball/114807c030841ace0e221e6465bc329d6bb4581b",
-                "reference": "114807c030841ace0e221e6465bc329d6bb4581b",
+                "url": "https://api.github.com/repos/rinvex/cortex-taggable/zipball/1e88688862925d8812bebab1dd7f60123457e6cc",
+                "reference": "1e88688862925d8812bebab1dd7f60123457e6cc",
                 "shasum": ""
             },
             "require": {
@@ -1303,7 +1328,11 @@
                 "rinvex/support": "dev-develop",
                 "rinvex/taggable": "dev-develop",
                 "spatie/laravel-activitylog": "^2.0.0",
-                "spatie/laravel-menu": "^3.0.0"
+                "spatie/laravel-menu": "^3.0.0",
+                "yajra/laravel-datatables-buttons": "^3.0.0",
+                "yajra/laravel-datatables-fractal": "^1.0.0",
+                "yajra/laravel-datatables-html": "^3.0.0",
+                "yajra/laravel-datatables-oracle": "^8.0.0"
             },
             "type": "cortex-module",
             "extra": {
@@ -1369,7 +1398,7 @@
                 "taxonomy",
                 "translatable"
             ],
-            "time": "2017-08-30T23:49:17+00:00"
+            "time": "2017-08-31T01:29:16+00:00"
         },
         {
             "name": "cortex/tenantable",
@@ -1377,12 +1406,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-tenantable.git",
-                "reference": "615d05bb44dbbc68e86c70704ac28f06af07f989"
+                "reference": "17eee7de95d00fbad4ad12f04e04ff954cd92605"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-tenantable/zipball/615d05bb44dbbc68e86c70704ac28f06af07f989",
-                "reference": "615d05bb44dbbc68e86c70704ac28f06af07f989",
+                "url": "https://api.github.com/repos/rinvex/cortex-tenantable/zipball/17eee7de95d00fbad4ad12f04e04ff954cd92605",
+                "reference": "17eee7de95d00fbad4ad12f04e04ff954cd92605",
                 "shasum": ""
             },
             "require": {
@@ -1404,7 +1433,11 @@
                 "rinvex/support": "dev-develop",
                 "rinvex/tenantable": "dev-develop",
                 "spatie/laravel-activitylog": "^2.0.0",
-                "spatie/laravel-menu": "^3.0.0"
+                "spatie/laravel-menu": "^3.0.0",
+                "yajra/laravel-datatables-buttons": "^3.0.0",
+                "yajra/laravel-datatables-fractal": "^1.0.0",
+                "yajra/laravel-datatables-html": "^3.0.0",
+                "yajra/laravel-datatables-oracle": "^8.0.0"
             },
             "type": "cortex-module",
             "extra": {
@@ -1469,7 +1502,7 @@
                 "tenantable",
                 "translatable"
             ],
-            "time": "2017-08-30T23:48:35+00:00"
+            "time": "2017-08-31T01:29:00+00:00"
         },
         {
             "name": "davejamesmiller/laravel-breadcrumbs",
@@ -3597,19 +3630,20 @@
         },
         {
             "name": "maatwebsite/excel",
-            "version": "dev-master",
+            "version": "2.1.21",
             "source": {
                 "type": "git",
-                "url": "https://github.com/rinvex/l55-Laravel-Excel.git",
-                "reference": "440e314ae53c9d694ac0728f681fde63f1390bc1"
+                "url": "https://github.com/Maatwebsite/Laravel-Excel.git",
+                "reference": "2f5e717a09bfa69f5d804a97880a944a3bbe25d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/l55-Laravel-Excel/zipball/440e314ae53c9d694ac0728f681fde63f1390bc1",
-                "reference": "440e314ae53c9d694ac0728f681fde63f1390bc1",
+                "url": "https://api.github.com/repos/Maatwebsite/Laravel-Excel/zipball/2f5e717a09bfa69f5d804a97880a944a3bbe25d2",
+                "reference": "2f5e717a09bfa69f5d804a97880a944a3bbe25d2",
                 "shasum": ""
             },
             "require": {
+                "ext-zip": "*",
                 "illuminate/cache": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*|5.5.*",
                 "illuminate/config": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*|5.5.*",
                 "illuminate/filesystem": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*|5.5.*",
@@ -3622,7 +3656,7 @@
             },
             "require-dev": {
                 "mockery/mockery": "~0.9",
-                "orchestra/testbench": "3.1.*",
+                "orchestra/testbench": "3.1.*|3.2.*|3.3.*|3.4.*|3.5.*",
                 "phpseclib/phpseclib": "~1.0",
                 "phpunit/phpunit": "~4.0"
             },
@@ -3651,11 +3685,7 @@
                     "Maatwebsite\\Excel\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "classmap": [
-                    "tests/TestCase.php"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "LGPL"
             ],
@@ -3667,18 +3697,15 @@
             ],
             "description": "An eloquent way of importing and exporting Excel and CSV in Laravel 4 with the power of PHPExcel",
             "keywords": [
+                "PHPExcel",
                 "batch",
                 "csv",
                 "excel",
                 "export",
                 "import",
-                "laravel",
-                "phpexcel"
+                "laravel"
             ],
-            "support": {
-                "source": "https://github.com/rinvex/l55-Laravel-Excel/tree/master"
-            },
-            "time": "2017-06-29T07:39:19+00:00"
+            "time": "2017-08-16T14:49:55+00:00"
         },
         {
             "name": "mcamara/laravel-localization",
@@ -5653,12 +5680,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/pages.git",
-                "reference": "afdbe9c0acba3174861de42ae6c25897178ee736"
+                "reference": "d6482e081d2676f3c6d723ca3d9018621eca595b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/pages/zipball/afdbe9c0acba3174861de42ae6c25897178ee736",
-                "reference": "afdbe9c0acba3174861de42ae6c25897178ee736",
+                "url": "https://api.github.com/repos/rinvex/pages/zipball/d6482e081d2676f3c6d723ca3d9018621eca595b",
+                "reference": "d6482e081d2676f3c6d723ca3d9018621eca595b",
                 "shasum": ""
             },
             "require": {
@@ -5725,7 +5752,7 @@
                 "pages",
                 "rinvex"
             ],
-            "time": "2017-08-30T22:57:38+00:00"
+            "time": "2017-08-31T00:11:11+00:00"
         },
         {
             "name": "rinvex/support",
@@ -8120,24 +8147,24 @@
         },
         {
             "name": "yajra/laravel-datatables-buttons",
-            "version": "v2.0.3",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yajra/laravel-datatables-buttons.git",
-                "reference": "18c9e3a9ef769c4fd777b9ac58185affabdef761"
+                "reference": "3eb655438435cb5d64aab618c581d0575649881a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yajra/laravel-datatables-buttons/zipball/18c9e3a9ef769c4fd777b9ac58185affabdef761",
-                "reference": "18c9e3a9ef769c4fd777b9ac58185affabdef761",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables-buttons/zipball/3eb655438435cb5d64aab618c581d0575649881a",
+                "reference": "3eb655438435cb5d64aab618c581d0575649881a",
                 "shasum": ""
             },
             "require": {
                 "illuminate/console": "5.4.*|5.5.*",
                 "maatwebsite/excel": "^2.0",
                 "php": ">=7.0",
-                "yajra/laravel-datatables-html": "^2.0",
-                "yajra/laravel-datatables-oracle": "7.*|8.*"
+                "yajra/laravel-datatables-html": "3.*",
+                "yajra/laravel-datatables-oracle": "8.*"
             },
             "require-dev": {
                 "mockery/mockery": "0.9.*",
@@ -8150,17 +8177,17 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0-dev"
+                    "dev-master": "3.0-dev"
                 },
                 "laravel": {
                     "providers": [
-                        "Yajra\\Datatables\\ButtonsServiceProvider"
+                        "Yajra\\DataTables\\ButtonsServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Yajra\\Datatables\\": "src/"
+                    "Yajra\\DataTables\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -8173,33 +8200,33 @@
                     "email": "aqangeles@gmail.com"
                 }
             ],
-            "description": "jQuery DataTables Buttons Plugin for Laravel.",
+            "description": "Laravel DataTables Buttons Plugin.",
             "keywords": [
                 "buttons",
                 "datatables",
                 "jquery",
                 "laravel"
             ],
-            "time": "2017-07-21T01:26:07+00:00"
+            "time": "2017-08-23T01:56:10+00:00"
         },
         {
-            "name": "yajra/laravel-datatables-html",
-            "version": "v2.0.6",
+            "name": "yajra/laravel-datatables-fractal",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/yajra/laravel-datatables-html.git",
-                "reference": "eb3d18ed9f70c6a9ac3c08fa9bd443fb22d7fc1c"
+                "url": "https://github.com/yajra/laravel-datatables-fractal.git",
+                "reference": "d6b4015c6fa4f702cc3a523318eb1582521837f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yajra/laravel-datatables-html/zipball/eb3d18ed9f70c6a9ac3c08fa9bd443fb22d7fc1c",
-                "reference": "eb3d18ed9f70c6a9ac3c08fa9bd443fb22d7fc1c",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables-fractal/zipball/d6b4015c6fa4f702cc3a523318eb1582521837f2",
+                "reference": "d6b4015c6fa4f702cc3a523318eb1582521837f2",
                 "shasum": ""
             },
             "require": {
-                "laravelcollective/html": "5.4.*|5.5.*",
-                "php": ">=5.6.4",
-                "yajra/laravel-datatables-oracle": "7.*|8.*"
+                "league/fractal": "^0.16",
+                "php": ">=7.0",
+                "yajra/laravel-datatables-oracle": "8.*"
             },
             "require-dev": {
                 "mockery/mockery": "0.9.*",
@@ -8208,17 +8235,75 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0-dev"
+                    "dev-master": "1.0-dev"
                 },
                 "laravel": {
                     "providers": [
-                        "Yajra\\Datatables\\HtmlServiceProvider"
+                        "Yajra\\DataTables\\FractalServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Yajra\\Datatables\\": "src/"
+                    "Yajra\\DataTables\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arjay Angeles",
+                    "email": "aqangeles@gmail.com"
+                }
+            ],
+            "description": "Laravel DataTables Fractal Plugin.",
+            "keywords": [
+                "api",
+                "datatables",
+                "fractal",
+                "laravel"
+            ],
+            "time": "2017-07-05T05:10:18+00:00"
+        },
+        {
+            "name": "yajra/laravel-datatables-html",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yajra/laravel-datatables-html.git",
+                "reference": "6eec59f51833a9bb4b8a324e70585d69068a3a16"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables-html/zipball/6eec59f51833a9bb4b8a324e70585d69068a3a16",
+                "reference": "6eec59f51833a9bb4b8a324e70585d69068a3a16",
+                "shasum": ""
+            },
+            "require": {
+                "laravelcollective/html": "5.4.*|5.5.*",
+                "php": ">=7.0",
+                "yajra/laravel-datatables-oracle": "8.*"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "~6.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Yajra\\DataTables\\HtmlServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Yajra\\DataTables\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -8239,56 +8324,61 @@
                 "jquery",
                 "laravel"
             ],
-            "time": "2017-07-29T03:11:53+00:00"
+            "time": "2017-08-31T01:22:28+00:00"
         },
         {
             "name": "yajra/laravel-datatables-oracle",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/rinvex/l55-laravel-datatables.git",
-                "reference": "7dfb16deb5d0c84efa3d4b419439c9d0d0712634"
+                "url": "https://github.com/yajra/laravel-datatables.git",
+                "reference": "4e265c485568943fd70c187897add18d17d488a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/l55-laravel-datatables/zipball/7dfb16deb5d0c84efa3d4b419439c9d0d0712634",
-                "reference": "7dfb16deb5d0c84efa3d4b419439c9d0d0712634",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/4e265c485568943fd70c187897add18d17d488a5",
+                "reference": "4e265c485568943fd70c187897add18d17d488a5",
                 "shasum": ""
             },
             "require": {
-                "illuminate/database": "~5.5.0",
-                "illuminate/filesystem": "~5.5.0",
-                "illuminate/http": "~5.5.0",
-                "illuminate/support": "~5.5.0",
-                "illuminate/view": "~5.5.0",
-                "php": ">=5.6.4"
+                "illuminate/database": "5.4.*|5.5.*",
+                "illuminate/filesystem": "5.4.*|5.5.*",
+                "illuminate/http": "5.4.*|5.5.*",
+                "illuminate/support": "5.4.*|5.5.*",
+                "illuminate/view": "5.4.*|5.5.*",
+                "php": ">=7.0"
             },
             "require-dev": {
-                "mockery/mockery": "0.9.*",
-                "orchestra/testbench": "^3.4",
-                "phpunit/phpunit": "~5.7"
+                "orchestra/testbench": "~3.5"
             },
             "suggest": {
-                "league/fractal": "Transform your api response into something you won't hate.",
                 "yajra/laravel-datatables-buttons": "Plugin for server-side exporting of dataTable.",
+                "yajra/laravel-datatables-fractal": "Plugin for server-side response using Fractal.",
                 "yajra/laravel-datatables-html": "Plugin for server-side HTML builder of dataTable."
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "7.0-dev"
+                    "dev-master": "8.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Yajra\\DataTables\\DataTablesServiceProvider"
+                    ],
+                    "aliases": {
+                        "DataTables": "Yajra\\DataTables\\Facades\\DataTables"
+                    }
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Yajra\\Datatables\\": "src/"
-                }
+                    "Yajra\\DataTables\\": "src/"
+                },
+                "files": [
+                    "src/helper.php"
+                ]
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Yajra\\Datatables\\Tests\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -8300,14 +8390,11 @@
             ],
             "description": "jQuery DataTables API for Laravel 4|5",
             "keywords": [
-                "dataTables",
+                "datatables",
                 "jquery",
                 "laravel"
             ],
-            "support": {
-                "source": "https://github.com/rinvex/l55-laravel-datatables/tree/master"
-            },
-            "time": "2017-06-29T07:16:47+00:00"
+            "time": "2017-08-31T01:46:38+00:00"
         }
     ],
     "packages-dev": [
@@ -10272,12 +10359,6 @@
             "package": "laravelcollective/html"
         },
         {
-            "alias": "2.1.17",
-            "alias_normalized": "2.1.17.0",
-            "version": "9999999-dev",
-            "package": "maatwebsite/excel"
-        },
-        {
             "alias": "3.3.0",
             "alias_normalized": "3.3.0.0",
             "version": "9999999-dev",
@@ -10288,12 +10369,6 @@
             "alias_normalized": "1.5.0.0",
             "version": "9999999-dev",
             "package": "spatie/laravel-sluggable"
-        },
-        {
-            "alias": "7.9.0",
-            "alias_normalized": "7.9.0.0",
-            "version": "9999999-dev",
-            "package": "yajra/laravel-datatables-oracle"
         }
     ],
     "minimum-stability": "dev",
@@ -10308,10 +10383,8 @@
         "cortex/taggable": 20,
         "cortex/tenantable": 20,
         "laravelcollective/html": 20,
-        "maatwebsite/excel": 20,
         "spatie/eloquent-sortable": 20,
-        "spatie/laravel-sluggable": 20,
-        "yajra/laravel-datatables-oracle": 20
+        "spatie/laravel-sluggable": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
