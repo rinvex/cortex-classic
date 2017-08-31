@@ -39,8 +39,8 @@ require('select2');
 require('moment-timezone');
 require('./vendor/slugify');
 window.moment = require('moment');
-window.routes = require('./routes');
 window.pace = require('./vendor/pace');
+window.routes = require('../../../public/js/routes');
 
 // Terminal
 require('jquery.terminal');
