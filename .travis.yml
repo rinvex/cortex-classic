@@ -21,6 +21,7 @@ after_script:
   - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
 
 notifications:
+  email: false
   slack:
     rooms:
       - secure: UmC1WpHy46UsFyCxQUOXFltI4kI9eVL0gweZov7OiuFmdEUEmhhegKmEbIfuQUqyyUkjb4J77iP8ZGMahe+vLrYI8XQB6bkyf1BLeFrcNcRmz4HzciiCCrI0g3ZMtCN6Y/YA8zuSu7uCjEYRwB4SvM9De8nuEFUniK1+xBOc22n2JcB+AdhHB63w49+Kxmhrj7E9W3i6XpjF0XY/VmVPJz7gtAY7cODYm5AXe+mafdtcL9hjm3n9jQ/qro2pu6t0pTPd6J5nIlr6AkNorEdQtggq1uIEc6oTlf5ZhX8tUy6Cb7laotlt/+evDbuu6whA46a5CdkXlHVTzrv6yrxDG/zco8jBjxUFTCxaZ+/8Y8dF/cE1O7DZvn0dyfkX4rU+9MlgM0FX56YojkSnq+w+SKB+tEl428n/Ar63KDgTdjtYa5mzu9CFguuTbnSepekRO38C7CVABXiY+Ahheaopza0aVzLmfXGm9nWWgMrUV4cfdTnbZydDx82tzWUiWvsTxy9Hf7/Qx1B3bgNjofborkxC3Nzim5z4ff2yrWyNOIqFbsH+VboHgQh5Dr7hycPbRJ/B/n+EcaFR1wejzg+Q6NZ6fFFiFndS6/gxVukYhBrqO4iANZPeDz1HZk45/3/N7FD7peOoBIclZphNOcovwPT0HMH0JuUTM8H7VzbwSA0=
