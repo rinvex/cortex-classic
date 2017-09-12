@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 return [
 
-    // Tenantable Database Tables
+    // Tenants Database Tables
     'tables' => [
 
         'tenants' => 'tenants',
@@ -12,7 +12,7 @@ return [
 
     ],
 
-    // Tenantable Models
+    // Tenants Models
     'models' => [
         'tenant' => \Cortex\Tenantable\Models\Tenant::class,
     ],

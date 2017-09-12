@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 return [
 
-    // Taggable Database Tables
+    // Tags Database Tables
     'tables' => [
 
         'tags' => 'tags',
@@ -12,7 +12,7 @@ return [
 
     ],
 
-    // Taggable Models
+    // Tags Models
     'models' => [
         'tag' => \Cortex\Taggable\Models\Tag::class,
     ],

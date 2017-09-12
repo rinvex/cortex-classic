@@ -20,10 +20,10 @@ return [
 
     ],
 
-    // Backend Configuration
-    'backend' => [
+    // Adminarea Configuration
+    'adminarea' => [
 
-        // Backend Idle Timeout
+        // Adminarea Idle Timeout
         'idle_timeout' => [
 
             'enforce' => false,

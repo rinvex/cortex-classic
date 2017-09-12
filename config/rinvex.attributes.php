@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 return [
 
-    // Attributable Database Tables
+    // Attributes Database Tables
     'tables' => [
 
         'attributes' => 'attributes',
@@ -17,7 +17,7 @@ return [
 
     ],
 
-    // Attributable Models
+    // Attributes Models
     'models' => [
 
         'attribute' => \Cortex\Attributable\Models\Attribute::class,
