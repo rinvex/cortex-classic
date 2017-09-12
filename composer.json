@@ -58,7 +58,6 @@
         "cortex/tenants": "dev-develop",
         "doctrine/dbal": "^2.6",
         "dusterio/laravel-aws-worker": "~0.1",
-        "laracademy/interactive-make": "^1.1",
         "laravel/envoy": "~1.3.0",
         "laravel/framework": "~5.5.0",
         "laravel/tinker": "^1.0.0",
