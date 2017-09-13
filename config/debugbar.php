@@ -180,7 +180,7 @@ return [
      | from trying to overcome bugs like this: http://trac.nginx.org/nginx/ticket/97
      |
      */
-    'route_prefix' => config('rinvex.cortex.route.locale_prefix') ? '{locale}/_debugbar' : '_debugbar',
+    'route_prefix' => config('cortex.foundation.route.locale_prefix') ? '{locale}/_debugbar' : '_debugbar',
 
     /*
      |--------------------------------------------------------------------------

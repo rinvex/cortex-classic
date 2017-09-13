@@ -14,7 +14,7 @@ return [
 
     // Categories Models
     'models' => [
-        'category' => \Cortex\Categorizable\Models\Category::class,
+        'category' => \Cortex\Categories\Models\Category::class,
     ],
 
 ];

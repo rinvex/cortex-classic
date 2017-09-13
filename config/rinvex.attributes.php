@@ -20,8 +20,8 @@ return [
     // Attributes Models
     'models' => [
 
-        'attribute' => \Cortex\Attributable\Models\Attribute::class,
-        'attribute_entity' => \Rinvex\Attributable\Models\AttributeEntity::class,
+        'attribute' => \Cortex\Attributes\Models\Attribute::class,
+        'attribute_entity' => \Rinvex\Attributes\Models\AttributeEntity::class,
 
     ],
 

@@ -14,7 +14,7 @@ return [
 
     // Tenants Models
     'models' => [
-        'tenant' => \Cortex\Tenantable\Models\Tenant::class,
+        'tenant' => \Cortex\Tenants\Models\Tenant::class,
     ],
 
 ];

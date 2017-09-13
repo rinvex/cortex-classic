@@ -14,7 +14,7 @@ return [
 
     // Tags Models
     'models' => [
-        'tag' => \Cortex\Taggable\Models\Tag::class,
+        'tag' => \Cortex\Tags\Models\Tag::class,
     ],
 
 ];
