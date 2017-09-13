@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "29b185884447b0b4099b49a2416de989",
+    "content-hash": "0c41ecb4e6ff1596d9e581b28e69a854",
     "packages": [
         {
             "name": "anahkiasen/underscore-php",
@@ -58,16 +58,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.36.5",
+            "version": "3.36.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "db5dc59777b663c7640a0cd3063e52b39c50dac2"
+                "reference": "a7cd486139971d66387a4938f5a0a2a95e50d678"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/db5dc59777b663c7640a0cd3063e52b39c50dac2",
-                "reference": "db5dc59777b663c7640a0cd3063e52b39c50dac2",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/a7cd486139971d66387a4938f5a0a2a95e50d678",
+                "reference": "a7cd486139971d66387a4938f5a0a2a95e50d678",
                 "shasum": ""
             },
             "require": {
@@ -134,7 +134,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-09-11T19:34:19+00:00"
+            "time": "2017-09-12T17:09:10+00:00"
         },
         {
             "name": "aws/aws-sdk-php-laravel",
@@ -560,12 +560,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-attributes.git",
-                "reference": "1da35487cfcd762e428af06ff07e99d45a23c2d1"
+                "reference": "217685ebf086fb367890393d534b5add366e0f74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-attributes/zipball/1da35487cfcd762e428af06ff07e99d45a23c2d1",
-                "reference": "1da35487cfcd762e428af06ff07e99d45a23c2d1",
+                "url": "https://api.github.com/repos/rinvex/cortex-attributes/zipball/217685ebf086fb367890393d534b5add366e0f74",
+                "reference": "217685ebf086fb367890393d534b5add366e0f74",
                 "shasum": ""
             },
             "require": {
@@ -658,7 +658,7 @@
                 "schema",
                 "value"
             ],
-            "time": "2017-09-12T16:59:57+00:00"
+            "time": "2017-09-13T09:32:34+00:00"
         },
         {
             "name": "cortex/categories",
@@ -666,12 +666,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-categories.git",
-                "reference": "6ac698b90b70bdaf42b005edceddda9bb3412fa4"
+                "reference": "70a8de1c06964276b493ce42bb7fd39a3a775a61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-categories/zipball/6ac698b90b70bdaf42b005edceddda9bb3412fa4",
-                "reference": "6ac698b90b70bdaf42b005edceddda9bb3412fa4",
+                "url": "https://api.github.com/repos/rinvex/cortex-categories/zipball/70a8de1c06964276b493ce42bb7fd39a3a775a61",
+                "reference": "70a8de1c06964276b493ce42bb7fd39a3a775a61",
                 "shasum": ""
             },
             "require": {
@@ -763,7 +763,7 @@
                 "taxonomy",
                 "translatable"
             ],
-            "time": "2017-09-12T17:00:07+00:00"
+            "time": "2017-09-13T09:36:31+00:00"
         },
         {
             "name": "cortex/console",
@@ -771,12 +771,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-console.git",
-                "reference": "2d8ffa7825a7ffdb94b11948f70f6ce5f1056ea9"
+                "reference": "67a95869ef0542ca81344a39ace7935fcef9365e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-console/zipball/2d8ffa7825a7ffdb94b11948f70f6ce5f1056ea9",
-                "reference": "2d8ffa7825a7ffdb94b11948f70f6ce5f1056ea9",
+                "url": "https://api.github.com/repos/rinvex/cortex-console/zipball/67a95869ef0542ca81344a39ace7935fcef9365e",
+                "reference": "67a95869ef0542ca81344a39ace7935fcef9365e",
                 "shasum": ""
             },
             "require": {
@@ -860,7 +860,7 @@
                 "rinvex",
                 "system"
             ],
-            "time": "2017-09-12T17:00:16+00:00"
+            "time": "2017-09-13T09:36:40+00:00"
         },
         {
             "name": "cortex/contacts",
@@ -868,12 +868,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-contacts.git",
-                "reference": "a933a1b0bf39577d4a90195305048a95a77e6411"
+                "reference": "ad31beb80deca032f213f1819ce26f43df1f3187"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-contacts/zipball/a933a1b0bf39577d4a90195305048a95a77e6411",
-                "reference": "a933a1b0bf39577d4a90195305048a95a77e6411",
+                "url": "https://api.github.com/repos/rinvex/cortex-contacts/zipball/ad31beb80deca032f213f1819ce26f43df1f3187",
+                "reference": "ad31beb80deca032f213f1819ce26f43df1f3187",
                 "shasum": ""
             },
             "require": {
@@ -965,7 +965,7 @@
                 "rinvex",
                 "shipping"
             ],
-            "time": "2017-09-12T17:00:41+00:00"
+            "time": "2017-09-13T09:36:48+00:00"
         },
         {
             "name": "cortex/fort",
@@ -973,12 +973,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-fort.git",
-                "reference": "e874c5fbb8a785a64d306f79a3bedb7a3e0d9feb"
+                "reference": "daa6473ca05e9d7da77c6f150b1b329795795cad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-fort/zipball/e874c5fbb8a785a64d306f79a3bedb7a3e0d9feb",
-                "reference": "e874c5fbb8a785a64d306f79a3bedb7a3e0d9feb",
+                "url": "https://api.github.com/repos/rinvex/cortex-fort/zipball/daa6473ca05e9d7da77c6f150b1b329795795cad",
+                "reference": "daa6473ca05e9d7da77c6f150b1b329795795cad",
                 "shasum": ""
             },
             "require": {
@@ -1080,7 +1080,7 @@
                 "twofactor",
                 "verification"
             ],
-            "time": "2017-09-12T17:00:52+00:00"
+            "time": "2017-09-13T09:36:59+00:00"
         },
         {
             "name": "cortex/foundation",
@@ -1088,12 +1088,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-foundation.git",
-                "reference": "dcf5f10e756b0f3859bd728fb216dc8d6531ff07"
+                "reference": "d05791626369c44375e1de997a71f1d1fcf8cfb8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-foundation/zipball/dcf5f10e756b0f3859bd728fb216dc8d6531ff07",
-                "reference": "dcf5f10e756b0f3859bd728fb216dc8d6531ff07",
+                "url": "https://api.github.com/repos/rinvex/cortex-foundation/zipball/d05791626369c44375e1de997a71f1d1fcf8cfb8",
+                "reference": "d05791626369c44375e1de997a71f1d1fcf8cfb8",
                 "shasum": ""
             },
             "require": {
@@ -1195,7 +1195,7 @@
                 "module",
                 "rinvex"
             ],
-            "time": "2017-09-12T16:46:50+00:00"
+            "time": "2017-09-13T12:27:59+00:00"
         },
         {
             "name": "cortex/pages",
@@ -1203,12 +1203,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-pages.git",
-                "reference": "5da4dcdb4f7d80c11ab231a0197b3c020c9bac74"
+                "reference": "a3cd43d9d22fff8d06a423047896929e7dd9612a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-pages/zipball/5da4dcdb4f7d80c11ab231a0197b3c020c9bac74",
-                "reference": "5da4dcdb4f7d80c11ab231a0197b3c020c9bac74",
+                "url": "https://api.github.com/repos/rinvex/cortex-pages/zipball/a3cd43d9d22fff8d06a423047896929e7dd9612a",
+                "reference": "a3cd43d9d22fff8d06a423047896929e7dd9612a",
                 "shasum": ""
             },
             "require": {
@@ -1294,7 +1294,7 @@
                 "pages",
                 "rinvex"
             ],
-            "time": "2017-09-12T17:01:00+00:00"
+            "time": "2017-09-13T09:37:13+00:00"
         },
         {
             "name": "cortex/tags",
@@ -1302,12 +1302,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-tags.git",
-                "reference": "72bcd27791fe16fc4166d9c55e48b42fa7149466"
+                "reference": "dd586854ea52a35fc454ece499c9814860c02091"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-tags/zipball/72bcd27791fe16fc4166d9c55e48b42fa7149466",
-                "reference": "72bcd27791fe16fc4166d9c55e48b42fa7149466",
+                "url": "https://api.github.com/repos/rinvex/cortex-tags/zipball/dd586854ea52a35fc454ece499c9814860c02091",
+                "reference": "dd586854ea52a35fc454ece499c9814860c02091",
                 "shasum": ""
             },
             "require": {
@@ -1399,7 +1399,7 @@
                 "taxonomy",
                 "translatable"
             ],
-            "time": "2017-09-12T17:01:07+00:00"
+            "time": "2017-09-13T09:37:06+00:00"
         },
         {
             "name": "cortex/tenants",
@@ -1407,12 +1407,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rinvex/cortex-tenants.git",
-                "reference": "9cd5ca517851886a58d38b1dabf9015dde378c06"
+                "reference": "0841fbfd83d722db0c0052753509d676aa4479bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rinvex/cortex-tenants/zipball/9cd5ca517851886a58d38b1dabf9015dde378c06",
-                "reference": "9cd5ca517851886a58d38b1dabf9015dde378c06",
+                "url": "https://api.github.com/repos/rinvex/cortex-tenants/zipball/0841fbfd83d722db0c0052753509d676aa4479bb",
+                "reference": "0841fbfd83d722db0c0052753509d676aa4479bb",
                 "shasum": ""
             },
             "require": {
@@ -1503,7 +1503,7 @@
                 "tenantable",
                 "translatable"
             ],
-            "time": "2017-09-12T17:01:21+00:00"
+            "time": "2017-09-13T09:37:30+00:00"
         },
         {
             "name": "davejamesmiller/laravel-breadcrumbs",
@@ -3016,16 +3016,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.5.3",
+            "version": "v5.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "779a98d3b2ebed2128db1a668dcc10a65c9b01be"
+                "reference": "d3e0493bead126cf7fb9a005c64e6b58a9190e51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/779a98d3b2ebed2128db1a668dcc10a65c9b01be",
-                "reference": "779a98d3b2ebed2128db1a668dcc10a65c9b01be",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/d3e0493bead126cf7fb9a005c64e6b58a9190e51",
+                "reference": "d3e0493bead126cf7fb9a005c64e6b58a9190e51",
                 "shasum": ""
             },
             "require": {
@@ -3144,7 +3144,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-09-07T13:50:21+00:00"
+            "time": "2017-09-13T13:36:29+00:00"
         },
         {
             "name": "laravel/socialite",
@@ -8350,25 +8350,44 @@
     "packages-dev": [
         {
             "name": "barryvdh/laravel-debugbar",
-            "version": "v2.4.3",
+            "version": "v3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-debugbar.git",
-                "reference": "d7c88f08131f6404cb714f3f6cf0642f6afa3903"
+                "reference": "bce341e3194bbeffa60ac782d645067557f5075e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/d7c88f08131f6404cb714f3f6cf0642f6afa3903",
-                "reference": "d7c88f08131f6404cb714f3f6cf0642f6afa3903",
+                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/zipball/bce341e3194bbeffa60ac782d645067557f5075e",
+                "reference": "bce341e3194bbeffa60ac782d645067557f5075e",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*",
-                "maximebf/debugbar": "~1.13.0",
-                "php": ">=5.5.9",
-                "symfony/finder": "~2.7|~3.0"
+                "illuminate/routing": "5.5.x",
+                "illuminate/session": "5.5.x",
+                "illuminate/support": "5.5.x",
+                "maximebf/debugbar": "~1.14.0",
+                "php": ">=7.0",
+                "symfony/debug": "^3",
+                "symfony/finder": "^3"
+            },
+            "require-dev": {
+                "illuminate/framework": "5.5.x"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Barryvdh\\Debugbar\\ServiceProvider"
+                    ],
+                    "aliases": {
+                        "Debugbar": "Barryvdh\\Debugbar\\Facade"
+                    }
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Barryvdh\\Debugbar\\": "src/"
@@ -8395,7 +8414,7 @@
                 "profiler",
                 "webprofiler"
             ],
-            "time": "2017-07-21T11:56:48+00:00"
+            "time": "2017-08-29T08:54:25+00:00"
         },
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -8574,6 +8593,67 @@
             "time": "2017-07-22T11:58:36+00:00"
         },
         {
+            "name": "filp/whoops",
+            "version": "2.1.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/filp/whoops.git",
+                "reference": "ffbbd2c06c64b08fb47974eed5dbce4ca2bb0eec"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/ffbbd2c06c64b08fb47974eed5dbce4ca2bb0eec",
+                "reference": "ffbbd2c06c64b08fb47974eed5dbce4ca2bb0eec",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5.9 || ^7.0",
+                "psr/log": "^1.0.1"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "^4.8 || ^5.0",
+                "symfony/var-dumper": "^2.6 || ^3.0"
+            },
+            "suggest": {
+                "symfony/var-dumper": "Pretty print complex values better with var-dumper available",
+                "whoops/soap": "Formats errors as SOAP responses"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Whoops\\": "src/Whoops/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Filipe Dobreira",
+                    "homepage": "https://github.com/filp",
+                    "role": "Developer"
+                }
+            ],
+            "description": "php error handling for cool kids",
+            "homepage": "https://filp.github.io/whoops/",
+            "keywords": [
+                "error",
+                "exception",
+                "handling",
+                "library",
+                "whoops",
+                "zf2"
+            ],
+            "time": "2017-08-03T18:23:40+00:00"
+        },
+        {
             "name": "fzaninotto/faker",
             "version": "v1.7.1",
             "source": {
@@ -8670,16 +8750,16 @@
         },
         {
             "name": "itsgoingd/clockwork",
-            "version": "v1.14.3",
+            "version": "v1.14.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/itsgoingd/clockwork.git",
-                "reference": "60a17e85a7f24b0161da906ab184d75ab4dceb41"
+                "reference": "015d0afa1604b6e44f52bf358c3a1f4d87cc7d5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/itsgoingd/clockwork/zipball/60a17e85a7f24b0161da906ab184d75ab4dceb41",
-                "reference": "60a17e85a7f24b0161da906ab184d75ab4dceb41",
+                "url": "https://api.github.com/repos/itsgoingd/clockwork/zipball/015d0afa1604b6e44f52bf358c3a1f4d87cc7d5e",
+                "reference": "015d0afa1604b6e44f52bf358c3a1f4d87cc7d5e",
                 "shasum": ""
             },
             "require": {
@@ -8721,20 +8801,20 @@
                 "logging",
                 "profiling"
             ],
-            "time": "2017-08-30T10:37:49+00:00"
+            "time": "2017-09-13T15:05:34+00:00"
         },
         {
             "name": "maximebf/debugbar",
-            "version": "1.13.1",
+            "version": "v1.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/maximebf/php-debugbar.git",
-                "reference": "afee79a236348e39a44cb837106b7c5b4897ac2a"
+                "reference": "e23a98f2d65607d8aa6c7b409a513f8fdf4acdde"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maximebf/php-debugbar/zipball/afee79a236348e39a44cb837106b7c5b4897ac2a",
-                "reference": "afee79a236348e39a44cb837106b7c5b4897ac2a",
+                "url": "https://api.github.com/repos/maximebf/php-debugbar/zipball/e23a98f2d65607d8aa6c7b409a513f8fdf4acdde",
+                "reference": "e23a98f2d65607d8aa6c7b409a513f8fdf4acdde",
                 "shasum": ""
             },
             "require": {
@@ -8753,7 +8833,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.13-dev"
+                    "dev-master": "1.14-dev"
                 }
             },
             "autoload": {
@@ -8782,7 +8862,7 @@
                 "debug",
                 "debugbar"
             ],
-            "time": "2017-01-05T08:46:19+00:00"
+            "time": "2017-08-17T07:17:00+00:00"
         },
         {
             "name": "mockery/mockery",
