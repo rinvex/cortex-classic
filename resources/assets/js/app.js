@@ -16,6 +16,7 @@ require('jquery-mousewheel');
 require('jquery-slimscroll');
 require('./vendor/jquery.icheck');
 require('./vendor/jquery.validation');
+require('./vendor/jquery.bootstrap.wizard');
 
 // Bootstrap
 require('bootstrap-sass');
@@ -173,5 +174,49 @@ $(function () {
         // Return table HTML string
         return $table;
     }
+
+
+    $('#guestarea-register-tenant-process').keypress(function(e){
+        if(e.keyCode === 13) {
+            e.preventDefault();
+            $('.next').click();
+        }
+    });
+
+    $('#guestarea-register-tenant-process').bootstrapWizard({
+        onNext: function (tab, navigation, index) {
+            return $('#guestarea-register-tenant-process').valid();
+        },
+        onFinish: function onNext(tab, navigation, index) {
+            $('#guestarea-register-tenant-process').submit();
+        },
+        onTabClick: function (tab, navigation, index, clickedIndex) {
+            if (clickedIndex > index) {
+                return $('#guestarea-register-tenant-process').valid();
+            }
+        }
+    });
+
+
+    $('#guestarea-register-member-process').keypress(function(e){
+        if(e.keyCode === 13) {
+            e.preventDefault();
+            $('.next').click();
+        }
+    });
+
+    $('#guestarea-register-member-process').bootstrapWizard({
+        onNext: function (tab, navigation, index) {
+            return $('#guestarea-register-member-process').valid();
+        },
+        onFinish: function onNext(tab, navigation, index) {
+            $('#guestarea-register-member-process').submit();
+        },
+        onTabClick: function (tab, navigation, index, clickedIndex) {
+            if (clickedIndex > index) {
+                return $('#guestarea-register-member-process').valid();
+            }
+        }
+    });
 
 });
