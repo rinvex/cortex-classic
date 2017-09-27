@@ -15,6 +15,6 @@ return [
     ],
 
     // Register routes
-    'register_routes' => true,
+    'register_routes' => false,
 
 ];
