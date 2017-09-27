@@ -9,14 +9,14 @@ return [
 
         // Prefix routes with {locale} whenever applicable
         // Changing this option require re-caching routes if already cached
-        'locale_prefix' => false,
+        'locale_prefix' => true,
 
         // Redirect standard routes to its localized alternative whenever applicable
         // 'route.locale_prefix' must be true for this option to work
-        'locale_redirect' => false,
+        'locale_redirect' => true,
 
         // Automatically add a trailing slash to the end of all routes
-        'trailing_slash' => false,
+        'trailing_slash' => true,
 
     ],
 
