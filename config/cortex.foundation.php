@@ -17,12 +17,13 @@ return [
 
         // Automatically add a trailing slash to the end of all routes
         'trailing_slash' => true,
-        
-        // defines the URL prefixes for the different areas
+
+        // Defines the URL prefixes for the different areas
         // Changing this option require re-caching routes if already cached
         'prefix' => [
             'memberarea' => 'memberarea',
-            'adminarea' => 'adminarea'
+            'tenantarea' => 'tenantarea',
+            'adminarea' => 'adminarea',
         ],
 
     ],
