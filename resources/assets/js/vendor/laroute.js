@@ -32,10 +32,10 @@
                 var qs  = this.getRouteQueryString(parameters);
 
                 if (this.absolute && this.isOtherHost(route)){
-                    return "//" + route.host + "/" + uri + qs;
+                    return "//" + route.host + "/" + uri + "/" + qs;
                 }
 
-                return this.getCorrectUrl(uri + qs);
+                return this.getCorrectUrl(uri + "/" + qs);
             },
 
             isOtherHost: function (route){
