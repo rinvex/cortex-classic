@@ -6,6 +6,8 @@
 /node_modules
 /storage/*.key
 /public/storage
+/package-lock.json
+/composer.lock
 Homestead.json
 Homestead.yaml
 composer.phar
