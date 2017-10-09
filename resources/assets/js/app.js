@@ -37,6 +37,7 @@ require('./vendor/datatables.net-buttons.server-side');
 
 // Misc
 require('select2');
+require('chart.js');
 require('moment-timezone');
 require('./vendor/slugify');
 window.moment = require('moment');
