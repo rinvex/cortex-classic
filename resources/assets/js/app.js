@@ -21,6 +21,7 @@ require('./vendor/jquery.bootstrap.wizard');
 // Bootstrap
 require('bootstrap-sass');
 require('bootstrap-notify');
+require('bootstrap-timepicker');
 require('bootstrap-colorpicker');
 require('bootstrap-daterangepicker');
 
