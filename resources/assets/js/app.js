@@ -36,6 +36,10 @@ require('datatables.net-buttons/js/buttons.html5');
 require('datatables.net-buttons/js/buttons.colVis');
 require('./vendor/datatables.net-buttons.server-side');
 
+// Fullcalendar
+require('fullcalendar');
+require('fullcalendar-scheduler');
+
 // Misc
 require('select2');
 require('chart.js');
