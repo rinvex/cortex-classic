@@ -21,6 +21,7 @@ require('./vendor/jquery.bootstrap.wizard');
 // Bootstrap
 require('bootstrap-sass');
 require('bootstrap-notify');
+require('bootstrap-colorpicker');
 require('bootstrap-daterangepicker');
 
 // Datatables
@@ -54,6 +55,10 @@ require('admin-lte');
 
 
 $(function () {
+    // Color Picker
+    $('.color-picker').colorpicker();
+
+
     // Highlight first tab that has errored inputs
     if ($('.tab-pane .has-error').length) {
         let erroredTabId = $('.tab-pane .has-error').closest('.tab-pane').attr('id');
