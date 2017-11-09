@@ -24,6 +24,10 @@ require('bootstrap-daterangepicker');
 require('bootstrap-datepicker');
 require('timepicker');
 
+// Datepair
+require('datepair.js');
+require('datepair.js/src/jquery.datepair');
+
 // Datatables
 require('datatables.net');
 require('datatables.net-bs');
