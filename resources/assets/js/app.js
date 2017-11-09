@@ -7,10 +7,6 @@
 // Bind variables to window object
 window.$ = window.jQuery = require('jquery');
 
-// // Turbolinks
-// window.Turbolinks = require("turbolinks");
-// Turbolinks.start();
-
 // jQuery
 require('jquery-mousewheel');
 require('jquery-slimscroll');
@@ -22,7 +18,6 @@ require('bootstrap-popover-picker/src/js/picker');
 // Bootstrap
 require('bootstrap-sass');
 require('bootstrap-notify');
-require('bootstrap-timepicker');
 require('bootstrap-colorpicker');
 require('bootstrap-daterangepicker');
 
