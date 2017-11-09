@@ -69,6 +69,31 @@ $(function () {
     // Icon Picker
     $('.icon-picker').iconpicker();
 
+    // Style Picker
+    $('.style-picker').picker({
+        templates: {
+            pickerItem: '<div class="picker-item"><i class="hidden"></i></div>',
+        },
+        selectedCustomClass: 'fa fa-check',
+        items: [
+            'bg-red',
+            'bg-yellow',
+            'bg-aqua',
+            'bg-blue',
+            'bg-light-blue',
+            'bg-green',
+            'bg-navy',
+            'bg-teal',
+            'bg-olive',
+            'bg-lime',
+            'bg-orange',
+            'bg-fuchsia',
+            'bg-purple',
+            'bg-maroon',
+            'bg-black',
+        ],
+    });
+
 
     // Highlight first tab that has errored inputs
     if ($('.tab-pane .has-error').length) {
