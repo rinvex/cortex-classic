@@ -19,6 +19,7 @@ require('bootstrap-popover-picker/src/js/picker');
 require('bootstrap-sass');
 require('bootstrap-notify');
 require('bootstrap-colorpicker');
+require('fontawesome-iconpicker');
 require('bootstrap-daterangepicker');
 require('bootstrap-datepicker');
 require('timepicker');
@@ -60,6 +61,9 @@ require('admin-lte');
 $(function () {
     // Color Picker
     $('.color-picker').colorpicker();
+
+    // Icon Picker
+    $('.icon-picker').iconpicker();
 
 
     // Highlight first tab that has errored inputs
