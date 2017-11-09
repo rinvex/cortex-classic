@@ -21,6 +21,7 @@ require('bootstrap-notify');
 require('bootstrap-colorpicker');
 require('bootstrap-daterangepicker');
 require('bootstrap-datepicker');
+require('timepicker');
 
 // Datatables
 require('datatables.net');

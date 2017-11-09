@@ -47,6 +47,7 @@
     "pace-progress": "^1.0.2",
     "perfect-scrollbar": "^0.6.16",
     "select2": "^4.0.3",
+    "timepicker": "^1.11.12",
     "wysihtml": "^0.6.0-beta1"
   }
 }
