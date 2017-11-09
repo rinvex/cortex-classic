@@ -17,6 +17,7 @@ require('jquery-slimscroll');
 require('./vendor/jquery.icheck');
 require('./vendor/jquery.validation');
 require('./vendor/jquery.bootstrap.wizard');
+require('bootstrap-popover-picker/src/js/picker');
 
 // Bootstrap
 require('bootstrap-sass');
