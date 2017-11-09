@@ -20,6 +20,7 @@ require('bootstrap-sass');
 require('bootstrap-notify');
 require('bootstrap-colorpicker');
 require('bootstrap-daterangepicker');
+require('bootstrap-datepicker');
 
 // Datatables
 require('datatables.net');
