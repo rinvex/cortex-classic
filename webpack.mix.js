@@ -11,9 +11,8 @@ const { mix } = require('laravel-mix');
  |
  */
 
-
 mix
-    .autoload({jquery: ['$', 'jQuery']})
+    .autoload({ jquery: ['$', 'jQuery'] })
     .sass('app/cortex/console/resources/assets/sass/terminal.scss', 'public/css/terminal.css')
     .sass('resources/assets/sass/theme-adminlte.scss', 'public/css/theme-adminlte.css')
     .sass('resources/assets/sass/fullcalendar.scss', 'public/css/fullcalendar.css')
@@ -27,41 +26,43 @@ mix
     .js('resources/assets/js/vendor/datatables.js', 'public/js/datatables.js')
     .js('resources/assets/js/vendor/fullcalendar.js', 'public/js/fullcalendar.js')
     .js('resources/assets/js/app.js', 'public/js/app.js')
-    .extract([
-        //jQuery
-        'jquery',
+    .extract(
+        [
+            //jQuery
+            'jquery',
 
-        // Mouse interaction
-        'jquery-mousewheel',
-        'jquery-slimscroll',
+            // Mouse interaction
+            'jquery-mousewheel',
+            'jquery-slimscroll',
 
-        // Bootstrap
-        'bootstrap-sass',
-        'bootstrap-notify',
+            // Bootstrap
+            'bootstrap-sass',
+            'bootstrap-notify',
 
-        // Pickers
-        'bootstrap-colorpicker',
-        'fontawesome-iconpicker',
-        'bootstrap-popover-picker/src/js/picker',
+            // Pickers
+            'bootstrap-colorpicker',
+            'fontawesome-iconpicker',
+            'bootstrap-popover-picker/src/js/picker',
 
-        // Date and Time
-        'moment',
-        'timepicker',
-        'datepair.js',
-        'moment-timezone',
-        'bootstrap-datepicker',
-        'bootstrap-daterangepicker',
-        'datepair.js/src/jquery.datepair',
+            // Date and Time
+            'moment',
+            'timepicker',
+            'datepair.js',
+            'moment-timezone',
+            'bootstrap-datepicker',
+            'bootstrap-daterangepicker',
+            'datepair.js/src/jquery.datepair',
 
-        // Misc
-        'select2',
-        './resources/assets/js/vendor/slugify',
-        './resources/assets/js/vendor/jquery.validation',
-        './resources/assets/js/vendor/jquery.bootstrap.wizard',
-        './resources/assets/js/vendor/pace',
+            // Misc
+            'select2',
+            './resources/assets/js/vendor/slugify',
+            './resources/assets/js/vendor/jquery.validation',
+            './resources/assets/js/vendor/jquery.bootstrap.wizard',
+            './resources/assets/js/vendor/pace',
 
-        // Theme
-        'admin-lte',
-
-    ], 'public/js/vendor.js')
+            // Theme
+            'admin-lte',
+        ],
+        'public/js/vendor.js'
+    )
     .version();

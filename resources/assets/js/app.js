@@ -39,8 +39,7 @@ window.pace = require('./vendor/pace');
 // Theme
 require('admin-lte');
 
-
-$(function () {
+$(function() {
     // Color Picker
     $('.color-picker').colorpicker();
 
@@ -72,25 +71,26 @@ $(function () {
         ],
     });
 
-
     // Highlight first tab that has errored inputs
     if ($('.tab-pane .has-error').length) {
-        let erroredTabId = $('.tab-pane .has-error').closest('.tab-pane').attr('id');
+        let erroredTabId = $('.tab-pane .has-error')
+            .closest('.tab-pane')
+            .attr('id');
         $('.nav a[href="#' + erroredTabId + '"]').tab('show');
     }
 
-
     // Slugify
-    $('[data-slugify]').on('input', function (e) {
+    $('[data-slugify]').on('input', function(e) {
         if ($($(this).data('slugify')).val().length === 0) {
-            $(this).on('keyup', function () {
+            $(this).on('keyup', function() {
                 let input = $(this).data('slugify');
-                let slug = $(this).val().slugify();
+                let slug = $(this)
+                    .val()
+                    .slugify();
                 $(input).val(slug);
             });
         }
     });
-
 
     // Enable linkable to tab
     let tabUrl = document.location.toString();
@@ -99,18 +99,16 @@ $(function () {
     }
 
     // Change URL hash for page-reload
-    $('.nav-tabs a').on('shown.bs.tab', function (e) {
+    $('.nav-tabs a').on('shown.bs.tab', function(e) {
         let yScroll = document.body.scrollTop;
         window.location.hash = e.target.hash;
         document.body.scrollTop = yScroll;
     });
 
-
     // Bind Select2 menus
     $('.select2').select2({
-        placeholder: "Select Option"
+        placeholder: 'Select Option',
     });
-
 
     // Configure datepicker
     $('.datepicker').attr('readonly', true);
@@ -118,14 +116,14 @@ $(function () {
         autoApply: true,
         showDropdowns: true,
         singleDatePicker: true,
-        locale: {format: 'YYYY-MM-DD'},
+        locale: { format: 'YYYY-MM-DD' },
     });
 
-    $('.datepicker').on('apply.daterangepicker', function (ev, picker) {
+    $('.datepicker').on('apply.daterangepicker', function(ev, picker) {
         $(this).val(picker.startDate.format('YYYY-MM-DD'));
     });
 
-    $('.datepicker').on('cancel.daterangepicker', function (ev, picker) {
+    $('.datepicker').on('cancel.daterangepicker', function(ev, picker) {
         $(this).val('');
     });
 });

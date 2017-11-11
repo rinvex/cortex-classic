@@ -56,21 +56,6 @@
     font-weight: normal !important;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .container-fluid {
     padding: 0 15px;
 }
@@ -80,14 +65,12 @@
 }
 
 #main-body {
-
 }
 
 #page {
     margin-left: 0;
     padding: 15px;
     background: #f5f5f5;
-
 }
 
 .panel {
@@ -141,7 +124,7 @@
 }
 
 .panel .panel-heading:after {
-    content: "";
+    content: '';
     display: block;
     clear: both;
     width: 0;
@@ -195,12 +178,16 @@
 }
 
 .modal {
-    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%,
-    rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%,
-    rgba(255, 255, 255, 0.15) 50%,
-    rgba(255, 255, 255, 0.15) 75%,
-    rgba(0, 0, 0, 0) 75%,
-    rgba(0, 0, 0, 0));
+    background-image: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.15) 25%,
+        rgba(0, 0, 0, 0) 25%,
+        rgba(0, 0, 0, 0) 50%,
+        rgba(255, 255, 255, 0.15) 50%,
+        rgba(255, 255, 255, 0.15) 75%,
+        rgba(0, 0, 0, 0) 75%,
+        rgba(0, 0, 0, 0)
+    );
     background-repeat: repeat;
 }
 
@@ -238,7 +225,6 @@
 }
 
 .modal > .modal-dialog .modal-content .modal-body {
-
 }
 
 .modal > .modal-dialog .modal-content .modal-footer {
@@ -316,7 +302,6 @@
 .panel.calendar .fc-header-left,
 .panel.calendar .fc-header-center,
 .panel.calendar .fc-header-right {
-
 }
 
 .panel.calendar .panel-heading {
@@ -329,7 +314,7 @@
     font-weight: 100;
 }
 
-@media screen and (min-width: 481px)  and (max-width: 992px) {
+@media screen and (min-width: 481px) and (max-width: 992px) {
     .cortal .cortal-event-view-band {
         right: -81px !important;
     }
@@ -341,12 +326,13 @@
 
     .cortal .cortal-event-view-band .cortal-band-close-btn {
         font-size: 25px !important;
-
     }
 }
 
 @media screen and (max-width: 480px), screen and (max-width: 768px), screen and (max-width: 992px) {
-    .fc-header-left, .fc-header-center, .fc-header-right {
+    .fc-header-left,
+    .fc-header-center,
+    .fc-header-right {
         width: 100% !important;
         display: block;
         clear: both;
@@ -368,12 +354,16 @@
         display: none;
     }
 
-    .panel-danger.calendar .fc-button-prev, .panel-danger.calendar .fc-button-next,
-    .panel-success.calendar .fc-button-prev, .panel-success.calendar .fc-button-next,
-    .panel-warning.calendar .fc-button-prev, .panel-warning.calendar .fc-button-next,
-    .panel-primary.calendar .fc-button-prev, .panel-primary.calendar .fc-button-next,
-    .panel-info.calendar .fc-button-prev, .panel-info.calendar .fc-button-next {
-
+    .panel-danger.calendar .fc-button-prev,
+    .panel-danger.calendar .fc-button-next,
+    .panel-success.calendar .fc-button-prev,
+    .panel-success.calendar .fc-button-next,
+    .panel-warning.calendar .fc-button-prev,
+    .panel-warning.calendar .fc-button-next,
+    .panel-primary.calendar .fc-button-prev,
+    .panel-primary.calendar .fc-button-next,
+    .panel-info.calendar .fc-button-prev,
+    .panel-info.calendar .fc-button-next {
     }
 
     .panel.calendar .fc-header-right .fc-button {
@@ -381,12 +371,12 @@
         bottom: -1px;
     }
 
-    .panel.calendar .fc-button-prev, .panel.calendar .fc-button-next {
+    .panel.calendar .fc-button-prev,
+    .panel.calendar .fc-button-next {
         top: -35px !important;
         right: 10px !important;
         position: absolute;
         width: 40px;
-
     }
 
     .panel.calendar .fc-button-prev {
