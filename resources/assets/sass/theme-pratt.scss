@@ -1,0 +1,268 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-color: #f2f2f2;
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Titles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway";
+    font-weight: 300;
+    color: #333;
+}
+
+/* Paragraph & Typographic */
+p {
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+
+.centered {
+    text-align: center;
+}
+
+/* Links */
+a {
+    color: #3bc492;
+    word-wrap: break-word;
+
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+a:hover,
+a:focus {
+    color: #c0392b;
+    text-decoration: none;
+    outline: 0;
+}
+
+a:before,
+a:after {
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/* ==========================================================================
+   Wrap Sections
+   ========================================================================== */
+
+#headerwrap {
+    background-color: #34495e;
+    padding-top: 60px;
+}
+
+#headerwrap h1 {
+    margin-top: 30px;
+    color: white;
+    font-size: 70px;
+
+}
+
+#headerwrap h3 {
+    color: white;
+    font-size: 30px;
+}
+
+#headerwrap h5 {
+    color: white;
+    font-weight: 700;
+    text-align: left;
+}
+
+#headerwrap p {
+    text-align: left;
+    color: white
+}
+
+/* intro Wrap */
+#intro {
+    padding-top: 50px;
+    border-top: #bdc3c7 solid 5px;
+}
+
+#features {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#features a[data-toggle=collapse] {
+    font-size: 20px;
+}
+
+#footerwrap {
+    background-color: #2f2f2f;
+    color: white;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    text-align: left;
+}
+
+#footerwrap h3 {
+    font-size: 28px;
+    color: white;
+}
+
+#footerwrap p {
+    color: white;
+    font-size: 18px;
+}
+
+/* Copyright Wrap */
+#copyright {
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    background: #222222;
+    padding-top: 15px;
+    text-align: right;
+}
+
+#copyright p {
+    color: white
+}
+
+.auth-page {
+    background-color: #34495e;
+}
+
+.auth-form {
+    margin-top: 25vh;
+    margin-bottom: 25vh;
+}
+
+form[role=auth] {
+    color: #5d5d5d;
+    background: #f2f2f2;
+    padding: 23px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+form[role=auth] input,
+form[role=auth] button {
+    margin: 16px 0;
+}
+
+form[role=auth] label {
+    margin: 16px 0 0 0;
+}
+
+form[role=auth] > div {
+    text-align: center;
+}
+
+.navbar-right {
+    margin-right: 0;
+}
+
+
+
+
+
+
+
+/* Profile container */
+.profile {
+    margin-top: 81px;
+    margin-bottom: 98px;
+}
+
+/* Profile sidebar */
+.profile-sidebar {
+    padding: 20px 0 10px 0;
+    background: #fff;
+}
+
+.profile-usertitle {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-usertitle-name {
+    color: #5a7391;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.profile-usertitle-job {
+    text-transform: uppercase;
+    color: #5b9bd1;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.profile-usermenu {
+    margin-top: 30px;
+}
+
+.profile-usermenu ul li {
+    border-bottom: 1px solid #f0f4f7;
+}
+
+.profile-usermenu ul li:last-child {
+    border-bottom: none;
+}
+
+.profile-usermenu ul li a {
+    color: #93a3b5;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.profile-usermenu ul li a i {
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.profile-usermenu ul li a:hover {
+    background-color: #fafcfd;
+    color: #5b9bd1;
+}
+
+.profile-usermenu ul li.active {
+    border-bottom: none;
+}
+
+.profile-usermenu ul li.active a {
+    color: #5b9bd1;
+    background-color: #f6f9fb;
+    border-left: 2px solid #5b9bd1;
+    margin-left: -2px;
+}
+
+/* Profile Content */
+.profile-content {
+    padding: 20px;
+    background: #fff;
+    min-height: 460px;
+}
+
