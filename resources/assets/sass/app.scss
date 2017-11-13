@@ -1,5 +1,5 @@
 // Notifications Customizations
-[data-notify="container"] {
+[data-notify='container'] {
     font-weight: bold;
 }
 
@@ -41,7 +41,7 @@
     text-align: center;
     color: #444;
     font-size: 14px;
-    background: url("../images/loading_bar.gif") no-repeat center 38px #fff;
+    background: url('../images/loading_bar.gif') no-repeat center 38px #fff;
     box-shadow: 2px 2px 5px #444;
     -moz-box-shadow: 2px 2px 5px #444;
     -webkit-box-shadow: 2px 2px 5px #444;
@@ -62,9 +62,22 @@ div.dt-button-background {
     /* Firefox */
     background: -o-radial-gradient(center, ellipse farthest-corner, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
     /* Opera */
-    background: -webkit-gradient(radial, center center, 0, center center, 497, color-stop(0, rgba(0, 0, 0, 0.3)), color-stop(1, rgba(0, 0, 0, 0.7)));
+    background: -webkit-gradient(
+        radial,
+        center center,
+        0,
+        center center,
+        497,
+        color-stop(0, rgba(0, 0, 0, 0.3)),
+        color-stop(1, rgba(0, 0, 0, 0.7))
+    );
     /* Webkit (Safari/Chrome 10) */
-    background: -webkit-radial-gradient(center, ellipse farthest-corner, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
+    background: -webkit-radial-gradient(
+        center,
+        ellipse farthest-corner,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.7) 100%
+    );
     /* Webkit (Chrome 11+) */
     background: radial-gradient(ellipse farthest-corner at center, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
     /* W3C Markup, IE10 Release Preview */
@@ -86,6 +99,7 @@ tr.details td.dt-details-control {
 }
 
 // Custom
-.tag-group, .attribute-group {
+.tag-group,
+.attribute-group {
     background-color: #eee !important;
 }
