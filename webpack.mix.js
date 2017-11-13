@@ -13,20 +13,21 @@ const { mix } = require('laravel-mix');
 
 
 mix
+    .setPublicPath('public/assets')
     .autoload({jquery: ['$', 'jQuery']})
-    .sass('app/cortex/console/resources/assets/sass/terminal.scss', 'public/css/terminal.css')
-    .sass('resources/assets/sass/theme-adminlte.scss', 'public/css/theme-adminlte.css')
-    .sass('resources/assets/sass/fullcalendar.scss', 'public/css/fullcalendar.css')
-    .sass('resources/assets/sass/theme-pratt.scss', 'public/css/theme-pratt.css')
-    .sass('resources/assets/sass/datatables.scss', 'public/css/datatables.css')
-    .sass('resources/assets/sass/vendor.scss', 'public/css/vendor.css')
-    .sass('resources/assets/sass/app.scss', 'public/css/app.css')
-    .js('node_modules/chart.js/src/chart.js', 'public/js/chart.js')
-    .js('resources/assets/js/vendor/wizard.js', 'public/js/wizard.js')
-    .js('resources/assets/js/vendor/terminal.js', 'public/js/terminal.js')
-    .js('resources/assets/js/vendor/datatables.js', 'public/js/datatables.js')
-    .js('resources/assets/js/vendor/fullcalendar.js', 'public/js/fullcalendar.js')
-    .js('resources/assets/js/app.js', 'public/js/app.js')
+    .sass('app/cortex/console/resources/assets/sass/terminal.scss', 'public/assets/css/terminal.css')
+    .sass('resources/assets/sass/theme-adminlte.scss', 'public/assets/css/theme-adminlte.css')
+    .sass('resources/assets/sass/fullcalendar.scss', 'public/assets/css/fullcalendar.css')
+    .sass('resources/assets/sass/theme-pratt.scss', 'public/assets/css/theme-pratt.css')
+    .sass('resources/assets/sass/datatables.scss', 'public/assets/css/datatables.css')
+    .sass('resources/assets/sass/vendor.scss', 'public/assets/css/vendor.css')
+    .sass('resources/assets/sass/app.scss', 'public/assets/css/app.css')
+    .js('node_modules/chart.js/src/chart.js', 'public/assets/js/chart.js')
+    .js('resources/assets/js/vendor/wizard.js', 'public/assets/js/wizard.js')
+    .js('resources/assets/js/vendor/terminal.js', 'public/assets/js/terminal.js')
+    .js('resources/assets/js/vendor/datatables.js', 'public/assets/js/datatables.js')
+    .js('resources/assets/js/vendor/fullcalendar.js', 'public/assets/js/fullcalendar.js')
+    .js('resources/assets/js/app.js', 'public/assets/js/app.js')
     .extract([
         //jQuery
         'jquery',
@@ -63,5 +64,5 @@ mix
         // Theme
         'admin-lte',
 
-    ], 'public/js/vendor.js')
+    ], 'public/assets/js/vendor.js')
     .version();

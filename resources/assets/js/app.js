@@ -6,7 +6,7 @@
 
 // Bind variables to window object
 window.$ = window.jQuery = require('jquery');
-window.routes = require('../../../public/js/routes');
+window.routes = require('../../../public/assets/js/routes');
 
 // Mouse interaction
 require('jquery-mousewheel');
