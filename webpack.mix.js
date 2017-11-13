@@ -14,6 +14,12 @@ const { mix } = require('laravel-mix');
 
 mix
     .setPublicPath('public/assets')
+    .options({
+        fileLoaderDirs: {
+            images: 'assets/images',
+            fonts: 'assets/fonts',
+        },
+    })
     .autoload({jquery: ['$', 'jQuery']})
     .sass('app/cortex/console/resources/assets/sass/terminal.scss', 'public/assets/css/terminal.css')
     .sass('resources/assets/sass/theme-adminlte.scss', 'public/assets/css/theme-adminlte.css')
