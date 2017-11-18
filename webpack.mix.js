@@ -15,7 +15,7 @@ const { mix } = require('laravel-mix');
 mix
     .setResourceRoot('/assets/')
     .setPublicPath('public/assets')
-    .autoload({jquery: ['$', 'jQuery']})
+    .autoload({jquery: ['$', 'jQuery', 'window.$', 'window.jQuery']})
     .sass('app/cortex/console/resources/assets/sass/terminal.scss', 'public/assets/css/terminal.css')
     .sass('resources/assets/sass/theme-adminlte.scss', 'public/assets/css/theme-adminlte.css')
     .sass('resources/assets/sass/fullcalendar.scss', 'public/assets/css/fullcalendar.css')

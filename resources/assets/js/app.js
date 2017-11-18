@@ -5,8 +5,8 @@
  */
 
 // Bind variables to window object
-window.$ = window.jQuery = require('jquery');
-window.routes = require('../../../public/assets/js/routes');
+require("expose-loader?$!expose-loader?jQuery!jquery");
+require('expose-loader?routes!../../../public/assets/js/routes');
 
 // Mouse interaction
 require('jquery-mousewheel');
@@ -17,9 +17,9 @@ require('bootstrap-sass');
 require('bootstrap-notify');
 
 // Pickers
+require('./vendor/picker');
 require('bootstrap-colorpicker');
 require('fontawesome-iconpicker');
-require('bootstrap-popover-picker/src/js/picker');
 
 // Date and Time
 require('timepicker');
@@ -27,14 +27,14 @@ require('datepair.js');
 require('moment-timezone');
 require('bootstrap-datepicker');
 require('bootstrap-daterangepicker');
+require('expose-loader?moment!moment');
 require('datepair.js/src/jquery.datepair');
-window.moment = require('moment');
 
 // Misc
 require('select2');
 require('./vendor/slugify');
 require('./vendor/jquery.validation');
-window.pace = require('./vendor/pace');
+require('expose-loader?pace!./vendor/pace');
 
 // Theme
 require('admin-lte');
