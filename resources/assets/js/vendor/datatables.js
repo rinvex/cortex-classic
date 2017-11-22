@@ -11,12 +11,6 @@ require('datatables.net-buttons/js/buttons.colVis');
 require('./datatables.net-buttons.server-side');
 
 $(function () {
-    // Custom Datatables length change select menu
-    oTable = $('.dataTableBuilder').DataTable();
-    $('.dataTableBuilderLengthChanger').on('change.DT', function () {
-        oTable.page.len($(this).val()).draw();
-    });
-
     // Format Log DataTable details
     window.dtFormatLogDetails = function (data) {
         if ($.isEmptyObject(data.attributes)) {
