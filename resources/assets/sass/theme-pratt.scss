@@ -5,7 +5,7 @@ html {
 
 body {
     background-color: #f2f2f2;
-    font-family: "Lato";
+    font-family: 'Lato';
     font-weight: 300;
     font-size: 16px;
     color: #555;
@@ -15,8 +15,13 @@ body {
 }
 
 /* Titles */
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Raleway";
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Raleway';
     font-weight: 300;
     color: #333;
 }
@@ -81,7 +86,6 @@ hr {
     margin-top: 30px;
     color: white;
     font-size: 70px;
-
 }
 
 #headerwrap h3 {
@@ -97,7 +101,7 @@ hr {
 
 #headerwrap p {
     text-align: left;
-    color: white
+    color: white;
 }
 
 /* intro Wrap */
@@ -111,7 +115,7 @@ hr {
     padding-bottom: 50px;
 }
 
-#features a[data-toggle=collapse] {
+#features a[data-toggle='collapse'] {
     font-size: 20px;
 }
 
@@ -144,7 +148,7 @@ hr {
 }
 
 #copyright p {
-    color: white
+    color: white;
 }
 
 .auth-page {
@@ -156,7 +160,7 @@ hr {
     margin-bottom: 25vh;
 }
 
-form[role=auth] {
+form[role='auth'] {
     color: #5d5d5d;
     background: #f2f2f2;
     padding: 23px;
@@ -165,28 +169,22 @@ form[role=auth] {
     -webkit-border-radius: 10px;
 }
 
-form[role=auth] input,
-form[role=auth] button {
+form[role='auth'] input,
+form[role='auth'] button {
     margin: 16px 0;
 }
 
-form[role=auth] label {
+form[role='auth'] label {
     margin: 16px 0 0 0;
 }
 
-form[role=auth] > div {
+form[role='auth'] > div {
     text-align: center;
 }
 
 .navbar-right {
     margin-right: 0;
 }
-
-
-
-
-
-
 
 /* Profile container */
 .profile {
@@ -265,4 +263,3 @@ form[role=auth] > div {
     background: #fff;
     min-height: 460px;
 }
-
