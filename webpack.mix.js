@@ -28,6 +28,7 @@ mix
     .js('resources/assets/js/vendor/datatables.js', 'public/assets/js/datatables.js')
     .js('resources/assets/js/vendor/fullcalendar.js', 'public/assets/js/fullcalendar.js')
     .js('app/cortex/console/resources/assets/js/terminal.js', 'public/assets/js/terminal.js')
+    .js('app/cortex/bookings/resources/assets/js/bookings.js', 'public/assets/js/bookings.js')
     .js('resources/assets/js/app.js', 'public/assets/js/app.js')
     .extract([
         //jQuery
