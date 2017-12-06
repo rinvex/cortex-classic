@@ -25,9 +25,9 @@ mix
     .sass('resources/assets/sass/app.scss', 'public/assets/css/app.css')
     .js('node_modules/chart.js/src/chart.js', 'public/assets/js/chart.js')
     .js('resources/assets/js/vendor/wizard.js', 'public/assets/js/wizard.js')
-    .js('resources/assets/js/vendor/terminal.js', 'public/assets/js/terminal.js')
     .js('resources/assets/js/vendor/datatables.js', 'public/assets/js/datatables.js')
     .js('resources/assets/js/vendor/fullcalendar.js', 'public/assets/js/fullcalendar.js')
+    .js('app/cortex/console/resources/assets/js/terminal.js', 'public/assets/js/terminal.js')
     .js('resources/assets/js/app.js', 'public/assets/js/app.js')
     .extract([
         //jQuery
