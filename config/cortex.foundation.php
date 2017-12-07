@@ -9,20 +9,19 @@ return [
 
         // Prefix routes with {locale} whenever applicable
         // Changing this option require re-caching routes if already cached
-        'locale_prefix' => true,
+        'locale_prefix' => false,
 
         // Redirect standard routes to its localized alternative whenever applicable
         // 'route.locale_prefix' must be true for this option to work
-        'locale_redirect' => true,
+        'locale_redirect' => false,
 
         // Automatically add a trailing slash to the end of all routes
-        'trailing_slash' => true,
+        'trailing_slash' => false,
 
         // Defines the URL prefixes for the different areas
         // Changing this option require re-caching routes if already cached
         'prefix' => [
             'frontarea' => '',
-            'tenantarea' => 'tenantarea',
             'adminarea' => 'adminarea',
         ],
 

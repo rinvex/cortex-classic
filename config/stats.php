@@ -3,29 +3,36 @@
 return [
 
     /*
-     * Every project is different and sometimes files
-     * and folders should be ignored and never
-     * count towards the project stats.
+     * List of folders to be analyzed.
      */
-    'ignore' => [
-
-        /*
-         * Ignore the contents of an entire folder
-         */
-        'folders' => [
-            'node_modules',
-            //'vendor',
-            // 'app/Http/Controllers'
-        ],
-
-        /*
-         * Ignore certain filenames or extensions
-         */
-        'files' => [
-            // 'helpers.php'
-            // 'twig.php'
-        ],
-
+    'paths' => [
+        base_path('app'),
+        base_path('database'),
+        base_path('tests'),
     ],
+
+    /*
+     * List of files/folders to be excluded from analysis.
+     */
+    'exclude' => [
+        // base_path('app/helpers.php'),
+        // base_path('app/Services'),
+    ],
+
+    /*
+     * The Strategy used to reject Classes from the project statistics.
+     *
+     * By default all Classes located in
+     * the vendor directory are being rejected and don't
+     * count to the statistics.
+     *
+     * The package ships with 2 strategies:
+     * - \Wnx\LaravelStats\RejectionStrategies\RejectVendorClasses::class
+     * - \Wnx\LaravelStats\RejectionStrategies\RejectInternalClasses::class
+     *
+     * If none of the default strategies fit for your usecase, you can
+     * write your own class which implements the RejectionStrategy Contract.
+     */
+    'rejection_strategy' => \Wnx\LaravelStats\RejectionStrategies\RejectVendorClasses::class,
 
 ];
