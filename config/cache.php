@@ -88,6 +88,6 @@ return [
     |
     */
 
-    'prefix' => 'rinvex_cortex',
+    'prefix' => env('CACHE_PREFIX', 'rinvex_cortex'),
 
 ];
