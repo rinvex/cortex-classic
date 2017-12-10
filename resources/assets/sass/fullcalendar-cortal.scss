@@ -83,7 +83,7 @@
 }
 
 .panel .panel-heading:after {
-    content: "";
+    content: '';
     display: block;
     clear: both;
     width: 0;
@@ -170,7 +170,6 @@
 }
 
 .modal > .modal-dialog .modal-content .modal-body {
-
 }
 
 .modal > .modal-dialog .modal-content .modal-footer {
@@ -248,7 +247,6 @@
 .panel.calendar .fc-header-left,
 .panel.calendar .fc-header-center,
 .panel.calendar .fc-header-right {
-
 }
 
 .panel.calendar .panel-heading {
@@ -262,7 +260,9 @@
 }
 
 @media screen and (max-width: 480px), screen and (max-width: 768px), screen and (max-width: 992px) {
-    .fc-header-left, .fc-header-center, .fc-header-right {
+    .fc-header-left,
+    .fc-header-center,
+    .fc-header-right {
         width: 100% !important;
         display: block;
         clear: both;
@@ -284,12 +284,16 @@
         display: none;
     }
 
-    .panel-danger.calendar .fc-button-prev, .panel-danger.calendar .fc-button-next,
-    .panel-success.calendar .fc-button-prev, .panel-success.calendar .fc-button-next,
-    .panel-warning.calendar .fc-button-prev, .panel-warning.calendar .fc-button-next,
-    .panel-primary.calendar .fc-button-prev, .panel-primary.calendar .fc-button-next,
-    .panel-info.calendar .fc-button-prev, .panel-info.calendar .fc-button-next {
-
+    .panel-danger.calendar .fc-button-prev,
+    .panel-danger.calendar .fc-button-next,
+    .panel-success.calendar .fc-button-prev,
+    .panel-success.calendar .fc-button-next,
+    .panel-warning.calendar .fc-button-prev,
+    .panel-warning.calendar .fc-button-next,
+    .panel-primary.calendar .fc-button-prev,
+    .panel-primary.calendar .fc-button-next,
+    .panel-info.calendar .fc-button-prev,
+    .panel-info.calendar .fc-button-next {
     }
 
     .panel.calendar .fc-header-right .fc-button {
@@ -297,12 +301,12 @@
         bottom: -1px;
     }
 
-    .panel.calendar .fc-button-prev, .panel.calendar .fc-button-next {
+    .panel.calendar .fc-button-prev,
+    .panel.calendar .fc-button-next {
         top: -35px !important;
         right: 10px !important;
         position: absolute;
         width: 40px;
-
     }
 
     .panel.calendar .fc-button-prev {
