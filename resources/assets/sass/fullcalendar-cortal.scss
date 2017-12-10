@@ -6,38 +6,6 @@
     margin-left: -15px;
 }
 
-.cortal .cortal-event-view-band {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    background: #f5f5f5;
-    /*z-index: 100;*/
-    z-index: 9999;
-    border-top: 5px solid #999;
-}
-
-.cortal .cortal-event-view-band .cortal-band-inner {
-    padding: 10px 30px;
-    margin-right: 251px;
-    padding-right: 150px;
-}
-
-.cortal .cortal-event-view-band .cortal-band-close-btn {
-    font-size: 30px;
-    font-weight: bold;
-    position: absolute;
-    right: 15px;
-    top: 6px;
-    outline: 0;
-    color: #999;
-}
-
-.cortal .cortal-event-view-band .cortal-band-close-btn:hover {
-    color: #ccc;
-}
-
 .cortal-event-form .colors .btn,
 .cortal-event-form-edit .colors .btn {
     position: relative;
@@ -56,38 +24,12 @@
     font-weight: normal !important;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .container-fluid {
     padding: 0 15px;
 }
 
 #wrapper {
     background: #e5e5e5;
-}
-
-#main-body {
-
-}
-
-#page {
-    margin-left: 0;
-    padding: 15px;
-    background: #f5f5f5;
-
 }
 
 .panel {
@@ -319,22 +261,6 @@
     font-weight: 100;
 }
 
-@media screen and (min-width: 481px)  and (max-width: 992px) {
-    .cortal .cortal-event-view-band {
-        right: -81px !important;
-    }
-
-    .cortal .cortal-event-view-band .cortal-band-inner {
-        margin-right: 81px !important;
-        padding-right: 50px !important;
-    }
-
-    .cortal .cortal-event-view-band .cortal-band-close-btn {
-        font-size: 25px !important;
-
-    }
-}
-
 @media screen and (max-width: 480px), screen and (max-width: 768px), screen and (max-width: 992px) {
     .fc-header-left, .fc-header-center, .fc-header-right {
         width: 100% !important;
@@ -419,23 +345,5 @@
     .panel.calendar .fc-header-title h2 {
         white-space: normal;
         word-wrap: normal;
-    }
-}
-
-/* phones! */
-@media screen and (max-width: 480px) {
-    .cortal .cortal-event-view-band {
-        right: 0px !important;
-    }
-
-    .cortal .cortal-event-view-band .cortal-band-inner {
-        margin-right: 10px !important;
-        padding: 20px !important;
-        padding-right: 30px !important;
-    }
-
-    .cortal .cortal-event-view-band .cortal-band-close-btn {
-        font-size: 18px !important;
-        right: 0px !important;
     }
 }
