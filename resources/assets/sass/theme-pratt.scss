@@ -266,3 +266,49 @@ form[role=auth] > div {
     min-height: 460px;
 }
 
+/* Wizard */
+.wizard {
+    border: 1px solid #eaefe9;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.wizard .panel {
+    margin-bottom: 0;
+}
+
+.wizard-step {
+    border-top: 1px solid #f2f2f2;
+    color: #666;
+    font-size: 14px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.wizard-step-number {
+    border-radius: 50%;
+    border: 1px solid #666;
+    display: inline-block;
+    font-size: 12px;
+    height: 32px;
+    margin-right: 26px;
+    padding: 6px;
+    text-align: center;
+    width: 32px;
+}
+
+.wizard-step-title {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.registration-success {
+    float: none;
+    width: 150px;
+    height: 150px;
+    margin: 25px auto;
+    background-image: url(../images/check-mark.svg);
+}
