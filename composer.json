@@ -56,6 +56,7 @@
         "cortex/pages": "dev-develop",
         "cortex/tags": "dev-develop",
         "cortex/tenants": "dev-develop",
+        "cortex/testimonials": "dev-develop",
         "doctrine/dbal": "^2.6",
         "dusterio/laravel-aws-worker": "~0.1",
         "laravel/envoy": "~1.3.0",
