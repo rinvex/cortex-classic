@@ -126,4 +126,27 @@ $(function() {
     $('.datepicker').on('cancel.daterangepicker', function(ev, picker) {
         $(this).val('');
     });
+
+    // Handle dynamic form fields
+    $(document).on('click', '.btn-add', function(e) {
+        e.preventDefault();
+
+        // Initialize required variables
+        let controlForm = $('#attributes-tab');
+        let currentEntry = $(this).parents('.entry:first');
+        let newEntry = $(currentEntry.clone()).appendTo(controlForm);
+
+        // Remove error message & style
+        newEntry.removeClass('has-error').find('.help-block').remove();
+        newEntry.find('input').val('');
+
+        // Replace add/remove buttons
+        controlForm.find('.entry:not(:last) .btn-add')
+                   .removeClass('btn-add').addClass('btn-remove')
+                   .removeClass('btn-success').addClass('btn-danger')
+                   .html('<span class="glyphicon glyphicon-minus"></span>');
+    }).on('click', '.btn-remove', function(e) {
+        e.preventDefault();
+        $(this).parents('.entry:first').remove();
+    });
 });
