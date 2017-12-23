@@ -16,7 +16,7 @@ let purifyCssPaths = [
 
 let webpackPlugins = [
     // reduce bundle size by ignoring moment js local files
-    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
 ];
 
 /*
