@@ -1,4 +1,23 @@
 const { mix } = require('laravel-mix');
+const webpack = require('webpack');
+
+let glob = require('glob');
+
+let purifyCssPaths = [
+    glob.sync(path.join(__dirname, 'app/**/*.php')),
+    glob.sync(path.join(__dirname, 'resources/assets/js/**/*.js')),
+    glob.sync(path.join(__dirname, 'node_modules/select2/**/*.js')),
+    glob.sync(path.join(__dirname, 'resources/views/**/*.blade.php')),
+    glob.sync(path.join(__dirname, 'node_modules/fullcalendar/**/*.js')),
+    glob.sync(path.join(__dirname, 'node_modules/datatables.net/**/*.js')),
+    glob.sync(path.join(__dirname, 'node_modules/jquery.terminal/**/*.js')),
+    glob.sync(path.join(__dirname, 'node_modules/fullcalendar-scheduler/**/*.js')),
+];
+
+let webpackPlugins = [
+    // reduce bundle size by ignoring moment js local files
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
+];
 
 /*
  |--------------------------------------------------------------------------
@@ -14,21 +33,25 @@ const { mix } = require('laravel-mix');
 mix
     .setResourceRoot('/assets/')
     .setPublicPath('public/assets')
+    .webpackConfig({ plugins: webpackPlugins })
     .autoload({ jquery: ['$', 'jQuery', 'window.$', 'window.jQuery'] })
-    .sass('app/cortex/console/resources/assets/sass/terminal.scss', 'public/assets/css/terminal.css')
-    .sass('resources/assets/sass/theme-adminlte.scss', 'public/assets/css/theme-adminlte.css')
-    .sass('resources/assets/sass/fullcalendar.scss', 'public/assets/css/fullcalendar.css')
-    .sass('resources/assets/sass/theme-pratt.scss', 'public/assets/css/theme-pratt.css')
-    .sass('resources/assets/sass/datatables.scss', 'public/assets/css/datatables.css')
-    .sass('resources/assets/sass/vendor.scss', 'public/assets/css/vendor.css')
+    .options({ purifyCss: { paths: [].concat.apply([], purifyCssPaths) } })
+
     .sass('resources/assets/sass/app.scss', 'public/assets/css/app.css')
-    .js('node_modules/chart.js/src/chart.js', 'public/assets/js/chart.js')
-    .js('resources/assets/js/vendor/wizard.js', 'public/assets/js/wizard.js')
-    .js('resources/assets/js/vendor/datatables.js', 'public/assets/js/datatables.js')
-    .js('resources/assets/js/vendor/fullcalendar.js', 'public/assets/js/fullcalendar.js')
-    .js('app/cortex/console/resources/assets/js/terminal.js', 'public/assets/js/terminal.js')
+    .sass('resources/assets/sass/vendor.scss', 'public/assets/css/vendor.css')
+    .sass('resources/assets/sass/datatables.scss', 'public/assets/css/datatables.css')
+    .sass('resources/assets/sass/theme-pratt.scss', 'public/assets/css/theme-pratt.css')
+    .sass('resources/assets/sass/fullcalendar.scss', 'public/assets/css/fullcalendar.css')
+    .sass('resources/assets/sass/theme-adminlte.scss', 'public/assets/css/theme-adminlte.css')
+    .sass('app/cortex/console/resources/assets/sass/terminal.scss', 'public/assets/css/terminal.css')
+
     .js('app/cortex/bookings/resources/assets/js/bookings.js', 'public/assets/js/bookings.js')
+    .js('app/cortex/console/resources/assets/js/terminal.js', 'public/assets/js/terminal.js')
+    .js('resources/assets/js/vendor/fullcalendar.js', 'public/assets/js/fullcalendar.js')
+    .js('resources/assets/js/vendor/datatables.js', 'public/assets/js/datatables.js')
+    .js('node_modules/chart.js/src/chart.js', 'public/assets/js/chart.js')
     .js('resources/assets/js/app.js', 'public/assets/js/app.js')
+
     .extract(
         [
             //jQuery
@@ -43,25 +66,24 @@ mix
             'bootstrap-notify',
 
             // Pickers
+            'timepicker',
+            'datepair.js',
+            'bootstrap-datepicker',
             'bootstrap-colorpicker',
             'fontawesome-iconpicker',
+            'bootstrap-daterangepicker',
+            'datepair.js/src/jquery.datepair',
             'bootstrap-popover-picker/src/js/picker',
 
             // Date and Time
             'moment',
-            'timepicker',
-            'datepair.js',
             'moment-timezone',
-            'bootstrap-datepicker',
-            'bootstrap-daterangepicker',
-            'datepair.js/src/jquery.datepair',
 
             // Misc
             'select2',
+            './resources/assets/js/vendor/pace',
             './resources/assets/js/vendor/slugify',
             './resources/assets/js/vendor/jquery.validation',
-            './resources/assets/js/vendor/jquery.bootstrap.wizard',
-            './resources/assets/js/vendor/pace',
 
             // Theme
             'admin-lte',
