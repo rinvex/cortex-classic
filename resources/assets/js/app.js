@@ -71,13 +71,35 @@ $(function() {
         ],
     });
 
-    // Highlight first tab that has errored inputs
-    if ($('.tab-pane .has-error').length) {
-        let erroredTabId = $('.tab-pane .has-error')
-            .closest('.tab-pane')
-            .attr('id');
-        $('.nav a[href="#' + erroredTabId + '"]').tab('show');
+
+    // Linkable tabs
+    let popState = false;
+    let tabUrl = document.location.toString();
+
+    // Match tab URL on first load
+    if (tabUrl.match('#') && tabUrl.match(/\-tab/gi)) {
+        $('.nav-tabs a[href="#' + tabUrl.split('#')[1] + '"]').tab('show');
     }
+
+    // Match tab URL on back/forward
+    window.onpopstate = function(e) {
+        popState = true;
+        tabUrl = document.location.toString();
+
+        if (tabUrl.match('#') && tabUrl.match(/\-tab/gi)) {
+            $('.nav-tabs a[href="#' + tabUrl.split('#')[1] + '"]').tab('show');
+        }
+    };
+
+    // Save history on tab show
+    $('.nav-tabs a').on('shown.bs.tab', function (e) {
+        if (window.history.pushState && ! popState) {
+            history.pushState(null, null, e.target.hash);
+        }
+
+        popState = false;
+    });
+
 
     // Slugify
     $('[data-slugify]').on('input', function(e) {
@@ -90,19 +112,6 @@ $(function() {
                 $(input).val(slug);
             });
         }
-    });
-
-    // Enable linkable to tab
-    let tabUrl = document.location.toString();
-    if (tabUrl.match('#') && tabUrl.match(/\-tab/gi)) {
-        $('.nav-tabs a[href="#' + tabUrl.split('#')[1] + '"]').tab('show');
-    }
-
-    // Change URL hash for page-reload
-    $('.nav-tabs a').on('shown.bs.tab', function(e) {
-        let yScroll = document.body.scrollTop;
-        window.location.hash = e.target.hash;
-        document.body.scrollTop = yScroll;
     });
 
     // Bind Select2 menus
