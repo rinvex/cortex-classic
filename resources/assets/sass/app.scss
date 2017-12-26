@@ -103,3 +103,24 @@ tr.details td.dt-details-control {
 .attribute-group {
     background-color: #eee !important;
 }
+
+// Dropzone
+.dropzone {
+    border-style: dashed;
+
+    .dz-message {
+        font-size: 2em;
+    }
+}
+
+.media-object {
+    max-width: 150px;
+
+    &.media-object-small {
+        width: 130px;
+    }
+}
+
+.large-icon {
+    font-size: 63px;
+}
