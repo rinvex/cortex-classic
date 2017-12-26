@@ -1,4 +1,4 @@
 // Fullcalendar
-require('fullcalendar');
-require('fullcalendar-scheduler');
-require('./fullcalendar-cortal');
+import 'fullcalendar';
+import 'fullcalendar-scheduler';
+import './fullcalendar-cortal';

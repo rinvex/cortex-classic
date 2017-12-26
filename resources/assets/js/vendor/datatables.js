@@ -1,14 +1,14 @@
 // Datatables
-require('datatables.net');
-require('datatables.net-bs');
-require('datatables.net-buttons');
-require('datatables.net-keytable');
-require('datatables.net-responsive');
-require('datatables.net-buttons-bs');
-require('datatables.net-responsive-bs');
-require('datatables.net-buttons/js/buttons.html5');
-require('datatables.net-buttons/js/buttons.colVis');
-require('./datatables.net-buttons.server-side');
+import 'datatables.net';
+import 'datatables.net-bs';
+import 'datatables.net-buttons';
+import 'datatables.net-keytable';
+import 'datatables.net-responsive';
+import 'datatables.net-buttons-bs';
+import 'datatables.net-responsive-bs';
+import 'datatables.net-buttons/js/buttons.html5';
+import 'datatables.net-buttons/js/buttons.colVis';
+import './datatables.net-buttons.server-side';
 
 $(function () {
     // Format Log DataTable details
