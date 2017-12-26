@@ -48,6 +48,7 @@
         "aws/aws-sdk-php": "~3.0",
         "aws/aws-sdk-php-laravel": "~3.0",
         "cortex/attributes": "dev-develop",
+        "cortex/bookings": "dev-develop",
         "cortex/categories": "dev-develop",
         "cortex/console": "dev-develop",
         "cortex/contacts": "dev-develop",
