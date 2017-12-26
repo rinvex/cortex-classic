@@ -16,6 +16,7 @@
     "bootstrap-datepicker": "^1.7.0",
     "bootstrap-daterangepicker": "^2.1.0",
     "bootstrap-notify": "^3.1.0",
+    "bootstrap-popover-picker": "^1.1.0",
     "bootstrap-sass": "^3.3.0",
     "chart.js": "^2.7.0",
     "codemirror": "^5.33.0",
