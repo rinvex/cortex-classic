@@ -5,41 +5,50 @@
  */
 
 // Bind variables to window object
-require('expose-loader?$!expose-loader?jQuery!jquery');
-require('expose-loader?routes!../../../public/assets/js/routes');
+import 'expose-loader?$!expose-loader?jQuery!jquery';
+import 'expose-loader?routes!../../../public/assets/js/routes';
 
 // Mouse interaction
-require('jquery-mousewheel');
-require('jquery-slimscroll');
+import 'jquery-mousewheel';
+import 'jquery-slimscroll';
 
 // Bootstrap
-require('bootstrap-sass');
-require('bootstrap-notify');
+import 'bootstrap-sass';
+import 'bootstrap-notify';
 
 // Pickers
-require('./vendor/picker');
-require('bootstrap-colorpicker');
-require('fontawesome-iconpicker');
-
-// Date and Time
-require('timepicker');
-require('datepair.js');
-require('moment-timezone');
-require('bootstrap-datepicker');
-require('bootstrap-daterangepicker');
-require('expose-loader?moment!moment');
-require('datepair.js/src/jquery.datepair');
+import 'timepicker';
+import 'datepair.js';
+import 'bootstrap-datepicker';
+import 'bootstrap-colorpicker';
+import 'fontawesome-iconpicker';
+import 'bootstrap-daterangepicker';
+import 'datepair.js/src/jquery.datepair';
+import './vendor/bootstrap-popover-picker';
 
 // Misc
-require('select2');
-require('./vendor/slugify');
-require('./vendor/jquery.validation');
-require('expose-loader?pace!./vendor/pace');
+import 'select2';
+import './vendor/pace';
+import './vendor/slugify';
+import Dropzone from 'dropzone';
+import './vendor/jquery.validation';
+import 'expose-loader?moment!moment';
 
 // Theme
-require('admin-lte');
+import 'admin-lte';
+
 
 $(function() {
+
+    Dropzone.options.mediaDropzone = {
+        parallelUploads: 1,
+        init: function () {
+            this.on("queuecomplete", function (file) {
+                location.reload();
+            });
+        }
+    };
+
     // Color Picker
     $('.color-picker').colorpicker();
 
