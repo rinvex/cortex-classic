@@ -12,6 +12,7 @@ let purifyCssPaths = [
     glob.sync(path.join(__dirname, 'node_modules/datatables.net/**/*.js')),
     glob.sync(path.join(__dirname, 'node_modules/jquery.terminal/**/*.js')),
     glob.sync(path.join(__dirname, 'node_modules/fullcalendar-scheduler/**/*.js')),
+    glob.sync(path.join(__dirname, 'node_modules/fontawesome-iconpicker/dist/**/*.js')),
 ];
 
 let webpackPlugins = [
@@ -73,14 +74,12 @@ mix
             'fontawesome-iconpicker',
             'bootstrap-daterangepicker',
             'datepair.js/src/jquery.datepair',
-            'bootstrap-popover-picker/src/js/picker',
-
-            // Date and Time
-            'moment',
-            'moment-timezone',
+            './resources/assets/js/vendor/bootstrap-popover-picker',
 
             // Misc
+            'moment',
             'select2',
+            'dropzone',
             './resources/assets/js/vendor/pace',
             './resources/assets/js/vendor/slugify',
             './resources/assets/js/vendor/jquery.validation',
