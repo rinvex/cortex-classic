@@ -37,16 +37,14 @@ import 'expose-loader?moment!moment';
 // Theme
 import 'admin-lte';
 
-
 $(function() {
-
     Dropzone.options.mediaDropzone = {
         parallelUploads: 1,
-        init: function () {
-            this.on("queuecomplete", function (file) {
+        init: function() {
+            this.on('queuecomplete', function(file) {
                 location.reload();
             });
-        }
+        },
     };
 
     // Color Picker
@@ -80,7 +78,6 @@ $(function() {
         ],
     });
 
-
     // Linkable tabs
     let popState = false;
     let tabUrl = document.location.toString();
@@ -101,14 +98,13 @@ $(function() {
     };
 
     // Save history on tab show
-    $('.nav-tabs a').on('shown.bs.tab', function (e) {
-        if (window.history.pushState && ! popState) {
+    $('.nav-tabs a').on('shown.bs.tab', function(e) {
+        if (window.history.pushState && !popState) {
             history.pushState(null, null, e.target.hash);
         }
 
         popState = false;
     });
-
 
     // Slugify
     $('[data-slugify]').on('input', function(e) {
