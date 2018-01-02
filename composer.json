@@ -74,14 +74,15 @@
         "wnx/laravel-stats": "dev-master"
     },
     "require-dev": {
-        "filp/whoops": "~2.0",
-        "mockery/mockery": "0.9.*",
-        "fzaninotto/faker": "~1.4",
-        "phpunit/phpunit": "^6.0.0",
-        "itsgoingd/clockwork": "^1.14.0",
         "barryvdh/laravel-debugbar": "^3.0.0",
         "barryvdh/laravel-ide-helper": "^2.4.0",
-        "codedungeon/phpunit-result-printer": "^0.4.0"
+        "codedungeon/phpunit-result-printer": "^0.4.0",
+        "filp/whoops": "~2.0",
+        "fzaninotto/faker": "~1.4",
+        "itsgoingd/clockwork": "^1.14.0",
+        "mockery/mockery": "0.9.*",
+        "phpunit/phpunit": "^6.0.0",
+        "symfony/thanks": "^1.0.0"
     },
     "autoload-dev": {
         "psr-4": {
