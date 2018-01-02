@@ -7,6 +7,7 @@ let purifyCssPaths = [
     glob.sync(path.join(__dirname, 'app/**/*.php')),
     glob.sync(path.join(__dirname, 'resources/assets/js/**/*.js')),
     glob.sync(path.join(__dirname, 'node_modules/select2/**/*.js')),
+    glob.sync(path.join(__dirname, 'node_modules/dropzone/**/*.js')),
     glob.sync(path.join(__dirname, 'resources/views/**/*.blade.php')),
     glob.sync(path.join(__dirname, 'node_modules/fullcalendar/**/*.js')),
     glob.sync(path.join(__dirname, 'node_modules/datatables.net/**/*.js')),
