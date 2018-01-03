@@ -1,12 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 return [
 
     /*
      * The filesystems on which to store added files and derived images by default. Choose
      * one or more of the filesystems you've configured in config/filesystems.php.
      */
-    'default_filesystem' => 'public',
+    'default_filesystem' => 's3',
 
     /*
      * The maximum file size of an item in bytes.
@@ -15,38 +17,22 @@ return [
     'max_file_size' => 1024 * 1024 * 10,
 
     /*
-     * This queue will be used to generate derived images.
+     * This queue will be used to generate derived and responsive images.
      * Leave empty to use the default queue.
      */
-    'queue_name' => '',
+    'queue_name' => 'media',
 
     /*
-     * The class name of the media model that should be used.
+     * The class names of the models that should be used.
      */
-    'media_model' => Spatie\MediaLibrary\Media::class,
 
-    /*
-     * The engine that should perform the image conversions.
-     * Should be either `gd` or `imagick`.
-     */
-    'image_driver' => 'gd',
-
-    /*
-     * When urls to files get generated, this class will be called. Leave empty
-     * if your files are stored locally above the site root or on s3.
-     */
-    'custom_url_generator_class' => null,
-
-    /*
-     * The class that contains the strategy for determining a media file's path.
-     */
-    'custom_path_generator_class' => null,
+    'media_model' => Spatie\MediaLibrary\Models\Media::class,
 
     's3' => [
         /*
          * The domain that should be prepended when generating urls.
          */
-        'domain' => 'https://xxxxxxx.s3.amazonaws.com',
+        'domain' => 'https://s3-eu-west-1.amazonaws.com/asdfghj23456x',
     ],
 
     'remote' => [
@@ -63,15 +49,45 @@ return [
         ],
     ],
 
-    /*
-     * These generators will be used to create an image of media files.
-     */
-    'image_generators' => [
-        Spatie\MediaLibrary\ImageGenerators\FileTypes\Image::class,
-        Spatie\MediaLibrary\ImageGenerators\FileTypes\Pdf::class,
-        Spatie\MediaLibrary\ImageGenerators\FileTypes\Svg::class,
-        Spatie\MediaLibrary\ImageGenerators\FileTypes\Video::class,
+    'uploads' => [
+        'temporary_upload_model' => Spatie\MediaLibrary\Uploads\Models\TemporaryUpload::class,
     ],
+
+    'responsive_images' => [
+
+        /*
+        * This class is responsible for calculating the target widths of the responsive
+        * images. By default we optimize for filesize and create variations that each are 20%
+        * smaller than the previous one. More info in the documentation.
+        *
+        * https://docs.spatie.be/laravel-medialibrary/v7/advanced-usage/generating-responsive-images
+        */
+
+        'width_calculator' => Spatie\MediaLibrary\ResponsiveImages\WidthCalculator\FileSizeOptimizedWidthCalculator::class,
+
+        /**
+         * By default rendering media to a responsive image will add some javascript and a tiny placeholder.
+         * This ensures that the browser can already determine the correct layout.
+         */
+        'use_tiny_placeholders' => true,
+
+        /**
+         * This class will generate the tiny placeholder used for progressive image loading. By default
+         * the medialibrary will use a tiny blurred jpg image.
+         */
+        'tiny_placeholder_generator' => Spatie\MediaLibrary\ResponsiveImages\TinyPlaceholderGenerator\Blurred::class,
+    ],
+
+    /*
+        * When urls to files get generated, this class will be called. Leave empty
+        * if your files are stored locally above the site root or on s3.
+        */
+    'custom_url_generator_class' => null,
+
+    /*
+        * The class that contains the strategy for determining a media file's path.
+        */
+    'custom_path_generator_class' => Cortex\Foundation\Generators\PathGenerator::class,
 
     /*
      * Medialibrary will try to optimize all converted images by removing
@@ -101,16 +117,32 @@ return [
     ],
 
     /*
+     * These generators will be used to create an image of media files.
+     */
+    'image_generators' => [
+        Spatie\MediaLibrary\ImageGenerators\FileTypes\Image::class,
+        Spatie\MediaLibrary\ImageGenerators\FileTypes\Pdf::class,
+        Spatie\MediaLibrary\ImageGenerators\FileTypes\Svg::class,
+        Spatie\MediaLibrary\ImageGenerators\FileTypes\Video::class,
+    ],
+
+    /*
+     * The engine that should perform the image conversions.
+     * Should be either `gd` or `imagick`.
+     */
+    'image_driver' => 'gd',
+
+    /*
+     * FFMPEG & FFProbe binaries paths, only used if you try to generate video
+     * thumbnails and have installed the php-ffmpeg/php-ffmpeg composer
+     * dependency.
+     */
+    'ffmpeg_path' => env('FFMPEG_PATH', '/usr/bin/ffmpeg'),
+    'ffprobe_path' => env('FFPROBE_PATH', '/usr/bin/ffmpeg'),
+
+    /*
      * The path where to store temporary files while performing image conversions.
      * If set to null, storage_path('medialibrary/temp') will be used.
      */
     'temporary_directory_path' => null,
-
-    /*
-     * FFMPEG & FFProbe binaries path, only used if you try to generate video
-     * thumbnails and have installed the php-ffmpeg/php-ffmpeg composer
-     * dependency.
-     */
-    'ffmpeg_binaries' => '/usr/bin/ffmpeg',
-    'ffprobe_binaries' => '/usr/bin/ffprobe',
 ];
