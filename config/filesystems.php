@@ -59,10 +59,10 @@ return [
 
         's3' => [
             'driver' => 's3',
-            'key' => env('AWS_KEY'),
-            'secret' => env('AWS_SECRET'),
-            'region' => env('AWS_REGION'),
-            'bucket' => env('AWS_BUCKET'),
+            'key' => env('AWS_S3_KEY'),
+            'secret' => env('AWS_S3_SECRET'),
+            'region' => env('AWS_S3_REGION'),
+            'bucket' => env('AWS_S3_BUCKET'),
         ],
 
         'snapshots' => [
