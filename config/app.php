@@ -176,7 +176,6 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         // Packages Service Providers...
-        Dusterio\AwsWorker\Integrations\LaravelServiceProvider::class,
         Krucas\Notification\NotificationServiceProvider::class,
         Lord\Laroute\LarouteServiceProvider::class,
         Aws\Laravel\AwsServiceProvider::class,
