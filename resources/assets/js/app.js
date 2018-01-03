@@ -149,6 +149,19 @@ $(function() {
         $(this).val('');
     });
 
+    // Handle file uploads inputs
+    $('.file-name').on('click', function() {
+        $(this).parents('.input-group').find(':file').trigger('click');
+    });
+
+    $(':file').on('change', function() {
+        let input = $(this);
+        let numFiles = input.get(0).files ? input.get(0).files.length : 1;
+        let label = numFiles > 1 ? numFiles + ' files selected' : input.val().replace(/\\/g, '/').replace(/.*\//, '');
+
+        $(this).parents('.input-group').find(':text').val(label);
+    });
+
     // Handle dynamic form fields
     $(document)
         .on('click', '.btn-add', function(e) {
