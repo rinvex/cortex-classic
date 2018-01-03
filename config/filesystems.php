@@ -65,6 +65,15 @@ return [
             'bucket' => env('AWS_S3_BUCKET'),
         ],
 
+        's3-public' => [
+            'driver' => 's3',
+            'visibility' => 'public',
+            'key' => env('AWS_S3_KEY'),
+            'secret' => env('AWS_S3_SECRET'),
+            'region' => env('AWS_S3_REGION'),
+            'bucket' => env('AWS_S3_BUCKET'),
+        ],
+
         'snapshots' => [
             'driver' => 'local',
             'root' => database_path('snapshots'),
