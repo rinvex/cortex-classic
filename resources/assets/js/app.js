@@ -33,6 +33,7 @@ import './vendor/slugify';
 import Dropzone from 'dropzone';
 import './vendor/jquery.validation';
 import 'expose-loader?moment!moment';
+import 'expose-loader?implicitForms!./vendor/jquery.implicitforms';
 
 // Theme
 import 'admin-lte';
@@ -46,6 +47,8 @@ $(function() {
             });
         },
     };
+    // Initialize implicit forms
+    implicitForms.initialize();
 
     // Color Picker
     $('.color-picker').colorpicker();
