@@ -38,15 +38,20 @@ import 'expose-loader?implicitForms!./vendor/jquery.implicitforms';
 // Theme
 import 'admin-lte';
 
+Dropzone.options.mediaDropzone = {
+    parallelUploads: 1,
+    init: function() {
+        this.on('error', function(file, response) {
+            $(file.previewElement).find('.dz-error-message').text(response.errors.file[0]);
+        });
+
+        this.on('queuecomplete', function(file) {
+            location.reload();
+        });
+    },
+};
+
 $(function() {
-    Dropzone.options.mediaDropzone = {
-        parallelUploads: 1,
-        init: function() {
-            this.on('queuecomplete', function(file) {
-                location.reload();
-            });
-        },
-    };
     // Initialize implicit forms
     implicitForms.initialize();
 
