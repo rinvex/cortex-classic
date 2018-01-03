@@ -42,7 +42,9 @@ Dropzone.options.mediaDropzone = {
     parallelUploads: 1,
     init: function() {
         this.on('error', function(file, response) {
-            $(file.previewElement).find('.dz-error-message').text(response.errors.file[0]);
+            $(file.previewElement)
+                .find('.dz-error-message')
+                .text(response.errors.file[0]);
         });
 
         this.on('queuecomplete', function(file) {
@@ -151,15 +153,27 @@ $(function() {
 
     // Handle file uploads inputs
     $('.file-name').on('click', function() {
-        $(this).parents('.input-group').find(':file').trigger('click');
+        $(this)
+            .parents('.input-group')
+            .find(':file')
+            .trigger('click');
     });
 
     $(':file').on('change', function() {
         let input = $(this);
         let numFiles = input.get(0).files ? input.get(0).files.length : 1;
-        let label = numFiles > 1 ? numFiles + ' files selected' : input.val().replace(/\\/g, '/').replace(/.*\//, '');
+        let label =
+            numFiles > 1
+                ? numFiles + ' files selected'
+                : input
+                      .val()
+                      .replace(/\\/g, '/')
+                      .replace(/.*\//, '');
 
-        $(this).parents('.input-group').find(':text').val(label);
+        $(this)
+            .parents('.input-group')
+            .find(':text')
+            .val(label);
     });
 
     // Handle dynamic form fields
