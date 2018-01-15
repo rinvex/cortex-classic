@@ -220,4 +220,26 @@ $(function() {
         modal.find('.modal-title').html(modalTitle);
         modal.find('.btn-danger').attr('href', modalAction);
     });
+
+    // Build countries select menu
+    function formatCountry (country_code) {
+        if (! country_code.id) {
+            return country_code.text;
+        }
+
+        var $country = $(
+            '<span style="padding-right: 10px">' + country_code.emoji + '</span>' +
+            '<span>' + country_code.text + '</span>'
+        );
+
+        return $country;
+    };
+
+    $("select[name='country_code']").select2({
+        placeholder: "Select a country",
+        templateSelection: formatCountry,
+        templateResult: formatCountry,
+        data: window.countries ? window.countries : []
+    }).val(window.selectedCountry ? window.selectedCountry : '').trigger('change');
+
 });
