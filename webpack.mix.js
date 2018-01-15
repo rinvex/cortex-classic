@@ -1,5 +1,6 @@
 const { mix } = require('laravel-mix');
 const webpack = require('webpack');
+const WebpackShellPlugin = require('webpack-shell-plugin');
 
 let glob = require('glob');
 
@@ -17,8 +18,13 @@ let purifyCssPaths = [
 ];
 
 let webpackPlugins = [
-    // reduce bundle size by ignoring moment js local files
+    // Reduce bundle size by ignoring moment js local files
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+
+    // Add shell command plugin to execute shell commands on building
+    new WebpackShellPlugin({onBuildStart:[
+        'php artisan laroute:generate',
+    ], onBuildEnd:[]}),
 ];
 
 /*

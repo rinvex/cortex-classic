@@ -50,6 +50,7 @@
     "purifycss-webpack": "^0.7.0",
     "select2": "^4.0.0",
     "timepicker": "^1.11.0",
+    "webpack-shell-plugin": "^0.5.0",
     "wysihtml": "^0.6.0-beta1"
   }
 }
