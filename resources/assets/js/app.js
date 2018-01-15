@@ -35,6 +35,12 @@ import './vendor/jquery.validation';
 import 'expose-loader?moment!moment';
 import 'expose-loader?implicitForms!./vendor/jquery.implicitforms';
 
+// Translations
+import Lang from './vendor/lang';
+import messages from '../../../public/assets/js/messages';
+window.Lang = new Lang({ messages });
+
+
 // Theme
 import 'admin-lte';
 
