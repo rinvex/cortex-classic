@@ -54,9 +54,6 @@ Dropzone.options.mediaDropzone = {
 };
 
 $(function() {
-    // Initialize implicit forms
-    implicitForms.initialize();
-
     // Color Picker
     $('.color-picker').colorpicker();
 
@@ -208,4 +205,19 @@ $(function() {
                 .parents('.entry:first')
                 .remove();
         });
+
+    $('#delete-confirmation').on('show.bs.modal', function (event) {
+        // Initialize implicit forms
+        implicitForms.initialize();
+
+        var button = $(event.relatedTarget); // Button that triggered the modal
+        var modalBody = button.data('modal-body');
+        var modalTitle = button.data('modal-title');
+        var modalAction = button.data('modal-action');
+
+        var modal = $(this);
+        modal.find('.modal-body').html(modalBody);
+        modal.find('.modal-title').html(modalTitle);
+        modal.find('.btn-danger').attr('href', modalAction);
+    });
 });
