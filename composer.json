@@ -22,9 +22,9 @@
     "homepage": "https://rinvex.com",
     "support": {
         "email": "help@rinvex.com",
-        "issues": "https://github.com/rinvex/country/issues",
-        "source": "https://github.com/rinvex/country",
-        "docs": "https://github.com/rinvex/country/blob/master/README.md"
+        "issues": "https://github.com/rinvex/cortex/issues",
+        "source": "https://github.com/rinvex/cortex",
+        "docs": "https://github.com/rinvex/cortex/blob/master/README.md"
     },
     "authors": [
         {
@@ -40,7 +40,7 @@
         },
         {
             "name": "The Generous Laravel Community",
-            "homepage": "https://github.com/rinvex/country/contributors"
+            "homepage": "https://github.com/rinvex/cortex/contributors"
         }
     ],
     "require": {
