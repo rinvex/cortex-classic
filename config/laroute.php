@@ -7,7 +7,7 @@ return [
     /*
      * The destination path for the javascript file.
      */
-    'path' => __DIR__.'/../public/assets/js',
+    'path' => public_path('assets/js'),
 
     /*
      * The destination filename for the javascript file.

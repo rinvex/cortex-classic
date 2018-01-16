@@ -4,7 +4,7 @@
 
         return {
             initialize: function () {
-                this.methodLinks = $('a[data-method]');
+                this.methodLinks = $('a[data-form]');
                 this.registerEvents();
             },
 
@@ -15,9 +15,9 @@
             handleMethod: function (e) {
                 let form;
                 let link = $(this);
-                let httpMethod = link.data('method').toUpperCase();
+                let httpMethod = link.data('form').toUpperCase();
 
-                // Ignore if the data-method attribute is not PUT, POST, or DELETE,
+                // Ignore if the data-form attribute is not PUT, POST, or DELETE,
                 if ($.inArray(httpMethod, ['PUT', 'DELETE', 'POST']) === - 1) {
                     return;
                 }
@@ -41,7 +41,7 @@
             createForm: function (link) {
                 let form = $('<form>', {'method': 'POST', 'action': link.attr('href')});
                 let _token = $('<input>', {'type': 'hidden', 'name': '_token', 'value': link.data('token')});
-                let _method = $('<input>', {'name': '_method', 'type': 'hidden', 'value': link.data('method')});
+                let _method = $('<input>', {'name': '_method', 'type': 'hidden', 'value': link.data('form')});
 
                 return form.append(_token, _method)
                            .appendTo('body');
