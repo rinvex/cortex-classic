@@ -22,10 +22,10 @@ let webpackPlugins = [
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
 
     // Add shell command plugin to execute shell commands on building
-    new WebpackShellPlugin({onBuildStart:[
-        'php artisan laroute:generate',
-        'php artisan lang:js --no-lib --quiet',
-    ], onBuildEnd:[]}),
+    new WebpackShellPlugin({
+        onBuildStart: ['php artisan laroute:generate', 'php artisan lang:js --no-lib --quiet'],
+        onBuildEnd: [],
+    }),
 ];
 
 /*
