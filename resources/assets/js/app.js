@@ -44,6 +44,9 @@ window.Lang = new Lang({ messages });
 // Theme
 import 'admin-lte';
 
+import Turbolinks from 'turbolinks';
+Turbolinks.start();
+
 Dropzone.options.mediaDropzone = {
     parallelUploads: 1,
     init: function() {

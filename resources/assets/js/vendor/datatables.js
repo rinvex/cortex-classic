@@ -10,6 +10,9 @@ import 'datatables.net-buttons/js/buttons.html5';
 import 'datatables.net-buttons/js/buttons.colVis';
 import './datatables.net-buttons.server-side';
 
+window.DataTableReady = true;
+$(document).trigger('datatables.ready');
+
 $(function () {
     // Format Log DataTable details
     window.dtFormatLogDetails = function (data) {
