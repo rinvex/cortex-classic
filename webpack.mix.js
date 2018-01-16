@@ -24,6 +24,7 @@ let webpackPlugins = [
     // Add shell command plugin to execute shell commands on building
     new WebpackShellPlugin({onBuildStart:[
         'php artisan laroute:generate',
+        'php artisan lang:js --no-lib --quiet',
     ], onBuildEnd:[]}),
 ];
 
