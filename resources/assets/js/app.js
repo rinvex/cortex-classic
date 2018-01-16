@@ -40,7 +40,6 @@ import Lang from './vendor/lang';
 import messages from '../../../public/assets/js/messages';
 window.Lang = new Lang({ messages });
 
-
 // Theme
 import 'admin-lte';
 
@@ -215,7 +214,7 @@ $(function() {
                 .remove();
         });
 
-    $('#delete-confirmation').on('show.bs.modal', function (event) {
+    $('#delete-confirmation').on('show.bs.modal', function(event) {
         // Initialize implicit forms
         implicitForms.initialize();
 
@@ -231,24 +230,30 @@ $(function() {
     });
 
     // Build countries select menu
-    function formatCountry (country_code) {
-        if (! country_code.id) {
+    function formatCountry(country_code) {
+        if (!country_code.id) {
             return country_code.text;
         }
 
         var $country = $(
-            '<span style="padding-right: 10px">' + country_code.emoji + '</span>' +
-            '<span>' + country_code.text + '</span>'
+            '<span style="padding-right: 10px">' +
+                country_code.emoji +
+                '</span>' +
+                '<span>' +
+                country_code.text +
+                '</span>'
         );
 
         return $country;
-    };
+    }
 
-    $("select[name='country_code']").select2({
-        placeholder: "Select a country",
-        templateSelection: formatCountry,
-        templateResult: formatCountry,
-        data: window.countries ? window.countries : []
-    }).val(window.selectedCountry ? window.selectedCountry : '').trigger('change');
-
+    $("select[name='country_code']")
+        .select2({
+            placeholder: 'Select a country',
+            templateSelection: formatCountry,
+            templateResult: formatCountry,
+            data: window.countries ? window.countries : [],
+        })
+        .val(window.selectedCountry ? window.selectedCountry : '')
+        .trigger('change');
 });
