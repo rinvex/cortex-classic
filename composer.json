@@ -72,7 +72,6 @@
         "spatie/laravel-db-snapshots": "^1.1.0",
         "spatie/laravel-link-checker": "^2.2.0",
         "spatie/laravel-medialibrary": "v7.x-dev",
-        "sven/artisan-view": "^2.0.0",
         "wnx/laravel-stats": "dev-master"
     },
     "require-dev": {
