@@ -11,6 +11,7 @@ let purifyCssPaths = [
     glob.sync(path.join(__dirname, 'node_modules/dropzone/**/*.js')),
     glob.sync(path.join(__dirname, 'resources/views/**/*.blade.php')),
     glob.sync(path.join(__dirname, 'node_modules/fullcalendar/**/*.js')),
+    glob.sync(path.join(__dirname, 'node_modules/admin-lte/dist/**/*.js')),
     glob.sync(path.join(__dirname, 'node_modules/datatables.net/**/*.js')),
     glob.sync(path.join(__dirname, 'node_modules/jquery.terminal/**/*.js')),
     glob.sync(path.join(__dirname, 'node_modules/fullcalendar-scheduler/**/*.js')),
