@@ -50,9 +50,9 @@ mix
     .sass('resources/assets/sass/app.scss', 'public/assets/css/app.css')
     .sass('resources/assets/sass/vendor.scss', 'public/assets/css/vendor.css')
     .sass('resources/assets/sass/datatables.scss', 'public/assets/css/datatables.css')
-    .sass('resources/assets/sass/theme-pratt.scss', 'public/assets/css/theme-pratt.css')
     .sass('resources/assets/sass/fullcalendar.scss', 'public/assets/css/fullcalendar.css')
-    .sass('resources/assets/sass/theme-adminlte.scss', 'public/assets/css/theme-adminlte.css')
+    .sass('resources/assets/sass/theme-frontarea.scss', 'public/assets/css/theme-frontarea.css')
+    .sass('resources/assets/sass/theme-adminarea.scss', 'public/assets/css/theme-adminarea.css')
     .sass('app/cortex/console/resources/assets/sass/terminal.scss', 'public/assets/css/terminal.css')
 
     .js('app/cortex/bookings/resources/assets/js/bookings.js', 'public/assets/js/bookings.js')
