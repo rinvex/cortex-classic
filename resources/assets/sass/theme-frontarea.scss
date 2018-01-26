@@ -259,9 +259,16 @@ hr {
 
 /* Profile Content */
 .profile-content {
-    padding: 20px;
     background: #fff;
-    min-height: 460px;
+    min-height: 400px;
+    position: relative;
+    padding: 20px 20px 60px 20px;
+}
+
+.profile-buttons {
+    bottom: 0;
+    position: absolute;
+    margin-bottom: 20px;
 }
 
 /* Wizard */
