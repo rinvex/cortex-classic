@@ -54,6 +54,7 @@
         "cortex/contacts": "dev-develop",
         "cortex/fort": "dev-develop",
         "cortex/foundation": "dev-develop",
+        "cortex/statistics": "dev-develop",
         "cortex/pages": "dev-develop",
         "cortex/tags": "dev-develop",
         "cortex/tenants": "dev-develop",
