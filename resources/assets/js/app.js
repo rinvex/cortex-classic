@@ -62,8 +62,6 @@ Dropzone.options.mediaDropzone = {
 };
 
 window.addEventListener('turbolinks:load', function() {
-    // Fake window onload trigger (dirty temp solution!)
-    $(window).trigger('load');
 
     // Color Picker
     $('.color-picker').colorpicker();
