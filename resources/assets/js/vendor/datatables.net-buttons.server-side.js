@@ -18,7 +18,7 @@
 
         action: function (e, dt, button, config) {
             var url = _buildUrl(dt, 'excel');
-            window.location = url;
+            Turbolinks.visit(url);
         }
     };
 
@@ -43,7 +43,7 @@
 
         action: function (e, dt, button, config) {
             var url = _buildUrl(dt, 'csv');
-            window.location = url;
+            Turbolinks.visit(url);
         }
     };
 
@@ -56,7 +56,7 @@
 
         action: function (e, dt, button, config) {
             var url = _buildUrl(dt, 'pdf');
-            window.location = url;
+            Turbolinks.visit(url);
         }
     };
 
@@ -69,7 +69,7 @@
 
         action: function (e, dt, button, config) {
             var url = _buildUrl(dt, 'print');
-            window.location = url;
+            Turbolinks.visit(url);
         }
     };
 
@@ -105,7 +105,7 @@
         },
 
         action: function (e, dt, button, config) {
-            window.location = window.location.href.replace(/\/+$/, "") + '/create';
+            Turbolinks.visit(window.location.href.replace(/\/+$/, "") + '/create');
         }
     };
 
@@ -117,7 +117,7 @@
         },
 
         action: function (e, dt, button, config) {
-            window.location = window.location.href.replace(/\/+$/, "") + '/import';
+            Turbolinks.visit(window.location.href.replace(/\/+$/, "") + '/import');
         }
     };
 })(jQuery, jQuery.fn.dataTable);
