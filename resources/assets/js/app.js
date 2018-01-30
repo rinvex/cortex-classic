@@ -46,22 +46,24 @@ import 'admin-lte';
 import Turbolinks from 'turbolinks';
 Turbolinks.start();
 
-Dropzone.options.mediaDropzone = {
-    parallelUploads: 1,
-    init: function() {
-        this.on('error', function(file, response) {
-            $(file.previewElement)
-                .find('.dz-error-message')
-                .text(response.errors.file[0]);
-        });
-
-        this.on('queuecomplete', function(file) {
-            location.reload();
-        });
-    },
-};
+Dropzone.autoDiscover = false;
 
 window.addEventListener('turbolinks:load', function() {
+    // Initialize dropzone(s)
+    $('.dropzone').dropzone({
+        parallelUploads: 1,
+        init: function() {
+            this.on('error', function(file, response) {
+                $(file.previewElement)
+                    .find('.dz-error-message')
+                    .text(response.errors.file[0]);
+            });
+
+            this.on('queuecomplete', function(file) {
+                location.reload();
+            });
+        },
+    });
 
     // Color Picker
     $('.color-picker').colorpicker();
