@@ -262,9 +262,11 @@ window.addEventListener('turbolinks:load', function() {
 });
 
 document.addEventListener('turbolinks:before-cache', function() {
-    $('.select2').select2().each(function(i, item){
-        $(item).select2('destroy');
-    });
+    $('.select2')
+        .select2()
+        .each(function(i, item) {
+            $(item).select2('destroy');
+        });
 
     // $('.dataTableBuilder').each(function(i, item){
     //     $(item).DataTable().destroy();
