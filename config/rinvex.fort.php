@@ -130,9 +130,6 @@ return [
             'expire' => 60,
         ],
 
-        // Send Success Email Upon Verification
-        'success_email' => true,
-
     ],
 
     /*
@@ -147,39 +144,8 @@ return [
 
     'throttle' => [
 
-        // Enable Login Throttling
-        'enabled' => true,
-
-        // Maximum Login Attempts before lockout
-        'max_login_attempts' => 5,
-
-        // Lockout Time (in minutes)
-        'lockout_time' => 1,
-
         // Send Lockout Email
         'lockout_email' => true,
-
-    ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | TwoFactor authentication
-    |--------------------------------------------------------------------------
-    |
-    | Rinvex Fort supports a variety of TwoFactor authentication backends through
-    | unified API, giving you convenient access to each using the same syntax.
-    | Here you may set the active TwoFactor authentication providers.
-    |
-    */
-
-    'twofactor' => [
-
-        'providers' => [
-
-            'totp',
-            'phone',
-
-        ],
 
     ],
 
@@ -226,11 +192,5 @@ return [
 
     // List items per page (use accross data lists)
     'items_per_page' => 10,
-
-    'boot' => [
-        'override_middleware' => false,
-        'override_exceptionhandler' => false,
-        'override_makeauth_command' => false,
-    ],
 
 ];
