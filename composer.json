@@ -54,8 +54,8 @@
         "cortex/contacts": "dev-develop",
         "cortex/fort": "dev-develop",
         "cortex/foundation": "dev-develop",
-        "cortex/statistics": "dev-develop",
         "cortex/pages": "dev-develop",
+        "cortex/statistics": "dev-develop",
         "cortex/tags": "dev-develop",
         "cortex/tenants": "dev-develop",
         "cortex/testimonials": "dev-develop",
@@ -115,6 +115,7 @@
         },
         "laravel": {
             "dont-discover": [
+                "silber/bouncer",
                 "mariuzzo/laravel-js-localization"
             ]
         }
