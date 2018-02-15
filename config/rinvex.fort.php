@@ -25,12 +25,20 @@ return [
 
     'emailverification' => [
 
-        // Email Verification Default Broker
-        'broker' => 'users',
+        'broker' => 'members',
 
-        // Email Verification Broker Configuration(s)
-        'users' => [
-            'provider' => 'users',
+        'admins' => [
+            'provider' => 'admins',
+            'expire' => 60,
+        ],
+
+        'members' => [
+            'provider' => 'members',
+            'expire' => 60,
+        ],
+
+        'managers' => [
+            'provider' => 'managers',
             'expire' => 60,
         ],
 

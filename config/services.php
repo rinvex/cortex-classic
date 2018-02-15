@@ -32,9 +32,9 @@ return [
     ],
 
     'stripe' => [
-        'model' => \Cortex\Fort\Models\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
+        'model' => \Cortex\Fort\Models\Member::class,
     ],
 
     'authy' => [

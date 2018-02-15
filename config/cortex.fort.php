@@ -6,6 +6,22 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Activate Sentinels
+    |--------------------------------------------------------------------------
+    |
+    | Sentinels are like frontline guardians, that protect access area routes
+    | with additional authentication layer. When enabled, admins required
+    | to login twice, first time using a sentinel user that is shared
+    | between admins, then second time with their own admin user.
+    |
+    */
+
+    'sentinels' => [
+        'adminarea',
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
     | Auth Models
     |--------------------------------------------------------------------------
     |
@@ -14,16 +30,16 @@ return [
     | you may use whatever you like. The model you want to use
     | must extend one of the default base models.
     |
-    | Note: User model is defined in the default Laravel configuration file:
-    |       config/auth.php (Check 'model' key inside the 'providers' array)
-    |
     */
 
     'models' => [
         'role' => \Cortex\Fort\Models\Role::class,
-        'user' => config('auth.providers.users.model'),
         'ability' => \Cortex\Fort\Models\Ability::class,
         'session' => \Cortex\Fort\Models\Session::class,
+        'admin' => config('auth.providers.admins.model'),
+        'member' => config('auth.providers.members.model'),
+        'manager' => config('auth.providers.managers.model'),
+        'sentinel' => config('auth.providers.sentinels.model'),
         'socialite' => \Cortex\Fort\Models\Socialite::class,
     ],
 
@@ -40,13 +56,14 @@ return [
     | Notes: - Sessions table is defined in the default Laravel configuration file:
     |          config/session.php (Check 'table' key)
     |
-    |        - Pivot tables defined within the
-    |
     */
 
     'tables' => [
         'roles' => 'roles',
-        'users' => 'users',
+        'admins' => 'admins',
+        'members' => 'members',
+        'managers' => 'managers',
+        'sentinels' => 'sentinels',
         'abilities' => 'abilities',
         'socialites' => 'socialites',
         'permissions' => 'permissions',

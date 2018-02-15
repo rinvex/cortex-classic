@@ -16,8 +16,8 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'web',
-        'passwords' => 'users',
+        'guard' => 'members',
+        'passwords' => 'members',
     ],
 
     /*
@@ -38,14 +38,30 @@ return [
     */
 
     'guards' => [
-        'web' => [
+
+        'admins' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'admins',
+        ],
+
+        'members' => [
+            'driver' => 'session',
+            'provider' => 'members',
+        ],
+
+        'managers' => [
+            'driver' => 'session',
+            'provider' => 'managers',
+        ],
+
+        'sentinels' => [
+            'driver' => 'session',
+            'provider' => 'sentinels',
         ],
 
         'api' => [
             'driver' => 'token',
-            'provider' => 'users',
+            'provider' => 'members',
         ],
     ],
 
@@ -67,9 +83,25 @@ return [
     */
 
     'providers' => [
-        'users' => [
+
+        'admins' => [
             'driver' => 'eloquent',
-            'model' => \Cortex\Fort\Models\User::class,
+            'model' => \Cortex\Fort\Models\Admin::class,
+        ],
+
+        'members' => [
+            'driver' => 'eloquent',
+            'model' => \Cortex\Fort\Models\Member::class,
+        ],
+
+        'managers' => [
+            'driver' => 'eloquent',
+            'model' => \Cortex\Fort\Models\Manager::class,
+        ],
+
+        'sentinels' => [
+            'driver' => 'eloquent',
+            'model' => \Cortex\Fort\Models\Sentinel::class,
         ],
 
         // 'users' => [
@@ -94,10 +126,27 @@ return [
     */
 
     'passwords' => [
-        'users' => [
-            'provider' => 'users',
+
+        'admins' => [
+            'provider' => 'admins',
             'expire' => 60,
         ],
+
+        'members' => [
+            'provider' => 'members',
+            'expire' => 60,
+        ],
+
+        'managers' => [
+            'provider' => 'managers',
+            'expire' => 60,
+        ],
+
+        'sentinels' => [
+            'provider' => 'sentinels',
+            'expire' => 60,
+        ],
+
     ],
 
 ];
