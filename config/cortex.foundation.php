@@ -23,6 +23,8 @@ return [
         'prefix' => [
             'frontarea' => '',
             'adminarea' => 'adminarea',
+            'tenantarea' => 'tenantarea',
+            'managerarea' => 'managerarea',
         ],
 
     ],

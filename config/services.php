@@ -34,7 +34,7 @@ return [
     'stripe' => [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
-        'model' => \Cortex\Fort\Models\Member::class,
+        'model' => \Cortex\Auth\Models\Member::class,
     ],
 
     'authy' => [

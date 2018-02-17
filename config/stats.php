@@ -20,6 +20,13 @@ return [
     ],
 
     /*
+     * List of your custom Classifiers
+     */
+    'custom_component_classifier' => [
+        // \App\Classifiers\CustomerExportClassifier::class
+    ],
+
+    /*
      * The Strategy used to reject Classes from the project statistics.
      *
      * By default all Classes located in
@@ -34,5 +41,19 @@ return [
      * write your own class which implements the RejectionStrategy Contract.
      */
     'rejection_strategy' => \Wnx\LaravelStats\RejectionStrategies\RejectVendorClasses::class,
+
+    /*
+     * Namespaces which should be ignored.
+     * Laravel Stats uses the `starts_with`-string helper, to
+     * check if a Namespace should be ignored.
+     *
+     * You can use `Illuminate` to ignore the entire `Illuminate`-namespace
+     * or `Illuminate\Support` to ignore a subset of the namespace.
+     */
+    'ignored_namespaces' => [
+        'Wnx\LaravelStats',
+        'Illuminate',
+        'Symfony',
+    ],
 
 ];

@@ -33,14 +33,14 @@ return [
     */
 
     'models' => [
-        'role' => \Cortex\Fort\Models\Role::class,
-        'ability' => \Cortex\Fort\Models\Ability::class,
-        'session' => \Cortex\Fort\Models\Session::class,
+        'role' => \Cortex\Auth\Models\Role::class,
+        'ability' => \Cortex\Auth\Models\Ability::class,
+        'session' => \Cortex\Auth\Models\Session::class,
         'admin' => config('auth.providers.admins.model'),
         'member' => config('auth.providers.members.model'),
         'manager' => config('auth.providers.managers.model'),
         'sentinel' => config('auth.providers.sentinels.model'),
-        'socialite' => \Cortex\Fort\Models\Socialite::class,
+        'socialite' => \Cortex\Auth\Models\Socialite::class,
     ],
 
     /*
@@ -121,7 +121,7 @@ return [
     // Minimum Passwords Characters
     'password_min_chars' => 8,
 
-    // Fort media storage disk
+    // Auth media storage disk
     'media' => [
         'disk' => 'public',
     ],

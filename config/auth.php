@@ -86,22 +86,22 @@ return [
 
         'admins' => [
             'driver' => 'eloquent',
-            'model' => \Cortex\Fort\Models\Admin::class,
+            'model' => \Cortex\Auth\Models\Admin::class,
         ],
 
         'members' => [
             'driver' => 'eloquent',
-            'model' => \Cortex\Fort\Models\Member::class,
+            'model' => \Cortex\Auth\Models\Member::class,
         ],
 
         'managers' => [
             'driver' => 'eloquent',
-            'model' => \Cortex\Fort\Models\Manager::class,
+            'model' => \Cortex\Auth\Models\Manager::class,
         ],
 
         'sentinels' => [
             'driver' => 'eloquent',
-            'model' => \Cortex\Fort\Models\Sentinel::class,
+            'model' => \Cortex\Auth\Models\Sentinel::class,
         ],
 
         // 'users' => [

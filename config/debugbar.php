@@ -12,9 +12,12 @@ return [
      | Debugbar is enabled by default, when debug is set to true in app.php.
      | You can override the value by setting enable to true or false instead of null.
      |
+     | You can provide an array of URI's that must be ignored (eg. 'api/*')
+     |
      */
 
     'enabled' => env('DEBUGBAR_ENABLED', null),
+    'except' => [],
 
     /*
      |--------------------------------------------------------------------------
@@ -118,6 +121,7 @@ return [
         'logs' => true, // Add the latest log messages
         'files' => true, // Show the included files
         'config' => true, // Display config settings
+        'cache' => true, // Display cache events
     ],
 
     /*
@@ -154,6 +158,9 @@ return [
         ],
         'logs' => [
             'file' => null,
+        ],
+        'cache' => [
+            'values' => true // collect cache values
         ],
     ],
 
