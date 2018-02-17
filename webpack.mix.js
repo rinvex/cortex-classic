@@ -1,6 +1,6 @@
-const { mix } = require('laravel-mix');
-const webpack = require('webpack');
-const WebpackShellPlugin = require('webpack-shell-plugin');
+let mix = require('laravel-mix');
+let webpack = require('webpack');
+let WebpackShellPlugin = require('webpack-shell-plugin');
 
 let glob = require('glob');
 

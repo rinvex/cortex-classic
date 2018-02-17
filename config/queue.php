@@ -17,7 +17,7 @@ return [
     |
     */
 
-    'default' => env('QUEUE_DRIVER', 'sqs'),
+    'default' => env('QUEUE_DRIVER', 'sync'),
 
     /*
     |--------------------------------------------------------------------------
@@ -64,6 +64,7 @@ return [
             'connection' => 'default',
             'queue' => 'default',
             'retry_after' => 90,
+            'block_for' => null,
         ],
 
     ],

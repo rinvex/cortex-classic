@@ -59,6 +59,7 @@ return [
 
         's3' => [
             'driver' => 's3',
+            'url' => env('AWS_S3_URL'),
             'key' => env('AWS_S3_KEY'),
             'secret' => env('AWS_S3_SECRET'),
             'region' => env('AWS_S3_REGION'),
@@ -68,6 +69,7 @@ return [
         's3-public' => [
             'driver' => 's3',
             'visibility' => 'public',
+            'url' => env('AWS_S3_URL'),
             'key' => env('AWS_S3_KEY'),
             'secret' => env('AWS_S3_SECRET'),
             'region' => env('AWS_S3_REGION'),

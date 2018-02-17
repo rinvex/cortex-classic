@@ -31,7 +31,7 @@ return [
     |
     */
 
-    'lifetime' => 120,
+    'lifetime' => env('SESSION_LIFETIME', 120),
 
     'expire_on_close' => false,
 
@@ -124,7 +124,7 @@ return [
     |
     */
 
-    'cookie' => 'cortex_session',
+    'cookie' => env('SESSION_COOKIE', str_slug(env('APP_NAME', 'laravel'), '_').'_session'),
 
     /*
     |--------------------------------------------------------------------------

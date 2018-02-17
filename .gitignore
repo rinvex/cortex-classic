@@ -1,6 +1,7 @@
 /build
 /vendor
 /.idea
+/.vscode
 /.vagrant
 /public/hot
 /node_modules
@@ -12,4 +13,5 @@ Homestead.json
 Homestead.yaml
 composer.phar
 npm-debug.log
+yarn-error.log
 .env
