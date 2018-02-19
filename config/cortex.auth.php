@@ -6,17 +6,17 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Activate Sentinels
+    | Activate Guardians
     |--------------------------------------------------------------------------
     |
-    | Sentinels are like frontline guardians, that protect access area routes
+    | Guardians are like frontline guardians, that protect access area routes
     | with additional authentication layer. When enabled, admins required
-    | to login twice, first time using a sentinel user that is shared
+    | to login twice, first time using a guardian user that is shared
     | between admins, then second time with their own admin user.
     |
     */
 
-    'sentinels' => [
+    'guardians' => [
         'adminarea',
     ],
 
@@ -39,7 +39,7 @@ return [
         'admin' => config('auth.providers.admins.model'),
         'member' => config('auth.providers.members.model'),
         'manager' => config('auth.providers.managers.model'),
-        'sentinel' => config('auth.providers.sentinels.model'),
+        'guardian' => config('auth.providers.guardians.model'),
         'socialite' => \Cortex\Auth\Models\Socialite::class,
     ],
 
@@ -63,7 +63,7 @@ return [
         'admins' => 'admins',
         'members' => 'members',
         'managers' => 'managers',
-        'sentinels' => 'sentinels',
+        'guardians' => 'guardians',
         'abilities' => 'abilities',
         'socialites' => 'socialites',
         'permissions' => 'permissions',

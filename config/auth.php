@@ -54,9 +54,9 @@ return [
             'provider' => 'managers',
         ],
 
-        'sentinels' => [
+        'guardians' => [
             'driver' => 'session',
-            'provider' => 'sentinels',
+            'provider' => 'guardians',
         ],
 
         'api' => [
@@ -99,9 +99,9 @@ return [
             'model' => \Cortex\Auth\Models\Manager::class,
         ],
 
-        'sentinels' => [
+        'guardians' => [
             'driver' => 'eloquent',
-            'model' => \Cortex\Auth\Models\Sentinel::class,
+            'model' => \Cortex\Auth\Models\Guardian::class,
         ],
 
         // 'users' => [
@@ -142,8 +142,8 @@ return [
             'expire' => 60,
         ],
 
-        'sentinels' => [
-            'provider' => 'sentinels',
+        'guardians' => [
+            'provider' => 'guardians',
             'expire' => 60,
         ],
 
