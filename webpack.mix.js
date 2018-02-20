@@ -53,6 +53,8 @@ mix
     .sass('resources/assets/sass/fullcalendar.scss', 'public/assets/css/fullcalendar.css')
     .sass('resources/assets/sass/theme-frontarea.scss', 'public/assets/css/theme-frontarea.css')
     .sass('resources/assets/sass/theme-adminarea.scss', 'public/assets/css/theme-adminarea.css')
+    .sass('resources/assets/sass/theme-tenantarea.scss', 'public/assets/css/theme-tenantarea.css')
+    .sass('resources/assets/sass/theme-managerarea.scss', 'public/assets/css/theme-managerarea.css')
     .sass('app/cortex/console/resources/assets/sass/terminal.scss', 'public/assets/css/terminal.css')
 
     .js('app/cortex/bookings/resources/assets/js/bookings.js', 'public/assets/js/bookings.js')
