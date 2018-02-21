@@ -49,6 +49,9 @@ Turbolinks.start();
 Dropzone.autoDiscover = false;
 
 window.addEventListener('turbolinks:load', function() {
+    // Fake window onload trigger (dirty temp solution!)
+    $(window).trigger('load');
+
     // Initialize dropzone(s)
     $('.dropzone').dropzone({
         parallelUploads: 1,
