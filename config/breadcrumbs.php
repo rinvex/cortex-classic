@@ -64,9 +64,9 @@ return [
     */
 
     // Manager
-    'manager-class'                            => DaveJamesMiller\Breadcrumbs\BreadcrumbsManager::class,
+    'manager-class' => DaveJamesMiller\Breadcrumbs\BreadcrumbsManager::class,
 
     // Generator
-    'generator-class'                          => DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator::class,
+    'generator-class' => DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator::class,
 
 ];
