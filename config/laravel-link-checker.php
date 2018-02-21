@@ -57,5 +57,5 @@ return [
          * Here's an example: [200, 302]
          */
         'exclude_status_codes' => [],
-    ]
+    ],
 ];
