@@ -160,7 +160,7 @@ return [
             'file' => null,
         ],
         'cache' => [
-            'values' => true // collect cache values
+            'values' => true, // collect cache values
         ],
     ],
 
