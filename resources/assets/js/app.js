@@ -262,6 +262,11 @@ window.addEventListener('turbolinks:load', function() {
         })
         .val(window.selectedCountry ? window.selectedCountry : '')
         .trigger('change');
+
+    // Highlight errored wizard step
+    if ($(".wizard-step:has(.has-error)").length && $(".wizard-step:has(.has-error)").first().find("a[data-parent='#accordion']").length) {
+        $(".wizard-step:has(.has-error)").first().find("a[data-parent='#accordion']").trigger('click');
+    }
 });
 
 document.addEventListener('turbolinks:before-cache', function() {
