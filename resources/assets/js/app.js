@@ -264,8 +264,16 @@ window.addEventListener('turbolinks:load', function() {
         .trigger('change');
 
     // Highlight errored wizard step
-    if ($(".wizard-step:has(.has-error)").length && $(".wizard-step:has(.has-error)").first().find("a[data-parent='#accordion']").length) {
-        $(".wizard-step:has(.has-error)").first().find("a[data-parent='#accordion']").trigger('click');
+    if (
+        $('.wizard-step:has(.has-error)').length &&
+        $('.wizard-step:has(.has-error)')
+            .first()
+            .find("a[data-parent='#accordion']").length
+    ) {
+        $('.wizard-step:has(.has-error)')
+            .first()
+            .find("a[data-parent='#accordion']")
+            .trigger('click');
     }
 });
 
