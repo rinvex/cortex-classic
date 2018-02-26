@@ -55,7 +55,10 @@ mix
     .sass('app/cortex/foundation/resources/assets/sass/theme-frontarea.scss', 'public/assets/css/theme-frontarea.css')
     .sass('app/cortex/foundation/resources/assets/sass/theme-adminarea.scss', 'public/assets/css/theme-adminarea.css')
     .sass('app/cortex/foundation/resources/assets/sass/theme-tenantarea.scss', 'public/assets/css/theme-tenantarea.css')
-    .sass('app/cortex/foundation/resources/assets/sass/theme-managerarea.scss', 'public/assets/css/theme-managerarea.css')
+    .sass(
+        'app/cortex/foundation/resources/assets/sass/theme-managerarea.scss',
+        'public/assets/css/theme-managerarea.css'
+    )
 
     .js('app/cortex/bookings/resources/assets/js/bookings.js', 'public/assets/js/bookings.js')
     .js('app/cortex/console/resources/assets/js/terminal.js', 'public/assets/js/terminal.js')
