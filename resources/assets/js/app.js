@@ -253,7 +253,7 @@ window.addEventListener('turbolinks:load', function() {
         return $country;
     }
 
-    $("select[name='country_code']")
+    $("select[name*='country_code']")
         .select2({
             placeholder: 'Select a country',
             templateSelection: formatCountry,
