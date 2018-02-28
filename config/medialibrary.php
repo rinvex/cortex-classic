@@ -32,7 +32,7 @@ return [
         /*
          * The domain that should be prepended when generating urls.
          */
-        'domain' => 'https://s3-eu-west-1.amazonaws.com/asdfghj23456x',
+        'domain' => 'https://xxxxxxx.s3.amazonaws.com',
     ],
 
     'remote' => [
