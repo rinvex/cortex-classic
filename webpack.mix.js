@@ -30,7 +30,7 @@ let webpackPlugins = [
 ];
 
 let webpackAliases = {
-    'markjs': 'mark.js/dist/jquery.mark.js',
+    markjs: 'mark.js/dist/jquery.mark.js',
 };
 
 /*
@@ -49,7 +49,7 @@ mix
     .setPublicPath('public/assets')
     .webpackConfig({
         plugins: webpackPlugins,
-        resolve: { alias: webpackAliases }
+        resolve: { alias: webpackAliases },
     })
     .autoload({ jquery: ['$', 'jQuery', 'window.$', 'window.jQuery'] })
     .options({ purifyCss: { paths: [].concat.apply([], purifyCssPaths) } })
