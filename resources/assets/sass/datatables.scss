@@ -1,5 +1,8 @@
+@import '../../../node_modules/datatables.mark.js/dist/datatables.mark';
 @import '../../../node_modules/datatables.net-bs/css/dataTables.bootstrap';
 @import '../../../node_modules/datatables.net-buttons-bs/css/buttons.bootstrap';
 @import '../../../node_modules/datatables.net-keytable-bs/css/keyTable.bootstrap';
 @import '../../../node_modules/datatables.net-rowgroup-bs/css/rowgroup.bootstrap';
 @import '../../../node_modules/datatables.net-responsive-bs/css/responsive.bootstrap';
+@import '../../../node_modules/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap';
+@import "./dataTables.searchPane";

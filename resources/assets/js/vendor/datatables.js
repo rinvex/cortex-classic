@@ -1,15 +1,18 @@
 // Datatables
 import 'datatables.net';
 import 'datatables.net-bs';
+import 'datatables.mark.js';
 import 'datatables.net-buttons';
 import 'datatables.net-rowgroup';
 import 'datatables.net-keytable';
 import 'datatables.net-responsive';
 import 'datatables.net-buttons-bs';
+import 'datatables.net-fixedheader';
 import 'datatables.net-responsive-bs';
 import 'datatables.net-buttons/js/buttons.html5';
 import 'datatables.net-buttons/js/buttons.colVis';
 import './datatables.net-buttons.server-side';
+import './dataTables.searchPane';
 
 // This is a workaround to handle the SPA nature of turbolinks
 window.DataTableReady = true;

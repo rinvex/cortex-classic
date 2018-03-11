@@ -29,6 +29,10 @@ let webpackPlugins = [
     }),
 ];
 
+let webpackAliases = {
+    'markjs': 'mark.js/dist/jquery.mark.js',
+};
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -43,7 +47,10 @@ let webpackPlugins = [
 mix
     .setResourceRoot('/assets/')
     .setPublicPath('public/assets')
-    .webpackConfig({ plugins: webpackPlugins })
+    .webpackConfig({
+        plugins: webpackPlugins,
+        resolve: { alias: webpackAliases }
+    })
     .autoload({ jquery: ['$', 'jQuery', 'window.$', 'window.jQuery'] })
     .options({ purifyCss: { paths: [].concat.apply([], purifyCssPaths) } })
 

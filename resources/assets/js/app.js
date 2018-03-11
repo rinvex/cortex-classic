@@ -17,6 +17,7 @@ import 'bootstrap-sass';
 import 'bootstrap-notify';
 
 // Pickers
+import 'mark.js';
 import 'timepicker';
 import 'datepair.js';
 import 'bootstrap-datepicker';
