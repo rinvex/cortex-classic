@@ -2,6 +2,7 @@
 import 'datatables.net';
 import 'datatables.net-bs';
 import 'datatables.net-buttons';
+import 'datatables.net-rowgroup';
 import 'datatables.net-keytable';
 import 'datatables.net-responsive';
 import 'datatables.net-buttons-bs';

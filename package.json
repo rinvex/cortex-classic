@@ -29,6 +29,8 @@
         "datatables.net-keytable-bs": "^2.3.0",
         "datatables.net-responsive": "^2.2.0",
         "datatables.net-responsive-bs": "^2.2.0",
+        "datatables.net-rowgroup": "^1.0.0",
+        "datatables.net-rowgroup-bs": "^1.0.0",
         "datepair.js": "^0.4.0",
         "dropzone": "^5.3.0",
         "expose-loader": "^0.7.0",
