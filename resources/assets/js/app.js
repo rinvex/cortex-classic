@@ -57,14 +57,16 @@ window.addEventListener('turbolinks:load', function() {
     $('.dropzone').dropzone({
         parallelUploads: 1,
         init: function() {
-            this.on('error', function(file, response) {
-                $(file.previewElement)
-                    .find('.dz-error-message')
-                    .text(response.errors.file[0]);
+            this.on('queuecomplete', function(file) {
+                window.location = routes.route(window.Accessarea + '.' + window.location.pathname.split( '/' )[2] + '.index');
             });
 
-            this.on('queuecomplete', function(file) {
-                location.reload();
+            this.on('addedfile', function(file) {
+                this.options.acceptedFiles = $(this.element).attr('data-dz-accepted-files');
+            });
+
+            this.on('error', function (file, response) {
+                $(file.previewElement).find('.dz-error-message').text(response.errors ? response.errors.file[0] : response);
             });
         },
     });
