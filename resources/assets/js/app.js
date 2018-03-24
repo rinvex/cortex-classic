@@ -284,9 +284,12 @@ window.addEventListener('turbolinks:load', function() {
     }
 
     // Highlight required fields
-    $('input').each(function(index, element){
+    $('input').each(function(index, element) {
         if ($(element).prop('required')) {
-            $(element).closest('.form-group').find('label:first').append(' <span class="text-red">*</span>');
+            $(element)
+                .closest('.form-group')
+                .find('label:first')
+                .append(' <span class="text-red">*</span>');
         }
     });
 
