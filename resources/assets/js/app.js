@@ -275,7 +275,11 @@ window.addEventListener('turbolinks:load', function() {
         $('.wizard-step:has(.has-error)').length &&
         $('.wizard-step:has(.has-error)')
             .first()
-            .find("a[data-parent='#accordion']").length
+            .find("a[data-parent='#accordion']").length &&
+        $('.wizard-step:has(.has-error)')
+            .first()
+            .find("a[data-parent='#accordion']")
+            .hasClass('collapsed')
     ) {
         $('.wizard-step:has(.has-error)')
             .first()
