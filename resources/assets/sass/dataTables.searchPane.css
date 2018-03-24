@@ -5,7 +5,7 @@ div.dt-searchPanes {
     justify-content: space-around;
     align-content: flex-start;
     align-items: stretch;
-    height: 200px
+    height: 200px;
 }
 
 div.dt-searchPanes div.pane {
@@ -13,14 +13,14 @@ div.dt-searchPanes div.pane {
     flex: 1;
     margin: 1em 0.5%;
     border: 1px solid #ccc;
-    border-radius: 3px
+    border-radius: 3px;
 }
 
-div.dt-searchPanes div.pane button[type=button] {
-    display: none
+div.dt-searchPanes div.pane button[type='button'] {
+    display: none;
 }
 
-div.dt-searchPanes div.pane.filtering button[type=button] {
+div.dt-searchPanes div.pane.filtering button[type='button'] {
     display: block;
     position: absolute;
     right: 6px;
@@ -28,11 +28,11 @@ div.dt-searchPanes div.pane.filtering button[type=button] {
     border: 1px solid #999;
     background: rgba(0, 0, 0, 0.1);
     border-radius: 16px;
-    cursor: pointer
+    cursor: pointer;
 }
 
-div.dt-searchPanes div.pane.filtering button[type=button]:hover {
-    background: rgba(0, 0, 0, 0.2)
+div.dt-searchPanes div.pane.filtering button[type='button']:hover {
+    background: rgba(0, 0, 0, 0.2);
 }
 
 div.dt-searchPanes div.pane div.title {
@@ -41,7 +41,7 @@ div.dt-searchPanes div.pane div.title {
     padding: 9px 0.35em;
     font-size: 1.1em;
     background-color: #e8e9eb;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15)
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 div.dt-searchPanes div.pane div.scroller {
@@ -50,13 +50,13 @@ div.dt-searchPanes div.pane div.scroller {
     bottom: 0;
     left: 0;
     right: 0;
-    overflow: auto
+    overflow: auto;
 }
 
 div.dt-searchPanes div.pane div.scroller ul {
     list-style: none;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 div.dt-searchPanes div.pane div.scroller ul li {
@@ -76,7 +76,7 @@ div.dt-searchPanes div.pane div.scroller ul li.selected span {
 }
 
 div.dt-searchPanes div.pane div.scroller ul li:nth-child(odd) {
-    background: rgba(0, 0, 0, 0.03)
+    background: rgba(0, 0, 0, 0.03);
 }
 
 div.dt-searchPanes div.pane div.scroller ul li.selected {
@@ -108,5 +108,5 @@ div.dt-searchPanes div.pane div.scroller ul li span.count {
     font-size: 0.8em;
     text-align: center;
     background-color: rgba(50, 118, 177, 0.5);
-    border-radius: 3px
+    border-radius: 3px;
 }
