@@ -58,15 +58,19 @@ window.addEventListener('turbolinks:load', function() {
         parallelUploads: 1,
         init: function() {
             this.on('queuecomplete', function(file) {
-                window.location = routes.route(window.Accessarea + '.' + window.location.pathname.split( '/' )[2] + '.index');
+                window.location = routes.route(
+                    window.Accessarea + '.' + window.location.pathname.split('/')[2] + '.index'
+                );
             });
 
             this.on('addedfile', function(file) {
                 this.options.acceptedFiles = $(this.element).attr('data-dz-accepted-files');
             });
 
-            this.on('error', function (file, response) {
-                $(file.previewElement).find('.dz-error-message').text(response.errors ? response.errors.file[0] : response);
+            this.on('error', function(file, response) {
+                $(file.previewElement)
+                    .find('.dz-error-message')
+                    .text(response.errors ? response.errors.file[0] : response);
             });
         },
     });
