@@ -289,6 +289,9 @@ window.addEventListener('turbolinks:load', function() {
             $(element).closest('.form-group').find('label:first').append(' <span class="text-red">*</span>');
         }
     });
+
+    // Autogenerate passwords
+    $(':password.autogenerate').val(Math.random().toString(36));
 });
 
 document.addEventListener('turbolinks:before-cache', function() {
