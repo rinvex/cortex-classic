@@ -282,6 +282,13 @@ window.addEventListener('turbolinks:load', function() {
             .find("a[data-parent='#accordion']")
             .trigger('click');
     }
+
+    // Highlight required fields
+    $('input').each(function(index, element){
+        if ($(element).prop('required')) {
+            $(element).closest('.form-group').find('label:first').append(' <span class="text-red">*</span>');
+        }
+    });
 });
 
 document.addEventListener('turbolinks:before-cache', function() {
