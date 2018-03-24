@@ -21,9 +21,9 @@ $(document).trigger('datatables.ready');
 $(function () {
     // Format Log DataTable details
     window.dtFormatLogDetails = function (data) {
-        if ($.isEmptyObject(data.attributes)) {
-            return 'Saved without any changes!';
-        }
+        // if ($.isEmptyObject(data.attributes)) {
+        //     return 'Saved without any changes!';
+        // }
 
         let headerDrwan = false;
         let $thead = $('<thead />');
