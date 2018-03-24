@@ -18,7 +18,7 @@
 
         action: function (e, dt, button, config) {
             var url = _buildUrl(dt, 'excel');
-            Turbolinks.visit(url);
+            window.location = url;
         }
     };
 
@@ -43,7 +43,7 @@
 
         action: function (e, dt, button, config) {
             var url = _buildUrl(dt, 'csv');
-            Turbolinks.visit(url);
+            window.location = url;
         }
     };
 
@@ -56,7 +56,7 @@
 
         action: function (e, dt, button, config) {
             var url = _buildUrl(dt, 'pdf');
-            Turbolinks.visit(url);
+            window.location = url;
         }
     };
 
@@ -69,7 +69,7 @@
 
         action: function (e, dt, button, config) {
             var url = _buildUrl(dt, 'print');
-            Turbolinks.visit(url);
+            window.location = url;
         }
     };
 
