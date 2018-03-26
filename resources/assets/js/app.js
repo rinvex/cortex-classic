@@ -288,7 +288,7 @@ window.addEventListener('turbolinks:load', function() {
     }
 
     // Highlight required fields
-    $('input').each(function(index, element) {
+    $('input, select, textarea').each(function(index, element) {
         if ($(element).prop('required')) {
             $(element)
                 .closest('.form-group')
