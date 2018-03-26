@@ -101,7 +101,8 @@
             "@php artisan ide-helper:generate",
             "@php artisan laroute:generate",
             "@php artisan package:discover",
-            "@php artisan ide-helper:meta"
+            "@php artisan ide-helper:meta",
+            "@npm install"
         ]
     },
     "config": {
