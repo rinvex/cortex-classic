@@ -67,6 +67,7 @@
         "league/flysystem-aws-s3-v3": "^1.0.0",
         "mariuzzo/laravel-js-localization": "^1.4.0",
         "predis/predis": "^1.1.0",
+        "roave/security-advisories": "dev-master",
         "spatie/laravel-db-snapshots": "^1.1.0",
         "spatie/laravel-link-checker": "^3.0.0",
         "spatie/laravel-medialibrary": "v7.x-dev",
