@@ -31,6 +31,7 @@ import './vendor/bootstrap-popover-picker';
 import 'select2';
 import './vendor/pace';
 import './vendor/slugify';
+import Hashids from 'hashids';
 import Dropzone from 'dropzone';
 import './vendor/jquery.validation';
 import 'expose-loader?moment!moment';
@@ -40,6 +41,7 @@ import 'expose-loader?implicitForms!./vendor/jquery.implicitforms';
 import Lang from './vendor/lang';
 import messages from '../../../public/assets/js/messages';
 window.Lang = new Lang({ messages });
+window.hashids = new Hashids(process.env.MIX_HASHIDS_KEY, process.env.MIX_HASHIDS_LENGTH);
 
 // Theme
 import 'admin-lte';
