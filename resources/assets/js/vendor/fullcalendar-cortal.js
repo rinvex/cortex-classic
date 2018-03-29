@@ -35,11 +35,10 @@
                         $('.popover').remove();
 
                         // Catch selected cells
-                        $cell = $('.fc-highlight, .fc-helper');
+                        $cell = $('.fc-highlight, .fc-helper').last();
 
                         // Attach popovers
-                        $cell.each(function () {
-                            $(this).popover({
+                        $cell.popover({
                                 title:'<h4 class="modal-title">Booking<span class="pull-right cal-event-add-close">&times</span></h4>',
                                 content: getFormHtml(),
                                 html: true,
@@ -55,11 +54,10 @@
                                 }
                             });
 
-                            // Display popovers
-                            if ($(this).is(':visible')) {
-                                $(this).popover('show');
-                            }
-                        });
+                        // Display popovers
+                        if ($cell.is(':visible')) {
+                            $cell.popover('show');
+                        }
 
                         $('.cal-event-add-close').css('cursor', 'pointer').click(function (domEvent) {
                             $cell.popover('hide');
