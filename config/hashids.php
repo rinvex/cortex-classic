@@ -33,11 +33,13 @@ return [
         'main' => [
             'salt' => env('HASHIDS_KEY'),
             'length' => env('HASHIDS_LENGTH'),
+            'alphabet' => env('HASHIDS_ALPHABET'),
         ],
 
         'alternative' => [
             'salt' => env('HASHIDS_KEY'),
             'length' => env('HASHIDS_LENGTH'),
+            'alphabet' => env('HASHIDS_ALPHABET'),
         ],
 
     ],
