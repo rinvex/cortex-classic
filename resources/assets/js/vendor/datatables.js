@@ -7,7 +7,6 @@ import 'datatables.net-rowgroup';
 import 'datatables.net-keytable';
 import 'datatables.net-responsive';
 import 'datatables.net-buttons-bs';
-import 'datatables.net-fixedheader';
 import 'datatables.net-responsive-bs';
 import 'datatables.net-buttons/js/buttons.html5';
 import 'datatables.net-buttons/js/buttons.colVis';
