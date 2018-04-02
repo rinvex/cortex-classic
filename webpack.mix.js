@@ -74,40 +74,38 @@ mix
     .js('node_modules/chart.js/src/chart.js', 'public/assets/js/chart.js')
     .js('resources/assets/js/app.js', 'public/assets/js/app.js')
 
-    .extract(
-        [
-            //jQuery
-            'jquery',
+    .extract([
+        //jQuery
+        'jquery',
 
-            // Mouse interaction
-            'jquery-mousewheel',
-            'jquery-slimscroll',
+        // Mouse interaction
+        'jquery-mousewheel',
+        'jquery-slimscroll',
 
-            // Bootstrap
-            'bootstrap-sass',
-            'bootstrap-notify',
+        // Bootstrap
+        'bootstrap-sass',
+        'bootstrap-notify',
 
-            // Pickers
-            'timepicker',
-            'datepair.js',
-            'bootstrap-datepicker',
-            'bootstrap-colorpicker',
-            'fontawesome-iconpicker',
-            'bootstrap-daterangepicker',
-            'datepair.js/src/jquery.datepair',
-            './resources/assets/js/vendor/bootstrap-popover-picker',
+        // Pickers
+        'timepicker',
+        'datepair.js',
+        'bootstrap-datepicker',
+        'bootstrap-colorpicker',
+        'fontawesome-iconpicker',
+        'bootstrap-daterangepicker',
+        'datepair.js/src/jquery.datepair',
+        './resources/assets/js/vendor/bootstrap-popover-picker',
 
-            // Misc
-            'moment',
-            'select2',
-            'dropzone',
-            './resources/assets/js/vendor/pace',
-            './resources/assets/js/vendor/slugify',
-            './resources/assets/js/vendor/jquery.validation',
+        // Misc
+        'moment',
+        'select2',
+        'dropzone',
+        './resources/assets/js/vendor/pace',
+        './resources/assets/js/vendor/slugify',
+        './resources/assets/js/vendor/jquery.validation',
 
-            // Theme
-            'admin-lte',
-        ],
-        'public/assets/js/vendor.js'
+        // Theme
+        'admin-lte',
+        ], 'public/assets/js/vendor.js'
     )
     .version();
