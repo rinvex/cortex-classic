@@ -95,14 +95,14 @@ window.addEventListener('turbolinks:load', function() {
             $.ajax({
                 method: 'GET',
                 url: routes.route('frontarea.country'),
-                success: function (response) {
+                success: function(response) {
                     callback(response);
-                }
+                },
             });
-        }
+        },
     });
 
-    $('input[type="tel"]').blur(function (event) {
+    $('input[type="tel"]').blur(function(event) {
         let phone = $(event.target);
         let formGroup = phone.closest('.form-group');
         let helpBlock = formGroup.find('.help-block');
@@ -196,7 +196,9 @@ window.addEventListener('turbolinks:load', function() {
     });
 
     // Configure datepicker
-    $('.datepicker').attr('readonly', true).daterangepicker();
+    $('.datepicker')
+        .attr('readonly', true)
+        .daterangepicker();
 
     // Handle file uploads inputs
     $('.file-name').on('click', function() {
