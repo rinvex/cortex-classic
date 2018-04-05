@@ -20,10 +20,12 @@ import 'bootstrap-notify';
 import 'mark.js';
 import 'timepicker';
 import 'datepair.js';
+import 'intl-tel-input';
 import 'bootstrap-datepicker';
 import 'bootstrap-colorpicker';
 import 'fontawesome-iconpicker';
 import 'bootstrap-daterangepicker';
+import 'intl-tel-input/build/js/utils';
 import 'datepair.js/src/jquery.datepair';
 import './vendor/bootstrap-popover-picker';
 
@@ -79,6 +81,41 @@ window.addEventListener('turbolinks:load', function() {
                     .text(response.errors ? response.errors.file[0] : response);
             });
         },
+    });
+
+    // Phone field
+    $('input[type="tel"]').intlTelInput({
+        isValidNumber: true,
+        hiddenInput: 'phone',
+        initialCountry: 'auto',
+        formatOnDisplay: false,
+        autoPlaceholder: 'aggressive',
+        preferredCountries: [],
+        geoIpLookup: function(callback) {
+            $.ajax({
+                method: 'GET',
+                url: routes.route('frontarea.country'),
+                success: function (response) {
+                    callback(response);
+                }
+            });
+        }
+    });
+
+    $('input[type="tel"]').blur(function (event) {
+        let phone = $(event.target);
+        let formGroup = phone.closest('.form-group');
+        let helpBlock = formGroup.find('.help-block');
+
+        if ($.trim(phone.val())) {
+            if (phone.intlTelInput('isValidNumber')) {
+                formGroup.removeClass('has-error');
+                helpBlock.addClass('hide');
+            } else {
+                formGroup.addClass('has-error');
+                helpBlock.removeClass('hide');
+            }
+        }
     });
 
     // Color Picker
