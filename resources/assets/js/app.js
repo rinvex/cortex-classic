@@ -196,21 +196,7 @@ window.addEventListener('turbolinks:load', function() {
     });
 
     // Configure datepicker
-    $('.datepicker').attr('readonly', true);
-    $('.datepicker').daterangepicker({
-        autoApply: true,
-        showDropdowns: true,
-        singleDatePicker: true,
-        locale: { format: 'YYYY-MM-DD' },
-    });
-
-    $('.datepicker').on('apply.daterangepicker', function(ev, picker) {
-        $(this).val(picker.startDate.format('YYYY-MM-DD'));
-    });
-
-    $('.datepicker').on('cancel.daterangepicker', function(ev, picker) {
-        $(this).val('');
-    });
+    $('.datepicker').attr('readonly', true).daterangepicker();
 
     // Handle file uploads inputs
     $('.file-name').on('click', function() {
