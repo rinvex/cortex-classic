@@ -17,7 +17,7 @@ return [
     'name' => env('APP_NAME', 'Cortex'),
 
     // Application Date Format
-    'date_format' => 'M jS, Y',
+    'date_format' => 'Y-m-d, h:i A',
 
     // Application Version
     'version' => '1.0.0',
