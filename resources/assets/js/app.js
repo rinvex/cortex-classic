@@ -93,7 +93,10 @@ window.addEventListener('turbolinks:load', function() {
         preferredCountries: [],
         geoIpLookup: function(callback) {
             $.ajax({
-                method: 'GET',
+                method: 'POST',
+                data: {
+                    _token: window.Laravel.csrfToken,
+                },
                 url: routes.route('frontarea.country'),
                 success: function(response) {
                     callback(response);
