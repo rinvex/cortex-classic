@@ -6,18 +6,12 @@ return [
 
     // Bookings Database Tables
     'tables' => [
-        'addons' => 'addons',
-        'bookings' => 'bookings',
-        'rates' => 'booking_rates',
-        'availabilities' => 'booking_availabilities',
-    ],
-
-    // Bookings Models
-    'models' => [
-        'rate' => \Cortex\Bookings\Models\Rate::class,
-        'addon' => \Cortex\Bookings\Models\Addon::class,
-        'booking' => \Cortex\Bookings\Models\Booking::class,
-        'availability' => \Cortex\Bookings\Models\Availability::class,
+        'bookable_rates' => 'bookable_rates',
+        'bookable_addons' => 'bookable_addons',
+        'bookable_bookings' => 'bookable_bookings',
+        'bookable_availabilities' => 'bookable_availabilities',
+        'ticketable_bookings' => 'ticketable_bookings',
+        'ticketable_tickets' => 'ticketable_tickets',
     ],
 
 ];
