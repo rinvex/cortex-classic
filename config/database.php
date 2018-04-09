@@ -54,6 +54,7 @@ return [
             'prefix' => env('DB_PREFIX', ''),
             'strict' => true,
             'engine' => null,
+            'timezone' => env('APP_TIMEZONE', 'UTC'),
         ],
 
         'pgsql' => [
@@ -67,6 +68,7 @@ return [
             'prefix' => env('DB_PREFIX', ''),
             'schema' => 'public',
             'sslmode' => 'prefer',
+            'timezone' => env('APP_TIMEZONE', 'UTC'),
         ],
 
         'sqlsrv' => [
@@ -78,6 +80,7 @@ return [
             'password' => env('DB_PASSWORD', ''),
             'charset' => 'utf8',
             'prefix' => '',
+            'timezone' => env('APP_TIMEZONE', 'UTC'),
         ],
 
     ],
