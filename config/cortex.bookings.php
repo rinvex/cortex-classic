@@ -6,7 +6,7 @@ return [
 
     // Bookings media storage disk
     'media' => [
-        'disk' => 'public',
+        'disk' => 's3-public',
     ],
 
     // Bookings database tables
