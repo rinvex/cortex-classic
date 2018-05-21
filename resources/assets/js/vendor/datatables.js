@@ -2,6 +2,7 @@
 import 'datatables.net';
 import 'datatables.net-bs';
 import 'datatables.mark.js';
+import 'datatables.net-select';
 import 'datatables.net-buttons';
 import 'datatables.net-rowgroup';
 import 'datatables.net-keytable';
