@@ -21,7 +21,6 @@ import 'mark.js';
 import 'timepicker';
 import 'datepair.js';
 import 'intl-tel-input';
-import 'bootstrap-datepicker';
 import 'bootstrap-colorpicker';
 import 'fontawesome-iconpicker';
 import 'bootstrap-daterangepicker';

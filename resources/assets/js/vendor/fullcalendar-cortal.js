@@ -392,14 +392,18 @@
                 'timeFormat': 'g:i a'
             });
 
-            $('input[name=start_date]').datepicker({
-                'format': 'yyyy-mm-dd',
-                'autoclose': true
+            $('input[name=start_date]').daterangepicker({
+                locale: {format: 'YYYY-MM-DD, hh:mm A'},
+                singleDatePicker: true,
+                showDropdowns: true,
+                autoApply: true,
             });
 
-            $('input[name=end_date]').datepicker({
-                'format': 'yyyy-mm-dd',
-                'autoclose': true
+            $('input[name=end_date]').daterangepicker({
+                locale: {format: 'YYYY-MM-DD, hh:mm A'},
+                singleDatePicker: true,
+                showDropdowns: true,
+                autoApply: true,
             });
 
             $('.duration').datepair();
