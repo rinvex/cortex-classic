@@ -52,7 +52,10 @@ mix
         resolve: { alias: webpackAliases },
     })
     .autoload({ jquery: ['$', 'jQuery', 'window.$', 'window.jQuery'] })
-    .options({ purifyCss: { paths: [].concat.apply([], purifyCssPaths) } })
+    .options({
+        // postCss: [require('postcss-image-inliner')()],
+        purifyCss: {paths: [].concat.apply([], purifyCssPaths)}
+    })
 
     .sass('resources/assets/sass/app.scss', 'public/assets/css/app.css')
     .sass('resources/assets/sass/vendor.scss', 'public/assets/css/vendor.css')
