@@ -12,7 +12,6 @@ import 'datatables.net-responsive-bs';
 import 'datatables.net-buttons/js/buttons.html5';
 import 'datatables.net-buttons/js/buttons.colVis';
 import './datatables.net-buttons.server-side';
-import './dataTables.searchPane';
 
 // This is a workaround to handle the SPA nature of turbolinks
 window.DataTableReady = true;
