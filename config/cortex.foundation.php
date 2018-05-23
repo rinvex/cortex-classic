@@ -45,10 +45,15 @@ return [
 
     ],
 
+    'models' => [
+        'import_record' => \Cortex\Foundation\Models\ImportRecord::class,
+    ],
+
     'tables' => [
         'media' => 'media',
         'activity_log' => 'activity_log',
         'notifications' => 'notifications',
+        'import_records' => 'import_records',
         'temporary_uploads' => 'temporary_uploads',
     ],
 
