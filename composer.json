@@ -76,7 +76,7 @@
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.1.0",
         "barryvdh/laravel-ide-helper": "^2.4.0",
-        "codedungeon/phpunit-result-printer": "^0.5.0",
+        "codedungeon/phpunit-result-printer": "^0.19.0",
         "filp/whoops": "^2.1.0",
         "fzaninotto/faker": "~1.7.0",
         "itsgoingd/clockwork": "^2.2.0",
