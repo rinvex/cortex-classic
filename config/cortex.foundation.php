@@ -4,6 +4,11 @@ declare(strict_types=1);
 
 return [
 
+    // Obscure IDs in certain access areas
+    'obscure' => [
+        'adminarea',
+    ],
+
     // Global Route Override
     'route' => [
 
