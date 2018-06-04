@@ -70,6 +70,8 @@ mix
         'public/assets/css/theme-managerarea.css'
     )
 
+    .js('node_modules/pym.js/dist/pym.v1.js', 'public/assets/js/embed.js')
+    .js('resources/assets/js/vendor/formbuilder.js', 'public/assets/js/formbuilder.js')
     .js('app/cortex/bookings/resources/assets/js/bookings.js', 'public/assets/js/bookings.js')
     .js('app/cortex/console/resources/assets/js/terminal.js', 'public/assets/js/terminal.js')
     .js('resources/assets/js/vendor/fullcalendar.js', 'public/assets/js/fullcalendar.js')
