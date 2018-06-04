@@ -260,19 +260,21 @@ window.addEventListener('turbolinks:load', function() {
                 .remove();
         });
 
-    $('#delete-confirmation').on('show.bs.modal', function(event) {
+    $('.modal.overlay').on('show.bs.modal', function(event) {
         // Initialize implicit forms
         implicitForms.initialize();
 
-        var button = $(event.relatedTarget); // Button that triggered the modal
-        var modalBody = button.data('modal-body');
-        var modalTitle = button.data('modal-title');
-        var modalAction = button.data('modal-action');
+        let button = $(event.relatedTarget); // Button that triggered the modal
+        let modalBody = button.data('modal-body');
+        let modalTitle = button.data('modal-title');
+        let modalAction = button.data('modal-action');
+        let modalButton = button.data('modal-button');
 
-        var modal = $(this);
+        let modal = $(this);
         modal.find('.modal-body').html(modalBody);
         modal.find('.modal-title').html(modalTitle);
-        modal.find('.btn-danger').attr('href', modalAction);
+        modal.find('a[data-form]').attr('href', modalAction);
+        modal.find('.modal-button').replaceWith(modalButton);
     });
 
     // Build countries select menu
@@ -281,7 +283,7 @@ window.addEventListener('turbolinks:load', function() {
             return country_code.text;
         }
 
-        var $country = $(
+        let $country = $(
             '<span style="padding-right: 10px">' +
                 country_code.emoji +
                 '</span>' +
