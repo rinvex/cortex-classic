@@ -228,6 +228,7 @@ window.addEventListener('turbolinks:load', function() {
     });
 
     // Handle dynamic form fields
+    // @TODO: refactor and use JS templates
     $(document)
         .on('click', '.btn-add', function(e) {
             e.preventDefault();
@@ -318,6 +319,23 @@ window.addEventListener('turbolinks:load', function() {
     ) {
         $('.wizard-step:has(.has-error)')
             .first()
+            .find("a[data-parent='#accordion']")
+            .trigger('click');
+    }
+
+    // Highlight errored accordion
+    if (
+        $('.panel-collapse:has(.has-error)').length &&
+        $('.panel-collapse:has(.has-error)')
+            .first().siblings()
+            .find("a[data-parent='#accordion']").length &&
+        $('.panel-collapse:has(.has-error)')
+            .first().siblings()
+            .find("a[data-parent='#accordion']")
+            .hasClass('collapsed')
+    ) {
+        $('.panel-collapse:has(.has-error)')
+            .first().siblings()
             .find("a[data-parent='#accordion']")
             .trigger('click');
     }
