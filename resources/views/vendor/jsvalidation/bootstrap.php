@@ -22,8 +22,7 @@
                 },
 
                 <?php if (isset($validator['ignore']) && is_string($validator['ignore'])): ?>
-
-                ignore: '<?php echo $validator['ignore']; ?>',
+                    ignore: '<?php echo $validator['ignore']; ?>',
                 <?php endif; ?>
 
                 /*
