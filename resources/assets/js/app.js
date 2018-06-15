@@ -56,6 +56,43 @@ Turbolinks.start();
 
 Dropzone.autoDiscover = false;
 
+window.highlight_errored_accordion = function(){
+    // Highlight errored accordion
+    if (
+        $('.panel-collapse:has(.has-error)').length &&
+        $('.panel-collapse:has(.has-error)')
+            .first().siblings()
+            .find("a[data-parent='#accordion']").length &&
+        $('.panel-collapse:has(.has-error)')
+            .first().siblings()
+            .find("a[data-parent='#accordion']")
+            .hasClass('collapsed')
+    ) {
+        $('.panel-collapse:has(.has-error)')
+            .first().siblings()
+            .find("a[data-parent*='accordion']")
+            .trigger('click');
+
+        // @TODO: focus first errored field
+    }
+
+    if ($('.panel-collapse:has(.has-error)').first().find('.panel-collapse:has(.has-error)').length && $('.panel-collapse:has(.has-error)').first().find('.panel-collapse:has(.has-error)').first().siblings().find("a[data-parent*='accordion']").hasClass('collapsed')) {
+        $('.panel-collapse:has(.has-error)').first().find('.panel-collapse:has(.has-error)').first().siblings().find("a[data-parent*='accordion']").trigger('click');
+        // @TODO: focus first errored field
+    }
+}
+
+window.highlight_required = function(){
+    $('input, select, textarea').each(function(index, element) {
+        if ($(element).prop('required') && ! $(element).closest('.form-group').find('label:first').find('.required-asterisk').length) {
+            $(element)
+                .closest('.form-group')
+                .find('label:first')
+                .append(' <span class="text-red required-asterisk">*</span>');
+        }
+    });
+}
+
 window.addEventListener('turbolinks:load', function() {
     // Fake window onload trigger (dirty temp solution!)
     $(window).trigger('load');
@@ -321,34 +358,11 @@ window.addEventListener('turbolinks:load', function() {
             .first()
             .find("a[data-parent='#accordion']")
             .trigger('click');
+
+        // @TODO: focus first errored field
     }
 
-    // Highlight errored accordion
-    if (
-        $('.panel-collapse:has(.has-error)').length &&
-        $('.panel-collapse:has(.has-error)')
-            .first().siblings()
-            .find("a[data-parent='#accordion']").length &&
-        $('.panel-collapse:has(.has-error)')
-            .first().siblings()
-            .find("a[data-parent='#accordion']")
-            .hasClass('collapsed')
-    ) {
-        $('.panel-collapse:has(.has-error)')
-            .first().siblings()
-            .find("a[data-parent='#accordion']")
-            .trigger('click');
-    }
-
-    // Highlight required fields
-    $('input, select, textarea').each(function(index, element) {
-        if ($(element).prop('required')) {
-            $(element)
-                .closest('.form-group')
-                .find('label:first')
-                .append(' <span class="text-red">*</span>');
-        }
-    });
+    highlight_required();
 
     // Autogenerate passwords
     $(':password.autogenerate').val(Math.random().toString(36));
