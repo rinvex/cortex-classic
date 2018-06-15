@@ -7,6 +7,7 @@ return [
     // Obscure IDs in certain access areas
     'obscure' => [
         'adminarea',
+        'frontarea',
     ],
 
     // Global Route Override
