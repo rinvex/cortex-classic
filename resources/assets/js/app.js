@@ -221,9 +221,10 @@ window.addEventListener('turbolinks:load', function() {
         if ($($(this).data('slugify')).val().length === 0) {
             $(this).on('keyup', function() {
                 let input = $(this).data('slugify');
+                let delimiter = $(this).data('slugify-delimiter');
                 let slug = $(this)
                     .val()
-                    .slugify();
+                    .slugify(delimiter);
                 $(input).val(slug);
             });
         }
