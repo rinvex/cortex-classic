@@ -17,7 +17,6 @@
         <testsuite name="Rinvex Cortex Feature Test Suite">
             <directory suffix="Test.php">./tests/Feature</directory>
         </testsuite>
-
         <testsuite name="Rinvex Cortex Unit Test Suite">
             <directory suffix="Test.php">./tests/Unit</directory>
         </testsuite>
