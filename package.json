@@ -34,7 +34,7 @@
         "datatables.net-select": "^1.2.5",
         "datatables.net-select-bs": "^1.2.5",
         "datepair.js": "^0.4.0",
-        "dropzone": "^5.4.0",
+        "dropzone": "5.4.*",
         "expose-loader": "^0.7.0",
         "font-awesome": "^4.7.0",
         "fontawesome-iconpicker": "^1.4.0",
