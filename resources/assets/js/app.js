@@ -97,6 +97,10 @@ window.addEventListener('turbolinks:load', function() {
     // Fake window onload trigger (dirty temp solution!)
     $(window).trigger('load');
 
+    // This is a workaround to handle the SPA nature of turbolinks
+    window.BookableRangeReady = true;
+    $(document).trigger('bookablerange.ready');
+
     // Initialize dropzone(s)
     $('.dropzone').dropzone({
         parallelUploads: 1,
