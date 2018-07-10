@@ -244,6 +244,10 @@ window.addEventListener('turbolinks:load', function() {
         .attr('readonly', true)
         .daterangepicker();
 
+    // Configure timepicker
+    $('.timepicker')
+        .timepicker();
+
     // Handle file uploads inputs
     $('.file-name').on('click', function() {
         $(this)
