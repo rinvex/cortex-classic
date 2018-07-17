@@ -320,8 +320,8 @@ window.addEventListener('turbolinks:load', function() {
         let modal = $(this);
         modal.find('.modal-body').html(modalBody);
         modal.find('.modal-title').html(modalTitle);
-        modal.find('a[data-form]').attr('href', modalAction);
         modal.find('.modal-button').replaceWith(modalButton);
+        modal.find('a[data-form]').attr('href', modalAction);
     });
 
     // Build countries select menu

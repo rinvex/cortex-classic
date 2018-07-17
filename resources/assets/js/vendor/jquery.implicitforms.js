@@ -61,7 +61,7 @@
         module.exports = implicitForms;
     }
     else {
-        window.routes = implicitForms;
+        window.implicitForms = implicitForms;
     }
 
 }).call(this);
