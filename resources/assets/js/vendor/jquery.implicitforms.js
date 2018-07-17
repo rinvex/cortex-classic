@@ -13,7 +13,6 @@
             },
 
             handleMethod: function (e) {
-                let form;
                 let link = $(this);
                 let httpMethod = link.data('form').toUpperCase();
 
@@ -29,7 +28,7 @@
                     }
                 }
 
-                form = implicitForms.createForm(link);
+                let form = implicitForms.createForm(link);
                 form.submit();
                 e.preventDefault();
             },

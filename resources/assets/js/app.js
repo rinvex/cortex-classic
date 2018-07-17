@@ -308,9 +308,6 @@ window.addEventListener('turbolinks:load', function() {
         });
 
     $('.modal.overlay').on('show.bs.modal', function(event) {
-        // Initialize implicit forms
-        implicitForms.initialize();
-
         let button = $(event.relatedTarget); // Button that triggered the modal
         let modalBody = button.data('modal-body');
         let modalTitle = button.data('modal-title');
@@ -322,6 +319,9 @@ window.addEventListener('turbolinks:load', function() {
         modal.find('.modal-title').html(modalTitle);
         modal.find('.modal-button').replaceWith(modalButton);
         modal.find('a[data-form]').attr('href', modalAction);
+
+        // Initialize implicit forms
+        implicitForms.initialize();
     });
 
     // Build countries select menu
