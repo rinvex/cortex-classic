@@ -54,6 +54,13 @@ import 'admin-lte';
 import Turbolinks from 'turbolinks';
 Turbolinks.start();
 
+// Persist page scroll position
+Turbolinks.scroll = {}
+document.addEventListener('click', function(event) {
+    if (event.target.getAttribute('data-turbolinks-scroll') !== 'false') return;
+    Turbolinks.scroll.top = document.documentElement.scrollTop;
+});
+
 Dropzone.autoDiscover = false;
 
 window.highlight_errored_accordion = function(){
@@ -100,6 +107,12 @@ window.addEventListener('turbolinks:load', function() {
     // This is a workaround to handle the SPA nature of turbolinks
     window.BookableRangeReady = true;
     $(document).trigger('bookablerange.ready');
+
+    // Persist page scroll position
+    if (Turbolinks.scroll.top) {
+        document.documentElement.scrollTop = Turbolinks.scroll.top;
+        Turbolinks.scroll = {};
+    }
 
     // Initialize dropzone(s)
     $('.dropzone').dropzone({
