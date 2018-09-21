@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 return [
 
     /*
@@ -31,6 +29,13 @@ return [
         ],
         \BeyondCode\SelfDiagnosis\Checks\EnvFileExists::class,
         \BeyondCode\SelfDiagnosis\Checks\ExampleEnvironmentVariablesAreSet::class,
+        \BeyondCode\SelfDiagnosis\Checks\LocalesAreInstalled::class => [
+            'required_locales' => [
+                'en_US',
+                'en_US.utf8',
+            ],
+        ],
+        \BeyondCode\SelfDiagnosis\Checks\MaintenanceModeNotEnabled::class,
         \BeyondCode\SelfDiagnosis\Checks\MigrationsAreUpToDate::class,
         \BeyondCode\SelfDiagnosis\Checks\PhpExtensionsAreInstalled::class => [
             'extensions' => [
@@ -44,6 +49,10 @@ return [
             ],
             'include_composer_extensions' => true,
         ],
+        //\BeyondCode\SelfDiagnosis\Checks\RedisCanBeAccessed::class => [
+        //    'default_connection' => true,
+        //    'connections' => [],
+        //],
         \BeyondCode\SelfDiagnosis\Checks\StorageDirectoryIsLinked::class,
     ],
 
@@ -55,6 +64,7 @@ return [
             \BeyondCode\SelfDiagnosis\Checks\ComposerWithDevDependenciesIsUpToDate::class,
             \BeyondCode\SelfDiagnosis\Checks\ConfigurationIsNotCached::class,
             \BeyondCode\SelfDiagnosis\Checks\RoutesAreNotCached::class,
+            \BeyondCode\SelfDiagnosis\Checks\ExampleEnvironmentVariablesAreUpToDate::class,
         ],
         'production' => [
             \BeyondCode\SelfDiagnosis\Checks\ComposerWithoutDevDependenciesIsUpToDate::class,
@@ -66,6 +76,20 @@ return [
                 ],
             ],
             \BeyondCode\SelfDiagnosis\Checks\RoutesAreCached::class,
+            //\BeyondCode\SelfDiagnosis\Checks\ServersArePingable::class => [
+            //    'servers' => [
+            //        'www.google.com',
+            //        ['host' => 'www.google.com', 'port' => 8080],
+            //        '8.8.8.8',
+            //        ['host' => '8.8.8.8', 'port' => 8080, 'timeout' => 5],
+            //    ],
+            //],
+            //\BeyondCode\SelfDiagnosis\Checks\SupervisorProgramsAreRunning::class => [
+            //    'programs' => [
+            //        'horizon',
+            //    ],
+            //    'restarted_within' => 300,
+            //],
         ],
     ],
 

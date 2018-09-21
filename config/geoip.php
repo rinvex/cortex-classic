@@ -72,6 +72,21 @@ return [
             'secure' => true,
             'key' => env('IPAPI_KEY'),
             'continent_path' => storage_path('app/continents.json'),
+            'lang' => 'en',
+        ],
+
+        'ipgeolocation' => [
+            'class' => \Torann\GeoIP\Services\IPGeoLocation::class,
+            'secure' => true,
+            'key' => env('IPGEOLOCATION_KEY'),
+            'continent_path' => storage_path('app/continents.json'),
+            'lang' => 'en',
+        ],
+
+        'ipdata' => [
+            'class'  => \Torann\GeoIP\Services\IPData::class,
+            'key'    => env('IPDATA_API_KEY'),
+            'secure' => true,
         ],
 
     ],

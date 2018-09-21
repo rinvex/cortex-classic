@@ -5,8 +5,8 @@ declare(strict_types=1);
 return [
 
     /*
-     * The filesystems on which to store added files and derived images by default. Choose
-     * one or more of the filesystems you've configured in config/filesystems.php.
+     * The disk on which to store added files and derived images by default. Choose
+     * one or more of the disks you've configured in config/filesystems.php.
      */
     'default_filesystem' => 's3',
 
@@ -23,9 +23,8 @@ return [
     'queue_name' => 'media',
 
     /*
-     * The class names of the models that should be used.
+     * The fully qualified class name of the media model.
      */
-
     'media_model' => Spatie\MediaLibrary\Models\Media::class,
 
     's3' => [
@@ -49,10 +48,6 @@ return [
         ],
     ],
 
-    'uploads' => [
-        'temporary_upload_model' => Spatie\MediaLibrary\Uploads\Models\TemporaryUpload::class,
-    ],
-
     'responsive_images' => [
 
         /*
@@ -62,7 +57,6 @@ return [
         *
         * https://docs.spatie.be/laravel-medialibrary/v7/advanced-usage/generating-responsive-images
         */
-
         'width_calculator' => Spatie\MediaLibrary\ResponsiveImages\WidthCalculator\FileSizeOptimizedWidthCalculator::class,
 
         /*
@@ -79,15 +73,15 @@ return [
     ],
 
     /*
-        * When urls to files get generated, this class will be called. Leave empty
-        * if your files are stored locally above the site root or on s3.
-        */
-    'custom_url_generator_class' => null,
+     * When urls to files get generated, this class will be called. Leave empty
+     * if your files are stored locally above the site root or on s3.
+     */
+    'url_generator' => null,
 
     /*
-        * The class that contains the strategy for determining a media file's path.
-        */
-    'custom_path_generator_class' => Cortex\Foundation\Generators\PathGenerator::class,
+     * The class that contains the strategy for determining a media file's path.
+     */
+    'path_generator' => null,
 
     /*
      * Medialibrary will try to optimize all converted images by removing
@@ -121,6 +115,7 @@ return [
      */
     'image_generators' => [
         Spatie\MediaLibrary\ImageGenerators\FileTypes\Image::class,
+        Spatie\MediaLibrary\ImageGenerators\FileTypes\Webp::class,
         Spatie\MediaLibrary\ImageGenerators\FileTypes\Pdf::class,
         Spatie\MediaLibrary\ImageGenerators\FileTypes\Svg::class,
         Spatie\MediaLibrary\ImageGenerators\FileTypes\Video::class,
@@ -138,11 +133,20 @@ return [
      * dependency.
      */
     'ffmpeg_path' => env('FFMPEG_PATH', '/usr/bin/ffmpeg'),
-    'ffprobe_path' => env('FFPROBE_PATH', '/usr/bin/ffmpeg'),
+    'ffprobe_path' => env('FFPROBE_PATH', '/usr/bin/ffprobe'),
 
     /*
      * The path where to store temporary files while performing image conversions.
      * If set to null, storage_path('medialibrary/temp') will be used.
      */
     'temporary_directory_path' => null,
+
+    /*
+     * Here you can override the class names of the jobs used by this package. Make sure
+     * your custom jobs extend the ones provided by the package.
+     */
+    'jobs' => [
+        'perform_conversions' => Spatie\MediaLibrary\Jobs\PerformConversions::class,
+        'generate_responsive_images' => Spatie\MediaLibrary\Jobs\GenerateResponsiveImages::class,
+    ],
 ];

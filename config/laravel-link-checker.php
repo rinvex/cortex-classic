@@ -28,6 +28,18 @@ return [
     'concurrency' => 10,
 
     /*
+     * List of client options to use in Guzzle HTTP.
+     */
+    'client_options' => [
+
+        \GuzzleHttp\RequestOptions::COOKIES => true,
+        \GuzzleHttp\RequestOptions::CONNECT_TIMEOUT => 10,
+        \GuzzleHttp\RequestOptions::TIMEOUT => 10,
+        \GuzzleHttp\RequestOptions::ALLOW_REDIRECTS => false,
+
+    ],
+
+    /*
      * Configuration regarding the used reporters.
      */
     'reporters' => [
