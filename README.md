@@ -14,3 +14,17 @@ composer create-project rinvex/cortex
 This will create a new project based on Rinvex Cortex, install the default modules, and prepare the project for your development.
 
 Docs to be prepared soon..
+
+Notes for the official L5.5 update, remove the following packages from the project's composer.json as they are required on module levet and not required on project level:
+- barryvdh/laravel-snappy
+- kalnoy/nestedset
+- laravelcollective/html
+- maatwebsite/excel
+- spatie/eloquent-sortable
+- spatie/laravel-activitylog
+- spatie/laravel-menu
+- spatie/laravel-sluggable
+- spatie/laravel-translatable
+- yajra/laravel-datatables-oracle
+
+Also don't forget to remove useless entries from `config/app.php` -> providers/aliases

@@ -1,17 +1,6 @@
 <?php
 
-/*
- * NOTICE OF LICENSE
- *
- * Part of the Rinvex Cortex Application.
- *
- * This source file is subject to The MIT License (MIT)
- * that is bundled with this package in the LICENSE file.
- *
- * Package: Rinvex Cortex Application
- * License: The MIT License (MIT)
- * Link:    https://rinvex.com
- */
+declare(strict_types=1);
 
 return [
 
@@ -28,7 +17,7 @@ return [
     |
     */
 
-    'default' => env('QUEUE_DRIVER', 'sync'),
+    'default' => env('QUEUE_DRIVER', 'sqs'),
 
     /*
     |--------------------------------------------------------------------------
@@ -49,7 +38,7 @@ return [
 
         'database' => [
             'driver' => 'database',
-            'table' => 'cortex_jobs',
+            'table' => 'jobs',
             'queue' => 'default',
             'retry_after' => 90,
         ],
@@ -63,11 +52,11 @@ return [
 
         'sqs' => [
             'driver' => 'sqs',
-            'key' => 'your-public-key',
-            'secret' => 'your-secret-key',
-            'prefix' => 'https://sqs.us-east-1.amazonaws.com/your-account-id',
-            'queue' => 'your-queue-name',
-            'region' => 'us-east-1',
+            'key' => env('AWS_SQS_KEY'),
+            'secret' => env('AWS_SQS_SECRET'),
+            'prefix' => env('AWS_SQS_PREFIX'),
+            'queue' => env('AWS_SQS_QUEUE'),
+            'region' => env('AWS_SQS_REGION'),
         ],
 
         'redis' => [
@@ -75,6 +64,7 @@ return [
             'connection' => 'default',
             'queue' => 'default',
             'retry_after' => 90,
+            'block_for' => null,
         ],
 
     ],
@@ -92,7 +82,7 @@ return [
 
     'failed' => [
         'database' => env('DB_CONNECTION', 'mysql'),
-        'table' => 'cortex_failed_jobs',
+        'table' => 'failed_jobs',
     ],
 
 ];

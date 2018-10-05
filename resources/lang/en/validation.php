@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
 
     /*
@@ -41,13 +43,15 @@ return [
     'email' => 'The :attribute must be a valid email address.',
     'exists' => 'The selected :attribute is invalid.',
     'file' => 'The :attribute must be a file.',
-    'filled' => 'The :attribute field is required.',
+    'filled' => 'The :attribute field must have a value.',
     'image' => 'The :attribute must be an image.',
     'in' => 'The selected :attribute is invalid.',
     'in_array' => 'The :attribute field does not exist in :other.',
     'integer' => 'The :attribute must be an integer.',
     'ip' => 'The :attribute must be a valid IP address.',
-    'json' => 'The :attribute must be a valid JSON string.',
+    'ipv4' => 'The :attribute must be a valid IPv4 address.',
+    'ipv6' => 'The :attribute must be a valid IPv6 address.',
+    'json' => 'The :attribute mus\t be a valid JSON string.',
     'max' => [
         'numeric' => 'The :attribute may not be greater than :max.',
         'file' => 'The :attribute may not be greater than :max kilobytes.',
@@ -85,6 +89,7 @@ return [
     'unique' => 'The :attribute has already been taken.',
     'uploaded' => 'The :attribute failed to upload.',
     'url' => 'The :attribute format is invalid.',
+    'phone' => 'The :attribute field contains an invalid number.',
 
     /*
     |--------------------------------------------------------------------------

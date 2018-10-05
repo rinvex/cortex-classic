@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     /*
      * DataTables search options.
@@ -10,6 +12,11 @@ return [
          * SQL: column LIKE "%keyword%"
          */
         'smart' => true,
+
+        /*
+         * Multi-term search will explode search keyword using spaces resulting into multiple term search.
+         */
+        'multi_term' => true,
 
         /*
          * Case insensitive will search the keyword in lower case format.
@@ -30,38 +37,26 @@ return [
     'index_column' => 'DT_Row_Index',
 
     /*
-     * DataTables fractal configurations.
-     */
-    'fractal' => [
-        /*
-         * Request key name to parse includes on fractal.
-         */
-        'includes' => 'include',
-
-        /*
-         * Default fractal serializer.
-         */
-        'serializer' => League\Fractal\Serializer\DataArraySerializer::class,
-    ],
-
-    /*
-     * Datatables list of available engines.
-     * This is where you can register your custom datatables engine.
+     * List of available builders for DataTables.
+     * This is where you can register your custom dataTables builder.
      */
     'engines' => [
-        'eloquent' => Yajra\Datatables\Engines\EloquentEngine::class,
-        'query' => Yajra\Datatables\Engines\QueryBuilderEngine::class,
-        'collection' => Yajra\Datatables\Engines\CollectionEngine::class,
+        'eloquent' => \Cortex\Foundation\DataTables\EloquentDataTable::class,
+        'query' => \Yajra\DataTables\QueryDataTable::class,
+        'collection' => \Yajra\DataTables\CollectionDataTable::class,
+        'resource' => \Yajra\DataTables\ApiResourceDataTable::class,
     ],
 
     /*
-     * Datatables accepted builder to engine mapping.
+     * DataTables accepted builder to engine mapping.
+     * This is where you can override which engine a builder should use
+     * Note, only change this if you know what you are doing!
      */
     'builders' => [
-        Illuminate\Database\Eloquent\Relations\HasMany::class => 'eloquent',
-        Illuminate\Database\Eloquent\Builder::class => 'eloquent',
-        Illuminate\Database\Query\Builder::class => 'query',
-        Illuminate\Support\Collection::class => 'collection',
+        //Illuminate\Database\Eloquent\Relations\Relation::class => 'eloquent',
+        //Illuminate\Database\Eloquent\Builder::class            => 'eloquent',
+        //Illuminate\Database\Query\Builder::class               => 'query',
+        //Illuminate\Support\Collection::class                   => 'collection',
     ],
 
     /*
@@ -69,4 +64,55 @@ return [
      * For MySQL, use '-%s %s'
      */
     'nulls_last_sql' => '%s %s NULLS LAST',
+
+    /*
+     * User friendly message to be displayed on user if error occurs.
+     * Possible values:
+     * null             - The exception message will be used on error response.
+     * 'throw'          - Throws a \Yajra\DataTables\Exceptions\Exception. Use your custom error handler if needed.
+     * 'custom message' - Any friendly message to be displayed to the user. You can also use translation key.
+     */
+    'error' => env('DATATABLES_ERROR', null),
+
+    /*
+     * Default columns definition of dataTable utility functions.
+     */
+    'columns' => [
+        /*
+         * List of columns hidden/removed on json response.
+         */
+        'excess' => ['rn', 'row_num'],
+
+        /*
+         * List of columns to be escaped. If set to *, all columns are escape.
+         * Note: You can set the value to empty array to disable XSS protection.
+         */
+        'escape' => '*',
+
+        /*
+         * List of columns that are allowed to display html content.
+         * Note: Adding columns to list will make us available to XSS attacks.
+         */
+        'raw' => ['action'],
+
+        /*
+         * List of columns are are forbidden from being searched/sorted.
+         */
+        'blacklist' => ['password', 'remember_token'],
+
+        /*
+         * List of columns that are only allowed fo search/sort.
+         * If set to *, all columns are allowed.
+         */
+        'whitelist' => '*',
+    ],
+
+    /*
+     * JsonResponse header and options config.
+     */
+    'json' => [
+        'header' => [],
+        'options' => 0,
+    ],
+
 ];

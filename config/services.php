@@ -1,19 +1,6 @@
 <?php
 
-/*
- * NOTICE OF LICENSE
- *
- * Part of the Rinvex Cortex Application.
- *
- * This source file is subject to The MIT License (MIT)
- * that is bundled with this package in the LICENSE file.
- *
- * Package: Rinvex Cortex Application
- * License: The MIT License (MIT)
- * Link:    https://rinvex.com
- */
-
-use Rinvex\Fort\Models\User;
+declare(strict_types=1);
 
 return [
 
@@ -35,9 +22,9 @@ return [
     ],
 
     'ses' => [
-        'key' => env('SES_KEY'),
-        'secret' => env('SES_SECRET'),
-        'region' => 'us-east-1',
+        'key' => env('AWS_SES_KEY'),
+        'secret' => env('AWS_SES_SECRET'),
+        'region' => env('AWS_SES_REGION'),
     ],
 
     'sparkpost' => [
@@ -45,9 +32,49 @@ return [
     ],
 
     'stripe' => [
-        'model' => User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
+        'model' => \Cortex\Auth\Models\Member::class,
+    ],
+
+    'authy' => [
+        'secret' => env('AUTHY_SECRET'),
+    ],
+
+    'twitter' => [
+        'client_id' => env('TWITTER_CLIENT_ID'),
+        'client_secret' => env('TWITTER_CLIENT_SECRET'),
+        'redirect' => env('TWITTER_CALLBACK_URL'),
+    ],
+
+    'facebook' => [
+        'client_id' => env('FACEBOOK_CLIENT_ID'),
+        'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
+        'redirect' => env('FACEBOOK_CALLBACK_URL'),
+    ],
+
+    'linkedin' => [
+        'client_id' => env('LinkedIn_CLIENT_ID'),
+        'client_secret' => env('LinkedIn_CLIENT_SECRET'),
+        'redirect' => env('LinkedIn_CALLBACK_URL'),
+    ],
+
+    'google' => [
+        'client_id' => env('GOOGLE_CLIENT_ID'),
+        'client_secret' => env('GOOGLE_CLIENT_SECRET'),
+        'redirect' => env('GOOGLE_CALLBACK_URL'),
+    ],
+
+    'github' => [
+        'client_id' => env('GITHUB_CLIENT_ID'),
+        'client_secret' => env('GITHUB_CLIENT_SECRET'),
+        'redirect' => env('GITHUB_CALLBACK_URL'),
+    ],
+
+    'bitbucket' => [
+        'client_id' => env('BITBUCKET_CLIENT_ID'),
+        'client_secret' => env('BITBUCKET_CLIENT_SECRET'),
+        'redirect' => env('BITBUCKET_CALLBACK_URL'),
     ],
 
 ];

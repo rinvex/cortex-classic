@@ -1,17 +1,6 @@
 <?php
 
-/*
- * NOTICE OF LICENSE
- *
- * Part of the Rinvex Cortex Application.
- *
- * This source file is subject to The MIT License (MIT)
- * that is bundled with this package in the LICENSE file.
- *
- * Package: Rinvex Cortex Application
- * License: The MIT License (MIT)
- * Link:    https://rinvex.com
- */
+declare(strict_types=1);
 
 return [
 
@@ -26,7 +15,7 @@ return [
     |
     */
 
-    'default' => 'local',
+    'default' => env('FILESYSTEM_DRIVER', 'local'),
 
     /*
     |--------------------------------------------------------------------------
@@ -39,7 +28,7 @@ return [
     |
     */
 
-    'cloud' => 's3',
+    'cloud' => env('FILESYSTEM_CLOUD', 's3'),
 
     /*
     |--------------------------------------------------------------------------
@@ -70,10 +59,26 @@ return [
 
         's3' => [
             'driver' => 's3',
-            'key' => env('AWS_KEY'),
-            'secret' => env('AWS_SECRET'),
-            'region' => env('AWS_REGION'),
-            'bucket' => env('AWS_BUCKET'),
+            'url' => env('AWS_S3_URL'),
+            'key' => env('AWS_S3_KEY'),
+            'secret' => env('AWS_S3_SECRET'),
+            'region' => env('AWS_S3_REGION'),
+            'bucket' => env('AWS_S3_BUCKET'),
+        ],
+
+        's3-public' => [
+            'driver' => 's3',
+            'visibility' => 'public',
+            'url' => env('AWS_S3_URL'),
+            'key' => env('AWS_S3_KEY'),
+            'secret' => env('AWS_S3_SECRET'),
+            'region' => env('AWS_S3_REGION'),
+            'bucket' => env('AWS_S3_BUCKET'),
+        ],
+
+        'snapshots' => [
+            'driver' => 'local',
+            'root' => database_path('snapshots'),
         ],
 
     ],

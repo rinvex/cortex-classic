@@ -1,17 +1,6 @@
 <?php
 
-/*
- * NOTICE OF LICENSE
- *
- * Part of the Rinvex Cortex Application.
- *
- * This source file is subject to The MIT License (MIT)
- * that is bundled with this package in the LICENSE file.
- *
- * Package: Rinvex Cortex Application
- * License: The MIT License (MIT)
- * Link:    https://rinvex.com
- */
+declare(strict_types=1);
 
 return [
 
@@ -59,11 +48,13 @@ return [
             'database' => env('DB_DATABASE', 'forge'),
             'username' => env('DB_USERNAME', 'forge'),
             'password' => env('DB_PASSWORD', ''),
+            'unix_socket' => env('DB_SOCKET', ''),
             'charset' => env('DB_CHARSET', 'utf8mb4'),
             'collation' => env('DB_COLLATION', 'utf8mb4_unicode_ci'),
             'prefix' => env('DB_PREFIX', ''),
             'strict' => true,
             'engine' => null,
+            'timezone' => env('APP_TIMEZONE', 'UTC'),
         ],
 
         'pgsql' => [
@@ -77,6 +68,19 @@ return [
             'prefix' => env('DB_PREFIX', ''),
             'schema' => 'public',
             'sslmode' => 'prefer',
+            'timezone' => env('APP_TIMEZONE', 'UTC'),
+        ],
+
+        'sqlsrv' => [
+            'driver' => 'sqlsrv',
+            'host' => env('DB_HOST', 'localhost'),
+            'port' => env('DB_PORT', '1433'),
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'timezone' => env('APP_TIMEZONE', 'UTC'),
         ],
 
     ],
@@ -92,7 +96,7 @@ return [
     |
     */
 
-    'migrations' => 'cortex_migrations',
+    'migrations' => 'migrations',
 
     /*
     |--------------------------------------------------------------------------
@@ -113,7 +117,7 @@ return [
             'host' => env('REDIS_HOST', '127.0.0.1'),
             'password' => env('REDIS_PASSWORD', null),
             'port' => env('REDIS_PORT', 6379),
-            'database' => 0,
+            'database' => env('REDIS_DATABASE', 0),
         ],
 
     ],

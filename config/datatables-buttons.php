@@ -1,11 +1,8 @@
 <?php
 
-return [
-    /*
-     * DataTables internal index id response column name.
-     */
-    'index_column' => 'DT_Row_Index',
+declare(strict_types=1);
 
+return [
     /*
      * Namespaces used by the generator.
      */
@@ -32,6 +29,11 @@ return [
     ],
 
     /*
+     * Set Custom stub folder
+     */
+    //'stub' => '/app/cortex/foundation/resources/stubs',
+
+    /*
      * PDF generator to be used when converting the table to pdf.
      * Available generators: excel, snappy
      * Snappy package: barryvdh/laravel-snappy
@@ -51,5 +53,20 @@ return [
             'margin-bottom' => '10mm',
         ],
         'orientation' => 'landscape',
+    ],
+
+    /*
+     * Default html builder parameters.
+     */
+    'parameters' => [
+        'dom' => 'Bfrtip',
+        'order' => [[0, 'desc']],
+        'buttons' => [
+            'create',
+            'export',
+            'print',
+            'reset',
+            'reload',
+        ],
     ],
 ];

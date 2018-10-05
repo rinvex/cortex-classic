@@ -1,24 +1,13 @@
 <?php
 
-/*
- * NOTICE OF LICENSE
- *
- * Part of the Rinvex Cortex Application.
- *
- * This source file is subject to The MIT License (MIT)
- * that is bundled with this package in the LICENSE file.
- *
- * Package: Rinvex Cortex Application
- * License: The MIT License (MIT)
- * Link:    https://rinvex.com
- */
+declare(strict_types=1);
 
 return [
 
     /*
      * The destination path for the javascript file.
      */
-    'path' => 'resources/assets/js',
+    'path' => public_path('assets/js'),
 
     /*
      * The destination filename for the javascript file.
@@ -60,7 +49,7 @@ return [
      * the ported helper Laravel url/route functions and the route data to go
      * with them.
      */
-    'template' => 'resources/assets/js/vendor/laroute.js',
+    'template' => __DIR__.'/../resources/assets/js/vendor/laroute.js',
 
     /*
      * Appends a prefix to URLs. By default the prefix is an empty string.

@@ -105,7 +105,7 @@
         },
 
         action: function (e, dt, button, config) {
-            window.location = window.location.href.replace(/\/+$/, "") + '/create';
+            Turbolinks.visit(window.location.href.replace(/\/+$/, "") + '/create');
         }
     };
 
@@ -117,7 +117,7 @@
         },
 
         action: function (e, dt, button, config) {
-            window.location = window.location.href.replace(/\/+$/, "") + '/import';
+            Turbolinks.visit(window.location.href.replace(/\/+$/, "") + '/import');
         }
     };
 })(jQuery, jQuery.fn.dataTable);

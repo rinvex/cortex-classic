@@ -1,19 +1,6 @@
 <?php
 
-/*
- * NOTICE OF LICENSE
- *
- * Part of the Rinvex Cortex Application.
- *
- * This source file is subject to The MIT License (MIT)
- * that is bundled with this package in the LICENSE file.
- *
- * Package: Rinvex Cortex Application
- * License: The MIT License (MIT)
- * Link:    https://rinvex.com
- */
-
-use Rinvex\Fort\Models\User;
+declare(strict_types=1);
 
 return [
 
@@ -29,8 +16,8 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'web',
-        'passwords' => 'users',
+        'guard' => 'members',
+        'passwords' => 'members',
     ],
 
     /*
@@ -51,14 +38,30 @@ return [
     */
 
     'guards' => [
-        'web' => [
+
+        'admins' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'admins',
+        ],
+
+        'members' => [
+            'driver' => 'session',
+            'provider' => 'members',
+        ],
+
+        'managers' => [
+            'driver' => 'session',
+            'provider' => 'managers',
+        ],
+
+        'guardians' => [
+            'driver' => 'session',
+            'provider' => 'guardians',
         ],
 
         'api' => [
             'driver' => 'token',
-            'provider' => 'users',
+            'provider' => 'members',
         ],
     ],
 
@@ -80,9 +83,25 @@ return [
     */
 
     'providers' => [
-        'users' => [
+
+        'admins' => [
             'driver' => 'eloquent',
-            'model' => User::class,
+            'model' => \Cortex\Auth\Models\Admin::class,
+        ],
+
+        'members' => [
+            'driver' => 'eloquent',
+            'model' => \Cortex\Auth\Models\Member::class,
+        ],
+
+        'managers' => [
+            'driver' => 'eloquent',
+            'model' => \Cortex\Auth\Models\Manager::class,
+        ],
+
+        'guardians' => [
+            'driver' => 'eloquent',
+            'model' => \Cortex\Auth\Models\Guardian::class,
         ],
 
         // 'users' => [
@@ -107,11 +126,27 @@ return [
     */
 
     'passwords' => [
-        'users' => [
-            'provider' => 'users',
-            'table' => 'password_resets',
+
+        'admins' => [
+            'provider' => 'admins',
             'expire' => 60,
         ],
+
+        'members' => [
+            'provider' => 'members',
+            'expire' => 60,
+        ],
+
+        'managers' => [
+            'provider' => 'managers',
+            'expire' => 60,
+        ],
+
+        'guardians' => [
+            'provider' => 'guardians',
+            'expire' => 60,
+        ],
+
     ],
 
 ];

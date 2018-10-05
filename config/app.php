@@ -1,17 +1,6 @@
 <?php
 
-/*
- * NOTICE OF LICENSE
- *
- * Part of the Rinvex Cortex Application.
- *
- * This source file is subject to The MIT License (MIT)
- * that is bundled with this package in the LICENSE file.
- *
- * Package: Rinvex Cortex Application
- * License: The MIT License (MIT)
- * Link:    https://rinvex.com
- */
+declare(strict_types=1);
 
 return [
 
@@ -25,7 +14,19 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Laravel',
+    'name' => env('APP_NAME', 'Cortex'),
+
+    // Application Date Format
+    'date_format' => 'Y-m-d, h:i A',
+
+    // Application Version
+    'version' => '1.0.0',
+
+    // Application Tagline
+    'tagline' => 'Rinvex Cortex is a solid foundation for enterprise solutions, that provides a flexible and extensible architecture for building multi-lingual, multi-tenant applications with content management, themeable views, application modules and much more.',
+
+    // Application Copyright
+    'copyright' => 'Copyright &copy; 2016-'.date('Y').', Rinvex LLC. All rights reserved.',
 
     /*
     |--------------------------------------------------------------------------
@@ -64,7 +65,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://cortex.rinvex.ext'),
+    'url' => env('APP_URL', 'http://cortex.rinvex.test'),
 
     /*
     |--------------------------------------------------------------------------
@@ -77,7 +78,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => env('APP_TIMEZONE', 'UTC'),
 
     /*
     |--------------------------------------------------------------------------
@@ -122,23 +123,6 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Logging Configuration
-    |--------------------------------------------------------------------------
-    |
-    | Here you may configure the log settings for your application. Out of
-    | the box, Laravel uses the Monolog PHP logging library. This gives
-    | you a variety of powerful log handlers / formatters to utilize.
-    |
-    | Available Settings: "single", "daily", "syslog", "errorlog"
-    |
-    */
-
-    'log' => env('APP_LOG', 'single'),
-
-    'log_level' => env('APP_LOG_LEVEL', 'debug'),
-
-    /*
-    |--------------------------------------------------------------------------
     | Autoloaded Service Providers
     |--------------------------------------------------------------------------
     |
@@ -155,6 +139,7 @@ return [
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
         Illuminate\Cache\CacheServiceProvider::class,
+        //Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class,
         Illuminate\Cookie\CookieServiceProvider::class,
         Illuminate\Database\DatabaseServiceProvider::class,
         Illuminate\Encryption\EncryptionServiceProvider::class,
@@ -167,27 +152,15 @@ return [
         Illuminate\Pipeline\PipelineServiceProvider::class,
         Illuminate\Queue\QueueServiceProvider::class,
         Illuminate\Redis\RedisServiceProvider::class,
+        //Illuminate\Auth\Passwords\PasswordResetServiceProvider::class,
         Illuminate\Session\SessionServiceProvider::class,
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
         // Packages Service Providers...
-        Cortex\Foundation\Overrides\Lord\Laroute\LarouteServiceProvider::class,
-        Dusterio\AwsWorker\Integrations\LaravelServiceProvider::class,
-        Rinvex\Fort\Providers\FortDeferredServiceProvider::class,
-        Cortex\Foundation\Providers\FortServiceProvider::class,
         Krucas\Notification\NotificationServiceProvider::class,
-        Rinvex\Sparse\Providers\SparseServiceProvider::class,
-        Spatie\Activitylog\ActivitylogServiceProvider::class,
-        Fideloper\Proxy\TrustedProxyServiceProvider::class,
-        Yajra\Datatables\DatatablesServiceProvider::class,
-        Yajra\Datatables\ButtonsServiceProvider::class,
-        Maatwebsite\Excel\ExcelServiceProvider::class,
-        Spatie\Fractal\FractalServiceProvider::class,
-        Laravel\Tinker\TinkerServiceProvider::class,
         Lord\Laroute\LarouteServiceProvider::class,
-        Barryvdh\Snappy\ServiceProvider::class,
         Aws\Laravel\AwsServiceProvider::class,
 
     ],
@@ -225,6 +198,7 @@ return [
         'Log' => Illuminate\Support\Facades\Log::class,
         'Mail' => Illuminate\Support\Facades\Mail::class,
         'Notification' => Illuminate\Support\Facades\Notification::class,
+        //'Password' => Illuminate\Support\Facades\Password::class,
         'Queue' => Illuminate\Support\Facades\Queue::class,
         'Redirect' => Illuminate\Support\Facades\Redirect::class,
         'Redis' => Illuminate\Support\Facades\Redis::class,
@@ -239,11 +213,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         // Packages Aliases...
-        'LaravelLocalization' => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
-        'SnappyImage' => Barryvdh\Snappy\Facades\SnappyImage::class,
         'Alert' => Krucas\Notification\Facades\Notification::class,
-        'PDF' => Barryvdh\Snappy\Facades\SnappyPdf::class,
-        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
         'AWS' => Aws\Laravel\AwsFacade::class,
 
     ],

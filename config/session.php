@@ -1,17 +1,6 @@
 <?php
 
-/*
- * NOTICE OF LICENSE
- *
- * Part of the Rinvex Cortex Application.
- *
- * This source file is subject to The MIT License (MIT)
- * that is bundled with this package in the LICENSE file.
- *
- * Package: Rinvex Cortex Application
- * License: The MIT License (MIT)
- * Link:    https://rinvex.com
- */
+declare(strict_types=1);
 
 return [
 
@@ -42,7 +31,7 @@ return [
     |
     */
 
-    'lifetime' => 120,
+    'lifetime' => env('SESSION_LIFETIME', 120),
 
     'expire_on_close' => false,
 
@@ -96,7 +85,7 @@ return [
     |
     */
 
-    'table' => 'cortex_sessions',
+    'table' => 'sessions',
 
     /*
     |--------------------------------------------------------------------------
@@ -135,7 +124,7 @@ return [
     |
     */
 
-    'cookie' => 'cortex_session',
+    'cookie' => env('SESSION_COOKIE', str_slug(env('APP_NAME', 'laravel'), '_').'_session'),
 
     /*
     |--------------------------------------------------------------------------
@@ -188,5 +177,20 @@ return [
     */
 
     'http_only' => true,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Same-Site Cookies
+    |--------------------------------------------------------------------------
+    |
+    | This option determines how your cookies behave when cross-site requests
+    | take place, and can be used to mitigate CSRF attacks. By default, we
+    | do not enable this as other CSRF protection services are in place.
+    |
+    | Supported: "lax", "strict"
+    |
+    */
+
+    'same_site' => null,
 
 ];
