@@ -45,7 +45,7 @@
         "intl-tel-input": "^12.3.0",
         "jquery": "^3.3.0",
         "jquery-slimscroll": "^1.3.0",
-        "jquery.terminal": "^1.16.0",
+        "jquery.terminal": "^1.21.0",
         "laravel-mix": "^2.1.0",
         "lodash": "^4.17.0",
         "mark.js": "^8.11.1",
