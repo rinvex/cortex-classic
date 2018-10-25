@@ -13,18 +13,59 @@ composer create-project rinvex/cortex
 
 This will create a new project based on Rinvex Cortex, install the default modules, and prepare the project for your development.
 
-Docs to be prepared soon..
 
-Notes for the official L5.5 update, remove the following packages from the project's composer.json as they are required on module levet and not required on project level:
-- barryvdh/laravel-snappy
-- kalnoy/nestedset
-- laravelcollective/html
-- maatwebsite/excel
-- spatie/eloquent-sortable
-- spatie/laravel-activitylog
-- spatie/laravel-menu
-- spatie/laravel-sluggable
-- spatie/laravel-translatable
-- yajra/laravel-datatables-oracle
+# Fresh Installation
 
-Also don't forget to remove useless entries from `config/app.php` -> providers/aliases
+Before you start working with this project, make sure you're familiar with the modular architecture of our system. The steps is straight forward and should be easy to implement.
+It's supposed that you're running homestead on vagrant machine, with the default setup, using PHP 7.1+ and MySQL 5.7.8+, or any similar environment like [rinvex/punnet](https://github.com/rinvex/punnet).
+If you follow the steps below, you should get it done in less than 10 minutes regardless of your experience level.
+Make sure to create a new database for the new project, and ensure you've local domain ready you can use.
+
+```
+composer create-project rinvex/cortex cortex-demo
+```
+
+Replace the following pseudo variables with your values in the following commands, then execute from terminal (inside the new project directory):
+
+- `YOUR_LOCAL_DOMAIN_HERE`
+- `YOUR_DATABASE_HOST_HERE`
+- `YOUR_DATABASE_NAME_HERE`
+- `YOUR_DATABASE_USERNAME_HERE`
+- `YOUR_DATABASE_PASSWORD_HERE`
+- `YOUR_SESSION_DOMAIN_HERE`
+
+```
+sed -i "s/APP_URL=.*/APP_URL=http\:\/\/YOUR_LOCAL_DOMAIN_HERE/" .env
+sed -i "s/DB_HOST=.*/DB_HOST=YOUR_DATABASE_HOST_HERE/" .env
+sed -i "s/DB_DATABASE=.*/DB_DATABASE=YOUR_DATABASE_NAME_HERE/" .env
+sed -i "s/DB_USERNAME=.*/DB_USERNAME=YOUR_DATABASE_USERNAME_HERE/" .env
+sed -i "s/DB_PASSWORD=.*/DB_PASSWORD=YOUR_DATABASE_PASSWORD_HERE/" .env
+sed -i "s/SESSION_DOMAIN=.*/SESSION_DOMAIN=YOUR_SESSION_DOMAIN_HERE/" .env
+```
+
+Install the project
+
+```
+php artisan cortex:install
+npm run dev
+```
+
+Create public disk symbolic link
+
+```
+php artisan storage:link
+```
+
+To create a new module run the following command
+
+```
+php artisan make:module cortex/boards
+```
+
+To see all the available command line tools, run the following command:
+
+```
+php artisan list
+```
+
+The rest of documentation will be ready soon..
