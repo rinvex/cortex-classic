@@ -25,11 +25,21 @@ Make sure to create a new database for the new project, and ensure you've local 
 composer create-project rinvex/cortex cortex-demo
 ```
 
-Replace `YOUR_LOCAL_DOMAIN_HERE`, `YOUR_DATABASE_NAME_HERE` and `YOUR_SESSION_DOMAIN_HERE` with your values in the following commands, then execute from terminal (inside the new project directory):
+Replace the following pseudo variables with your values in the following commands, then execute from terminal (inside the new project directory):
+
+- `YOUR_LOCAL_DOMAIN_HERE`
+- `YOUR_DATABASE_HOST_HERE`
+- `YOUR_DATABASE_NAME_HERE`
+- `YOUR_DATABASE_USERNAME_HERE`
+- `YOUR_DATABASE_PASSWORD_HERE`
+- `YOUR_SESSION_DOMAIN_HERE`
 
 ```
 sed -i "s/APP_URL=.*/APP_URL=http\:\/\/YOUR_LOCAL_DOMAIN_HERE/" .env
+sed -i "s/DB_HOST=.*/DB_HOST=YOUR_DATABASE_HOST_HERE/" .env
 sed -i "s/DB_DATABASE=.*/DB_DATABASE=YOUR_DATABASE_NAME_HERE/" .env
+sed -i "s/DB_USERNAME=.*/DB_USERNAME=YOUR_DATABASE_USERNAME_HERE/" .env
+sed -i "s/DB_PASSWORD=.*/DB_PASSWORD=YOUR_DATABASE_PASSWORD_HERE/" .env
 sed -i "s/SESSION_DOMAIN=.*/SESSION_DOMAIN=YOUR_SESSION_DOMAIN_HERE/" .env
 ```
 
