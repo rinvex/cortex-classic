@@ -58,17 +58,17 @@ mix
         purifyCss: {paths: [].concat.apply([], purifyCssPaths)}
     })
 
-    .sass('resources/assets/sass/app.scss', 'public/assets/css/app.css')
-    .sass('resources/assets/sass/vendor.scss', 'public/assets/css/vendor.css')
-    .sass('resources/assets/sass/datatables.scss', 'public/assets/css/datatables.css')
-    .sass('resources/assets/sass/fullcalendar.scss', 'public/assets/css/fullcalendar.css')
-    .sass('app/cortex/console/resources/assets/sass/terminal.scss', 'public/assets/css/terminal.css')
-    .sass('app/cortex/foundation/resources/assets/sass/theme-frontarea.scss', 'public/assets/css/theme-frontarea.css')
-    .sass('app/cortex/foundation/resources/assets/sass/theme-adminarea.scss', 'public/assets/css/theme-adminarea.css')
-    .sass('app/cortex/foundation/resources/assets/sass/theme-tenantarea.scss', 'public/assets/css/theme-tenantarea.css')
+    .sass('resources/assets/sass/app.scss', 'public/assets/css/app.css', { implementation: require('node-sass') })
+    .sass('resources/assets/sass/vendor.scss', 'public/assets/css/vendor.css', { implementation: require('node-sass') })
+    .sass('resources/assets/sass/datatables.scss', 'public/assets/css/datatables.css', { implementation: require('node-sass') })
+    .sass('resources/assets/sass/fullcalendar.scss', 'public/assets/css/fullcalendar.css', { implementation: require('node-sass') })
+    .sass('app/cortex/console/resources/assets/sass/terminal.scss', 'public/assets/css/terminal.css', { implementation: require('node-sass') })
+    .sass('app/cortex/foundation/resources/assets/sass/theme-frontarea.scss', 'public/assets/css/theme-frontarea.css', { implementation: require('node-sass') })
+    .sass('app/cortex/foundation/resources/assets/sass/theme-adminarea.scss', 'public/assets/css/theme-adminarea.css', { implementation: require('node-sass') })
+    .sass('app/cortex/foundation/resources/assets/sass/theme-tenantarea.scss', 'public/assets/css/theme-tenantarea.css', { implementation: require('node-sass') })
     .sass(
         'app/cortex/foundation/resources/assets/sass/theme-managerarea.scss',
-        'public/assets/css/theme-managerarea.css'
+        'public/assets/css/theme-managerarea.css', { implementation: require('node-sass') }
     )
 
     .js('node_modules/pym.js/dist/pym.v1.js', 'public/assets/js/embed.js')
