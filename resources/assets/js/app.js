@@ -20,12 +20,12 @@ import 'bootstrap-notify';
 import 'mark.js';
 import 'timepicker';
 import 'datepair.js';
-import 'intl-tel-input';
 import 'bootstrap-colorpicker';
 import 'fontawesome-iconpicker';
 import 'bootstrap-daterangepicker';
 import 'intl-tel-input/build/js/utils';
 import 'datepair.js/src/jquery.datepair';
+import intlTelInput from 'intl-tel-input';
 import './vendor/bootstrap-popover-picker';
 
 // Misc
@@ -137,7 +137,7 @@ window.addEventListener('turbolinks:load', function() {
     });
 
     // Phone field
-    $('input[type="tel"]').intlTelInput({
+    intlTelInput(document.querySelector('input[type="tel"]'), {
         isValidNumber: true,
         hiddenInput: 'phone',
         initialCountry: 'auto',
@@ -162,9 +162,10 @@ window.addEventListener('turbolinks:load', function() {
         let phone = $(event.target);
         let formGroup = phone.closest('.form-group');
         let helpBlock = formGroup.find('.help-block');
+        let iti = intlTelInput(document.querySelector(event.target));
 
         if ($.trim(phone.val())) {
-            if (phone.intlTelInput('isValidNumber')) {
+            if (iti.isValidNumber()) {
                 formGroup.removeClass('has-error');
                 helpBlock.addClass('hide');
             } else {
