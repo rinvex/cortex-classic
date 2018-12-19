@@ -52,6 +52,7 @@ mix
         plugins: webpackPlugins,
         resolve: { alias: webpackAliases },
     })
+    .copyDirectory('resources/assets/favicon', 'public/assets/favicon')
     .autoload({ jquery: ['$', 'jQuery', 'window.$', 'window.jQuery'] })
     .options({
         // postCss: [require('postcss-image-inliner')()],
