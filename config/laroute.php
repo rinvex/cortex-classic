@@ -7,7 +7,7 @@ return [
     /*
      * The destination path for the javascript file.
      */
-    'path' => public_path('assets/js'),
+    'path' => public_path('js'),
 
     /*
      * The destination filename for the javascript file.
@@ -49,7 +49,7 @@ return [
      * the ported helper Laravel url/route functions and the route data to go
      * with them.
      */
-    'template' => __DIR__.'/../resources/assets/js/vendor/laroute.js',
+    'template' => __DIR__.'/../resources/js/vendor/laroute.js',
 
     /*
      * Appends a prefix to URLs. By default the prefix is an empty string.

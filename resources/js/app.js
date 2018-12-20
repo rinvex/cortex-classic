@@ -6,7 +6,7 @@
 
 // Bind variables to window object
 import 'expose-loader?$!expose-loader?jQuery!jquery';
-import 'expose-loader?routes!../../../public/assets/js/routes';
+import 'expose-loader?routes!../../public/js/routes';
 
 // Mouse interaction
 import 'jquery-mousewheel';
@@ -40,7 +40,7 @@ import 'expose-loader?implicitForms!./vendor/jquery.implicitforms';
 
 // Translations
 import Lang from './vendor/lang';
-import messages from '../../../public/assets/js/messages';
+import messages from '../../public/js/messages';
 window.Lang = new Lang({ messages });
 window.hashids = new Hashids(
     process.env.MIX_HASHIDS_KEY,

@@ -6,7 +6,7 @@ let glob = require('glob');
 
 let purifyCssPaths = [
     glob.sync(path.join(__dirname, 'app/**/*.php')),
-    glob.sync(path.join(__dirname, 'resources/assets/js/**/*.js')),
+    glob.sync(path.join(__dirname, 'resources/js/**/*.js')),
     glob.sync(path.join(__dirname, 'node_modules/select2/**/*.js')),
     glob.sync(path.join(__dirname, 'node_modules/dropzone/**/*.js')),
     glob.sync(path.join(__dirname, 'resources/views/**/*.blade.php')),
@@ -46,39 +46,37 @@ let webpackAliases = {
  */
 
 mix
-    .setResourceRoot('/assets/')
-    .setPublicPath('public/assets')
     .webpackConfig({
         plugins: webpackPlugins,
         resolve: { alias: webpackAliases },
     })
-    .copyDirectory('resources/assets/favicon', 'public/assets/favicon')
+    .copyDirectory('resources/favicon', 'public/favicon')
     .autoload({ jquery: ['$', 'jQuery', 'window.$', 'window.jQuery'] })
     .options({
         // postCss: [require('postcss-image-inliner')()],
         purifyCss: {paths: [].concat.apply([], purifyCssPaths)}
     })
 
-    .sass('resources/assets/sass/app.scss', 'public/assets/css/app.css', { implementation: require('node-sass') })
-    .sass('resources/assets/sass/vendor.scss', 'public/assets/css/vendor.css', { implementation: require('node-sass') })
-    .sass('resources/assets/sass/datatables.scss', 'public/assets/css/datatables.css', { implementation: require('node-sass') })
-    .sass('resources/assets/sass/fullcalendar.scss', 'public/assets/css/fullcalendar.css', { implementation: require('node-sass') })
-    .sass('app/cortex/console/resources/assets/sass/terminal.scss', 'public/assets/css/terminal.css', { implementation: require('node-sass') })
-    .sass('app/cortex/foundation/resources/assets/sass/theme-frontarea.scss', 'public/assets/css/theme-frontarea.css', { implementation: require('node-sass') })
-    .sass('app/cortex/foundation/resources/assets/sass/theme-adminarea.scss', 'public/assets/css/theme-adminarea.css', { implementation: require('node-sass') })
-    .sass('app/cortex/foundation/resources/assets/sass/theme-tenantarea.scss', 'public/assets/css/theme-tenantarea.css', { implementation: require('node-sass') })
+    .sass('resources/sass/app.scss', 'public/css/app.css', { implementation: require('node-sass') })
+    .sass('resources/sass/vendor.scss', 'public/css/vendor.css', { implementation: require('node-sass') })
+    .sass('resources/sass/datatables.scss', 'public/css/datatables.css', { implementation: require('node-sass') })
+    .sass('resources/sass/fullcalendar.scss', 'public/css/fullcalendar.css', { implementation: require('node-sass') })
+    .sass('app/cortex/console/resources/sass/terminal.scss', 'public/css/terminal.css', { implementation: require('node-sass') })
+    .sass('app/cortex/foundation/resources/sass/theme-frontarea.scss', 'public/css/theme-frontarea.css', { implementation: require('node-sass') })
+    .sass('app/cortex/foundation/resources/sass/theme-adminarea.scss', 'public/css/theme-adminarea.css', { implementation: require('node-sass') })
+    .sass('app/cortex/foundation/resources/sass/theme-tenantarea.scss', 'public/css/theme-tenantarea.css', { implementation: require('node-sass') })
     .sass(
-        'app/cortex/foundation/resources/assets/sass/theme-managerarea.scss',
-        'public/assets/css/theme-managerarea.css', { implementation: require('node-sass') }
+        'app/cortex/foundation/resources/sass/theme-managerarea.scss',
+        'public/css/theme-managerarea.css', { implementation: require('node-sass') }
     )
 
-    .js('node_modules/pym.js/dist/pym.v1.js', 'public/assets/js/embed.js')
-    .js('resources/assets/js/vendor/formbuilder.js', 'public/assets/js/formbuilder.js')
-    .js('app/cortex/console/resources/assets/js/terminal.js', 'public/assets/js/terminal.js')
-    .js('resources/assets/js/vendor/fullcalendar.js', 'public/assets/js/fullcalendar.js')
-    .js('resources/assets/js/vendor/datatables.js', 'public/assets/js/datatables.js')
-    .js('node_modules/chart.js/src/chart.js', 'public/assets/js/chart.js')
-    .js('resources/assets/js/app.js', 'public/assets/js/app.js')
+    .js('node_modules/pym.js/dist/pym.v1.js', 'public/js/embed.js')
+    .js('resources/js/vendor/formbuilder.js', 'public/js/formbuilder.js')
+    .js('app/cortex/console/resources/js/terminal.js', 'public/js/terminal.js')
+    .js('resources/js/vendor/fullcalendar.js', 'public/js/fullcalendar.js')
+    .js('resources/js/vendor/datatables.js', 'public/js/datatables.js')
+    .js('node_modules/chart.js/src/chart.js', 'public/js/chart.js')
+    .js('resources/js/app.js', 'public/js/app.js')
 
     .extract(
         [
@@ -101,19 +99,19 @@ mix
             'fontawesome-iconpicker',
             'bootstrap-daterangepicker',
             'datepair.js/src/jquery.datepair',
-            './resources/assets/js/vendor/bootstrap-popover-picker',
+            './resources/js/vendor/bootstrap-popover-picker',
 
             // Misc
             'moment',
             'select2',
             'dropzone',
-            './resources/assets/js/vendor/pace',
-            './resources/assets/js/vendor/slugify',
-            './resources/assets/js/vendor/jquery.validation',
+            './resources/js/vendor/pace',
+            './resources/js/vendor/slugify',
+            './resources/js/vendor/jquery.validation',
 
             // Theme
             'admin-lte',
         ],
-        'public/assets/js/vendor.js'
+        'public/js/vendor.js'
     )
     .version();
