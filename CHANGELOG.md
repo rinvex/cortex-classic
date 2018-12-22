@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## v1.0.4 - 2018-12-22
+- Update composer config
+- Update installation steps
+- Update npm dependencies
+- Enforce using node-sass instead of dart sass to fix issues with laravel-mix v4
+- Add favicon
+- Replace vanilla intl-tel-input package with jquery wrapped version (v14 issue)
+- Enforce consistency
+- Simplify and flatten resources/public directories
+
 ## v1.0.3 - 2018-10-25
 - Update documentation
 

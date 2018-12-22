@@ -45,7 +45,6 @@
     ],
     "require": {
         "php": "^7.1.3",
-        "fideloper/proxy": "^4.0",
         "aws/aws-sdk-php": "^3.67.0",
         "aws/aws-sdk-php-laravel": "^3.1.0",
         "beyondcode/laravel-self-diagnosis": "^1.0.0",
@@ -60,6 +59,7 @@
         "cortex/tags": "^1.0.0",
         "cortex/tenants": "^1.0.0",
         "doctrine/dbal": "^2.8.0",
+        "fideloper/proxy": "^4.0",
         "guzzlehttp/guzzle": "^6.3",
         "laravel/envoy": "~1.4.0",
         "laravel/framework": "~5.7.0",
@@ -67,7 +67,6 @@
         "league/flysystem-aws-s3-v3": "^1.0.0",
         "mariuzzo/laravel-js-localization": "^1.4.0",
         "predis/predis": "^1.1.1",
-        "roave/security-advisories": "dev-master",
         "spatie/laravel-db-snapshots": "^1.1.0",
         "spatie/laravel-link-checker": "^4.1.0",
         "spatie/laravel-medialibrary": "^7.5.0",
@@ -85,6 +84,7 @@
         "nunomaduro/collision": "^2.0.0",
         "nunomaduro/larastan": "^0.2.0",
         "phpunit/phpunit": "^7.0.0",
+        "roave/security-advisories": "dev-master",
         "symfony/thanks": "^1.1.0"
     },
     "autoload-dev": {
@@ -101,7 +101,9 @@
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php artisan package:discover --ansi",
+            "@php artisan ide-helper:generate --ansi",
+            "@php artisan ide-helper:meta --ansi"
         ]
     },
     "config": {

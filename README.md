@@ -47,6 +47,7 @@ Install the project
 
 ```
 php artisan cortex:install
+npm install
 npm run dev
 ```
 
