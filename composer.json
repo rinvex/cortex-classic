@@ -67,7 +67,6 @@
         "league/flysystem-aws-s3-v3": "^1.0.0",
         "mariuzzo/laravel-js-localization": "^1.4.0",
         "predis/predis": "^1.1.1",
-        "roave/security-advisories": "dev-master",
         "spatie/laravel-db-snapshots": "^1.1.0",
         "spatie/laravel-link-checker": "^4.1.0",
         "spatie/laravel-medialibrary": "^7.5.0",
@@ -85,6 +84,7 @@
         "nunomaduro/collision": "^2.0.0",
         "nunomaduro/larastan": "^0.2.0",
         "phpunit/phpunit": "^7.0.0",
+        "roave/security-advisories": "dev-master",
         "symfony/thanks": "^1.1.0"
     },
     "autoload-dev": {
@@ -97,14 +97,13 @@
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
-            "@php artisan key:generate --ansi",
-            "npm install --silent"
+            "@php artisan key:generate --ansi"
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi",
             "@php artisan ide-helper:generate --ansi",
-            "@php artisan ide-helper:meta --ansi",
-            "@php artisan package:discover --ansi"
+            "@php artisan ide-helper:meta --ansi"
         ]
     },
     "config": {
