@@ -59,7 +59,6 @@
         "cortex/tags": "^1.0.0",
         "cortex/tenants": "^1.0.0",
         "doctrine/dbal": "^2.8.0",
-        "fideloper/proxy": "^4.0",
         "guzzlehttp/guzzle": "^6.3",
         "laravel/envoy": "~1.4.0",
         "laravel/framework": "~5.7.0",
