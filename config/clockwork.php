@@ -131,8 +131,8 @@ return [
 	*/
 
 	'filter_uris' => [
-		'/__clockwork/.*', // disable collecting data for clockwork-web assets
-		'/horizon/.*', // disable collecting data for Laravel Horizon requests
+		'/horizon/.*', // Laravel Horizon requests
+		'/telescope/.*' // Laravel Telescope requests
 	],
 
 	/*
@@ -151,6 +151,29 @@ return [
 	*/
 
 	'collect_stack_traces' => env('CLOCKWORK_COLLECT_STACK_TRACES', true),
+
+	/*
+	|--------------------------------------------------------------------------
+	| Serialization
+	|--------------------------------------------------------------------------
+	|
+	| Configure how Clockwork serializes the collected data.
+	| Depth limits how many levels of multi-level arrays and objects have
+	| extended serialization (rest uses simple serialization).
+	| Blackbox allows you to specify classes which contents should be never
+	| serialized (eg. a service container class).
+	| Lowering depth limit and adding classes to blackbox lowers the memory
+	| usage and processing time.
+	|
+	*/
+
+	'serialization_depth' => env('CLOCKWORK_SERIALIZATION_DEPTH', 10),
+
+	'serialization_blackbox' => [
+		\Illuminate\Container\Container::class,
+		\Illuminate\Foundation\Application::class,
+		\Laravel\Lumen\Application::class
+	],
 
 	/*
 	|--------------------------------------------------------------------------
