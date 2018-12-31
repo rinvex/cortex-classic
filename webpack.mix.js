@@ -4,19 +4,19 @@ let WebpackShellPlugin = require('webpack-shell-plugin');
 
 let glob = require('glob');
 
-let purifyCssPaths = [
-    glob.sync(path.join(__dirname, 'app/**/*.php')),
-    glob.sync(path.join(__dirname, 'resources/js/**/*.js')),
-    glob.sync(path.join(__dirname, 'node_modules/select2/**/*.js')),
-    glob.sync(path.join(__dirname, 'node_modules/dropzone/**/*.js')),
-    glob.sync(path.join(__dirname, 'resources/views/**/*.blade.php')),
-    glob.sync(path.join(__dirname, 'node_modules/fullcalendar/**/*.js')),
-    glob.sync(path.join(__dirname, 'node_modules/formBuilder/dist/*.js')),
-    glob.sync(path.join(__dirname, 'node_modules/admin-lte/dist/**/*.js')),
-    glob.sync(path.join(__dirname, 'node_modules/datatables.net/**/*.js')),
-    glob.sync(path.join(__dirname, 'node_modules/jquery.terminal/**/*.js')),
-    glob.sync(path.join(__dirname, 'node_modules/fullcalendar-scheduler/**/*.js')),
-    glob.sync(path.join(__dirname, 'node_modules/fontawesome-iconpicker/dist/**/*.js')),
+let scanForCssSelectors = [
+    path.join(__dirname, 'app/**/*.php'),
+    path.join(__dirname, 'resources/js/**/*.js'),
+    path.join(__dirname, 'node_modules/select2/**/*.js'),
+    path.join(__dirname, 'node_modules/dropzone/**/*.js'),
+    path.join(__dirname, 'resources/views/**/*.blade.php'),
+    path.join(__dirname, 'node_modules/fullcalendar/**/*.js'),
+    path.join(__dirname, 'node_modules/formBuilder/dist/*.js'),
+    path.join(__dirname, 'node_modules/admin-lte/dist/**/*.js'),
+    path.join(__dirname, 'node_modules/datatables.net/**/*.js'),
+    path.join(__dirname, 'node_modules/jquery.terminal/**/*.js'),
+    path.join(__dirname, 'node_modules/fullcalendar-scheduler/**/*.js'),
+    path.join(__dirname, 'node_modules/fontawesome-iconpicker/dist/**/*.js'),
 ];
 
 let webpackPlugins = [
@@ -54,7 +54,6 @@ mix
     .autoload({ jquery: ['$', 'jQuery', 'window.$', 'window.jQuery'] })
     .options({
         // postCss: [require('postcss-image-inliner')()],
-        purifyCss: {paths: [].concat.apply([], purifyCssPaths)}
     })
 
     .sass('resources/sass/app.scss', 'public/css/app.css', { implementation: require('node-sass') })
@@ -114,4 +113,9 @@ mix
         ],
         'public/js/vendor.js'
     )
+    .purgeCss({
+        enabled: true,
+        globs: scanForCssSelectors,
+        extensions: ['html', 'js', 'php', 'vue'],
+    })
     .version();
