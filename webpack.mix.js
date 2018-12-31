@@ -3,6 +3,7 @@ let webpack = require('webpack');
 let WebpackShellPlugin = require('webpack-shell-plugin');
 
 let glob = require('glob');
+require('laravel-mix-purgecss');
 
 let scanForCssSelectors = [
     path.join(__dirname, 'app/**/*.php'),
