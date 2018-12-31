@@ -45,6 +45,7 @@
     ],
     "require": {
         "php": "^7.1.3",
+        "appstract/laravel-opcache": "^2.0.0",
         "aws/aws-sdk-php": "^3.67.0",
         "aws/aws-sdk-php-laravel": "^3.1.0",
         "beyondcode/laravel-self-diagnosis": "^1.0.0",
