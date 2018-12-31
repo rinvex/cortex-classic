@@ -61,10 +61,10 @@
         "sass-loader": "^7.1.0",
         "select2": "^4.0.0",
         "timepicker": "^1.11.0",
+        "tinymce": "^4.9.2",
         "turbolinks": "^5.2.0",
         "vue-template-compiler": "^2.5.21",
-        "webpack-shell-plugin": "^0.5.0",
-        "wysihtml": "^0.6.0-beta1"
+        "webpack-shell-plugin": "^0.5.0"
     },
     "dependencies": {}
 }
