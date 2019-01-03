@@ -54,6 +54,7 @@ mix
         resolve: { alias: webpackAliases },
     })
     .copyDirectory('resources/favicon', 'public/favicon')
+    .copyDirectory('node_modules/tinymce/skins', 'public/tinymce')
     .autoload({ jquery: ['$', 'jQuery', 'window.$', 'window.jQuery'] })
     .options({
         // postCss: [require('postcss-image-inliner')()],
