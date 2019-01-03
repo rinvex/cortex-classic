@@ -51,6 +51,10 @@ window.hashids = new Hashids(
 // Theme
 import 'admin-lte';
 
+// Tinymce
+import tinymce from 'tinymce/tinymce';
+import 'tinymce/themes/modern/theme';
+
 import Turbolinks from 'turbolinks';
 Turbolinks.start();
 
@@ -113,6 +117,12 @@ window.addEventListener('turbolinks:load', function() {
         document.documentElement.scrollTop = Turbolinks.scroll.top;
         Turbolinks.scroll = {};
     }
+
+    // Initialize the tinymce
+    tinymce.init({
+        selector: '.tinymce',
+        skin_url: '/tinymce/lightgray'
+    });
 
     // Initialize dropzone(s)
     $('.dropzone').dropzone({
