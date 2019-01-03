@@ -133,9 +133,18 @@ window.highlight_required = function(){
     });
 }
 
+let sidebarScrolPosition = 0;
+
 window.addEventListener('turbolinks:load', function() {
     // Fake window onload trigger (dirty temp solution!)
     $(window).trigger('load');
+
+    // Preserve sidebar scroll
+    $('.sidebar').scroll(function() {
+        sidebarScrolPosition = $('.sidebar').scrollTop();
+    });
+
+    $('.sidebar').animate({ scrollTop: sidebarScrolPosition }, 0);
 
     // This is a workaround to handle the SPA nature of turbolinks
     window.BookableRangeReady = true;
