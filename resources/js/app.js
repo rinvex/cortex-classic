@@ -52,7 +52,7 @@ window.hashids = new Hashids(
 import 'admin-lte';
 
 // Tinymce
-import tinymce from 'tinymce/tinymce';
+import TinyMCE from 'tinymce/tinymce';
 import 'tinymce/themes/modern/theme';
 
 import Turbolinks from 'turbolinks';
@@ -119,7 +119,7 @@ window.addEventListener('turbolinks:load', function() {
     }
 
     // Initialize the tinymce
-    tinymce.init({
+    TinyMCE.init({
         selector: '.tinymce',
         skin_url: '/tinymce/lightgray'
     });
