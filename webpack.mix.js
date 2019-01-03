@@ -55,7 +55,7 @@ mix
     })
     .copyDirectory('resources/favicon', 'public/favicon')
     .copyDirectory('node_modules/tinymce/skins', 'public/tinymce')
-    .autoload({ jquery: ['$', 'jQuery', 'window.$', 'window.jQuery'] })
+    // .autoload({ jquery: ['$', 'jQuery', 'window.$', 'window.jQuery'] })
     .options({
         // postCss: [require('postcss-image-inliner')()],
     })
@@ -120,7 +120,7 @@ mix
     .purgeCss({
         enabled: true,
         globs: scanForCssSelectors,
-        whitelistPatterns: [/select2/, /alert/],
         extensions: ['html', 'js', 'php', 'vue'],
+        whitelistPatterns: [/select2/, /alert/],
     })
     .version();
