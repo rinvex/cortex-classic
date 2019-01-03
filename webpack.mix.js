@@ -7,15 +7,17 @@ require('laravel-mix-purgecss');
 
 let scanForCssSelectors = [
     path.join(__dirname, 'app/**/*.php'),
+    path.join(__dirname, 'config/*.php'),
     path.join(__dirname, 'resources/js/**/*.js'),
+    path.join(__dirname, 'resources/views/**/*.php'),
     path.join(__dirname, 'node_modules/select2/**/*.js'),
     path.join(__dirname, 'node_modules/dropzone/**/*.js'),
-    path.join(__dirname, 'resources/views/**/*.blade.php'),
     path.join(__dirname, 'node_modules/fullcalendar/**/*.js'),
     path.join(__dirname, 'node_modules/formBuilder/dist/*.js'),
     path.join(__dirname, 'node_modules/admin-lte/dist/**/*.js'),
     path.join(__dirname, 'node_modules/datatables.net/**/*.js'),
     path.join(__dirname, 'node_modules/jquery.terminal/**/*.js'),
+    path.join(__dirname, 'node_modules/bootstrap-notify/**/*.js'),
     path.join(__dirname, 'node_modules/fullcalendar-scheduler/**/*.js'),
     path.join(__dirname, 'node_modules/fontawesome-iconpicker/dist/**/*.js'),
 ];
@@ -117,6 +119,7 @@ mix
     .purgeCss({
         enabled: true,
         globs: scanForCssSelectors,
+        whitelistPatterns: [/select2/, /alert/],
         extensions: ['html', 'js', 'php', 'vue'],
     })
     .version();
