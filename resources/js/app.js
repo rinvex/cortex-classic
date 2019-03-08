@@ -4,6 +4,33 @@
  * code may be modified to fit the specific needs of your application.
  */
 
+window._ = require('lodash');
+
+
+try {
+    // window.Popper = require('popper.js').default;
+    window.$ = window.jQuery = require('jquery');
+} catch (e) {}
+
+
+window.axios = require('axios');
+
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
+/**
+ * Next we will register the CSRF Token as a common header with Axios so that
+ * all outgoing HTTP requests automatically have it attached. This is just
+ * a simple convenience so we don't have to attach every token manually.
+ */
+
+let token = document.head.querySelector('meta[name="csrf-token"]');
+
+if (token) {
+    window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+} else {
+    console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
+}
+
 // Bind variables to window object
 import 'expose-loader?$!expose-loader?jQuery!jquery';
 import 'expose-loader?routes!../../public/js/routes';
@@ -41,7 +68,7 @@ import 'expose-loader?implicitForms!./vendor/jquery.implicitforms';
 // Translations
 import Lang from './vendor/lang';
 import messages from '../../public/js/messages';
-window.Lang = new Lang({ messages });
+window.Lang = new Lang({ messages, fallback: 'en' });
 window.hashids = new Hashids(
     process.env.MIX_HASHIDS_KEY,
     process.env.MIX_HASHIDS_LENGTH,
@@ -50,6 +77,10 @@ window.hashids = new Hashids(
 
 // Theme
 import 'admin-lte';
+
+// Tinymce
+import TinyMCE from 'tinymce/tinymce';
+import 'tinymce/themes/modern/theme';
 
 import Turbolinks from 'turbolinks';
 Turbolinks.start();
@@ -100,9 +131,18 @@ window.highlight_required = function(){
     });
 }
 
+let sidebarScrolPosition = 0;
+
 window.addEventListener('turbolinks:load', function() {
     // Fake window onload trigger (dirty temp solution!)
     $(window).trigger('load');
+
+    // Preserve sidebar scroll
+    $('.sidebar').scroll(function() {
+        sidebarScrolPosition = $('.sidebar').scrollTop();
+    });
+
+    $('.sidebar').animate({ scrollTop: sidebarScrolPosition }, 0);
 
     // This is a workaround to handle the SPA nature of turbolinks
     window.BookableRangeReady = true;
@@ -113,6 +153,12 @@ window.addEventListener('turbolinks:load', function() {
         document.documentElement.scrollTop = Turbolinks.scroll.top;
         Turbolinks.scroll = {};
     }
+
+    // Initialize the tinymce
+    TinyMCE.init({
+        selector: '.tinymce',
+        skin_url: '/tinymce/lightgray'
+    });
 
     // Initialize dropzone(s)
     $('.dropzone').dropzone({
@@ -401,3 +447,28 @@ document.addEventListener('turbolinks:before-cache', function() {
     //     $(item).DataTable().destroy();
     // });
 });
+
+window.Vue = require('vue');
+
+/**
+ * The following block of code may be used to automatically register your
+ * Vue components. It will recursively scan this directory for the Vue
+ * components and automatically register them with their "basename".
+ *
+ * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
+ */
+
+// const files = require.context('./', true, /\.vue$/i)
+// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+
+Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+
+/**
+ * Next, we will create a fresh Vue application instance and attach it to
+ * the page. Then, you may begin adding components to this application
+ * or customize the JavaScript scaffolding to fit your unique needs.
+ */
+
+// const app = new Vue({
+//     el: '#app'
+// });

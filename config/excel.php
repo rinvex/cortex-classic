@@ -30,6 +30,13 @@ return [
         'temp_path' => sys_get_temp_dir(),
 
         /*
+       |--------------------------------------------------------------------------
+       | Pre-calculate formulas during export
+       |--------------------------------------------------------------------------
+       */
+        'pre_calculate_formulas' => false,
+
+        /*
         |--------------------------------------------------------------------------
         | CSV Settings
         |--------------------------------------------------------------------------
@@ -44,6 +51,25 @@ return [
             'use_bom' => false,
             'include_separator_line' => false,
             'excel_compatibility' => false,
+        ],
+    ],
+
+    'imports' => [
+
+        'read_only' => true,
+
+        'heading_row' => [
+
+            /*
+            |--------------------------------------------------------------------------
+            | Heading Row Formatter
+            |--------------------------------------------------------------------------
+            |
+            | Configure the heading row formatter.
+            | Available options: none|slug|custom
+            |
+            */
+            'formatter' => 'slug',
         ],
     ],
 
@@ -80,7 +106,6 @@ return [
         |--------------------------------------------------------------------------
         |
         | Configure here which Pdf driver should be used by default.
-        |
         | Available options: Excel::MPDF | Excel::TCPDF | Excel::DOMPDF
         |
         */

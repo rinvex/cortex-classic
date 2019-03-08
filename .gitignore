@@ -6,12 +6,13 @@
 /public/hot
 /node_modules
 /storage/*.key
+/composer.lock
 /public/storage
 /package-lock.json
-/composer.lock
+.phpunit.result.cache
 Homestead.json
 Homestead.yaml
-composer.phar
-npm-debug.log
 yarn-error.log
+npm-debug.log
+composer.phar
 .env

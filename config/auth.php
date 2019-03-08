@@ -62,6 +62,7 @@ return [
         'api' => [
             'driver' => 'token',
             'provider' => 'members',
+            'hash' => false,
         ],
     ],
 

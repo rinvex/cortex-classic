@@ -15,9 +15,9 @@ import './datatables.net-buttons.server-side';
 
 // This is a workaround to handle the SPA nature of turbolinks
 window.DataTableReady = true;
-$(document).trigger('datatables.ready');
+document.dispatchEvent(new Event('datatables.ready'));
 
-$(function () {
+(function () {
     // Format Log DataTable details
     window.dtFormatLogDetails = function (data) {
         // if ($.isEmptyObject(data.attributes)) {
