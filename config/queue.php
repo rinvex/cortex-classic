@@ -48,6 +48,7 @@ return [
             'host' => 'localhost',
             'queue' => 'default',
             'retry_after' => 90,
+            'block_for' => 0,
         ],
 
         'sqs' => [
@@ -62,7 +63,7 @@ return [
         'redis' => [
             'driver' => 'redis',
             'connection' => 'default',
-            'queue' => 'default',
+            'queue' => env('REDIS_QUEUE', 'default'),
             'retry_after' => 90,
             'block_for' => null,
         ],

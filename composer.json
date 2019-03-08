@@ -43,6 +43,20 @@
             "homepage": "https://github.com/rinvex/cortex/contributors"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/rinvex/l58-laravel-datatables-fractal"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/rinvex/l58-laravel-jsvalidation"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/rinvex/l58-laroute"
+        }
+    ],
     "require": {
         "php": "^7.2.0",
         "ext-pdo": "*",
@@ -65,6 +79,7 @@
         "laravel/helpers": "^1.0.0",
         "laravel/tinker": "^1.0.0",
         "league/flysystem-aws-s3-v3": "^1.0.0",
+        "lord/laroute": "^2.4.0",
         "mariuzzo/laravel-js-localization": "^1.4.0",
         "nunomaduro/laravel-console-task": "^1.2.0",
         "nunomaduro/laravel-console-menu": "^2.1.0",
