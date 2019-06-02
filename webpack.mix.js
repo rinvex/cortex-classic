@@ -16,7 +16,6 @@ let scanForCssSelectors = [
     path.join(__dirname, 'node_modules/formBuilder/dist/*.js'),
     path.join(__dirname, 'node_modules/admin-lte/dist/**/*.js'),
     path.join(__dirname, 'node_modules/datatables.net/**/*.js'),
-    path.join(__dirname, 'node_modules/jquery.terminal/**/*.js'),
     path.join(__dirname, 'node_modules/bootstrap-notify/**/*.js'),
     path.join(__dirname, 'node_modules/fullcalendar-scheduler/**/*.js'),
     path.join(__dirname, 'node_modules/fontawesome-iconpicker/dist/**/*.js'),
@@ -28,7 +27,7 @@ let webpackPlugins = [
 
     // Add shell command plugin to execute shell commands on building
     new WebpackShellPlugin({
-        onBuildStart: ['php artisan laroute:generate --ansi', 'php artisan lang:js --ansi --no-lib'],
+        onBuildStart: ['php artisan laroute:generate --no-interaction', 'php artisan lang:js --no-lib --no-interaction'],
         onBuildEnd: [],
     }),
 ];
@@ -57,28 +56,26 @@ mix
     .copyDirectory('node_modules/tinymce/skins', 'public/tinymce')
     // .autoload({ jquery: ['$', 'jQuery', 'window.$', 'window.jQuery'] })
     .options({
+        // processCssUrls: false
         // postCss: [require('postcss-image-inliner')()],
     })
 
-    .sass('resources/sass/app.scss', 'public/css/app.css', { implementation: require('node-sass') })
-    .sass('resources/sass/vendor.scss', 'public/css/vendor.css', { implementation: require('node-sass') })
-    .sass('resources/sass/datatables.scss', 'public/css/datatables.css', { implementation: require('node-sass') })
-    .sass('resources/sass/fullcalendar.scss', 'public/css/fullcalendar.css', { implementation: require('node-sass') })
-    .sass('app/cortex/console/resources/sass/terminal.scss', 'public/css/terminal.css', { implementation: require('node-sass') })
-    .sass('app/cortex/foundation/resources/sass/theme-frontarea.scss', 'public/css/theme-frontarea.css', { implementation: require('node-sass') })
-    .sass('app/cortex/foundation/resources/sass/theme-adminarea.scss', 'public/css/theme-adminarea.css', { implementation: require('node-sass') })
-    .sass('app/cortex/foundation/resources/sass/theme-tenantarea.scss', 'public/css/theme-tenantarea.css', { implementation: require('node-sass') })
+    .sass('resources/sass/app.scss', 'public/css/app.css')
+    .sass('resources/sass/vendor.scss', 'public/css/vendor.css')
+    .sass('resources/sass/datatables.scss', 'public/css/datatables.css')
+    .sass('resources/sass/fullcalendar.scss', 'public/css/fullcalendar.css')
+    .sass('app/cortex/foundation/resources/sass/theme-frontarea.scss', 'public/css/theme-frontarea.css')
+    .sass('app/cortex/foundation/resources/sass/theme-adminarea.scss', 'public/css/theme-adminarea.css')
+    .sass('app/cortex/foundation/resources/sass/theme-tenantarea.scss', 'public/css/theme-tenantarea.css')
     .sass(
         'app/cortex/foundation/resources/sass/theme-managerarea.scss',
-        'public/css/theme-managerarea.css', { implementation: require('node-sass') }
+        'public/css/theme-managerarea.css'
     )
 
     .js('node_modules/pym.js/dist/pym.v1.js', 'public/js/embed.js')
     .js('resources/js/vendor/formbuilder.js', 'public/js/formbuilder.js')
-    .js('app/cortex/console/resources/js/terminal.js', 'public/js/terminal.js')
     .js('resources/js/vendor/fullcalendar.js', 'public/js/fullcalendar.js')
     .js('resources/js/vendor/datatables.js', 'public/js/datatables.js')
-    .js('node_modules/chart.js/src/chart.js', 'public/js/chart.js')
     .js('resources/js/app.js', 'public/js/app.js')
 
     .extract(
@@ -108,7 +105,6 @@ mix
             'moment',
             'select2',
             'dropzone',
-            './resources/js/vendor/pace',
             './resources/js/vendor/slugify',
             './resources/js/vendor/jquery.validation',
 
@@ -121,6 +117,6 @@ mix
         enabled: true,
         globs: scanForCssSelectors,
         extensions: ['html', 'js', 'php', 'vue'],
-        whitelistPatterns: [/select2/, /alert/],
+        whitelistPatterns: [/select2/, /alert/, /turbolinks/],
     })
     .version();

@@ -55,6 +55,12 @@ return [
             'days' => 14,
         ],
 
+        'installer' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/installer.log'),
+            'level' => 'debug',
+        ],
+
         'slack' => [
             'driver' => 'slack',
             'url' => env('LOG_SLACK_WEBHOOK_URL'),

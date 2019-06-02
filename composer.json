@@ -46,34 +46,25 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/rinvex/l58-laravel-datatables-fractal"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/rinvex/l58-laravel-jsvalidation"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/rinvex/l58-laroute"
+            "url": "https://github.com/rinvex/l58-notification"
         }
     ],
     "require": {
         "php": "^7.2.0",
         "ext-pdo": "*",
         "appstract/laravel-opcache": "^2.0.0",
-        "aws/aws-sdk-php": "^3.87.0",
+        "aws/aws-sdk-php": "^3.95.0",
         "aws/aws-sdk-php-laravel": "^3.3.0",
-        "beyondcode/laravel-self-diagnosis": "^1.1.0",
+        "beyondcode/laravel-self-diagnosis": "^1.2.0",
         "cortex/auth": "^2.0.0",
         "cortex/auth-b2b2c2": "^2.0.0",
         "cortex/categories": "^2.0.0",
-        "cortex/console": "^2.0.0",
         "cortex/foundation": "^2.0.0",
         "cortex/pages": "^2.0.0",
         "cortex/tags": "^2.0.0",
         "cortex/tenants": "^2.0.0",
         "doctrine/dbal": "^2.9.0",
-        "guzzlehttp/guzzle": "^6.3",
+        "guzzlehttp/guzzle": "^6.3.0",
         "laravel/envoy": "~1.5.0",
         "laravel/framework": "~5.8.0",
         "laravel/helpers": "^1.0.0",
@@ -83,9 +74,9 @@
         "mariuzzo/laravel-js-localization": "^1.4.0",
         "nunomaduro/laravel-console-task": "^1.2.0",
         "nunomaduro/laravel-console-menu": "^2.1.0",
-        "predis/predis": "^1.1.1",
+        "predis/predis": "^1.1.0",
         "spatie/laravel-collection-macros": "^5.0.0",
-        "spatie/laravel-db-snapshots": "^1.1.0",
+        "spatie/laravel-db-snapshots": "^1.2.0",
         "spatie/laravel-medialibrary": "^7.6.0"
     },
     "require-dev": {
@@ -97,13 +88,18 @@
         "fzaninotto/faker": "~1.8.0",
         "itsgoingd/clockwork": "^3.1.0",
         "mockery/mockery": "^1.2.0",
-        "nunomaduro/collision": "^2.1.0",
+        "nunomaduro/collision": "^3.0.0",
         "nunomaduro/larastan": "^0.3.0",
         "nunomaduro/laravel-desktop-notifier": "^2.1.0",
-        "phpunit/phpunit": "^8.0.0",
+        "phpunit/phpunit": "^8.1.0",
         "roave/security-advisories": "dev-master",
         "symfony/thanks": "^1.1.0",
-        "wnx/laravel-stats": "^1.8.0"
+        "wnx/laravel-stats": "^1.9.0"
+    },
+    "autoload": {
+        "classmap": [
+            "database"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
@@ -132,6 +128,7 @@
     "extra": {
         "laravel": {
             "dont-discover": [
+                "lord/laroute",
                 "silber/bouncer",
                 "mariuzzo/laravel-js-localization"
             ]
