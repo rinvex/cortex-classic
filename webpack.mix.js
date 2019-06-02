@@ -27,7 +27,7 @@ let webpackPlugins = [
 
     // Add shell command plugin to execute shell commands on building
     new WebpackShellPlugin({
-        onBuildStart: ['php artisan laroute:generate --ansi', 'php artisan lang:js --ansi --no-lib'],
+        onBuildStart: ['php artisan laroute:generate --no-interaction', 'php artisan lang:js --no-lib --no-interaction'],
         onBuildEnd: [],
     }),
 ];
@@ -56,6 +56,7 @@ mix
     .copyDirectory('node_modules/tinymce/skins', 'public/tinymce')
     // .autoload({ jquery: ['$', 'jQuery', 'window.$', 'window.jQuery'] })
     .options({
+        // processCssUrls: false
         // postCss: [require('postcss-image-inliner')()],
     })
 
@@ -116,6 +117,6 @@ mix
         enabled: true,
         globs: scanForCssSelectors,
         extensions: ['html', 'js', 'php', 'vue'],
-        whitelistPatterns: [/select2/, /alert/],
+        whitelistPatterns: [/select2/, /alert/, /turbolinks/],
     })
     .version();
