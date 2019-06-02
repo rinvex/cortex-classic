@@ -16,7 +16,6 @@ let scanForCssSelectors = [
     path.join(__dirname, 'node_modules/formBuilder/dist/*.js'),
     path.join(__dirname, 'node_modules/admin-lte/dist/**/*.js'),
     path.join(__dirname, 'node_modules/datatables.net/**/*.js'),
-    path.join(__dirname, 'node_modules/jquery.terminal/**/*.js'),
     path.join(__dirname, 'node_modules/bootstrap-notify/**/*.js'),
     path.join(__dirname, 'node_modules/fullcalendar-scheduler/**/*.js'),
     path.join(__dirname, 'node_modules/fontawesome-iconpicker/dist/**/*.js'),
@@ -74,10 +73,8 @@ mix
 
     .js('node_modules/pym.js/dist/pym.v1.js', 'public/js/embed.js')
     .js('resources/js/vendor/formbuilder.js', 'public/js/formbuilder.js')
-    .js('app/cortex/console/resources/js/terminal.js', 'public/js/terminal.js')
     .js('resources/js/vendor/fullcalendar.js', 'public/js/fullcalendar.js')
     .js('resources/js/vendor/datatables.js', 'public/js/datatables.js')
-    .js('node_modules/chart.js/src/chart.js', 'public/js/chart.js')
     .js('resources/js/app.js', 'public/js/app.js')
 
     .extract(
@@ -107,7 +104,6 @@ mix
             'moment',
             'select2',
             'dropzone',
-            './resources/js/vendor/pace',
             './resources/js/vendor/slugify',
             './resources/js/vendor/jquery.validation',
 
