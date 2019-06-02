@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## [v2.1.0] - 2019-06-02
+- Drop travis php v7.1 check
+- Update composer deps
+- Remove useless node packages: codemirror, chart.js, jquery.terminal
+- Replace node-sass with sass package, update deps, and drop pace-progress
+- Replace node-sass with sass package
+- Drop useless node packages
+- Clean things and remove useless files
+- Remove pace code, update turbolinks code, fix node bootstrap & intlTelInput issues
+- Add new logging channel for installer
+- Publish error views and required config files
+
 ## [v2.0.0] - 2019-03-03
 - Require PHP 7.2 & Laravel 5.8
 - Update npm dependencies
