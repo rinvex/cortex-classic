@@ -60,17 +60,16 @@ mix
         // postCss: [require('postcss-image-inliner')()],
     })
 
-    .sass('resources/sass/app.scss', 'public/css/app.css', { implementation: require('node-sass') })
-    .sass('resources/sass/vendor.scss', 'public/css/vendor.css', { implementation: require('node-sass') })
-    .sass('resources/sass/datatables.scss', 'public/css/datatables.css', { implementation: require('node-sass') })
-    .sass('resources/sass/fullcalendar.scss', 'public/css/fullcalendar.css', { implementation: require('node-sass') })
-    .sass('app/cortex/console/resources/sass/terminal.scss', 'public/css/terminal.css', { implementation: require('node-sass') })
-    .sass('app/cortex/foundation/resources/sass/theme-frontarea.scss', 'public/css/theme-frontarea.css', { implementation: require('node-sass') })
-    .sass('app/cortex/foundation/resources/sass/theme-adminarea.scss', 'public/css/theme-adminarea.css', { implementation: require('node-sass') })
-    .sass('app/cortex/foundation/resources/sass/theme-tenantarea.scss', 'public/css/theme-tenantarea.css', { implementation: require('node-sass') })
+    .sass('resources/sass/app.scss', 'public/css/app.css')
+    .sass('resources/sass/vendor.scss', 'public/css/vendor.css')
+    .sass('resources/sass/datatables.scss', 'public/css/datatables.css')
+    .sass('resources/sass/fullcalendar.scss', 'public/css/fullcalendar.css')
+    .sass('app/cortex/foundation/resources/sass/theme-frontarea.scss', 'public/css/theme-frontarea.css')
+    .sass('app/cortex/foundation/resources/sass/theme-adminarea.scss', 'public/css/theme-adminarea.css')
+    .sass('app/cortex/foundation/resources/sass/theme-tenantarea.scss', 'public/css/theme-tenantarea.css')
     .sass(
         'app/cortex/foundation/resources/sass/theme-managerarea.scss',
-        'public/css/theme-managerarea.css', { implementation: require('node-sass') }
+        'public/css/theme-managerarea.css'
     )
 
     .js('node_modules/pym.js/dist/pym.v1.js', 'public/js/embed.js')
