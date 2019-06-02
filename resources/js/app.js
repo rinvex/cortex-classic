@@ -57,7 +57,6 @@ import './vendor/bootstrap-popover-picker';
 
 // Misc
 import 'select2';
-import './vendor/pace';
 import './vendor/slugify';
 import Hashids from 'hashids';
 import Dropzone from 'dropzone';
@@ -80,7 +79,7 @@ import 'admin-lte';
 
 // Tinymce
 import TinyMCE from 'tinymce/tinymce';
-import 'tinymce/themes/modern/theme';
+import 'tinymce/themes/silver/theme';
 
 import Turbolinks from 'turbolinks';
 Turbolinks.start();

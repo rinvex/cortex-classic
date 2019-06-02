@@ -1,9 +1,10 @@
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 @import '~bootstrap-daterangepicker/daterangepicker.css';
 @import '~bootstrap-sass/assets/stylesheets/_bootstrap.scss';
 @import '~bootstrap-colorpicker/src/sass/_colorpicker.scss';
 @import '~bootstrap-popover-picker/dist/css/bootstrap-picker.css';
 @import '~fontawesome-iconpicker/dist/css/fontawesome-iconpicker.css';
-@import '~intl-tel-input/src/css/intlTelInput.scss';
+@import '~intl-tel-input/build/css/intlTelInput.css';
 @import '~font-awesome/scss/font-awesome.scss';
 @import '~timepicker/jquery.timepicker.css';
 @import '~select2/dist/css/select2.css';

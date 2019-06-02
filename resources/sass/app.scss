@@ -102,10 +102,12 @@ tr.details td.dt-details-control {
     font-size: 63px;
 }
 
-// Turbolinks
+/* Turbolinks */
 .turbolinks-progress-bar {
-    height: 2px;
+    height: 3px;
     background-color: #fff;
+    box-shadow: 0 0 10px #ffa500, 0 0 5px #ffa500;
+    opacity: 0.7;
 }
 
 /* Profile sidebar */
