@@ -46,7 +46,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/rinvex/l58-edvinaskrucas-notification"
+            "url": "https://github.com/rinvex/l58-notification"
         }
     ],
     "require": {
