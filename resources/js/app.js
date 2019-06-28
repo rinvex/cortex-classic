@@ -156,7 +156,8 @@ window.addEventListener('turbolinks:load', function() {
     // Initialize the tinymce
     TinyMCE.init({
         selector: '.tinymce',
-        skin_url: '/tinymce/lightgray'
+        skin_url: '/tinymce/ui/oxide',
+        content_css: '/tinymce/ui/oxide/content.css'
     });
 
     // Initialize dropzone(s)
@@ -436,6 +437,8 @@ window.addEventListener('turbolinks:load', function() {
 });
 
 document.addEventListener('turbolinks:before-cache', function() {
+    TinyMCE.remove();
+
     $('.select2')
         .select2()
         .each(function(i, item) {
