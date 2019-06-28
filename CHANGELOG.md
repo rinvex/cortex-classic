@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## [v2.1.1] - 2019-06-28
+- Disable cache paths by default
+- Enforce latest composer package versions
+- Enforce consistency
+- Update language files
+- Prevent Laroute from adding trailing slash
+- Simple tweak to artisan commands
+- Add .DS_Store to project .gitignore
+- Turn off output buffering
+- Fix TinyMCE issues
+
 ## [v2.1.0] - 2019-06-02
 - Drop travis php v7.1 check
 - Update composer deps
@@ -81,6 +92,8 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v0.0.1 - 2017-03-13
 - First tagged beta release
 
+[v2.1.1]: https://github.com/rinvex/cortex/compare/v2.1.0...v2.1.1
+[v2.1.0]: https://github.com/rinvex/cortex/compare/v2.0.0...v2.1.0
 [v2.0.0]: https://github.com/rinvex/cortex/compare/v1.0.3...v2.0.0
 [v1.0.3]: https://github.com/rinvex/cortex/compare/v1.0.2...v1.0.3
 [v1.0.2]: https://github.com/rinvex/cortex/compare/v1.0.1...v1.0.2
