@@ -16,8 +16,8 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'members',
-        'passwords' => 'members',
+        'guard' => 'member',
+        'passwords' => 'member',
     ],
 
     /*
@@ -39,22 +39,22 @@ return [
 
     'guards' => [
 
-        'admins' => [
+        'admin' => [
             'driver' => 'session',
             'provider' => 'admins',
         ],
 
-        'members' => [
+        'member' => [
             'driver' => 'session',
             'provider' => 'members',
         ],
 
-        'managers' => [
+        'manager' => [
             'driver' => 'session',
             'provider' => 'managers',
         ],
 
-        'guardians' => [
+        'guardian' => [
             'driver' => 'session',
             'provider' => 'guardians',
         ],
