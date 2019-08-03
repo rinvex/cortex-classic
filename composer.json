@@ -85,7 +85,6 @@
         "beyondcode/laravel-dump-server": "^1.2.0",
         "beyondcode/laravel-query-detector": "^1.0.0",
         "beyondcode/laravel-tinker-server": "^1.0.0",
-        "beyondcode/laravel-visual-diff": "^1.0.0",
         "codedungeon/phpunit-result-printer": "^0.26.0",
         "filp/whoops": "^2.4.0",
         "fzaninotto/faker": "~1.8.0",
