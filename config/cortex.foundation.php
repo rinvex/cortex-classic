@@ -62,4 +62,11 @@ return [
         'temporary_uploads' => 'temporary_uploads',
     ],
 
+    // Media storage config
+    'media' => [
+        'size' => '1024', // KB
+        'disk' => 's3-public',
+        'mimetypes' => 'image/jpeg,image/gif,image/png',
+    ],
+
 ];

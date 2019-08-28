@@ -121,11 +121,6 @@ return [
     // Minimum Passwords Characters
     'password_min_chars' => 8,
 
-    // Auth media storage disk
-    'media' => [
-        'disk' => 'public',
-    ],
-
     /*
     |--------------------------------------------------------------------------
     | Reauthentication Options
