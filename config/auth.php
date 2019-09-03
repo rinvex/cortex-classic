@@ -128,22 +128,22 @@ return [
 
     'passwords' => [
 
-        'admins' => [
+        'admin' => [
             'provider' => 'admins',
             'expire' => 60,
         ],
 
-        'members' => [
+        'member' => [
             'provider' => 'members',
             'expire' => 60,
         ],
 
-        'managers' => [
+        'manager' => [
             'provider' => 'managers',
             'expire' => 60,
         ],
 
-        'guardians' => [
+        'guardian' => [
             'provider' => 'guardians',
             'expire' => 60,
         ],
