@@ -56,7 +56,7 @@ import messages from '../../public/js/messages';
 window.Lang = new Lang({ messages, fallback: 'en' });
 window.hashids = new Hashids(
     process.env.MIX_HASHIDS_KEY,
-    process.env.MIX_HASHIDS_LENGTH,
+    Number(process.env.MIX_HASHIDS_LENGTH),
     process.env.MIX_HASHIDS_ALPHABET
 );
 
