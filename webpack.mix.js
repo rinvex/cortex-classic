@@ -117,6 +117,6 @@ mix
         enabled: true,
         globs: scanForCssSelectors,
         extensions: ['html', 'js', 'php', 'vue'],
-        whitelistPatterns: [/select2/, /alert/, /turbolinks/],
+        whitelistPatterns: [/select2/, /alert/, /turbolinks/, /iti/],
     })
     .version();
