@@ -9,6 +9,11 @@ return [
         'adminarea',
     ],
 
+    // Allow search engines to index access areas
+    'indexable' => [
+        'frontarea',
+    ],
+
     // Global Route Override
     'route' => [
 
