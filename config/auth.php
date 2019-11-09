@@ -165,4 +165,17 @@ return [
 
     'password_timeout' => 10800,
 
+    /*
+    |--------------------------------------------------------------------------
+    | TwoFactor Confirmation Timeout
+    |--------------------------------------------------------------------------
+    |
+    | Here you may define the amount of seconds before a TwoFactor confirmation
+    | times out and the user is prompted to re-enter their TwoFactor via the
+    | confirmation screen. By default, the timeout lasts for three hours.
+    |
+    */
+
+    'twofactor_timeout' => 10800,
+
 ];
