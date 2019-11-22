@@ -121,6 +121,11 @@ return [
     // Minimum Passwords Characters
     'password_min_chars' => 8,
 
+    // Auth media storage disk
+    'media' => [
+        'disk' => 'public',
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Reauthentication Options
@@ -134,6 +139,28 @@ return [
 
     'reauthentication' => [
         'timeout' => 3600,
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Throttle Options
+    |--------------------------------------------------------------------------
+    |
+    | To prevent abusing and spamming specific routes, we can throttle how
+    | many times a user can hit these routes within defined time period,
+    | Enter maximum attempts, and decay minutes for each route.
+    |
+    */
+
+    'throttle' => [
+        'login' => [
+            'max_attempts' => 5,
+            'decay_minutes' => 1,
+        ],
+        'passwordreset' => [
+            'max_attempts' => 5,
+            'decay_minutes' => 1,
+        ],
     ],
 
 ];
