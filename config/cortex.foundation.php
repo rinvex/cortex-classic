@@ -6,7 +6,10 @@ return [
 
     // Obscure IDs in certain access areas
     'obscure' => [
-        'adminarea',
+        'rotate' => false,
+        'areas' => [
+            'adminarea',
+        ],
     ],
 
     // Allow search engines to index access areas
