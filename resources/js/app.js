@@ -17,20 +17,6 @@ window.axios = require('axios');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
-/**
- * Next we will register the CSRF Token as a common header with Axios so that
- * all outgoing HTTP requests automatically have it attached. This is just
- * a simple convenience so we don't have to attach every token manually.
- */
-
-let token = document.head.querySelector('meta[name="csrf-token"]');
-
-if (token) {
-    window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
-} else {
-    console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
-}
-
 // Bind variables to window object
 import 'expose-loader?$!expose-loader?jQuery!jquery';
 import 'expose-loader?routes!../../public/js/routes';
@@ -70,7 +56,7 @@ import messages from '../../public/js/messages';
 window.Lang = new Lang({ messages, fallback: 'en' });
 window.hashids = new Hashids(
     process.env.MIX_HASHIDS_KEY,
-    process.env.MIX_HASHIDS_LENGTH,
+    Number(process.env.MIX_HASHIDS_LENGTH),
     process.env.MIX_HASHIDS_ALPHABET
 );
 

@@ -82,6 +82,7 @@ return [
             'secret' => env('AWS_DYNAMODB_SECRET'),
             'region' => env('AWS_DYNAMODB_REGION', 'eu-west-1'),
             'table' => env('AWS_DYNAMODB_TABLE', 'cache'),
+            'endpoint' => env('DYNAMODB_ENDPOINT'),
         ],
 
     ],

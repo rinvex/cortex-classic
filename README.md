@@ -70,3 +70,18 @@ php artisan list
 ```
 
 The rest of documentation will be ready soon..
+
+# Optional
+
+If you're using any browser streaming features, and would like to disable output buffering, then make sure your PHP & nginx settings are set up correctly, with buffering turned off, so you can stream content to the browser.
+
+## nginx config
+```
+fastcgi_buffering off;
+```
+
+## php config
+```
+output_buffering = off
+zlib.output_compression = off
+```

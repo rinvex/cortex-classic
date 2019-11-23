@@ -9,6 +9,11 @@ return [
         'adminarea',
     ],
 
+    // Allow search engines to index access areas
+    'indexable' => [
+        'frontarea',
+    ],
+
     // Global Route Override
     'route' => [
 
@@ -60,6 +65,13 @@ return [
         'notifications' => 'notifications',
         'import_records' => 'import_records',
         'temporary_uploads' => 'temporary_uploads',
+    ],
+
+    // Media storage config
+    'media' => [
+        'size' => '1024', // KB
+        'disk' => 's3-public',
+        'mimetypes' => 'image/jpeg,image/gif,image/png',
     ],
 
 ];

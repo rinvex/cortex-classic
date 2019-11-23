@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## [v2.2.0] - 2019-11-23
+- Update project to Laravel v6.5
+- Use singular guard name instead of plural
+- Update composer dependencies
+- Update media config options
+- Update config files & enforce consistency
+- Remove manual adding of X-CSRF-TOKEN header (https://github.com/laravel/laravel/pull/5083)
+- Use singular guard names for email verification brokers and passwords
+- Update jquery.validation library
+- Cast process.env.MIX_HASHIDS_LENGTH to number to fix JS error
+- Add new reauthentication config option
+- Fix phone number input display issue
+
 ## [v2.1.1] - 2019-06-28
 - Disable cache paths by default
 - Enforce latest composer package versions
@@ -92,6 +105,7 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v0.0.1 - 2017-03-13
 - First tagged beta release
 
+[v2.2.0]: https://github.com/rinvex/cortex/compare/v2.1.1...v2.2.0
 [v2.1.1]: https://github.com/rinvex/cortex/compare/v2.1.0...v2.1.1
 [v2.1.0]: https://github.com/rinvex/cortex/compare/v2.0.0...v2.1.0
 [v2.0.0]: https://github.com/rinvex/cortex/compare/v1.0.3...v2.0.0
