@@ -77,7 +77,7 @@
         "doctrine/dbal": "^2.9.0",
         "guzzlehttp/guzzle": "^6.3.0",
         "laravel/envoy": "^1.6.0",
-        "laravel/framework": "^6.5.0",
+        "laravel/framework": "^6.6.0",
         "laravel/helpers": "^1.1.0",
         "laravel/tinker": "^1.0.0",
         "league/flysystem-aws-s3-v3": "^1.0.0",
