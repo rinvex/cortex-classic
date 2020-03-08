@@ -46,6 +46,7 @@
         "laravel-echo": "^1.6.0",
         "laravel-mix": "^5.0.0",
         "laravel-mix-purgecss": "^4.2.0",
+        "laravel-mix-workbox": "^0.1.2",
         "lodash": "^4.17.0",
         "mark.js": "^8.11.0",
         "moment": "^2.24.0",
