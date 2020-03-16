@@ -7,9 +7,4 @@ return [
     // Manage autoload migrations
     'autoload_migrations' => true,
 
-    // Tenants media storage disk
-    'media' => [
-        'disk' => 'public',
-    ],
-
 ];
