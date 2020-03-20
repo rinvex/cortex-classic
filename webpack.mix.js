@@ -1,9 +1,13 @@
 let mix = require('laravel-mix');
 let webpack = require('webpack');
 let WebpackShellPlugin = require('webpack-shell-plugin');
+let Dependencies = require('laravel-mix/src/Dependencies.js');
+let moduleDependencies = [];
 
 let glob = require('glob');
 require('laravel-mix-purgecss');
+
+let webpackAliases = {markjs: 'mark.js/dist/jquery.mark.js'};
 
 let scanForCssSelectors = [
     path.join(__dirname, 'app/**/*.php'),
@@ -12,14 +16,13 @@ let scanForCssSelectors = [
     path.join(__dirname, 'resources/views/**/*.php'),
     path.join(__dirname, 'node_modules/select2/**/*.js'),
     path.join(__dirname, 'node_modules/dropzone/**/*.js'),
-    path.join(__dirname, 'node_modules/fullcalendar/**/*.js'),
-    path.join(__dirname, 'node_modules/formBuilder/dist/*.js'),
     path.join(__dirname, 'node_modules/admin-lte/dist/**/*.js'),
     path.join(__dirname, 'node_modules/datatables.net/**/*.js'),
     path.join(__dirname, 'node_modules/bootstrap-notify/**/*.js'),
-    path.join(__dirname, 'node_modules/fullcalendar-scheduler/**/*.js'),
     path.join(__dirname, 'node_modules/fontawesome-iconpicker/dist/**/*.js'),
 ];
+
+let whitelistPatterns = [/select2/, /alert/, /turbolinks/, /iti/, /dt-/];
 
 let webpackPlugins = [
     // Reduce bundle size by ignoring moment js local files
@@ -32,10 +35,6 @@ let webpackPlugins = [
     }),
 ];
 
-let webpackAliases = {
-    markjs: 'mark.js/dist/jquery.mark.js',
-};
-
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -46,6 +45,29 @@ let webpackAliases = {
  | file for the application as well as bundling up all the JS files.
  |
  */
+
+
+// Dynamically import module webpack config
+glob.sync('app/*/*/resources/js/webpack.js').forEach(function (file) {
+    var moduleWebpack = require(path.join(__dirname, file));
+
+    moduleDependencies.push(...moduleWebpack.install || []);
+    scanForCssSelectors.push(...moduleWebpack.scanForCssSelectors || []);
+    whitelistPatterns.push(...moduleWebpack.whitelistPatterns || []);
+    webpackPlugins.push(...moduleWebpack.webpackPlugins || []);
+
+    moduleWebpack.mix.js.forEach(function(dependency) {
+        mix.js(dependency.input, dependency.output);
+    });
+
+    moduleWebpack.mix.css.forEach(function(dependency) {
+        mix.sass(dependency.input, dependency.output);
+    });
+});
+
+// Install module dependencies
+new Dependencies(moduleDependencies).install(false);
+
 
 mix
     .webpackConfig({
@@ -63,7 +85,6 @@ mix
     .sass('resources/sass/app.scss', 'public/css/app.css')
     .sass('resources/sass/vendor.scss', 'public/css/vendor.css')
     .sass('resources/sass/datatables.scss', 'public/css/datatables.css')
-    .sass('resources/sass/fullcalendar.scss', 'public/css/fullcalendar.css')
     .sass('app/cortex/foundation/resources/sass/theme-frontarea.scss', 'public/css/theme-frontarea.css')
     .sass('app/cortex/foundation/resources/sass/theme-adminarea.scss', 'public/css/theme-adminarea.css')
     .sass('app/cortex/foundation/resources/sass/theme-tenantarea.scss', 'public/css/theme-tenantarea.css')
@@ -72,9 +93,6 @@ mix
         'public/css/theme-managerarea.css'
     )
 
-    .js('node_modules/pym.js/dist/pym.v1.js', 'public/js/embed.js')
-    .js('resources/js/vendor/formbuilder.js', 'public/js/formbuilder.js')
-    .js('resources/js/vendor/fullcalendar.js', 'public/js/fullcalendar.js')
     .js('resources/js/vendor/datatables.js', 'public/js/datatables.js')
     .js('resources/js/app.js', 'public/js/app.js')
 
@@ -117,6 +135,6 @@ mix
         enabled: true,
         globs: scanForCssSelectors,
         extensions: ['html', 'js', 'php', 'vue'],
-        whitelistPatterns: [/select2/, /alert/, /turbolinks/, /iti/],
+        whitelistPatterns: whitelistPatterns,
     })
     .version();

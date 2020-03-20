@@ -60,6 +60,17 @@ window.hashids = new Hashids(
     process.env.MIX_HASHIDS_ALPHABET
 );
 
+import Echo from 'laravel-echo';
+
+window.Pusher = require('pusher-js');
+
+window.Echo = new Echo({
+    broadcaster: 'pusher',
+    key: process.env.MIX_PUSHER_APP_KEY,
+    cluster: process.env.MIX_PUSHER_APP_CLUSTER,
+    forceTLS: true
+});
+
 // Theme
 import 'admin-lte';
 
@@ -103,7 +114,7 @@ window.highlight_errored_accordion = function(){
         $('.panel-collapse:has(.has-error)').first().find('.panel-collapse:has(.has-error)').first().siblings().find("a[data-parent*='accordion']").trigger('click');
         // @TODO: focus first errored field
     }
-}
+};
 
 window.highlight_required = function(){
     $('input, select, textarea').each(function(index, element) {
@@ -114,7 +125,7 @@ window.highlight_required = function(){
                 .append(' <span class="text-red required-asterisk">*</span>');
         }
     });
-}
+};
 
 let sidebarScrolPosition = 0;
 

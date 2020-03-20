@@ -61,7 +61,7 @@ document.dispatchEvent(new Event('datatables.ready'));
                     // Loop through cell value object and append as string
                     $.each(item2, function (i3, item3) {
                         cellValue += i3 + ': ' + item3 + ' ';
-                    })
+                    });
 
                     // Append cell value to table row
                     $tr.append('<td>' + cellValue + '</td>');
@@ -76,4 +76,4 @@ document.dispatchEvent(new Event('datatables.ready'));
         return $table;
     }
 
-});
+})();
