@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## [v3.0.0] - 2020-03-21
+- Upgrade to Laravel v7.x
+- Require PHP v7.4 minimum
+- Refactor webpack to dynamically import module specific requirements
+- Refactor composer dependencies and upgrade to Laravel v7.x and PHP v7.4
+- Integrate pusher and laravel-echo for real time communication
+- Fix medialibrary s3 bucket domain Url
+- Tweak ID obscure feature
+- Update npm dependencies
+- Tweak public manifest file
+- Update composer dependencies
+- Remove module related dependencies
+- Install workbox PWA support
+- Enforce consistent composer dependency versions
+- Downgrade npm fontawesome-iconpicker package version to support Fontawesome 4.7
+
 ## [v2.2.0] - 2019-11-23
 - Update project to Laravel v6.5
 - Use singular guard name instead of plural
@@ -105,6 +121,7 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v0.0.1 - 2017-03-13
 - First tagged beta release
 
+[v3.0.0]: https://github.com/rinvex/cortex/compare/v2.2.0...v3.0.0
 [v2.2.0]: https://github.com/rinvex/cortex/compare/v2.1.1...v2.2.0
 [v2.1.1]: https://github.com/rinvex/cortex/compare/v2.1.0...v2.1.1
 [v2.1.0]: https://github.com/rinvex/cortex/compare/v2.0.0...v2.1.0
