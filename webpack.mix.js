@@ -18,8 +18,13 @@ let Dependencies = require('laravel-mix/src/Dependencies.js');
  ** Initialize Variables **
  **************************/
 
+// Modules to skip compiling
+let dontDiscover = [];
+
+// npm dependencies to be installed
 let moduleDependencies = [];
 
+// Extracted vendor libraries
 let vendorLibraries = [
     //jQuery
     'jquery',
@@ -100,8 +105,15 @@ let purgeCssOptions = {
  **   Dynamic modules    **
  **************************/
 
-glob.sync('app/*/*/resources/js/webpack.js').forEach(function (file) {
-    var moduleWebpack = require(path.join(__dirname, file));
+glob.sync('app/*/*/resources/js/webpack.mix.js').forEach(function (file) {
+    let moduleName = file.split('/')[1] + '/' + file.split('/')[2];
+
+    // Check if we need to skip this module
+    if (dontDiscover.includes(moduleName)) {
+        return;
+    }
+
+    let moduleWebpack = require(path.join(__dirname, file));
 
     moduleDependencies.push(...moduleWebpack.install || []);
     scanForCssSelectors.push(...moduleWebpack.scanForCssSelectors || []);
