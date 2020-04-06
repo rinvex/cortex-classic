@@ -5,13 +5,18 @@
 let glob = require('glob');
 let mix = require('laravel-mix');
 let webpack = require('webpack');
+let tailwindcss = require('tailwindcss');
 
-require('mix-tailwindcss');
 require('laravel-mix-workbox');
 require('laravel-mix-purgecss');
-let WebpackShellPlugin = require('webpack-shell-plugin');
+
+let webpackShellPlugin = require('webpack-shell-plugin');
 let webpackAliases = {markjs: 'mark.js/dist/jquery.mark.js'};
 let Dependencies = require('laravel-mix/src/Dependencies.js');
+let postCssPlugins = [
+    tailwindcss('./tailwind.config.js'),
+    require('postcss-nested'),
+];
 
 
 /**************************
@@ -87,7 +92,7 @@ let webpackPlugins = [
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
 
     // Add shell command plugin to execute shell commands on building
-    new WebpackShellPlugin({
+    new webpackShellPlugin({
         onBuildStart: ['php artisan laroute:generate --ansi --no-interaction', 'php artisan lang:js --ansi --no-lib --no-interaction'],
         onBuildEnd: [],
     }),
@@ -143,7 +148,10 @@ new Dependencies(moduleDependencies).install(false);
 
 mix
 
-    .options({processCssUrls: false})
+    .options({
+        processCssUrls: false,
+        postCss: postCssPlugins,
+    })
 
     .webpackConfig({
         plugins: webpackPlugins,
@@ -160,5 +168,4 @@ mix
     .extract(vendorLibraries, 'public/js/vendor.js')
     .purgeCss(purgeCssOptions)
     .generateSW()
-    .tailwind()
     .version();
