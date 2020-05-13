@@ -150,5 +150,8 @@ return [
     */
 
     'attributes' => [],
+    'invalid_country' => 'Country must be valid!',
+    'invalid_language' => 'Language must be valid!',
+    'invalid_strip_tags' => 'HTML tags are not allowed!',
 
 ];
