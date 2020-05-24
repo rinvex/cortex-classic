@@ -56,7 +56,7 @@ return [
             'key' => env('AWS_SQS_KEY'),
             'secret' => env('AWS_SQS_SECRET'),
             'prefix' => env('AWS_SQS_PREFIX'),
-            'queue' => env('AWS_SQS_QUEUE'),
+            'queue' => env('AWS_SQS_QUEUE', 'default'),
             'suffix' => env('AWS_SQS_SUFFIX'),
             'region' => env('AWS_SQS_REGION'),
         ],
