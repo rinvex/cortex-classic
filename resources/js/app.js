@@ -35,9 +35,9 @@ import 'timepicker';
 import 'datepair.js';
 import 'bootstrap-colorpicker';
 import 'fontawesome-iconpicker';
-import './vendor/intl-tel-input';
 import 'bootstrap-daterangepicker';
 import 'intl-tel-input/build/js/utils';
+import './vendor/jquery-intl-tel-input';
 import 'datepair.js/src/jquery.datepair';
 import './vendor/bootstrap-popover-picker';
 
@@ -46,9 +46,9 @@ import 'select2';
 import './vendor/slugify';
 import Hashids from 'hashids';
 import Dropzone from 'dropzone';
-import './vendor/jquery.validation';
+import './vendor/jquery-validation';
 import 'expose-loader?moment!moment';
-import 'expose-loader?implicitForms!./vendor/jquery.implicitforms';
+import 'expose-loader?implicitForms!./vendor/jquery-implicitforms';
 
 // Translations
 import Lang from './vendor/lang';
