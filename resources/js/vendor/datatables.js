@@ -88,11 +88,8 @@ window.addEventListener('turbolinks:load', function () {
     dataTableBuilder.on('draw.dt', function () {
         $.ajaxPrefilter(function (options, originalOptions, jqXHR) {
             if (window.showSelected) {
-                let selectedIds = dataTableBuilder.DataTable().column(0).checkboxes.selected();
-
-                if (selectedIds.length > 0) {
-                    options.data += '&selected_ids=' + selectedIds.join(',');
-                }
+                let selectedIds = dataTableBuilder.DataTable().column(0).checkboxes.selected().join(',').split(',');
+                selectedIds.forEach(selectedId => options.data += '&selected_ids[]=' + selectedId);
             }
         });
     });
