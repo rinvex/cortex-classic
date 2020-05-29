@@ -85,3 +85,6 @@ fastcgi_buffering off;
 output_buffering = off
 zlib.output_compression = off
 ```
+
+Notes:
+- If you changed any `.env` environment variables, or any of their references, make sure to run `npm run dev` to update the public assets, as it reference some of it.
