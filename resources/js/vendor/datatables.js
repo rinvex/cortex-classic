@@ -75,7 +75,7 @@ document.dispatchEvent(new Event('datatables.ready'));
 
         // Return table HTML string
         return $table;
-    }
+    };
 
 })();
 
@@ -91,7 +91,7 @@ window.addEventListener('turbolinks:load', function () {
                 let selectedIds = dataTableBuilder.DataTable().column(0).checkboxes.selected();
 
                 if (selectedIds.length > 0) {
-                    options.data += '&selected_ids='+selectedIds.join(',');
+                    options.data += '&selected_ids=' + selectedIds.join(',');
                 }
             }
         });

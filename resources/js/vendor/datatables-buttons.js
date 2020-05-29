@@ -7,11 +7,11 @@
     } else if (typeof exports === 'object') {
         // CommonJS
         module.exports = function (root, $) {
-            if (!root) {
+            if (! root) {
                 root = window;
             }
 
-            if (!$ || !$.fn.dataTable) {
+            if (! $ || ! $.fn.dataTable) {
                 $ = require('datatables.net')(root, $).$;
             }
 
@@ -48,7 +48,10 @@
             let selectedIds = $('.dataTableBuilder').DataTable().column(0).checkboxes.selected();
 
             if (selectedIds.length > 0) {
-                axios.post(window.location.href, {action: action, selected_ids: selectedIds.join(',').split(',')})
+                axios.post(window.location.href, {
+                    action: action,
+                    selected_ids: selectedIds.join(',').split(',')
+                })
                      .then(function (response) {
                          let notification = function () {$.notify({message: response.data}, {type: 'success', mouse_over: 'pause', z_index: 9999, animate: {enter: 'animated fadeIn', exit: 'animated fadeOut'}});}; if (typeof notification === 'function') {notification(); notification = null;}
                          dt.search('').draw();

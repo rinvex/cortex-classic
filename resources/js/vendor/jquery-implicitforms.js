@@ -55,11 +55,9 @@
         define(function () {
             return implicitForms;
         });
-    }
-    else if (typeof module === 'object' && module.exports){
+    } else if (typeof module === 'object' && module.exports) {
         module.exports = implicitForms;
-    }
-    else {
+    } else {
         window.implicitForms = implicitForms;
     }
 
