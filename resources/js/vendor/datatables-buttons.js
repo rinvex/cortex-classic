@@ -7,11 +7,11 @@
     } else if (typeof exports === 'object') {
         // CommonJS
         module.exports = function (root, $) {
-            if (! root) {
+            if (!root) {
                 root = window;
             }
 
-            if (! $ || ! $.fn.dataTable) {
+            if (!$ || !$.fn.dataTable) {
                 $ = require('datatables.net')(root, $).$;
             }
 
@@ -22,223 +22,133 @@
         factory(jQuery, window, document);
     }
 }(function ($, window, document, undefined) {
-    "use strict";
-    var DataTable = $.fn.dataTable;
+    'use strict';
+    let DataTable = $.fn.dataTable;
 
-    var _buildUrl = function(dt, action) {
-        var url = dt.ajax.url() || '';
-        var params = dt.ajax.params();
-        params.action = action;
+    let exportAction = function (e, dt, button, config, action) {
+        let dataTableBuilder = $('.dataTableBuilder');
+        let selectedIds = dataTableBuilder.DataTable().column(0).checkboxes.selected();
 
-        return url + '?' + $.param(params);
+        let $form = $('<form />');
+        $form.attr('action', window.location);
+        $form.attr('method', 'post');
+        $form.append('<input type="hidden" name="action" value="' + action + '" />');
+        $form.append('<input type="hidden" name="_token" value="' + window.Laravel.csrfToken + '" />');
+
+        if (selectedIds.length) {
+            selectedIds.join(',').split(',').forEach((selectedId) => $form.append('<input type="hidden" name="selected_ids[]" value="' + selectedId + '" />'));
+        }
+
+        dataTableBuilder.append($form);
+        $form.submit();
+    };
+
+    let bulkAction = function (e, dt, button, config, action) {
+        if (confirm('Are you sure you want to ' + action + ' all selected records?')) {
+            let selectedIds = $('.dataTableBuilder').DataTable().column(0).checkboxes.selected();
+
+            if (selectedIds.length > 0) {
+                axios.post(window.location.href, {action: action, selected_ids: selectedIds.join(',').split(',')})
+                     .then(function (response) {
+                         let notification = function () {$.notify({message: response.data}, {type: 'success', mouse_over: 'pause', z_index: 9999, animate: {enter: 'animated fadeIn', exit: 'animated fadeOut'}});}; if (typeof notification === 'function') {notification(); notification = null;}
+                         dt.search('').draw();
+                         dt.column(0).checkboxes.deselectAll();
+                     });
+            } else {
+                alert('No Selected Records!');
+            }
+        }
+    };
+
+    DataTable.ext.buttons.export = {
+        extend: 'collection',
+        className: 'buttons-export',
+        buttons: ['csv', 'excel', 'pdf'],
+        text: (dt) => '<i class="fa fa-download"></i> ' + dt.i18n('buttons.export', 'Export') + '&nbsp;<span class="caret"/>',
     };
 
     DataTable.ext.buttons.excel = {
-    className: 'buttons-excel',
-    text: function text(dt) {
-      return '<i class="fa fa-file-excel-o"></i> ' + dt.i18n('buttons.excel', 'Excel');
-    },
-    action: function action(e, dt, button, config) {
-      // var url = _buildUrl(dt, 'excel');
+        className: 'buttons-excel',
+        action: (e, dt, button, config) => exportAction(e, dt, button, config, 'excel'),
+        text: (dt) => '<i class="fa fa-file-excel-o"></i> ' + dt.i18n('buttons.excel', 'Excel'),
+    };
 
-      // window.location = url;
+    DataTable.ext.buttons.csv = {
+        className: 'buttons-csv',
+        action: (e, dt, button, config) => exportAction(e, dt, button, config, 'csv'),
+        text: (dt) => '<i class="fa fa-file-excel-o"></i> ' + dt.i18n('buttons.csv', 'CSV'),
+    };
 
-      var rows_selected = $('.dataTableBuilder').DataTable().column(0).checkboxes.selected();
-      var tempUrl = dt.ajax.url() || '';
-      var params = dt.ajax.params();
-      params.action = 'excel';
-      params.selectedId = '';
-      var url = tempUrl + '?' + $.param(params);
-      window.location = url;
-      
-    }
-  };
-  DataTable.ext.buttons["export"] = {
-    extend: 'collection',
-    className: 'buttons-export',
-    text: function text(dt) {
-      return '<i class="fa fa-download"></i> ' + dt.i18n('buttons.export', 'Export') + '&nbsp;<span class="caret"/>';
-    },
-    buttons: ['csv', 'excel', 'pdf']
-  };
-  DataTable.ext.buttons.csv = {
-    className: 'buttons-csv',
-    text: function text(dt) {
-      return '<i class="fa fa-file-excel-o"></i> ' + dt.i18n('buttons.csv', 'CSV');
-    },
-    action: function action(e, dt, button, config) {
-      // var url = _buildUrl(dt, 'csv');
+    DataTable.ext.buttons.pdf = {
+        className: 'buttons-pdf',
+        action: (e, dt, button, config) => exportAction(e, dt, button, config, 'pdf'),
+        text: (dt) => '<i class="fa fa-file-pdf-o"></i> ' + dt.i18n('buttons.pdf', 'PDF'),
+    };
 
-      // window.location = url;
-      
-      var rows_selected = $('.dataTableBuilder').DataTable().column(0).checkboxes.selected();
-      var tempUrl = dt.ajax.url() || '';
-      var params = dt.ajax.params();
-      params.action = 'csv';
-      params.selectedId = '';
-      var url = tempUrl + '?' + $.param(params);
-      window.location = url;
+    DataTable.ext.buttons.print = {
+        className: 'buttons-print',
+        action: (e, dt, button, config) => exportAction(e, dt, button, config, 'print'),
+        text: (dt) => '<i class="fa fa-print"></i> ' + dt.i18n('buttons.print', 'Print'),
+    };
 
-
-    }
-  };
-  DataTable.ext.buttons.pdf = {
-    className: 'buttons-pdf',
-    text: function text(dt) {
-      return '<i class="fa fa-file-pdf-o"></i> ' + dt.i18n('buttons.pdf', 'PDF');
-    },
-    action: function action(e, dt, button, config) {
-      // var url = _buildUrl(dt, 'pdf');
-
-      // window.location = url;
-
-      var rows_selected = $('.dataTableBuilder').DataTable().column(0).checkboxes.selected();
-      var tempUrl = dt.ajax.url() || '';
-      var params = dt.ajax.params();
-      params.action = 'pdf';
-      params.selectedId = '';
-      var url = tempUrl + '?' + $.param(params);
-      window.location = url;
-
-    }
-  };
-  DataTable.ext.buttons.print = {
-    className: 'buttons-print',
-    text: function text(dt) {
-      return '<i class="fa fa-print"></i> ' + dt.i18n('buttons.print', 'Print');
-    },
-    action: function action(e, dt, button, config) {
-      // var url = _buildUrl(dt, 'print');
-      // window.location = url;
-      var rows_selected = $('.dataTableBuilder').DataTable().column(0).checkboxes.selected();
-      var tempUrl = dt.ajax.url() || '';
-      var params = dt.ajax.params();
-      params.action = 'print';
-      params.selectedId = rows_selected.join(",");
-
-      if (window.selectAllLink) {
-        params.selectedId = '';
-      }
-
-      var url = tempUrl + '?' + $.param(params);
-      window.location = url;
-    }
-  };
-  DataTable.ext.buttons.reset = {
-    className: 'buttons-reset',
-    text: function text(dt) {
-      return '<i class="fa fa-undo"></i> ' + dt.i18n('buttons.reset', 'Reset');
-    },
-    action: function action(e, dt, button, config) {
-      dt.search('').draw();
-    }
-  };
-  DataTable.ext.buttons.reload = {
-    className: 'buttons-reload',
-    text: function text(dt) {
-      return '<i class="fa fa-refresh"></i> ' + dt.i18n('buttons.reload', 'Reload');
-    },
-    action: function action(e, dt, button, config) {
-      dt.draw(false);
-    }
-  };
-  DataTable.ext.buttons.create = {
-    className: 'buttons-create',
-    text: function text(dt) {
-      return '<i class="fa fa-plus"></i> ' + dt.i18n('buttons.create', 'Create');
-    },
-    action: function action(e, dt, button, config) {
-      Turbolinks.visit(window.location.href.replace(/\/+$/, "") + '/create');
-    }
-  };
-  DataTable.ext.buttons["import"] = {
-    className: 'buttons-import',
-    text: function text(dt) {
-      return '<i class="fa fa-upload"></i> ' + dt.i18n('buttons.import', 'Import');
-    },
-    action: function action(e, dt, button, config) {
-      Turbolinks.visit(window.location.href.replace(/\/+$/, "") + '/import');
-    }
-  };
-  DataTable.ext.buttons.bulkDelete = {
-    className: 'buttons-delete',
-    text: function text(dt) {
-      return '<i class="fa fa-trash"></i> ' + dt.i18n('buttons.delete', 'Delete');
-    },
-    action: function action(e, dt, button, config) {
-      var answer = confirm('Are you sure you want to delete this?');
-
-      if (answer) {
-        var rows_selected = $('.dataTableBuilder').DataTable().column(0).checkboxes.selected();
-        var selectedIdList = rows_selected.join(',');
-        var selectAllFlag = window.selectAllLink ? 1 : 0;
-
-        if (selectedIdList.length > 0) {
-          if (window.selectAllLink) {
-            selectedIdList = 0;
-            window.selectAllLink = false;
-          }
-
-          Turbolinks.visit(window.location.href.replace(/\/+$/, "") + '/delete?ids=' + selectedIdList + '&all=' + selectAllFlag);
-        } else {
-          alert('No Row Selected !');
+    DataTable.ext.buttons.reset = {
+        className: 'buttons-reset',
+        text: (dt) => '<i class="fa fa-undo"></i> ' + dt.i18n('buttons.reset', 'Reset'),
+        action: (e, dt, button, config) => {
+            dt.search('').draw();
+            dt.column(0).checkboxes.deselectAll();
         }
-      }
-    }
-  };
-  DataTable.ext.buttons.bulkEnable = {
-    className: 'buttons-enable',
-    text: function text(dt) {
-      return '<i class="fa fa-power-off "></i> ' + dt.i18n('buttons.enable', 'Enable');
-    },
-    action: function action(e, dt, button, config) {
-      var rows_selected = $('.dataTableBuilder').DataTable().column(0).checkboxes.selected();
-      var selectedIdList = rows_selected.join(',');
-      var selectAllFlag = window.selectAllLink ? 1 : 0;
+    };
 
-      if (selectedIdList.length > 0) {
-        if (window.selectAllLink) {
-          selectedIdList = 0;
-          window.selectAllLink = false;
-        }
+    DataTable.ext.buttons.reload = {
+        className: 'buttons-reload',
+        text: (dt) => '<i class="fa fa-refresh"></i> ' + dt.i18n('buttons.reload', 'Reload'),
+        action: (e, dt, button, config) => dt.draw(false),
+    };
 
-        Turbolinks.visit(window.location.href.replace(/\/+$/, "") + '/enable?ids=' + selectedIdList + '&all=' + selectAllFlag);
-      } else {
-        alert('No Row Selected !');
-      }
-    }
-  };
-  DataTable.ext.buttons.bulkDisable = {
-    className: 'buttons-disable',
-    text: function text(dt) {
-      return '<i class="fa fa-power-off "></i> ' + dt.i18n('buttons.disable', 'Disable');
-    },
-    action: function action(e, dt, button, config) {
-      var rows_selected = $('.dataTableBuilder').DataTable().column(0).checkboxes.selected();
-      var selectedIdList = rows_selected.join(',');
-      var selectAllFlag = window.selectAllLink ? 1 : 0;
+    DataTable.ext.buttons.create = {
+        className: 'buttons-create',
+        text: (dt) => '<i class="fa fa-plus"></i> ' + dt.i18n('buttons.create', 'Create'),
+        action: (e, dt, button, config) => Turbolinks.visit(window.location.href.replace(/\/+$/, '') + '/create'),
+    };
 
-      if (selectedIdList.length > 0) {
-        if (window.selectAllLink) {
-          selectedIdList = 0;
-          window.selectAllLink = false;
-        }
+    DataTable.ext.buttons.import = {
+        className: 'buttons-import',
+        text: (dt) => '<i class="fa fa-upload"></i> ' + dt.i18n('buttons.import', 'Import'),
+        action: (e, dt, button, config) => Turbolinks.visit(window.location.href.replace(/\/+$/, '') + '/import'),
+    };
 
-        Turbolinks.visit(window.location.href.replace(/\/+$/, "") + '/disable?ids=' + selectedIdList + '&all=' + selectAllFlag);
-      } else {
-        alert('No Row Selected !');
-      }
-    }
-  };
-  DataTable.ext.buttons.selectedShow = {
-    className: 'buttons-selected',
-    text: function text(dt) {
-      return 'Show Selected';
-    },
-    action: function action(e, dt, button, config) {
-      window.isSelected = true;
-      dt.draw();
-    }
-  };
- 
+    DataTable.ext.buttons.showSelected = {
+        className: 'buttons-selected',
+        text: (dt) => '<i class="fa fa-check "></i> ' + dt.i18n('buttons.showSelected', 'Show Selected'),
+        action: (e, dt, button, config) => {
+            window.showSelected = true;
+            dt.draw();
+        },
+    };
+
+    DataTable.ext.buttons.bulk = {
+        extend: 'collection',
+        className: 'buttons-bulk',
+        text: (dt) => '<i class="fa fa-list"></i> ' + dt.i18n('buttons.bulk', 'Bulk') + '&nbsp;<span class="caret"/>',
+    };
+
+    DataTable.ext.buttons.bulkDelete = {
+        className: 'buttons-bulk-delete',
+        action: (e, dt, button, config) => bulkAction(e, dt, button, config, 'delete'),
+        text: (dt) => '<i class="fa fa-trash"></i> ' + dt.i18n('buttons.bulkDelete', 'Delete'),
+    };
+
+    DataTable.ext.buttons.bulkActivate = {
+        className: 'buttons-bulk-activate',
+        action: (e, dt, button, config) => bulkAction(e, dt, button, config, 'activate'),
+        text: (dt) => '<i class="fa fa-trash"></i> ' + dt.i18n('buttons.bulkActivate', 'Activate'),
+    };
+
+    DataTable.ext.buttons.bulkDeactivate = {
+        className: 'buttons-bulk-deactivate',
+        action: (e, dt, button, config) => bulkAction(e, dt, button, config, 'deactivate'),
+        text: (dt) => '<i class="fa fa-trash"></i> ' + dt.i18n('buttons.bulkDeactivate', 'Deactivate'),
+    };
+
 }));

@@ -81,75 +81,19 @@ document.dispatchEvent(new Event('datatables.ready'));
 
 
 // Datatable Checkbox
-window.isSelected = false;
-window.selectAllLink=false;
+window.showSelected = false;
 window.addEventListener('turbolinks:load', function () {
-    $('.dataTableBuilder').on('draw.dt', function () {
-        onDrawCallBack(this);
-    });
+    let dataTableBuilder = $('.dataTableBuilder');
 
-    function onDrawCallBack(dtObj) {
-        if (selectAllLink) {
-
-            if (!$('.dataTableBuilder thead tr input[type="checkbox"]').prop('checked')) {
-                $('.dataTableBuilder thead tr input[type="checkbox"]').trigger('click');
-            }
-
-            $('.dataTableBuilder tbody').find('tr').each(function () {
-                $(this).addClass('selected');
-            });
-            $('.dataTableBuilder tbody tr').find('input[type="checkbox"]').each(function () {
-                $(this).prop('checked', true);
-            });
-
-            $('.select-item').html($('.dataTableBuilder').DataTable().page.info().recordsTotal + ' rows selected');
-        }
-
+    dataTableBuilder.on('draw.dt', function () {
         $.ajaxPrefilter(function (options, originalOptions, jqXHR) {
-            if (window.isSelected && !selectAllLink) {
-                console.log('single condition');
-                var dt = $('.dataTableBuilder').DataTable();
-                var rows_selected = dt.column(0).checkboxes.selected();
-                var selectedIdList = rows_selected.join(',');
+            if (window.showSelected) {
+                let selectedIds = dataTableBuilder.DataTable().column(0).checkboxes.selected();
 
-                if (selectedIdList.length > 0) {
-                    options.url = options.url + "?selectedId=" + selectedIdList;
-                    window.isSelected = false;
+                if (selectedIds.length > 0) {
+                    options.data += '&selected_ids='+selectedIds.join(',');
                 }
             }
         });
-    }
-
-    $('.dataTableBuilder tr:has(td)').find('input[type="checkbox"]').click(function () {
-        $('#countLabel').remove();
     });
-    $(document).on('click', '.dt-checkboxes', function (e) {
-        $('#countLabel').remove();
-    });
-    $('.dataTableBuilder tr:has(th)').find('input[type="checkbox"]').click(function () {
-        if ($(this).prop("checked")) {
-            currentPageSelectedCount();
-        } else {
-            $('#countLabel').remove();
-        }
-    });
-    $(document).on('click', '#linkAll', function (e) {
-        if (window.selectAllLink) {
-            window.selectAllLink = false;
-            $('#linkAll').html('Select all ' + $('.dataTableBuilder').DataTable().page.info().recordsTotal + ' conversations in Inbox.');
-
-        } else {
-            $('.select-item').html($('.dataTableBuilder').DataTable().page.info().recordsTotal + ' rows selected');
-            window.selectAllLink = true;
-            $('#linkAll').html('Clear selection.');
-        }
-    });
-
-    function currentPageSelectedCount() {
-        if (!selectAllLink) {
-            $('#countLabel').remove();
-            $('.dataTableBuilder').before('<label id="countLabel" style="caption-side: bottom;text-align:center;width:100%;font-weight:500;margin-top:2%"> All ' + $('.dataTableBuilder').DataTable().page.info().length + ' conversations on this page are selected.<a  style="cursor:pointer" id="linkAll"> Select all ' + $('.dataTableBuilder').DataTable().page.info().recordsTotal + ' conversations in Inbox.<a></label>');
-        }
-    }
-
 });
