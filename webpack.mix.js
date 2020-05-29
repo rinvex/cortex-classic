@@ -85,7 +85,7 @@ let scanForCssSelectors = [
     path.join(__dirname, 'node_modules/fontawesome-iconpicker/dist/**/*.js'),
 ];
 
-let whitelistPatterns = [/select2/, /alert/, /turbolinks/, /iti/, /dt-/];
+let whitelistPatterns = [/select2/, /alert/, /turbolinks/, /iti/, /dt-/, /dataTable/, /col-/, /btn-/];
 
 let webpackPlugins = [
     // Reduce bundle size by ignoring moment js local files
@@ -102,7 +102,7 @@ let purgeCssOptions = {
     enabled: true,
     globs: scanForCssSelectors,
     extensions: ['html', 'js', 'php', 'vue'],
-    whitelistPatterns: whitelistPatterns,
+    whitelistPatternsChildren: whitelistPatterns,
 };
 
 
