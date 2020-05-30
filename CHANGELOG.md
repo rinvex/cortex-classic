@@ -5,6 +5,9 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## [v3.1.1] - 2020-05-30
+- Update composer dependencies
+
 ## [v3.1.0] - 2020-05-30
 - Add missing config files
 - Fix CSS purge whitelisting
@@ -143,6 +146,7 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v0.0.1 - 2017-03-13
 - First tagged beta release
 
+[v3.1.1]: https://github.com/rinvex/cortex/compare/v3.1.0...v3.1.1
 [v3.1.0]: https://github.com/rinvex/cortex/compare/v3.0.0...v3.1.0
 [v3.0.0]: https://github.com/rinvex/cortex/compare/v2.2.0...v3.0.0
 [v2.2.0]: https://github.com/rinvex/cortex/compare/v2.1.1...v2.2.0
