@@ -74,7 +74,7 @@ class Lang {
      * @return {boolean} true if the given key is defined on the messages source, otherwise false.
      */
     has(key, locale) {
-        if (typeof key !== 'string' || !this.messages) {
+        if (typeof key !== 'string' || ! this.messages) {
             return false;
         }
 
@@ -91,7 +91,7 @@ class Lang {
      * @return {string} The translation message, if not found the given key.
      */
     get(key, replacements, locale) {
-        if (!this.has(key, locale)) {
+        if (! this.has(key, locale)) {
             return key;
         }
 
@@ -238,9 +238,9 @@ class Lang {
         var entries = key.entries.slice();
         var subKey = '';
         while (entries.length && message !== undefined) {
-            var subKey = !subKey ? entries.shift() : subKey.concat('.', entries.shift());
+            var subKey = ! subKey ? entries.shift() : subKey.concat('.', entries.shift());
             if (message[subKey] !== undefined) {
-                message = message[subKey]
+                message = message[subKey];
                 subKey = '';
             }
         }
@@ -251,9 +251,9 @@ class Lang {
             entries = key.entries.slice();
             subKey = '';
             while (entries.length && message !== undefined) {
-                var subKey = !subKey ? entries.shift() : subKey.concat('.', entries.shift());
+                var subKey = ! subKey ? entries.shift() : subKey.concat('.', entries.shift());
                 if (message[subKey]) {
-                    message = message[subKey]
+                    message = message[subKey];
                     subKey = '';
                 }
             }
@@ -272,7 +272,7 @@ class Lang {
      * @return {String}
      */
     _getLocale(key) {
-        key = this._parseKey(key, this.locale)
+        key = this._parseKey(key, this.locale);
         if (this.messages[key.source]) {
             return this.locale;
         }
@@ -296,7 +296,7 @@ class Lang {
                 break;
             }
 
-            tree = tree[pathSegments.shift()]
+            tree = tree[pathSegments.shift()];
         }
 
         return tree;
@@ -325,7 +325,7 @@ class Lang {
     _applyReplacements(message, replacements) {
         var keys = Object.keys(replacements).sort(this._sortReplacementKeys);
 
-        keys.forEach(function(replace) {
+        keys.forEach(function (replace) {
             message = message.replace(new RegExp(':' + replace, 'gi'), function (match) {
                 var value = replacements[replace];
 
@@ -336,7 +336,7 @@ class Lang {
                 }
 
                 // Capitalize first letter.
-                var firstCap = match === match.replace(/\w/i, function(letter) {
+                var firstCap = match === match.replace(/\w/i, function (letter) {
                     return letter.toUpperCase();
                 });
                 if (firstCap) {
@@ -344,7 +344,7 @@ class Lang {
                 }
 
                 return value;
-            })
+            });
         });
         return message;
     }
@@ -383,7 +383,7 @@ class Lang {
         interval = interval.trim();
 
         var matches = interval.match(this.intervalRegexp);
-        if (!matches) {
+        if (! matches) {
             throw 'Invalid interval: ' + interval;
         }
 

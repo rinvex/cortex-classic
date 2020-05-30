@@ -8,16 +8,16 @@
  *   will be converted to the delimiter. The default list includes:
  *   ['–', '—', '―', '~', '\\', '/', '|', '+', '\'', '‘', '’', ' ']
  */
-if (!String.prototype.slugify) {
+if (! String.prototype.slugify) {
     String.prototype.slugify = function (delimiter, separators) {
         var i = separators && separators.length,
             slug = this,
             delimiter = delimiter || '-',
             regexEscape = new RegExp(/[[\/\\^$*+?.()|{}\]]/g),
-            regexDelimiter = delimiter.replace(regexEscape, "\\$&"),
-            prohibited = new RegExp("([^a-z0-9" + regexDelimiter + "])", "g"),
-            consecutive = new RegExp("(" + regexDelimiter + "+)", "g"),
-            trim = new RegExp("^" + regexDelimiter + "*(.*?)" + regexDelimiter + "*$"),
+            regexDelimiter = delimiter.replace(regexEscape, '\\$&'),
+            prohibited = new RegExp('([^a-z0-9' + regexDelimiter + '])', 'g'),
+            consecutive = new RegExp('(' + regexDelimiter + '+)', 'g'),
+            trim = new RegExp('^' + regexDelimiter + '*(.*?)' + regexDelimiter + '*$'),
             sanitizer = {
                 // common latin
                 'á': 'a', 'à': 'a', 'â': 'a', 'ä': 'a', 'ã': 'a', 'æ': 'ae', 'ç': 'c', 'é': 'e', 'è': 'e', 'ê': 'e',
@@ -195,7 +195,7 @@ if (!String.prototype.slugify) {
 
         // add any user-defined separator elements
         if (separators) {
-            for (i; i >= 0; --i) {
+            for (i; i >= 0; -- i) {
                 sanitizer[separators[i]] = delimiter;
             }
         }
@@ -206,8 +206,8 @@ if (!String.prototype.slugify) {
             return sanitizer[match] || '';
         });
         slug = slug.replace(consecutive, delimiter);
-        slug = slug.replace(trim, "$1");
+        slug = slug.replace(trim, '$1');
 
         return slug;
-    }
+    };
 }

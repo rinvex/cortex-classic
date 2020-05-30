@@ -1,6 +1,6 @@
 (function ($) {
 
-    $.fn.fullCalendarCortal = function(options) {
+    $.fn.fullCalendarCortal = function (options) {
 
         // Override default settings
         var settings = $.extend({
@@ -28,7 +28,7 @@
 
                 // Handle calendar selection
                 select: function (start, end) {
-                    if(settings.cortalPopupBreakPoint && $(window).width() <= settings.cortalPopupBreakPoint) {
+                    if (settings.cortalPopupBreakPoint && $(window).width() <= settings.cortalPopupBreakPoint) {
                         showCortalPopupForm(false);
                     } else {
                         // Remove existing popovers
@@ -39,20 +39,20 @@
 
                         // Attach popovers
                         $cell.popover({
-                                title:'<h4 class="modal-title">Booking<span class="pull-right cal-event-add-close">&times</span></h4>',
-                                content: getFormHtml(),
-                                html: true,
-                                placement: 'auto',
-                                container: $cortal,
-                            }).on('shown.bs.popover', function (domEvent) {
-                                // Fix arrow position when revealing more content
-                                // Example: on day and week agenda views!
-                                $arrow = $('.cortal .popover .arrow');
+                            title: '<h4 class="modal-title">Booking<span class="pull-right cal-event-add-close">&times</span></h4>',
+                            content: getFormHtml(),
+                            html: true,
+                            placement: 'auto',
+                            container: $cortal,
+                        }).on('shown.bs.popover', function (domEvent) {
+                            // Fix arrow position when revealing more content
+                            // Example: on day and week agenda views!
+                            $arrow = $('.cortal .popover .arrow');
 
-                                if ($arrow.length > 0) {
-                                    $arrow.css('top', $arrow.position().top);
-                                }
-                            });
+                            if ($arrow.length > 0) {
+                                $arrow.css('top', $arrow.position().top);
+                            }
+                        });
 
                         // Display popovers
                         if ($cell.is(':visible')) {
@@ -148,7 +148,7 @@
                         $('.popover').remove();
 
                         $(this).popover({
-                            title:'<h4 class="modal-title">Booking<span class="pull-right cal-event-add-close">&times</span></h4>',
+                            title: '<h4 class="modal-title">Booking<span class="pull-right cal-event-add-close">&times</span></h4>',
                             content: getFormHtml(true),
                             html: true,
                             placement: 'auto',
@@ -198,8 +198,8 @@
                         title: 'Confirm',
                         html: true,
                         content: '<p>Are you sure you want to delete this event?</p>' +
-                        '<a href="javascript:" class="btn btn-danger">Yes</a> ' +
-                        '<a href="javascript:" class="btn btn-default">No</a>',
+                            '<a href="javascript:" class="btn btn-danger">Yes</a> ' +
+                            '<a href="javascript:" class="btn btn-default">No</a>',
                         trigger: 'click',
                         placement: 'top'
                     }).on('shown.bs.popover', function () {
@@ -257,14 +257,14 @@
                     });
                 },
 
-                eventResize: function(calendarEvent, delta, revertFunc) {
+                eventResize: function (calendarEvent, delta, revertFunc) {
                     // Save event to the backend
                     if ($.isFunction(settings.eventUpdate)) {
                         settings.eventUpdate($calendar, calendarEvent);
                     }
                 },
 
-                eventDrop: function(calendarEvent, delta, revertFunc, domEvent, ui, view) {
+                eventDrop: function (calendarEvent, delta, revertFunc, domEvent, ui, view) {
                     // Handle moving events to/from all-day cells
                     if (! calendarEvent.end) {
                         calendarEvent.end = calendarEvent.start.clone();
@@ -333,7 +333,7 @@
             $calendar.fullCalendar('unselect');
             $('.popover').remove();
 
-            if(hideModal) {
+            if (hideModal) {
                 $('#cortalDialog').modal('hide');
             }
         }
@@ -343,20 +343,20 @@
                             '<input type="hidden" name="id" />';
 
             htmlForm += '<div class="row"><div class="form-group col-xs-12"><label for="customer_id">Customer: </label><select id="customer_id" name="customer_id" class="form-control select2" required="required">';
-            $.each(settings.customers.responseJSON, function(customerKey, customerName) {
+            $.each(settings.customers.responseJSON, function (customerKey, customerName) {
                 htmlForm += '<option value="' + customerKey + '">' + customerName + '</option>';
             });
             htmlForm += '</select></div></div>';
 
             htmlForm += '<div class="row"><div class="form-group col-xs-12"><label for="resource_id">Resource: </label><select id="resource_id" name="resource_id" class="form-control select2" required="required">';
-            $.each(settings.rooms.responseJSON, function(resourceKey, resourceObject) {
+            $.each(settings.rooms.responseJSON, function (resourceKey, resourceObject) {
                 htmlForm += '<option value="' + resourceObject.id + '" data-style="' + resourceObject.style + '">' + resourceObject.name + '</option>';
             });
             htmlForm += '</select></div></div>';
 
             htmlForm += '<div class="checkbox"><label><input name="isAllDay" type="checkbox">All day</label></div>';
 
-            htmlForm += '<div class="duration">'
+            htmlForm += '<div class="duration">';
             htmlForm += '<label>Start:</label>';
             htmlForm += '<div class="row"><div class="form-group col-xs-6">';
             htmlForm += '<input name="start_date" type="text" class="form-control date start" placeholder="YYYY-MM-DD"></div>';
@@ -441,6 +441,6 @@
             //make sure default view is selected
             $('#cortalDialog').modal('show');
         }
-    }
+    };
 
 }(jQuery));

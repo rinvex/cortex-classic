@@ -5,6 +5,28 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## [v3.1.0] - 2020-05-30
+- Add missing config files
+- Fix CSS purge whitelisting
+- Fix datatables bulk actions selected_ids
+- Fix CS
+- Refactor datatables buttons and checkbox
+- Update readme note
+- Add realtime update to datatables
+- Change default broadcast driver to pusher
+- Add 'default' as the default queue
+- Install datatables checkboxes
+- Rename resource assets
+- Rename datatables files
+- Add missing language phrases
+- Update composer dependencies
+- Replace str_slug leftover global function with class based counterpart
+- Tweak tailwindCss webpack config
+- Update queue table names
+- Add the ability to skip discovering module webpack files
+- Move image assets to cortex/foundation module
+- Refactor webpack config, add full frontend dynamic build modularity, and install tailwindcss
+
 ## [v3.0.0] - 2020-03-21
 - Upgrade to Laravel v7.x
 - Require PHP v7.4 minimum
@@ -121,6 +143,7 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v0.0.1 - 2017-03-13
 - First tagged beta release
 
+[v3.1.0]: https://github.com/rinvex/cortex/compare/v3.0.0...v3.1.0
 [v3.0.0]: https://github.com/rinvex/cortex/compare/v2.2.0...v3.0.0
 [v2.2.0]: https://github.com/rinvex/cortex/compare/v2.1.1...v2.2.0
 [v2.1.1]: https://github.com/rinvex/cortex/compare/v2.1.0...v2.1.1

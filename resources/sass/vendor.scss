@@ -1,4 +1,6 @@
-$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+$fa-font-path: '../fonts/fontawesome';
+$icon-font-path: '../fonts/bootstrap/';
+
 @import '~bootstrap-daterangepicker/daterangepicker.css';
 @import '~bootstrap-sass/assets/stylesheets/_bootstrap.scss';
 @import '~bootstrap-colorpicker/src/sass/_colorpicker.scss';

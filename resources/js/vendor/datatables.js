@@ -11,7 +11,8 @@ import 'datatables.net-buttons-bs';
 import 'datatables.net-responsive-bs';
 import 'datatables.net-buttons/js/buttons.html5';
 import 'datatables.net-buttons/js/buttons.colVis';
-import './datatables.net-buttons.server-side';
+import 'jquery-datatables-checkboxes';
+import './datatables-buttons';
 
 // This is a workaround to handle the SPA nature of turbolinks
 window.DataTableReady = true;
@@ -74,6 +75,22 @@ document.dispatchEvent(new Event('datatables.ready'));
 
         // Return table HTML string
         return $table;
-    }
+    };
 
 })();
+
+
+// Datatable Checkbox
+window.showSelected = false;
+window.addEventListener('turbolinks:load', function () {
+    let dataTableBuilder = $('.dataTableBuilder');
+
+    dataTableBuilder.on('draw.dt', function () {
+        $.ajaxPrefilter(function (options, originalOptions, jqXHR) {
+            if (window.showSelected) {
+                let selectedIds = dataTableBuilder.DataTable().column(0).checkboxes.selected().join(',').split(',');
+                selectedIds.forEach(selectedId => options.data += '&selected_ids[]=' + selectedId);
+            }
+        });
+    });
+});

@@ -38,7 +38,7 @@ return [
 
         'database' => [
             'driver' => 'database',
-            'table' => 'jobs',
+            'table' => 'queue_jobs',
             'queue' => 'default',
             'retry_after' => 90,
         ],
@@ -56,7 +56,7 @@ return [
             'key' => env('AWS_SQS_KEY'),
             'secret' => env('AWS_SQS_SECRET'),
             'prefix' => env('AWS_SQS_PREFIX'),
-            'queue' => env('AWS_SQS_QUEUE'),
+            'queue' => env('AWS_SQS_QUEUE', 'default'),
             'suffix' => env('AWS_SQS_SUFFIX'),
             'region' => env('AWS_SQS_REGION'),
         ],
@@ -85,7 +85,7 @@ return [
     'failed' => [
         'driver' => env('QUEUE_FAILED_DRIVER', 'database'),
         'database' => env('DB_CONNECTION', 'mysql'),
-        'table' => 'failed_jobs',
+        'table' => 'failed_queue_jobs',
     ],
 
 ];

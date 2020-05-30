@@ -35,9 +35,9 @@ import 'timepicker';
 import 'datepair.js';
 import 'bootstrap-colorpicker';
 import 'fontawesome-iconpicker';
-import './vendor/intl-tel-input';
 import 'bootstrap-daterangepicker';
 import 'intl-tel-input/build/js/utils';
+import './vendor/jquery-intl-tel-input';
 import 'datepair.js/src/jquery.datepair';
 import './vendor/bootstrap-popover-picker';
 
@@ -46,9 +46,9 @@ import 'select2';
 import './vendor/slugify';
 import Hashids from 'hashids';
 import Dropzone from 'dropzone';
-import './vendor/jquery.validation';
+import './vendor/jquery-validation';
 import 'expose-loader?moment!moment';
-import 'expose-loader?implicitForms!./vendor/jquery.implicitforms';
+import 'expose-loader?implicitForms!./vendor/jquery-implicitforms';
 
 // Translations
 import Lang from './vendor/lang';
@@ -128,6 +128,36 @@ window.highlight_required = function(){
 };
 
 let sidebarScrolPosition = 0;
+
+
+/**
+ * The following block of code used to automatically register your module
+ * app js code dynamically. It will recursively scan module directories
+ * for the app js code and automatically register them respectively.
+ *
+ * Path: ./app/cortex/auth/resources/js/app.js
+ * Code: `module.exports = function () {};`
+ * Call: module('cortex/auth')();
+ */
+
+let CortexModule = {};
+const files = require.context('../../app/', true, /app\.js$/i);
+files.keys().forEach(function (key) {
+    let segments = key.split('/');
+    CortexModule[segments[1] + '/' + segments[2]] = files(key);
+});
+
+/**
+ * Retrieve module JS.
+ *
+ * @param namespace
+ *
+ * @return {*}
+ */
+window.module = function (namespace) {
+    return CortexModule[namespace];
+};
+
 
 window.addEventListener('turbolinks:load', function() {
     // Fake window onload trigger (dirty temp solution!)

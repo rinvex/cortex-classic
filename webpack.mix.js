@@ -1,13 +1,76 @@
-let mix = require('laravel-mix');
-let webpack = require('webpack');
-let WebpackShellPlugin = require('webpack-shell-plugin');
-let Dependencies = require('laravel-mix/src/Dependencies.js');
-let moduleDependencies = [];
+/**************************
+ **    Import modules    **
+ **************************/
 
 let glob = require('glob');
+let mix = require('laravel-mix');
+let webpack = require('webpack');
+let tailwindcss = require('tailwindcss');
+
+require('laravel-mix-workbox');
 require('laravel-mix-purgecss');
 
+let webpackShellPlugin = require('webpack-shell-plugin');
 let webpackAliases = {markjs: 'mark.js/dist/jquery.mark.js'};
+let Dependencies = require('laravel-mix/src/Dependencies.js');
+let postCssPlugins = [
+    tailwindcss('./tailwind.config.js'),
+    require('postcss-nested'),
+];
+
+
+/**************************
+ ** Initialize Variables **
+ **************************/
+
+// Modules to skip compiling
+let dontDiscover = [];
+
+// npm dependencies to be installed
+let moduleDependencies = [];
+
+// Extracted vendor libraries
+let vendorLibraries = [
+    //jQuery
+    'jquery',
+
+    'vue',
+    'axios',
+    'lodash',
+    'mark.js',
+    'tinymce',
+    'pusher-js',
+    'turbolinks',
+    'laravel-echo',
+    'intl-tel-input',
+    'vue-template-compiler',
+
+    // Mouse interaction
+    'jquery-mousewheel',
+    'jquery-slimscroll',
+
+    // Bootstrap
+    'bootstrap-sass',
+    'bootstrap-notify',
+
+    // Pickers
+    'timepicker',
+    'datepair.js',
+    'bootstrap-datepicker',
+    'bootstrap-colorpicker',
+    'fontawesome-iconpicker',
+    'bootstrap-daterangepicker',
+    'datepair.js/src/jquery.datepair',
+
+    // Misc
+    'moment',
+    'select2',
+    'dropzone',
+
+    // Theme
+    'admin-lte',
+];
+
 
 let scanForCssSelectors = [
     path.join(__dirname, 'app/**/*.php'),
@@ -22,34 +85,40 @@ let scanForCssSelectors = [
     path.join(__dirname, 'node_modules/fontawesome-iconpicker/dist/**/*.js'),
 ];
 
-let whitelistPatterns = [/select2/, /alert/, /turbolinks/, /iti/, /dt-/];
+let whitelistPatterns = [/select2/, /alert/, /turbolinks/, /iti/, /dt-/, /dataTable/, /col-/, /btn-/];
 
 let webpackPlugins = [
     // Reduce bundle size by ignoring moment js local files
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
 
     // Add shell command plugin to execute shell commands on building
-    new WebpackShellPlugin({
+    new webpackShellPlugin({
         onBuildStart: ['php artisan laroute:generate --ansi --no-interaction', 'php artisan lang:js --ansi --no-lib --no-interaction'],
         onBuildEnd: [],
     }),
 ];
 
-/*
- |--------------------------------------------------------------------------
- | Mix Asset Management
- |--------------------------------------------------------------------------
- |
- | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel application. By default, we are compiling the Sass
- | file for the application as well as bundling up all the JS files.
- |
- */
+let purgeCssOptions = {
+    enabled: true,
+    globs: scanForCssSelectors,
+    extensions: ['html', 'js', 'php', 'vue'],
+    whitelistPatternsChildren: whitelistPatterns,
+};
 
 
-// Dynamically import module webpack config
-glob.sync('app/*/*/resources/js/webpack.js').forEach(function (file) {
-    var moduleWebpack = require(path.join(__dirname, file));
+/**************************
+ **   Dynamic modules    **
+ **************************/
+
+glob.sync('app/*/*/resources/js/webpack.mix.js').forEach(function (file) {
+    let moduleName = file.split('/')[1] + '/' + file.split('/')[2];
+
+    // Check if we need to skip this module
+    if (dontDiscover.includes(moduleName)) {
+        return;
+    }
+
+    let moduleWebpack = require(path.join(__dirname, file));
 
     moduleDependencies.push(...moduleWebpack.install || []);
     scanForCssSelectors.push(...moduleWebpack.scanForCssSelectors || []);
@@ -63,78 +132,40 @@ glob.sync('app/*/*/resources/js/webpack.js').forEach(function (file) {
     moduleWebpack.mix.css.forEach(function(dependency) {
         mix.sass(dependency.input, dependency.output);
     });
+
+    moduleWebpack.copy.forEach(function(path) {
+        mix.copyDirectory(path.from, path.to);
+    });
 });
 
 // Install module dependencies
 new Dependencies(moduleDependencies).install(false);
 
 
+/**************************
+ ** Mix Asset Management **
+ **************************/
+
 mix
+
+    .options({
+        processCssUrls: false,
+        postCss: postCssPlugins,
+    })
+
     .webpackConfig({
         plugins: webpackPlugins,
-        resolve: { alias: webpackAliases },
-    })
-    .copyDirectory('resources/favicon', 'public/favicon')
-    .copyDirectory('node_modules/tinymce/skins', 'public/tinymce')
-    // .autoload({ jquery: ['$', 'jQuery', 'window.$', 'window.jQuery'] })
-    .options({
-        // processCssUrls: false
-        // postCss: [require('postcss-image-inliner')()],
+        resolve: {alias: webpackAliases},
     })
 
     .sass('resources/sass/app.scss', 'public/css/app.css')
     .sass('resources/sass/vendor.scss', 'public/css/vendor.css')
     .sass('resources/sass/datatables.scss', 'public/css/datatables.css')
-    .sass('app/cortex/foundation/resources/sass/theme-frontarea.scss', 'public/css/theme-frontarea.css')
-    .sass('app/cortex/foundation/resources/sass/theme-adminarea.scss', 'public/css/theme-adminarea.css')
-    .sass('app/cortex/foundation/resources/sass/theme-tenantarea.scss', 'public/css/theme-tenantarea.css')
-    .sass(
-        'app/cortex/foundation/resources/sass/theme-managerarea.scss',
-        'public/css/theme-managerarea.css'
-    )
 
     .js('resources/js/vendor/datatables.js', 'public/js/datatables.js')
     .js('resources/js/app.js', 'public/js/app.js')
 
-    .extract(
-        [
-            //jQuery
-            'jquery',
-
-            // Mouse interaction
-            'jquery-mousewheel',
-            'jquery-slimscroll',
-
-            // Bootstrap
-            'bootstrap-sass',
-            'bootstrap-notify',
-
-            // Pickers
-            'timepicker',
-            'datepair.js',
-            'bootstrap-datepicker',
-            'bootstrap-colorpicker',
-            'fontawesome-iconpicker',
-            'bootstrap-daterangepicker',
-            'datepair.js/src/jquery.datepair',
-            './resources/js/vendor/bootstrap-popover-picker',
-
-            // Misc
-            'moment',
-            'select2',
-            'dropzone',
-            './resources/js/vendor/slugify',
-            './resources/js/vendor/jquery.validation',
-
-            // Theme
-            'admin-lte',
-        ],
-        'public/js/vendor.js'
-    )
-    .purgeCss({
-        enabled: true,
-        globs: scanForCssSelectors,
-        extensions: ['html', 'js', 'php', 'vue'],
-        whitelistPatterns: whitelistPatterns,
-    })
+    .extract(vendorLibraries, 'public/js/vendor.js')
+    .purgeCss(purgeCssOptions)
+    .generateSW()
     .version();
