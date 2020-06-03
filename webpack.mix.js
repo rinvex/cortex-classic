@@ -7,7 +7,6 @@ let mix = require('laravel-mix');
 let webpack = require('webpack');
 let tailwindcss = require('tailwindcss');
 
-require('laravel-mix-workbox');
 require('laravel-mix-purgecss');
 
 let webpackShellPlugin = require('webpack-shell-plugin');
@@ -167,5 +166,4 @@ mix
 
     .extract(vendorLibraries, 'public/js/vendor.js')
     .purgeCss(purgeCssOptions)
-    .generateSW()
     .version();
