@@ -77,6 +77,7 @@ import 'admin-lte';
 // Tinymce
 import TinyMCE from 'tinymce/tinymce';
 import 'tinymce/themes/silver/theme';
+import 'tinymce/icons/default';
 
 import Turbolinks from 'turbolinks';
 Turbolinks.start();
