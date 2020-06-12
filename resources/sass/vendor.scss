@@ -2,7 +2,7 @@ $flagsImagePath: '../images/';
 $fa-font-path: '../fonts/fontawesome';
 $icon-font-path: '../fonts/bootstrap/';
 
-@import '~bootstrap-daterangepicker/daterangepicker.css';
+@import '~bootstrap-daterangepicker/daterangepicker.scss';
 @import '~bootstrap-sass/assets/stylesheets/_bootstrap.scss';
 @import '~bootstrap-colorpicker/src/sass/_colorpicker.scss';
 @import '~bootstrap-popover-picker/dist/css/bootstrap-picker.css';
@@ -10,5 +10,5 @@ $icon-font-path: '../fonts/bootstrap/';
 @import '~intl-tel-input/src/css/intlTelInput.scss';
 @import '~font-awesome/scss/font-awesome.scss';
 @import '~timepicker/jquery.timepicker.css';
-@import '~select2/dist/css/select2.css';
+@import '~select2/src/scss/core.scss';
 @import '~dropzone/dist/dropzone.css';
