@@ -11,7 +11,6 @@
     },
     "devDependencies": {
         "admin-lte": "^2.4.0",
-        "animate.css": "^4.1.0",
         "axios": "^0.19.0",
         "bootstrap-colorpicker": "^2.5.0",
         "bootstrap-daterangepicker": "^2.1.0",
@@ -51,8 +50,6 @@
         "mark.js": "^8.11.0",
         "moment": "^2.26.0",
         "npm": "^6.14.0",
-        "perfect-scrollbar": "^1.5.0",
-        "popper.js": "^1.16.0",
         "postcss-nested": "^4.2.0",
         "pusher-js": "^6.0.0",
         "sass": "^1.26.0",
