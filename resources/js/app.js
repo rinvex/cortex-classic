@@ -466,6 +466,9 @@ window.addEventListener('turbolinks:load', function() {
 document.addEventListener('turbolinks:before-cache', function() {
     TinyMCE.remove();
 
+    window.selectedCountry = null;
+    window.selectedCountries = null;
+
     $('.select2')
         .select2()
         .each(function(i, item) {
