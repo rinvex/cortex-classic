@@ -89,7 +89,7 @@ window.addEventListener('turbolinks:load', function () {
         $.ajaxPrefilter(function (options, originalOptions, jqXHR) {
             if (window.showSelected) {
                 let selectedIds = dataTableBuilder.DataTable().column(0).checkboxes.selected().join(',').split(',');
-                selectedIds.forEach(selectedId => options.data += '&selected_ids[]=' + selectedId);
+                selectedIds.filter(item => item).forEach(item => options.data += '&selected_ids[]=' + item);
             }
         });
     });

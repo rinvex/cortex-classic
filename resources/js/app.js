@@ -8,7 +8,6 @@ window._ = require('lodash');
 
 
 try {
-    // window.Popper = require('popper.js').default;
     window.$ = window.jQuery = require('jquery');
 } catch (e) {}
 
@@ -77,6 +76,9 @@ import 'admin-lte';
 // Tinymce
 import TinyMCE from 'tinymce/tinymce';
 import 'tinymce/themes/silver/theme';
+import 'tinymce/plugins/image/plugin';
+import 'tinymce/plugins/imagetools/plugin';
+import 'tinymce/icons/default';
 
 import Turbolinks from 'turbolinks';
 Turbolinks.start();
@@ -184,6 +186,8 @@ window.addEventListener('turbolinks:load', function() {
     TinyMCE.init({
         selector: '.tinymce',
         skin_url: '/tinymce/ui/oxide',
+        plugins: "image imagetools",
+        toolbar: "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | outdent indent | image",
         content_css: '/tinymce/ui/oxide/content.css'
     });
 
@@ -428,7 +432,7 @@ window.addEventListener('turbolinks:load', function() {
         return $country;
     }
 
-    $("select[name='country_code']")
+    $("select[name*='country_code']")
         .select2({
             placeholder: 'Select a country',
             templateSelection: formatCountry,
@@ -465,6 +469,9 @@ window.addEventListener('turbolinks:load', function() {
 
 document.addEventListener('turbolinks:before-cache', function() {
     TinyMCE.remove();
+
+    window.selectedCountry = null;
+    window.selectedCountries = null;
 
     $('.select2')
         .select2()

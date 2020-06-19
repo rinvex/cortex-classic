@@ -98,8 +98,9 @@
         className: 'buttons-reset',
         text: (dt) => '<i class="fa fa-undo"></i> ' + dt.i18n('buttons.reset', 'Reset'),
         action: (e, dt, button, config) => {
-            dt.search('').draw();
             dt.column(0).checkboxes.deselectAll();
+            delete window.showSelected;
+            dt.search('').draw();
         }
     };
 

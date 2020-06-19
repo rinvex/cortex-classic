@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## [v4.0.0] - 2020-06-19
+- Update composer dependencies
+- Enforce composer version constraints best practices and ease min modules required versions
+  - Plus drop two unnecessary modules cortex/console & cortex/forms from the core project
+- Add clockwork environment variables
+- Add image button to tinymce editor
+- Override core Application foundation class and PackageManifest bootstrap cache builder
+- Reset countries browser cache
+- Utilize .scss instead of .css
+- Add more selectors to purgeCss whitelist
+- Customize intlTelInput flags image path, and utilize .scss instead of .css style sheet
+- Drop unused npm dependencies
+- Downgrade datatables.net-buttons to v1.6.1 temporary to avoid multiple issues in v1.6.2
+- Add more selectors to the purgeCSS whitelist
+- Update tinymce imports
+- Update composer and npm dependencies
+- Drop using workbox currently
+- Tweak selected_ids collection filtration and check
+
 ## [v3.1.1] - 2020-05-30
 - Update composer dependencies
 
@@ -146,6 +165,7 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v0.0.1 - 2017-03-13
 - First tagged beta release
 
+[v4.0.0]: https://github.com/rinvex/cortex/compare/v3.1.1...v4.0.0
 [v3.1.1]: https://github.com/rinvex/cortex/compare/v3.1.0...v3.1.1
 [v3.1.0]: https://github.com/rinvex/cortex/compare/v3.0.0...v3.1.0
 [v3.0.0]: https://github.com/rinvex/cortex/compare/v2.2.0...v3.0.0

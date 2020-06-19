@@ -7,7 +7,6 @@ let mix = require('laravel-mix');
 let webpack = require('webpack');
 let tailwindcss = require('tailwindcss');
 
-require('laravel-mix-workbox');
 require('laravel-mix-purgecss');
 
 let webpackShellPlugin = require('webpack-shell-plugin');
@@ -85,7 +84,7 @@ let scanForCssSelectors = [
     path.join(__dirname, 'node_modules/fontawesome-iconpicker/dist/**/*.js'),
 ];
 
-let whitelistPatterns = [/select2/, /alert/, /turbolinks/, /iti/, /dt-/, /dataTable/, /col-/, /btn-/];
+let whitelistPatterns = [/select2/, /alert/, /turbolinks/, /iti/, /dt-/, /dataTable/, /col-/, /btn-/, /dropdown/, /picker/, /dropzone/, /progress/, /sidebar/, /nav/, /button/];
 
 let webpackPlugins = [
     // Reduce bundle size by ignoring moment js local files
@@ -167,5 +166,4 @@ mix
 
     .extract(vendorLibraries, 'public/js/vendor.js')
     .purgeCss(purgeCssOptions)
-    .generateSW()
     .version();
