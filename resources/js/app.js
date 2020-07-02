@@ -76,9 +76,6 @@ import 'admin-lte';
 // Tinymce
 import TinyMCE from 'tinymce/tinymce';
 import 'tinymce/themes/silver/theme';
-import 'tinymce/plugins/image/plugin';
-import 'tinymce/plugins/imagetools/plugin';
-import 'tinymce/icons/default';
 
 import Turbolinks from 'turbolinks';
 Turbolinks.start();
@@ -186,9 +183,15 @@ window.addEventListener('turbolinks:load', function() {
     TinyMCE.init({
         selector: '.tinymce',
         skin_url: '/tinymce/ui/oxide',
-        plugins: "image imagetools",
-        toolbar: "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | outdent indent | image",
-        content_css: '/tinymce/ui/oxide/content.css'
+        content_css: '/tinymce/ui/oxide/content.css',
+        plugins: "image code emoticons fullscreen visualblocks preview table insertdatetime charmap directionality lists advlist anchor autosave codesample hr nonbreaking media pagebreak print save searchreplace tabfocus textpattern toc visualchars wordcount link autoresize",
+        toolbar: [
+            "bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | formatselect fontselect fontsizeselect | forecolor backcolor",
+            "undo redo | ltr rtl | bullist numlist outdent indent | hr anchor link image media | codesample charmap emoticons | removeformat preview code fullscreen",
+        ],
+        menubar: "file edit view insert format table tools",
+        max_height: 500,
+        branding: false,
     });
 
     // Initialize dropzone(s)
