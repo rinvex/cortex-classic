@@ -153,5 +153,6 @@ return [
     'invalid_country' => 'Country must be valid!',
     'invalid_language' => 'Language must be valid!',
     'invalid_strip_tags' => 'HTML tags are not allowed!',
+    'invalid_timeoffset' => 'Invalid time offset!',
 
 ];
