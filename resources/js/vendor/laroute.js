@@ -31,8 +31,9 @@
                 var uri = this.replaceNamedParameters(route.uri, parameters);
                 var qs = this.getRouteQueryString(parameters);
 
+                // Bind {subdomain} route parameter
                 if (this.absolute && this.isOtherHost(route)) {
-                    return '//' + route.host + '/' + uri + (qs ? '/' + qs : '');
+                    return '//' + this.replaceNamedParameters(route.host, {'subdomain': window.location.hostname.split('.')[0]}) + '/' + uri + (qs ? '/' + qs : '');
                 }
 
                 return this.getCorrectUrl(uri + (qs ? '/' + qs : ''));
