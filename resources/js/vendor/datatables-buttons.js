@@ -30,7 +30,7 @@
         let selectedIds = dataTableBuilder.DataTable().column(0).checkboxes.selected();
 
         let $form = $('<form />');
-        $form.attr('action', window.location);
+        $form.attr('action', window.location + '?' + $.param(dt.ajax.params()));
         $form.attr('method', 'post');
         $form.append('<input type="hidden" name="action" value="' + action + '" />');
         $form.append('<input type="hidden" name="_token" value="' + window.Laravel.csrfToken + '" />');
