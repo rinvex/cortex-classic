@@ -54,7 +54,7 @@
         }
     ],
     "require": {
-        "php": "^7.4.0",
+        "php": "^7.4.0 || ^8.0.0",
         "ext-json": "*",
         "ext-pdo": "*",
         "appstract/laravel-opcache": "^4.0.0",
