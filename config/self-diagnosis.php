@@ -34,7 +34,7 @@ return [
         \BeyondCode\SelfDiagnosis\Checks\LocalesAreInstalled::class => [
             'required_locales' => [
                 'en_US',
-                'en_US.utf8',
+                PHP_OS === 'Darwin' ? 'en_US.UTF-8' : 'en_US.utf8',
             ],
         ],
         \BeyondCode\SelfDiagnosis\Checks\MaintenanceModeNotEnabled::class,
@@ -92,6 +92,7 @@ return [
             //    ],
             //    'restarted_within' => 300,
             //],
+            //\BeyondCode\SelfDiagnosis\Checks\HorizonIsRunning::class,
         ],
     ],
 

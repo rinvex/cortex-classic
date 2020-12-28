@@ -9,13 +9,22 @@ return [
     | Filename & Format
     |--------------------------------------------------------------------------
     |
-    | The default filename (without extension) and the format (php or json)
+    | The default filename
     |
     */
 
-    'filename' => '_ide_helper',
-    'format' => 'php',
+    'filename'  => '_ide_helper.php',
 
+    /*
+    |--------------------------------------------------------------------------
+    | Where to write the PhpStorm specific meta file
+    |--------------------------------------------------------------------------
+    |
+    | PhpStorm also supports the directory `.phpstorm.meta.php/` with arbitrary
+    | files in it, should you need additional files for your project; e.g.
+    | `.phpstorm.meta.php/laravel_ide_Helper.php'.
+    |
+    */
     'meta_filename' => '.phpstorm.meta.php',
 
     /*
@@ -31,6 +40,20 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Factory Builders
+    |--------------------------------------------------------------------------
+    |
+    | Set to true to generate factory generators for better factory()
+    | method auto-completion.
+    |
+    | Deprecated for Laravel 8 or latest.
+    |
+    */
+
+    'include_factory_builders' => false,
+
+    /*
+    |--------------------------------------------------------------------------
     | Write Model Magic methods
     |--------------------------------------------------------------------------
     |
@@ -39,6 +62,28 @@ return [
     */
 
     'write_model_magic_where' => true,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Write Model External Eloquent Builder methods
+    |--------------------------------------------------------------------------
+    |
+    | Set to false to disable write external eloquent builder methods
+    |
+    */
+
+    'write_model_external_builder_methods' => true,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Write Model relation count properties
+    |--------------------------------------------------------------------------
+    |
+    | Set to false to disable writing of relation count properties to model DocBlocks.
+    |
+    */
+
+    'write_model_relation_count_properties' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -79,10 +124,26 @@ return [
     | Define in which directories the ide-helper:models command should look
     | for models.
     |
+    | glob patterns are supported to easier reach models in sub-directories,
+    | e.g. `app/Services/* /Models` (without the space)
+    |
     */
 
     'model_locations' => [
         'app',
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Models to ignore
+    |--------------------------------------------------------------------------
+    |
+    | Define which models should be ignored.
+    |
+    */
+
+    'ignored_models' => [
+
     ],
 
     /*
@@ -99,18 +160,7 @@ return [
         'Session' => ['Illuminate\Session\Store'],
     ],
 
-    'magic' => [
-        'Log' => [
-            'debug' => 'Monolog\Logger::addDebug',
-            'info' => 'Monolog\Logger::addInfo',
-            'notice' => 'Monolog\Logger::addNotice',
-            'warning' => 'Monolog\Logger::addWarning',
-            'error' => 'Monolog\Logger::addError',
-            'critical' => 'Monolog\Logger::addCritical',
-            'alert' => 'Monolog\Logger::addAlert',
-            'emergency' => 'Monolog\Logger::addEmergency',
-        ],
-    ],
+    'magic' => [],
 
     /*
     |--------------------------------------------------------------------------
@@ -190,8 +240,44 @@ return [
     | Cast the given "real type" to the given "type".
     |
     */
-   'type_overrides' => [
+    'type_overrides' => [
         'integer' => 'int',
         'boolean' => 'bool',
-   ],
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Include DocBlocks from classes
+    |--------------------------------------------------------------------------
+    |
+    | Include DocBlocks from classes to allow additional code inspection for
+    | magic methods and properties.
+    |
+    */
+    'include_class_docblocks' => false,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Force FQN usage
+    |--------------------------------------------------------------------------
+    |
+    | Use the fully qualified (class) name in docBlock,
+    | event if class exists in a given file
+    | or there is an import (use className) of a given class
+    |
+    */
+    'force_fqn' => false,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Additional relation types
+    |--------------------------------------------------------------------------
+    |
+    | Sometimes it's needed to create custom relation types. The key of the array
+    | is the Relationship Method name. The value of the array is the canonical class
+    | name of the Relationship, e.g. `'relationName' => RelationShipClass::class`.
+    |
+    */
+    'additional_relation_types' => [],
+
 ];

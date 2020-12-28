@@ -19,4 +19,9 @@ return [
      * The directory where temporary files will be stored.
      */
     'temporary_directory_path' => storage_path('app/laravel-db-snapshots/temp'),
+
+    /*
+     * Create dump files that are gzipped
+     */
+    'compress' => false,
 ];

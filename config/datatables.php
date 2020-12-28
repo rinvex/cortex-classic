@@ -29,6 +29,12 @@ return [
          * SQL: column LIKE "%k%e%y%w%o%r%d%"
          */
         'use_wildcards' => false,
+
+        /*
+         * Perform a search which starts with the given keyword.
+         * SQL: column LIKE "keyword%"
+         */
+        'starts_with'      => false,
     ],
 
     /*
@@ -60,10 +66,10 @@ return [
     ],
 
     /*
-     * Nulls last sql pattern for Posgresql & Oracle.
-     * For MySQL, use '-%s %s'
+     * Nulls last sql pattern for PostgreSQL & Oracle.
+     * For MySQL, use 'CASE WHEN :column IS NULL THEN 1 ELSE 0 END, :column :direction'
      */
-    'nulls_last_sql' => '%s %s NULLS LAST',
+    'nulls_last_sql' => ':column :direction NULLS LAST',
 
     /*
      * User friendly message to be displayed on user if error occurs.

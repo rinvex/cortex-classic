@@ -89,6 +89,13 @@ return [
             'secure' => true,
         ],
 
+        'ipfinder' => [
+            'class'  => \Torann\GeoIP\Services\IPFinder::class,
+            'key'    => env('IPFINDER_API_KEY'),
+            'secure' => true,
+            'locales' => ['en'],
+        ],
+
     ],
 
     /*

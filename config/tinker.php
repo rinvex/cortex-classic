@@ -21,7 +21,22 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Alias Blacklist
+    | Auto Aliased Classes
+    |--------------------------------------------------------------------------
+    |
+    | Tinker will not automatically alias classes in your vendor namespaces
+    | but you may explicitly allow a subset of classes to get aliased by
+    | adding the names of each of those classes to the following list.
+    |
+    */
+
+    'alias' => [
+        //
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Classes That Should Not Be Aliased
     |--------------------------------------------------------------------------
     |
     | Typically, Tinker automatically aliases classes as you require them in
@@ -30,6 +45,8 @@ return [
     |
     */
 
-    'dont_alias' => [],
+    'dont_alias' => [
+        'App\Nova',
+    ],
 
 ];
