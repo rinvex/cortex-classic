@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 return [
 
-    'core_modules' => [
+    'always_active' => [
         'cortex/foundation',
         'cortex/auth',
     ],
