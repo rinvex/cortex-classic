@@ -241,4 +241,50 @@ return [
         'Alert' => Krucas\Notification\Facades\Notification::class,
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Service Provider Loading Priorities
+    |--------------------------------------------------------------------------
+    |
+    | This array of packages and modules will be used to load service providers
+    | in that specified priority order. First come, first loaded, which means
+    | the later loaded service providers are able to override previous ones
+    |
+    */
+
+    'provider_loading' => [
+
+        'priority_1' => [
+            'laravel/',
+        ],
+
+        'priority_2' => [
+            'fideloper/proxy',
+            'fruitcake/laravel-cors',
+            'diglactic/laravel-breadcrumbs',
+            'mcamara/laravel-localization',
+            'proengsoft/laravel-jsvalidation',
+            'laravelcollective/html',
+            'facade/ignition',
+            'vinkla/hashids',
+            'nesbot/carbon',
+            'spatie/',
+            'yajra/',
+        ],
+
+        'priority_3' => [
+            'rinvex/',
+        ],
+
+        'priority_4' => [
+            'cortex/',
+        ],
+
+        'priority_5' => [
+            'cortex/foundation',
+            'cortex/tenants',
+        ],
+
+    ],
+
 ];
