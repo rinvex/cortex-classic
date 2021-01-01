@@ -273,7 +273,11 @@ return [
         ],
 
         'priority_3' => [
-            'rinvex/',
+            'rinvex/authy',
+            'rinvex/laravel-',
+            'rinvex/countries',
+            'rinvex/languages',
+            'rinvex/universities',
         ],
 
         'priority_4' => [
