@@ -125,8 +125,8 @@ return [
         'files' => true, // Show the included files
         'config' => true, // Display config settings
         'cache' => true, // Display cache events
-        'models'          => true,  // Display models
-        'livewire'        => true,  // Display Livewire (when available)
+        'models' => true,  // Display models
+        'livewire' => true,  // Display Livewire (when available)
     ],
 
     /*
@@ -143,16 +143,16 @@ return [
             'show_name' => true,   // Also show the users name/email in the debugbar
         ],
         'db' => [
-            'with_params'       => true,   // Render SQL with the parameters substituted
-            'backtrace'         => true,   // Use a backtrace to find the origin of the query in your files.
+            'with_params' => true,   // Render SQL with the parameters substituted
+            'backtrace' => true,   // Use a backtrace to find the origin of the query in your files.
             'backtrace_exclude_paths' => [],   // Paths to exclude from backtrace. (in addition to defaults)
-            'timeline'          => false,  // Add the queries to the timeline
+            'timeline' => false,  // Add the queries to the timeline
             'explain' => [                 // Show EXPLAIN output on queries
                 'enabled' => false,
                 'types' => ['SELECT'],     // Deprecated setting, is always only SELECT
             ],
-            'hints'             => false,    // Show hints for common mistakes
-            'show_copy'         => false,    // Show copy button next to the query
+            'hints' => false,    // Show hints for common mistakes
+            'show_copy' => false,    // Show copy button next to the query
         ],
         'mail' => [
             'full_log' => false,

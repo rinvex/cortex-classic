@@ -60,16 +60,16 @@ return [
         | Configure e.g. default title, creator, subject,...
         |
         */
-        'properties'             => [
-            'creator'        => '',
+        'properties' => [
+            'creator' => '',
             'lastModifiedBy' => '',
-            'title'          => '',
-            'description'    => '',
-            'subject'        => '',
-            'keywords'       => '',
-            'category'       => '',
-            'manager'        => '',
-            'company'        => '',
+            'title' => '',
+            'description' => '',
+            'subject' => '',
+            'keywords' => '',
+            'category' => '',
+            'manager' => '',
+            'company' => '',
         ],
     ],
 
@@ -122,12 +122,12 @@ return [
         | Configure e.g. delimiter, enclosure and line ending for CSV imports.
         |
         */
-        'csv'         => [
-            'delimiter'        => ',',
-            'enclosure'        => '"',
+        'csv' => [
+            'delimiter' => ',',
+            'enclosure' => '"',
             'escape_character' => '\\',
-            'contiguous'       => false,
-            'input_encoding'   => 'UTF-8',
+            'contiguous' => false,
+            'input_encoding' => 'UTF-8',
         ],
 
         /*
@@ -138,16 +138,16 @@ return [
         | Configure e.g. default title, creator, subject,...
         |
         */
-        'properties'  => [
-            'creator'        => '',
+        'properties' => [
+            'creator' => '',
             'lastModifiedBy' => '',
-            'title'          => '',
-            'description'    => '',
-            'subject'        => '',
-            'keywords'       => '',
-            'category'       => '',
-            'manager'        => '',
-            'company'        => '',
+            'title' => '',
+            'description' => '',
+            'subject' => '',
+            'keywords' => '',
+            'category' => '',
+            'manager' => '',
+            'company' => '',
         ],
 
     ],
@@ -229,7 +229,7 @@ return [
         | Drivers: memory|illuminate|batch
         |
         */
-        'driver'     => 'memory',
+        'driver' => 'memory',
 
         /*
         |--------------------------------------------------------------------------
@@ -241,7 +241,7 @@ return [
         | Here you can tweak the memory limit to your liking.
         |
         */
-        'batch'     => [
+        'batch' => [
             'memory_limit' => 60000,
         ],
 
@@ -292,7 +292,7 @@ return [
         | storing reading or downloading. Here you can customize that path.
         |
         */
-        'local_path'          => storage_path('framework/laravel-excel'),
+        'local_path' => storage_path('framework/laravel-excel'),
 
         /*
         |--------------------------------------------------------------------------
@@ -308,8 +308,8 @@ return [
         | in conjunction with queued imports and exports.
         |
         */
-        'remote_disk'         => null,
-        'remote_prefix'       => null,
+        'remote_disk' => null,
+        'remote_prefix' => null,
 
         /*
         |--------------------------------------------------------------------------
