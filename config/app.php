@@ -225,7 +225,7 @@ return [
         //'Password' => Illuminate\Support\Facades\Password::class,
         'Queue' => Illuminate\Support\Facades\Queue::class,
         'Redirect' => Illuminate\Support\Facades\Redirect::class,
-        'Redis' => Illuminate\Support\Facades\Redis::class,
+        // 'Redis' => Illuminate\Support\Facades\Redis::class,
         'Request' => Illuminate\Support\Facades\Request::class,
         'Response' => Illuminate\Support\Facades\Response::class,
         'Route' => Illuminate\Support\Facades\Route::class,
@@ -239,6 +239,56 @@ return [
 
         // Packages Aliases...
         'Alert' => Krucas\Notification\Facades\Notification::class,
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Service Provider Loading Priorities
+    |--------------------------------------------------------------------------
+    |
+    | This array of packages and modules will be used to load service providers
+    | in that specified priority order. First come, first loaded, which means
+    | the later loaded service providers are able to override previous ones
+    |
+    */
+
+    'provider_loading' => [
+
+        'priority_1' => [
+            'laravel/',
+        ],
+
+        'priority_2' => [
+            'fideloper/proxy',
+            'fruitcake/laravel-cors',
+            'diglactic/laravel-breadcrumbs',
+            'mcamara/laravel-localization',
+            'proengsoft/laravel-jsvalidation',
+            'laravelcollective/html',
+            'facade/ignition',
+            'vinkla/hashids',
+            'nesbot/carbon',
+            'spatie/',
+            'yajra/',
+        ],
+
+        'priority_3' => [
+            'rinvex/authy',
+            'rinvex/laravel-',
+            'rinvex/countries',
+            'rinvex/languages',
+            'rinvex/universities',
+        ],
+
+        'priority_4' => [
+            'cortex/',
+        ],
+
+        'priority_5' => [
+            'cortex/foundation',
+            'cortex/tenants',
+        ],
+
     ],
 
 ];

@@ -15,11 +15,12 @@ return [
     |
     */
 
-    'password' => 'Passwords must be at least eight characters and match the confirmation.',
     'reset' => 'Your password has been reset!',
-    'sent' => 'We have e-mailed your password reset link!',
-    'expired' => 'This password reset link is expired, please request a new one.',
+    'sent' => 'We have emailed your password reset link!',
+    'throttled' => 'Please wait before retrying.',
     'token' => 'This password reset token is invalid.',
-    'user' => "We can't find a user with that e-mail address.",
+    'user' => "We can't find a user with that email address.",
+    'password' => 'Passwords must be at least eight characters and match the confirmation.',
+    'expired' => 'This password reset link is expired, please request a new one.',
 
 ];

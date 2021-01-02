@@ -17,9 +17,10 @@ return [
     | - 'breadcrumbs::bootstrap2'  - Bootstrap 2
     | - 'breadcrumbs::bulma'       - Bulma
     | - 'breadcrumbs::foundation6' - Foundation 6
-    | - 'breadcrumbs::materialize' - Materialize
-    | - 'breadcrumbs::uikit'       - UIkit
     | - 'breadcrumbs::json-ld'     - JSON-LD Structured Data
+    | - 'breadcrumbs::materialize' - Materialize
+    | - 'breadcrumbs::tailwind'    - Tailwind CSS
+    | - 'breadcrumbs::uikit'       - UIkit
     |
     | Or a custom view, e.g. '_partials/breadcrumbs'.
     |
@@ -69,9 +70,9 @@ return [
     */
 
     // Manager
-    'manager-class' => DaveJamesMiller\Breadcrumbs\BreadcrumbsManager::class,
+    'manager-class' => Diglactic\Breadcrumbs\Manager::class,
 
     // Generator
-    'generator-class' => DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator::class,
+    'generator-class' => Diglactic\Breadcrumbs\Generator::class,
 
 ];

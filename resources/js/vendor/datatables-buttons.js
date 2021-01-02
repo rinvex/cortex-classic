@@ -30,7 +30,7 @@
         let selectedIds = dataTableBuilder.DataTable().column(0).checkboxes.selected();
 
         let $form = $('<form />');
-        $form.attr('action', window.location);
+        $form.attr('action', window.location + '?' + $.param(dt.ajax.params()));
         $form.attr('method', 'post');
         $form.append('<input type="hidden" name="action" value="' + action + '" />');
         $form.append('<input type="hidden" name="_token" value="' + window.Laravel.csrfToken + '" />');
@@ -153,6 +153,17 @@
         className: 'buttons-bulk-deactivate',
         action: (e, dt, button, config) => bulkAction(e, dt, button, config, 'deactivate'),
         text: (dt) => '<i class="fa fa-trash"></i> ' + dt.i18n('buttons.bulkDeactivate', 'Deactivate'),
+    };
+
+    DataTable.ext.buttons.bulkRevoke = {
+        className: 'buttons-bulk-revoke',
+        action: (e, dt, button, config) => bulkAction(e, dt, button, config, 'revoke'),
+        text: (dt) => '<i class="fa fa-trash"></i> ' + dt.i18n('buttons.bulkRevoke', 'Revoke'),
+    };
+
+    DataTable.ext.buttons.create_popup = {
+        className: 'buttons-create-popup',
+        text: (dt) => '<i class="fa fa-plus"></i> ' + dt.i18n('buttons.create', 'Create'),
     };
 
 }));

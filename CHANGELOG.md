@@ -5,6 +5,42 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## [v5.0.0] - 2021-01-02
+- Add support for PHP v8
+- Upgrade to Composer v2
+- Upgrade to Laravel v8
+- Disable self-diagnosis composer check
+- Autoload and activate all installed modules once autoload is dumped
+- Update self-diagnosis config
+- Update config files
+- Update copyright year
+- Remove uneeded composer dependency nunomaduro/laravel-console-dusk
+- Drop problematic develop composer dependency nunomaduro/phpinsights
+- Update composer dependency names
+- Rename core_modules to always_active
+- Refactor service provider loading priorities
+- Update overridden views
+- Update config files
+- Update StyleCI & TravisCI config
+- Update rinvex/laravel-composer config
+- FIx composer dependencies
+- Update webpack whitelisted classes
+- Add DataTable.ext.buttons.create_popup & .bulkRevoke buttons
+- Update datatables script for better view variables support, and realtime pusher
+- Update datatables config options
+- Remove un-overridden config files
+- Move datatables.mark.css to app.scss
+- Add maximum number of password characters
+- Append datatable params to export url to export only filtered data
+- Bind {subdomain} route parameter
+- Add authEndpoint named route to Laravel echo
+- Generate absolute URLs for laroute
+- Update ignition & flare config
+- Add missing tinymce editor icons
+- Add timeoffset validation error message
+- Fix geoip timezone inconsistency
+- Add and tweak tinymce buttons
+
 ## [v4.0.0] - 2020-06-19
 - Update composer dependencies
 - Enforce composer version constraints best practices and ease min modules required versions
@@ -165,6 +201,7 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v0.0.1 - 2017-03-13
 - First tagged beta release
 
+[v5.0.0]: https://github.com/rinvex/cortex/compare/v4.0.0...v5.0.0
 [v4.0.0]: https://github.com/rinvex/cortex/compare/v3.1.1...v4.0.0
 [v3.1.1]: https://github.com/rinvex/cortex/compare/v3.1.0...v3.1.1
 [v3.1.0]: https://github.com/rinvex/cortex/compare/v3.0.0...v3.1.0

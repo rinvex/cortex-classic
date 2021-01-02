@@ -19,6 +19,7 @@ return [
     'enabled' => env('DEBUGBAR_ENABLED', null),
     'except' => [
         'telescope*',
+        'horizon*',
     ],
 
     /*
@@ -124,6 +125,8 @@ return [
         'files' => true, // Show the included files
         'config' => true, // Display config settings
         'cache' => true, // Display cache events
+        'models' => true,  // Display models
+        'livewire' => true,  // Display Livewire (when available)
     ],
 
     /*
@@ -142,12 +145,14 @@ return [
         'db' => [
             'with_params' => true,   // Render SQL with the parameters substituted
             'backtrace' => true,   // Use a backtrace to find the origin of the query in your files.
+            'backtrace_exclude_paths' => [],   // Paths to exclude from backtrace. (in addition to defaults)
             'timeline' => false,  // Add the queries to the timeline
             'explain' => [                 // Show EXPLAIN output on queries
                 'enabled' => false,
-                'types' => ['SELECT'],     // ['SELECT', 'INSERT', 'UPDATE', 'DELETE']; for MySQL 5.6.3+
+                'types' => ['SELECT'],     // Deprecated setting, is always only SELECT
             ],
-            'hints' => true,    // Show hints for common mistakes
+            'hints' => false,    // Show hints for common mistakes
+            'show_copy' => false,    // Show copy button next to the query
         ],
         'mail' => [
             'full_log' => false,
@@ -200,4 +205,14 @@ return [
      | To override default domain, specify it as a non-empty value.
      */
     'route_domain' => domain(),
+
+    /*
+     |--------------------------------------------------------------------------
+     | DebugBar theme
+     |--------------------------------------------------------------------------
+     |
+     | Switches between light and dark theme. If set to auto it will respect system preferences
+     | Possible values: auto, light, dark
+     */
+    'theme' => 'auto',
 ];

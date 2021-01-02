@@ -12,7 +12,7 @@
                     if (element.parent('.input-group').length ||
                         element.prop('type') === 'checkbox' || element.prop('type') === 'radio') {
                         error.insertAfter(element.parent());
-                        // else just place the validation message immediatly after the input
+                        // else just place the validation message immediately after the input
                     } else {
                         error.insertAfter(element);
                     }

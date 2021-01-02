@@ -30,15 +30,15 @@ return [
             ],
         ],
         \BeyondCode\SelfDiagnosis\Checks\EnvFileExists::class,
-        \BeyondCode\SelfDiagnosis\Checks\ExampleEnvironmentVariablesAreSet::class,
-        \BeyondCode\SelfDiagnosis\Checks\LocalesAreInstalled::class => [
-            'required_locales' => [
-                'en_US',
-                'en_US.utf8',
-            ],
-        ],
+        //\BeyondCode\SelfDiagnosis\Checks\ExampleEnvironmentVariablesAreSet::class,
+        //\BeyondCode\SelfDiagnosis\Checks\LocalesAreInstalled::class => [
+        //    'required_locales' => [
+        //        'en_US',
+        //        PHP_OS === 'Darwin' ? 'en_US.UTF-8' : 'en_US.utf8',
+        //    ],
+        //],
         \BeyondCode\SelfDiagnosis\Checks\MaintenanceModeNotEnabled::class,
-        \BeyondCode\SelfDiagnosis\Checks\MigrationsAreUpToDate::class,
+        //\BeyondCode\SelfDiagnosis\Checks\MigrationsAreUpToDate::class,
         \BeyondCode\SelfDiagnosis\Checks\PhpExtensionsAreInstalled::class => [
             'extensions' => [
                 'openssl',
@@ -63,13 +63,13 @@ return [
      */
     'environment_checks' => [
         'development' => [
-            \BeyondCode\SelfDiagnosis\Checks\ComposerWithDevDependenciesIsUpToDate::class,
+            //\BeyondCode\SelfDiagnosis\Checks\ComposerWithDevDependenciesIsUpToDate::class,
             \BeyondCode\SelfDiagnosis\Checks\ConfigurationIsNotCached::class,
             \BeyondCode\SelfDiagnosis\Checks\RoutesAreNotCached::class,
-            \BeyondCode\SelfDiagnosis\Checks\ExampleEnvironmentVariablesAreUpToDate::class,
+            //\BeyondCode\SelfDiagnosis\Checks\ExampleEnvironmentVariablesAreUpToDate::class,
         ],
         'production' => [
-            \BeyondCode\SelfDiagnosis\Checks\ComposerWithoutDevDependenciesIsUpToDate::class,
+            //\BeyondCode\SelfDiagnosis\Checks\ComposerWithoutDevDependenciesIsUpToDate::class,
             \BeyondCode\SelfDiagnosis\Checks\ConfigurationIsCached::class,
             \BeyondCode\SelfDiagnosis\Checks\DebugModeIsNotEnabled::class,
             \BeyondCode\SelfDiagnosis\Checks\PhpExtensionsAreDisabled::class => [
@@ -92,6 +92,7 @@ return [
             //    ],
             //    'restarted_within' => 300,
             //],
+            //\BeyondCode\SelfDiagnosis\Checks\HorizonIsRunning::class,
         ],
     ],
 
