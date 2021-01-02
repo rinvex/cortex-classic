@@ -73,7 +73,7 @@ return [
     /*
      * Generator command default options value.
      */
-    'generator'     => [
+    'generator' => [
         /*
          * Default columns to generate when not set.
          */
