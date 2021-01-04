@@ -57,7 +57,7 @@
         "cortex/pages": "^5.0.0",
         "cortex/tags": "^5.0.0",
         "cortex/tenants": "^6.0.0",
-        "doctrine/dbal": "^2.10.0",
+        "doctrine/dbal": "^3.0.0",
         "facade/ignition": "^2.5.0",
         "guzzlehttp/guzzle": "^7.2.0",
         "laravel/envoy": "^2.4.0",
