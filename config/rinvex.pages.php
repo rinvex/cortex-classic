@@ -10,6 +10,7 @@ return [
     // Pageable Database Tables
     'tables' => [
         'pages' => 'pages',
+        'pageables' => 'pageables',
     ],
 
     // Pageable Models
