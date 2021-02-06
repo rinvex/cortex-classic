@@ -104,8 +104,7 @@
             "@php artisan cortex:activate",
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi",
-            "@php artisan ide-helper:generate --ansi",
-            "@php artisan ide-helper:meta --ansi"
+            "@php artisan cortex:execute:dump"
         ]
     },
     "config": {
