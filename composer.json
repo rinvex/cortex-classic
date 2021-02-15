@@ -110,7 +110,6 @@
     "extra": {
         "laravel": {
             "dont-discover": [
-                "silber/bouncer",
                 "rinvex/tmp-lord-laroute",
                 "barryvdh/laravel-debugbar",
                 "appstract/laravel-opcache",
