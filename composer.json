@@ -79,13 +79,8 @@
         "itsgoingd/clockwork": "^5.0.0",
         "mockery/mockery": "^1.4.0",
         "nunomaduro/collision": "^5.1.0",
-        "nunomaduro/larastan": "^0.7.0",
-        "nunomaduro/laravel-console-menu": "^3.2.0",
-        "nunomaduro/laravel-console-task": "^1.6.0",
-        "nunomaduro/laravel-desktop-notifier": "^2.5.0",
         "phpunit/phpunit": "^9.5.0",
-        "symfony/thanks": "^1.2.0",
-        "wnx/laravel-stats": "^2.5.0"
+        "symfony/thanks": "^1.2.0"
     },
     "autoload-dev": {
         "psr-4": {
