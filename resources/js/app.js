@@ -47,6 +47,7 @@ import Hashids from 'hashids';
 import Dropzone from 'dropzone';
 import './vendor/jquery-validation';
 import 'expose-loader?moment!moment';
+import 'expose-loader?pluralize!pluralize';
 import 'expose-loader?implicitForms!./vendor/jquery-implicitforms';
 
 // Translations
