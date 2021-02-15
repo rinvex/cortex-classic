@@ -54,6 +54,7 @@
         "cortex/auth": "^7.0.0",
         "cortex/categories": "^5.0.0",
         "cortex/foundation": "^6.0.0",
+        "cortex/oauth": "^2.0.0",
         "cortex/pages": "^5.0.0",
         "cortex/tags": "^5.0.0",
         "cortex/tenants": "^6.0.0",
