@@ -95,11 +95,10 @@
             "@php artisan key:generate --ansi"
         ],
         "post-autoload-dump": [
-            "@php artisan cortex:autoload",
-            "@php artisan cortex:activate",
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi",
-            "@php artisan cortex:execute:dump"
+            "@php artisan cortex:generate:idehelper",
+            "@php artisan cortex:autoload --activate"
         ]
     },
     "config": {
