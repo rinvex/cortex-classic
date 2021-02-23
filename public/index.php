@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
+use Cortex\Foundation\Http\Request;
 use Illuminate\Contracts\Http\Kernel;
-use Cortex\Foundation\Overrides\Illuminate\Http\Request;
 
 define('LARAVEL_START', microtime(true));
 
