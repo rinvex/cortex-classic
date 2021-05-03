@@ -88,4 +88,9 @@ return [
         'table' => 'failed_queue_jobs',
     ],
 
+    'batching' => [
+        'database' => env('DB_DATABASE', 'forge'),
+        'table' => 'job_batches',
+    ],
+
 ];

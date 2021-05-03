@@ -17,7 +17,7 @@ return [
 
     'defaults' => [
         'guard' => 'member',
-        'api' => 'api:member',
+        'apiguard' => 'api:member',
         'provider' => 'members',
         'passwords' => 'member',
         'emails' => 'member',
