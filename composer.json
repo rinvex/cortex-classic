@@ -66,7 +66,7 @@
         "laravel/tinker": "^2.5.0",
         "league/flysystem-aws-s3-v3": "^1.0.0",
         "predis/predis": "^1.1.0",
-        "pusher/pusher-php-server": "^5.0.0",
+        "pusher/pusher-php-server": "^6.0.0",
         "spatie/laravel-db-snapshots": "^1.7.0"
     },
     "require-dev": {
