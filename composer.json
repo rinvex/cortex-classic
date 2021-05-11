@@ -50,7 +50,7 @@
         "appstract/laravel-opcache": "^4.0.0",
         "aws/aws-sdk-php": "^3.171.0",
         "aws/aws-sdk-php-laravel": "^3.6.0",
-        "beyondcode/laravel-self-diagnosis": "^1.5.0",
+        "beyondcode/laravel-self-diagnosis": "dev-master",
         "cortex/auth": "^7.0.0",
         "cortex/categories": "^5.0.0",
         "cortex/foundation": "^6.0.0",
@@ -67,7 +67,8 @@
         "league/flysystem-aws-s3-v3": "^1.0.0",
         "predis/predis": "^1.1.0",
         "pusher/pusher-php-server": "^6.0.0",
-        "spatie/laravel-db-snapshots": "^1.7.0"
+        "spatie/laravel-db-snapshots": "^1.7.0",
+        "wulfheart/pretty_routes": "^0.3.0"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master",
