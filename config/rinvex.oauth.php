@@ -43,10 +43,10 @@ return [
 
     // Models
     'models' => [
-        'client' => \Cortex\OAuth\Models\Client::class,
-        'auth_code' => \Cortex\OAuth\Models\AuthCode::class,
-        'access_token' => \Cortex\OAuth\Models\AccessToken::class,
-        'refresh_token' => \Cortex\OAuth\Models\RefreshToken::class,
+        'client' => \Cortex\Oauth\Models\Client::class,
+        'auth_code' => \Cortex\Oauth\Models\AuthCode::class,
+        'access_token' => \Cortex\Oauth\Models\AccessToken::class,
+        'refresh_token' => \Cortex\Oauth\Models\RefreshToken::class,
     ],
 
     /*
