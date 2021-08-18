@@ -1,14 +1,13 @@
-$flagsImagePath: '../images/';
-$fa-font-path: '../fonts/fontawesome';
-$icon-font-path: '../fonts/bootstrap/';
+$flagsImagePath: '../../build/img/';
+$icon-font-path: '../../fonts/bootstrap/';
 
-@import '~bootstrap-daterangepicker/daterangepicker.scss';
-@import '~bootstrap-sass/assets/stylesheets/_bootstrap.scss';
-@import '~bootstrap-colorpicker/src/sass/_colorpicker.scss';
-@import '~bootstrap-popover-picker/dist/css/bootstrap-picker.css';
-@import '~fontawesome-iconpicker/dist/css/fontawesome-iconpicker.css';
-@import '~intl-tel-input/src/css/intlTelInput.scss';
-@import '~font-awesome/scss/font-awesome.scss';
-@import '~timepicker/jquery.timepicker.css';
-@import '~select2/src/scss/core.scss';
-@import '~dropzone/dist/dropzone.css';
+@import '~bootstrap-daterangepicker/daterangepicker';
+@import '~bootstrap-sass/assets/stylesheets/_bootstrap';
+@import '~bootstrap-colorpicker/src/sass/_colorpicker';
+@import '~bootstrap-popover-picker/dist/css/bootstrap-picker';
+@import '~fontawesome-iconpicker/dist/css/fontawesome-iconpicker';
+@import '~intl-tel-input/src/css/intlTelInput';
+@import '~font-awesome/scss/font-awesome';
+@import '~timepicker/jquery.timepicker';
+@import '~select2/src/scss/core';
+@import '~dropzone/dist/dropzone';
