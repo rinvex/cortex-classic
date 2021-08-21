@@ -177,8 +177,9 @@ window.addEventListener('turbolinks:load', function() {
     // Initialize the tinymce
     TinyMCE.init({
         selector: '.tinymce',
-        skin_url: '/tinymce/ui/oxide',
-        content_css: '/tinymce/ui/oxide/content.css',
+        base_url: '/tinymce/',
+        skin_url: '/tinymce/skins/ui/oxide',
+        content_css: '/tinymce/skins/ui/oxide/content.css',
         plugins: "image code emoticons fullscreen visualblocks preview table insertdatetime charmap directionality lists advlist anchor autosave codesample hr nonbreaking media pagebreak print save searchreplace tabfocus textpattern toc visualchars wordcount link autoresize",
         toolbar: [
             "bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | formatselect fontselect fontsizeselect | forecolor backcolor",
