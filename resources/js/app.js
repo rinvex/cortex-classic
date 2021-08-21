@@ -4,21 +4,13 @@
  * code may be modified to fit the specific needs of your application.
  */
 
-window._ = require('lodash');
-
-
-try {
-    window.$ = window.jQuery = require('jquery');
-} catch (e) {}
-
-
 window.axios = require('axios');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 // Bind variables to window object
-import 'expose-loader?$!expose-loader?jQuery!jquery';
-import 'expose-loader?routes!../../public/js/routes';
+import 'expose-loader?exposes=$!expose-loader?exposes=jQuery!jquery';
+import 'expose-loader?exposes=routes!../../public/js/routes';
 
 // Mouse interaction
 import 'jquery-mousewheel';
@@ -46,9 +38,9 @@ import './vendor/slugify';
 import Hashids from 'hashids';
 import Dropzone from 'dropzone';
 import './vendor/jquery-validation';
-import 'expose-loader?moment!moment';
-import 'expose-loader?pluralize!pluralize';
-import 'expose-loader?implicitForms!./vendor/jquery-implicitforms';
+import 'expose-loader?exposes=moment!moment';
+import 'expose-loader?exposes=pluralize!pluralize';
+import 'expose-loader?exposes=implicitForms!./vendor/jquery-implicitforms';
 
 // Translations
 import Lang from './vendor/lang';
