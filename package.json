@@ -57,7 +57,7 @@
         "sass-loader": "^8.0.0",
         "resolve-url-loader": "^4.0.0",
         "select2": "^4.0.0",
-        "tailwindcss": "^1.4.0",
+        "tailwindcss": "^2.0.0",
         "timepicker": "^1.13.0",
         "tinymce": "^5.3.0",
         "turbolinks": "^5.2.0",
