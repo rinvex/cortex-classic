@@ -35,7 +35,6 @@
         "expose-loader": "^3.0.0",
         "font-awesome": "^4.7.0",
         "fontawesome-iconpicker": "^1.4.0",
-        "formBuilder": "^3.7.0",
         "glob": "^7.1.0",
         "hashids": "^2.2.0",
         "install": "^0.13.0",
