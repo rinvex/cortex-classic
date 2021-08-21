@@ -83,6 +83,14 @@
                 }
             },
 
+            getByAction: function (action) {
+                for (var key in this.routes) {
+                    if (this.routes.hasOwnProperty(key) && this.routes[key].action === action) {
+                        return this.routes[key];
+                    }
+                }
+            },
+
             getCorrectUrl: function (uri) {
                 var url = this.prefix + '/' + uri.replace(/^\/?/, '');
 
@@ -117,6 +125,13 @@
         };
 
         return {
+            // Generate a url for a given controller action.
+            // $NAMESPACE$.action('HomeController@getIndex', [params = {}])
+            action: function (name, parameters) {
+                parameters = parameters || {};
+
+                return routes.route(name, parameters, routes.getByAction(name));
+            },
 
             // Generate a url for a given named route.
             // $NAMESPACE$.route('routeName', [params = {}])
@@ -149,6 +164,14 @@
 
                 return getHtmlLink(url, title, attributes);
             },
+
+            // Generate a html link to the given controller action.
+            // $NAMESPACE$.link_to_action('HomeController@getIndex', [title=url], [parameters = {}], [attributes = {}])
+            link_to_action: function (action, title, parameters, attributes) {
+                var url = this.action(action, parameters);
+
+                return getHtmlLink(url, title, attributes);
+            }
 
         };
 
