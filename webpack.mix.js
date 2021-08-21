@@ -9,8 +9,8 @@ let tailwindcss = require('tailwindcss');
 
 require('laravel-mix-purgecss');
 
-let webpackShellPlugin = require('webpack-shell-plugin');
 let webpackAliases = {markjs: 'mark.js/dist/jquery.mark.js'};
+let WebpackShellPluginNext = require('webpack-shell-plugin-next');
 let Dependencies = require('laravel-mix/src/Dependencies.js');
 let postCssPlugins = [
     tailwindcss('./tailwind.config.js'),
@@ -91,9 +91,9 @@ let webpackPlugins = [
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
 
     // Add shell command plugin to execute shell commands on building
-    new webpackShellPlugin({
-        onBuildStart: ['php artisan laroute:generate --ansi --no-interaction', 'php artisan lang:js --ansi --no-lib --no-interaction'],
-        onBuildEnd: [],
+    new WebpackShellPluginNext({
+        onBuildStart: {scripts: ['php artisan laroute:generate --ansi --no-interaction', 'php artisan lang:js --ansi --no-lib --no-interaction'], blocking: true, parallel: false},
+        onBuildEnd: {scripts: [], blocking: true, parallel: false},
     }),
 ];
 

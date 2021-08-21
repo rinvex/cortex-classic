@@ -63,7 +63,7 @@
         "timepicker": "^1.13.0",
         "tinymce": "^5.3.0",
         "turbolinks": "^5.2.0",
-        "webpack-shell-plugin": "^0.5.0"
+        "webpack-shell-plugin-next": "^2.2.0"
     },
     "dependencies": {}
 }
