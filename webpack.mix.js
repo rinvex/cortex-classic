@@ -152,7 +152,7 @@ new Dependencies(moduleDependencies).install(false);
 mix
 
     .options({
-        processCssUrls: false,
+        processCssUrls: true,
         postCss: postCssPlugins,
     })
 
