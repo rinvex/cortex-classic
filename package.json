@@ -49,7 +49,7 @@
         "laravel-mix-purgecss": "^6.0.0",
         "mark.js": "^8.11.0",
         "moment": "^2.26.0",
-        "npm": "^6.14.0",
+        "npm": "^7.20.0",
         "pluralize": "^8.0.0",
         "postcss-nested": "^4.2.0",
         "pusher-js": "^6.0.0",
