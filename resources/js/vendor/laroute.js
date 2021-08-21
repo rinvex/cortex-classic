@@ -31,9 +31,12 @@
                 var uri = this.replaceNamedParameters(route.uri, parameters);
                 var qs = this.getRouteQueryString(parameters);
 
-                // Bind {subdomain} route parameter
+                // Bind {central_domain} & {tenant_domain} route parameters
                 if (this.absolute && this.isOtherHost(route)) {
-                    return '//' + this.replaceNamedParameters(route.host, {'subdomain': window.location.hostname.split('.')[0]}) + '/' + uri + (qs ? '/' + qs : '');
+                    return '//' + this.replaceNamedParameters(route.host, {
+                        'central_domain': window.location.hostname,
+                        'tenant_domain': window.location.hostname
+                    }) + '/' + uri + (qs ? '/' + qs : '');
                 }
 
                 return this.getCorrectUrl(uri + (qs ? '/' + qs : ''));
@@ -191,4 +194,3 @@
     }
 
 }).call(this);
-
