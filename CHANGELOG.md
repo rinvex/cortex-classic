@@ -5,6 +5,58 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## [v6.0.0] - 2021-08-22
+- Drop PHP v7 support
+- Remove useless npm packages formBuilder
+- Bind {central_domain} & {tenant_domain} in laroute
+- Update npm dependencies
+- Update tailwindcss to v2
+- Update npm to v7
+- Install webpack resolve-url-loader plugin and enable processCssUrls option
+- Upgrade laravel mix purgecess extension and update options
+- Change tinymce default paths
+- Remove useless npm dependencies
+- Upgrade expose-loader npm package
+- Upgrade webpack to v5 and Laravel Mix to v6
+- Use webpack-shell-plugin-next webpack plugin instead of the deprecated webpack-shell-plugin one
+- Drop default Vue support from the project as it's not used
+- Add get rout by action functionality to laroute
+- Disable locale useAcceptLanguageHeader temporary
+- Update debugbar route prefix
+- Override SessionServiceProvider to use custom SessionManager
+- Update rinvex tenants config
+- Enable session encryption
+- Update composer dependencies for all cortex modules
+- Fix wrong datatable file path after version update
+- Remove .css & .scss extensions for sass compiled files and fix few issues	030c22e
+- Move global image files from cortex/foundation to global app space
+- Fix namespace naming convention
+- Add pusher config placeholders to avoid composer create-project issues
+- Rename ExceptionHandler
+- Update composer dependencies
+- Update pusher/pusher-php-server requirement from ^6.0.0 to ^7.0.0
+- Upgrade to GitHub-native Dependabot (#139)
+- Update pusher/pusher-php-server requirement from ^5.0.0 to ^6.0.0 (#137)
+- Update config options
+- Override Diglactic\Breadcrumbs\Manager
+- Fix form ajax remote validation message on error status code
+- Rearrange guards and add additional api guards
+- Move email verification config to default project config/auth.php file
+- Update pusher/pusher-php-server requirement from ^4.1.0 to ^5.0.0 (#136)
+- Add missing rinvex/oauth config file
+- Change core `Request` namespace
+- Install pluralize npm package
+- Require cortex/oauth composer dependency for API layer
+- Tweak post-autoload-dump composer scripts
+- Remove laravel autodiscovery exception for "silber/bouncer"
+- Remove unnecessary composer dependencies
+- Upgrade to GitHub-native Dependabot
+- Update nunomaduro/larastan requirement from ^0.6.0 to ^0.7.0
+- Move ide-helper generation to artisan command to conditionally run on dev environments only (when dev-package is installed)
+- Update missing pages config option
+- Change default queue connection to database
+- Update doctrine/dbal requirement from ^2.10.0 to ^3.0.0
+
 ## [v5.0.0] - 2021-01-02
 - Add support for PHP v8
 - Upgrade to Composer v2
@@ -201,6 +253,7 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v0.0.1 - 2017-03-13
 - First tagged beta release
 
+[v6.0.0]: https://github.com/rinvex/cortex/compare/v5.0.0...v6.0.0
 [v5.0.0]: https://github.com/rinvex/cortex/compare/v4.0.0...v5.0.0
 [v4.0.0]: https://github.com/rinvex/cortex/compare/v3.1.1...v4.0.0
 [v3.1.1]: https://github.com/rinvex/cortex/compare/v3.1.0...v3.1.1
