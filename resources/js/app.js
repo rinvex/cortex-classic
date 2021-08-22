@@ -4,21 +4,13 @@
  * code may be modified to fit the specific needs of your application.
  */
 
-window._ = require('lodash');
-
-
-try {
-    window.$ = window.jQuery = require('jquery');
-} catch (e) {}
-
-
 window.axios = require('axios');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 // Bind variables to window object
-import 'expose-loader?$!expose-loader?jQuery!jquery';
-import 'expose-loader?routes!../../public/js/routes';
+import 'expose-loader?exposes=$!expose-loader?exposes=jQuery!jquery';
+import 'expose-loader?exposes=routes!../../public/js/routes';
 
 // Mouse interaction
 import 'jquery-mousewheel';
@@ -46,8 +38,9 @@ import './vendor/slugify';
 import Hashids from 'hashids';
 import Dropzone from 'dropzone';
 import './vendor/jquery-validation';
-import 'expose-loader?moment!moment';
-import 'expose-loader?implicitForms!./vendor/jquery-implicitforms';
+import 'expose-loader?exposes=moment!moment';
+import 'expose-loader?exposes=pluralize!pluralize';
+import 'expose-loader?exposes=implicitForms!./vendor/jquery-implicitforms';
 
 // Translations
 import Lang from './vendor/lang';
@@ -184,8 +177,9 @@ window.addEventListener('turbolinks:load', function() {
     // Initialize the tinymce
     TinyMCE.init({
         selector: '.tinymce',
-        skin_url: '/tinymce/ui/oxide',
-        content_css: '/tinymce/ui/oxide/content.css',
+        base_url: '/tinymce/',
+        skin_url: '/tinymce/skins/ui/oxide',
+        content_css: '/tinymce/skins/ui/oxide/content.css',
         plugins: "image code emoticons fullscreen visualblocks preview table insertdatetime charmap directionality lists advlist anchor autosave codesample hr nonbreaking media pagebreak print save searchreplace tabfocus textpattern toc visualchars wordcount link autoresize",
         toolbar: [
             "bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | formatselect fontselect fontsizeselect | forecolor backcolor",
@@ -488,28 +482,3 @@ document.addEventListener('turbolinks:before-cache', function() {
     //     $(item).DataTable().destroy();
     // });
 });
-
-window.Vue = require('vue');
-
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
-
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
-// const app = new Vue({
-//     el: '#app'
-// });

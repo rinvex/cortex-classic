@@ -204,7 +204,7 @@ return [
      | By default DebugBar route served from the same domain that request served.
      | To override default domain, specify it as a non-empty value.
      */
-    'route_domain' => domain(),
+    'route_domain' => '{central_domain}',
 
     /*
      |--------------------------------------------------------------------------

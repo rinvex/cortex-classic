@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('QUEUE_CONNECTION', 'sync'),
+    'default' => env('QUEUE_CONNECTION', 'database'),
 
     /*
     |--------------------------------------------------------------------------
@@ -86,6 +86,11 @@ return [
         'driver' => env('QUEUE_FAILED_DRIVER', 'database-uuids'),
         'database' => env('DB_CONNECTION', 'mysql'),
         'table' => 'failed_queue_jobs',
+    ],
+
+    'batching' => [
+        'database' => env('DB_DATABASE', 'forge'),
+        'table' => 'job_batches',
     ],
 
 ];

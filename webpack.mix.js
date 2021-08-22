@@ -2,6 +2,7 @@
  **    Import modules    **
  **************************/
 
+let path = require('path');
 let glob = require('glob');
 let mix = require('laravel-mix');
 let webpack = require('webpack');
@@ -9,8 +10,8 @@ let tailwindcss = require('tailwindcss');
 
 require('laravel-mix-purgecss');
 
-let webpackShellPlugin = require('webpack-shell-plugin');
 let webpackAliases = {markjs: 'mark.js/dist/jquery.mark.js'};
+let WebpackShellPluginNext = require('webpack-shell-plugin-next');
 let Dependencies = require('laravel-mix/src/Dependencies.js');
 let postCssPlugins = [
     tailwindcss('./tailwind.config.js'),
@@ -72,36 +73,39 @@ let vendorLibraries = [
 
 
 let scanForCssSelectors = [
-    path.join(__dirname, 'app/**/*.php'),
     path.join(__dirname, 'config/*.php'),
-    path.join(__dirname, 'resources/js/**/*.js'),
-    path.join(__dirname, 'resources/views/**/*.php'),
+    path.join(__dirname, 'app/**/*.js'),
+    path.join(__dirname, 'app/**/*.php'),
+    path.join(__dirname, 'app/**/*.vue'),
+    path.join(__dirname, 'resources/**/*.js'),
+    path.join(__dirname, 'resources/**/*.php'),
     path.join(__dirname, 'node_modules/select2/**/*.js'),
     path.join(__dirname, 'node_modules/dropzone/**/*.js'),
     path.join(__dirname, 'node_modules/admin-lte/dist/**/*.js'),
     path.join(__dirname, 'node_modules/datatables.net/**/*.js'),
     path.join(__dirname, 'node_modules/bootstrap-notify/**/*.js'),
-    path.join(__dirname, 'node_modules/fontawesome-iconpicker/dist/**/*.js'),
+    path.join(__dirname, 'node_modules/bootstrap-daterangepicker/**/*.js'),
 ];
 
-let whitelistPatterns = [/select2/, /alert/, /turbolinks/, /iti/, /dt-/, /dataTable/, /text-/, /col-/, /btn-/, /dropdown/, /picker/, /dropzone/, /progress/, /sidebar/, /nav/, /button/];
+let safelist = [/select2/, /alert/, /turbolinks/, /iti/, /dt-/, /dataTable/, /text-/, /col-/, /btn-/, /dropdown/, /picker/, /dropzone/, /progress/, /sidebar/, /nav/, /fa-/];
 
 let webpackPlugins = [
     // Reduce bundle size by ignoring moment js local files
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
 
     // Add shell command plugin to execute shell commands on building
-    new webpackShellPlugin({
-        onBuildStart: ['php artisan laroute:generate --ansi --no-interaction', 'php artisan lang:js --ansi --no-lib --no-interaction'],
-        onBuildEnd: [],
+    new WebpackShellPluginNext({
+        onBuildStart: {scripts: ['php artisan laroute:generate --ansi --no-interaction', 'php artisan lang:js --ansi --no-lib --no-interaction'], blocking: true, parallel: false},
+        onBuildEnd: {scripts: [], blocking: true, parallel: false},
     }),
 ];
 
 let purgeCssOptions = {
     enabled: true,
-    globs: scanForCssSelectors,
+    variables: true,
+    content: scanForCssSelectors,
     extensions: ['html', 'js', 'php', 'vue'],
-    whitelistPatternsChildren: whitelistPatterns,
+    safelist: safelist,
 };
 
 
@@ -121,7 +125,7 @@ glob.sync('app/*/*/resources/js/webpack.mix.js').forEach(function (file) {
 
     moduleDependencies.push(...moduleWebpack.install || []);
     scanForCssSelectors.push(...moduleWebpack.scanForCssSelectors || []);
-    whitelistPatterns.push(...moduleWebpack.whitelistPatterns || []);
+    safelist.push(...moduleWebpack.safelist || []);
     webpackPlugins.push(...moduleWebpack.webpackPlugins || []);
 
     moduleWebpack.mix.js.forEach(function(dependency) {
@@ -148,7 +152,7 @@ new Dependencies(moduleDependencies).install(false);
 mix
 
     .options({
-        processCssUrls: false,
+        processCssUrls: true,
         postCss: postCssPlugins,
     })
 

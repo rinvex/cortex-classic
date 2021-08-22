@@ -40,7 +40,7 @@ $app->singleton(
 
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
-    Cortex\Foundation\Exceptions\Handler::class
+    Cortex\Foundation\Exceptions\ExceptionHandler::class
 );
 
 /*

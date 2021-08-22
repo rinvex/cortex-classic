@@ -44,20 +44,21 @@
         }
     ],
     "require": {
-        "php": "^7.4.0 || ^8.0.0",
+        "php": "^8.0.0",
         "ext-json": "*",
         "ext-pdo": "*",
         "appstract/laravel-opcache": "^4.0.0",
         "aws/aws-sdk-php": "^3.171.0",
         "aws/aws-sdk-php-laravel": "^3.6.0",
-        "beyondcode/laravel-self-diagnosis": "^1.5.0",
-        "cortex/auth": "^7.0.0",
-        "cortex/categories": "^5.0.0",
-        "cortex/foundation": "^6.0.0",
-        "cortex/pages": "^5.0.0",
-        "cortex/tags": "^5.0.0",
-        "cortex/tenants": "^6.0.0",
-        "doctrine/dbal": "^2.10.0",
+        "beyondcode/laravel-self-diagnosis": "dev-master",
+        "cortex/auth": "^8.0.0",
+        "cortex/categories": "^6.0.0",
+        "cortex/foundation": "^7.0.0",
+        "cortex/oauth": "^3.0.0",
+        "cortex/pages": "^6.0.0",
+        "cortex/tags": "^6.0.0",
+        "cortex/tenants": "^7.0.0",
+        "doctrine/dbal": "^3.0.0",
         "facade/ignition": "^2.5.0",
         "guzzlehttp/guzzle": "^7.2.0",
         "laravel/envoy": "^2.4.0",
@@ -65,8 +66,9 @@
         "laravel/tinker": "^2.5.0",
         "league/flysystem-aws-s3-v3": "^1.0.0",
         "predis/predis": "^1.1.0",
-        "pusher/pusher-php-server": "^4.1.0",
-        "spatie/laravel-db-snapshots": "^1.7.0"
+        "pusher/pusher-php-server": "^7.0.0",
+        "spatie/laravel-db-snapshots": "^1.7.0",
+        "wulfheart/pretty_routes": "^0.3.0"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master",
@@ -79,13 +81,8 @@
         "itsgoingd/clockwork": "^5.0.0",
         "mockery/mockery": "^1.4.0",
         "nunomaduro/collision": "^5.1.0",
-        "nunomaduro/larastan": "^0.6.0",
-        "nunomaduro/laravel-console-menu": "^3.2.0",
-        "nunomaduro/laravel-console-task": "^1.6.0",
-        "nunomaduro/laravel-desktop-notifier": "^2.5.0",
         "phpunit/phpunit": "^9.5.0",
-        "symfony/thanks": "^1.2.0",
-        "wnx/laravel-stats": "^2.5.0"
+        "symfony/thanks": "^1.2.0"
     },
     "autoload-dev": {
         "psr-4": {
@@ -100,12 +97,10 @@
             "@php artisan key:generate --ansi"
         ],
         "post-autoload-dump": [
-            "@php artisan cortex:autoload",
-            "@php artisan cortex:activate",
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi",
-            "@php artisan ide-helper:generate --ansi",
-            "@php artisan ide-helper:meta --ansi"
+            "@php artisan cortex:generate:idehelper",
+            "@php artisan cortex:autoload --activate"
         ]
     },
     "config": {
@@ -116,7 +111,6 @@
     "extra": {
         "laravel": {
             "dont-discover": [
-                "silber/bouncer",
                 "rinvex/tmp-lord-laroute",
                 "barryvdh/laravel-debugbar",
                 "appstract/laravel-opcache",
