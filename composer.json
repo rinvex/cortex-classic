@@ -56,7 +56,7 @@
         "cortex/foundation": "^7.0.0",
         "cortex/oauth": "^3.0.0",
         "cortex/pages": "^6.0.0",
-        "cortex/tags": "^6.0.0",
+        "cortex/tags": "^7.1.0",
         "cortex/tenants": "^7.0.0",
         "doctrine/dbal": "^3.0.0",
         "facade/ignition": "^2.5.0",
