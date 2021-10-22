@@ -31,10 +31,13 @@
                 var uri = this.replaceNamedParameters(route.uri, parameters);
                 var qs = this.getRouteQueryString(parameters);
 
-                // Bind {routeDomain} route parameters
+                // Bind route domain parameters. Ex: {frontarea}, {adminarea} ..etc
                 if (this.absolute && this.isOtherHost(route)) {
                     return '//' + this.replaceNamedParameters(route.host, {
-                        'central_domain': window.location.hostname
+                        'frontarea': window.location.hostname,
+                        'adminarea': window.location.hostname,
+                        'tenantarea': window.location.hostname,
+                        'managerarea': window.location.hostname
                     }) + '/' + uri + (qs ? '/' + qs : '');
                 }
 
