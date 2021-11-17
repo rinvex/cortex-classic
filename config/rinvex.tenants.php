@@ -38,22 +38,4 @@ return [
 
     'resolver' => \Rinvex\Tenants\Resolvers\SubdomainOrDomainTenantResolver::class,
 
-    /*
-    |--------------------------------------------------------------------------
-    | Alias Domains
-    |--------------------------------------------------------------------------
-    |
-    | If your application is accessible through multiple domain names,
-    | you may specify these domains here, so the application router
-    | take care of matching the incoming requests appropriately.
-    |
-    | No need to list the default domain, it is automatically
-    | appended to the compiled list from `app.url` config.
-    |
-    */
-
-    'alias_domains' => [
-        'app.rinvex.test',
-    ],
-
 ];

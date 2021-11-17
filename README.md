@@ -2,7 +2,9 @@
 
 Rinvex Cortex is a solid foundation for enterprise solutions, that provides a flexible and extensible architecture for building multi-lingual, multi-tenant applications with content management, themeable views, application modules and much more.
 
-This project uses Laravel framework, but it has it's own application architecture, that's radically different than the default vanilla architecture. Rinvex Cortex is built of modules, and modules are the core building blocks and at the heart of it. Modules are first citizens and everything within the entire application is built of a module, even it's basic fundamental building block that drives the whole system. Everything here is a module, no procedural features here, only modularized!
+This project uses Laravel framework, but it has its own modular architecture, that's different from the default vanilla structure. Rinvex Cortex is built of modules, and modules are the core building blocks and at the heart of it. Modules are first citizens and everything within the entire application is built of a module, even it's basic fundamental building block that drives the whole system. Everything here is part of a module! Once installed, you can check the automatically populated structure inside the `app` directory to get familiar with it.
+
+The project also supports multi-tenant, multi-domain, and multiple access areas, such as: adminarea, frontarea, managerarea, and tenantarea. Each access area is dedicated for a different user type, like: admins, managers, and members. Each type can access only their access areas, and have their own guards and authentication/authorization.
 
 This project is currently under heavy development, and may not have the level of support you're looking for, but for the record it's been used for multiple live enterprise solutions on production. Still, use at your own responsibility, and note that it changes rapidly.
 
@@ -51,6 +53,13 @@ npm install
 npm run dev
 ```
 
+**Important:** You'll need to update your localhost project domains in config `app.domains` for the project to run smoothly.
+
+The rest of documentation will be ready soon..
+
+
+# Optional
+
 Create public disk symbolic link
 
 ```
@@ -68,10 +77,6 @@ To see all the available command line tools, run the following command:
 ```
 php artisan list
 ```
-
-The rest of documentation will be ready soon..
-
-# Optional
 
 If you're using any browser streaming features, and would like to disable output buffering, then make sure your PHP & nginx settings are set up correctly, with buffering turned off, so you can stream content to the browser.
 

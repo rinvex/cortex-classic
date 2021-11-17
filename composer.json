@@ -67,7 +67,7 @@
         "league/flysystem-aws-s3-v3": "^1.0.0",
         "predis/predis": "^1.1.0",
         "pusher/pusher-php-server": "^7.0.0",
-        "spatie/laravel-db-snapshots": "^1.7.0",
+        "spatie/laravel-db-snapshots": "^2.0.0",
         "wulfheart/pretty_routes": "^0.3.0"
     },
     "require-dev": {
@@ -76,7 +76,7 @@
         "barryvdh/laravel-ide-helper": "^2.7.0",
         "beyondcode/laravel-dump-server": "^1.4.0",
         "beyondcode/laravel-query-detector": "^1.2.0",
-        "codedungeon/phpunit-result-printer": "^0.30.0",
+        "codedungeon/phpunit-result-printer": "^0.31.0",
         "fakerphp/faker": "^1.13.0",
         "itsgoingd/clockwork": "^5.0.0",
         "mockery/mockery": "^1.4.0",

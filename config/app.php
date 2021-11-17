@@ -291,4 +291,41 @@ return [
 
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Route Domains
+    |--------------------------------------------------------------------------
+    |
+    | Specify all the domains used by your application, with their accessible
+    | accessareas, and the application router will take care of matching
+    | incoming requests appropriately. Also include default domain.
+    |
+    */
+
+    'domains' => [
+
+        'app.rinvex.test' => [
+            'frontarea',
+            'adminarea',
+            'managerarea',
+            //'tenantarea',
+        ],
+
+        'cortex.rinvex.test' => [
+            'frontarea',
+            'adminarea',
+            'managerarea',
+            'tenantarea',
+        ],
+
+        'tenantsdomain.test' => [
+            'tenantarea',
+        ],
+
+        'qweqwe.test' => [
+            'asdasd',
+        ],
+
+    ],
+
 ];
