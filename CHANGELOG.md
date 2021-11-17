@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## [v6.0.1] - 2021-11-17
+- Support multi-tenant multi-domains
+- Laroute: Bind route domain parameters. Ex: {frontarea}, {adminarea} ..etc
+- Add app.domains config option and remove outdated rinvex.tenants config options
+
 ## [v6.0.0] - 2021-08-22
 - Drop PHP v7 support
 - Remove useless npm packages formBuilder
@@ -253,6 +258,7 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v0.0.1 - 2017-03-13
 - First tagged beta release
 
+[v6.0.1]: https://github.com/rinvex/cortex/compare/v6.0.0...v6.0.1
 [v6.0.0]: https://github.com/rinvex/cortex/compare/v5.0.0...v6.0.0
 [v5.0.0]: https://github.com/rinvex/cortex/compare/v4.0.0...v5.0.0
 [v4.0.0]: https://github.com/rinvex/cortex/compare/v3.1.1...v4.0.0
