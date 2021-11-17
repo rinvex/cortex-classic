@@ -308,6 +308,7 @@ return [
             'frontarea',
             'adminarea',
             'managerarea',
+            //'tenantarea',
         ],
 
         'cortex.rinvex.test' => [
