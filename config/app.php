@@ -176,15 +176,6 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
-        /*
-         * Package Service Providers...
-         */
-        Krucas\Notification\NotificationServiceProvider::class,
-
-        /*
-         * Application Service Providers...
-         */
-
     ],
 
     /*
