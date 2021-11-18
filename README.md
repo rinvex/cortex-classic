@@ -41,15 +41,17 @@ sed -i "s/DB_USERNAME=.*/DB_USERNAME=YOUR_DATABASE_USERNAME_HERE/" .env
 sed -i "s/DB_PASSWORD=.*/DB_PASSWORD=YOUR_DATABASE_PASSWORD_HERE/" .env
 ```
 
-Create database tables and seed data
+Install the project
 
 ```
 php artisan cortex:install
+npm install
+npm run dev
 ```
 
-**Important Step:** Update your localhost project domains in config `app.domains` for the project to run smoothly.
+**Important:** You'll need to update your localhost project domains in config `app.domains` for the project to run smoothly.
 
-That's all the mandatory installation steps, the rest are optional.
+The rest of documentation will be ready soon..
 
 
 # Optional
