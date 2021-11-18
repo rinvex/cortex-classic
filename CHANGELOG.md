@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## [v6.0.2] - 2021-11-18
+- Generate a new APP_KEY after composer autoload-dump if none exists
+- Remove unnecessary service provider loading which is autoloaded now
+
 ## [v6.0.1] - 2021-11-17
 - Support multi-tenant multi-domains
 - Laroute: Bind route domain parameters. Ex: {frontarea}, {adminarea} ..etc
@@ -258,6 +262,7 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v0.0.1 - 2017-03-13
 - First tagged beta release
 
+[v6.0.2]: https://github.com/rinvex/cortex/compare/v6.0.1...v6.0.2
 [v6.0.1]: https://github.com/rinvex/cortex/compare/v6.0.0...v6.0.1
 [v6.0.0]: https://github.com/rinvex/cortex/compare/v5.0.0...v6.0.0
 [v5.0.0]: https://github.com/rinvex/cortex/compare/v4.0.0...v5.0.0
