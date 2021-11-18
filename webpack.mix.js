@@ -91,7 +91,10 @@ let safelist = [/select2/, /alert/, /turbolinks/, /iti/, /dt-/, /dataTable/, /te
 
 let webpackPlugins = [
     // Reduce bundle size by ignoring moment js local files
-    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+    new webpack.IgnorePlugin({
+        resourceRegExp: /^\.\/locale$/,
+        contextRegExp: /moment$/,
+    }),
 
     // Add shell command plugin to execute shell commands on building
     new WebpackShellPluginNext({
