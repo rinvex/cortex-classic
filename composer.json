@@ -98,6 +98,7 @@
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan key:generate --ansi --ifnot",
             "@php artisan package:discover --ansi",
             "@php artisan cortex:generate:idehelper",
             "@php artisan cortex:autoload --activate"
