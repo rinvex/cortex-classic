@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## [v6.0.8] - 2022-01-31
+- Fix laravel mix webpack dynamic module npm package installation
+- Add Livewire config file
+
 ## [v6.0.7] - 2022-01-31
 - Fix laravel mix webpack dynamic module npm package installation
 
@@ -277,6 +281,7 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v0.0.1 - 2017-03-13
 - First tagged beta release
 
+[v6.0.8]: https://github.com/rinvex/cortex/compare/v6.0.7...v6.0.8
 [v6.0.7]: https://github.com/rinvex/cortex/compare/v6.0.6...v6.0.7
 [v6.0.6]: https://github.com/rinvex/cortex/compare/v6.0.5...v6.0.6
 [v6.0.5]: https://github.com/rinvex/cortex/compare/v6.0.4...v6.0.5
