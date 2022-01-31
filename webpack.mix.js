@@ -145,7 +145,7 @@ glob.sync('app/*/*/resources/js/webpack.mix.js').forEach(function (file) {
 });
 
 // Install module dependencies
-new Dependencies(moduleDependencies).install(false);
+(new Dependencies()).enqueue(moduleDependencies).install();
 
 
 /**************************
