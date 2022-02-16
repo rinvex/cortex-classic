@@ -79,8 +79,7 @@
         "predis/predis": "^1.1.0",
         "pusher/pusher-php-server": "^7.0.0",
         "spatie/laravel-db-snapshots": "^2.2.0",
-        "spatie/laravel-ignition": "^1.0.0",
-        "wulfheart/pretty_routes": "^0.3.0"
+        "spatie/laravel-ignition": "^1.0.0"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master",
