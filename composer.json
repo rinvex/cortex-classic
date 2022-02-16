@@ -43,14 +43,26 @@
             "homepage": "https://github.com/rinvex/cortex/contributors"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/laravel-shift/laravel-self-diagnosis.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/laravel-shift/uniquewith-validator.git"
+        }
+    ],
     "require": {
         "php": "^8.0.0",
+        "ext-curl": "*",
         "ext-json": "*",
+        "ext-mbstring": "*",
+        "ext-openssl": "*",
         "ext-pdo": "*",
         "appstract/laravel-opcache": "^4.0.0",
-        "aws/aws-sdk-php": "^3.171.0",
-        "aws/aws-sdk-php-laravel": "^3.6.0",
-        "beyondcode/laravel-self-diagnosis": "dev-master",
+        "aws/aws-sdk-php": "^3.200.0",
+        "beyondcode/laravel-self-diagnosis": "dev-l9-compatibility",
         "cortex/auth": "^8.0.0",
         "cortex/categories": "^6.0.0",
         "cortex/foundation": "^7.0.0",
@@ -58,29 +70,29 @@
         "cortex/pages": "^6.0.0",
         "cortex/tags": "^6.0.0",
         "cortex/tenants": "^7.0.0",
-        "doctrine/dbal": "^3.0.0",
-        "facade/ignition": "^2.5.0",
-        "guzzlehttp/guzzle": "^7.2.0",
-        "laravel/envoy": "^2.4.0",
-        "laravel/framework": "^8.0.0 || ^9.0.0",
-        "laravel/tinker": "^2.5.0",
-        "league/flysystem-aws-s3-v3": "^1.0.0",
+        "doctrine/dbal": "^3.3.0",
+        "guzzlehttp/guzzle": "^7.4.0",
+        "laravel/envoy": "^2.8.0",
+        "laravel/framework": "^9.0.0 || ^10.0.0",
+        "laravel/tinker": "^2.7.0",
+        "league/flysystem-aws-s3-v3": "^3.0.0",
         "predis/predis": "^1.1.0",
         "pusher/pusher-php-server": "^7.0.0",
-        "spatie/laravel-db-snapshots": "^2.0.0",
+        "spatie/laravel-db-snapshots": "^2.2.0",
+        "spatie/laravel-ignition": "^1.0.0",
         "wulfheart/pretty_routes": "^0.3.0"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master",
-        "barryvdh/laravel-debugbar": "^3.3.0",
-        "barryvdh/laravel-ide-helper": "^2.7.0",
-        "beyondcode/laravel-dump-server": "^1.4.0",
-        "beyondcode/laravel-query-detector": "^1.2.0",
+        "barryvdh/laravel-debugbar": "^3.6.0",
+        "barryvdh/laravel-ide-helper": "^2.12.0",
+        "beyondcode/laravel-dump-server": "^1.7.0",
+        "beyondcode/laravel-query-detector": "^1.6.0",
         "codedungeon/phpunit-result-printer": "^0.31.0",
-        "fakerphp/faker": "^1.13.0",
-        "itsgoingd/clockwork": "^5.0.0",
-        "mockery/mockery": "^1.4.0",
-        "nunomaduro/collision": "^5.1.0",
+        "fakerphp/faker": "^1.19.0",
+        "itsgoingd/clockwork": "^5.1.0",
+        "mockery/mockery": "^1.5.0",
+        "nunomaduro/collision": "^6.1.0",
         "phpunit/phpunit": "^9.5.0",
         "symfony/thanks": "^1.2.0"
     },
@@ -107,7 +119,12 @@
     "config": {
         "sort-packages": true,
         "preferred-install": "dist",
-        "optimize-autoloader": true
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "rinvex/laravel-composer": true,
+            "composer/package-versions-deprecated": true,
+            "symfony/thanks": true
+        }
     },
     "extra": {
         "laravel": {

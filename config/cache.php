@@ -29,7 +29,7 @@ return [
     | same cache driver to group types of items stored in your caches.
     |
     | Supported drivers: "apc", "array", "database", "file",
-    |            "memcached", "redis", "dynamodb", "null"
+    |         "memcached", "redis", "dynamodb", "octane", "null"
     |
     */
 
@@ -48,6 +48,7 @@ return [
             'driver' => 'database',
             'table' => 'cache',
             'connection' => null,
+            'lock_connection' => null,
         ],
 
         'file' => [
@@ -77,15 +78,20 @@ return [
         'redis' => [
             'driver' => 'redis',
             'connection' => 'cache',
+            'lock_connection' => 'default',
         ],
 
         'dynamodb' => [
             'driver' => 'dynamodb',
             'key' => env('AWS_DYNAMODB_KEY'),
             'secret' => env('AWS_DYNAMODB_SECRET'),
-            'region' => env('AWS_DYNAMODB_REGION', 'eu-west-1'),
+            'region' => env('AWS_DYNAMODB_REGION', 'us-east-1'),
             'table' => env('AWS_DYNAMODB_TABLE', 'cache'),
             'endpoint' => env('DYNAMODB_ENDPOINT'),
+        ],
+
+        'octane' => [
+            'driver' => 'octane',
         ],
 
     ],

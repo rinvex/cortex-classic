@@ -38,9 +38,10 @@ return [
 
         'database' => [
             'driver' => 'database',
-            'table' => 'queue_jobs',
+            'table' => 'queue_job_records',
             'queue' => 'default',
             'retry_after' => 90,
+            'after_commit' => false,
         ],
 
         'beanstalkd' => [
@@ -49,16 +50,18 @@ return [
             'queue' => 'default',
             'retry_after' => 90,
             'block_for' => 0,
+            'after_commit' => false,
         ],
 
         'sqs' => [
             'driver' => 'sqs',
             'key' => env('AWS_SQS_KEY'),
             'secret' => env('AWS_SQS_SECRET'),
-            'prefix' => env('AWS_SQS_PREFIX'),
+            'prefix' => env('AWS_SQS_PREFIX', 'https://sqs.us-east-1.amazonaws.com/your-account-id'),
             'queue' => env('AWS_SQS_QUEUE', 'default'),
             'suffix' => env('AWS_SQS_SUFFIX'),
-            'region' => env('AWS_SQS_REGION'),
+            'region' => env('AWS_SQS_REGION', 'us-east-1'),
+            'after_commit' => false,
         ],
 
         'redis' => [
@@ -67,6 +70,7 @@ return [
             'queue' => env('REDIS_QUEUE', 'default'),
             'retry_after' => 90,
             'block_for' => null,
+            'after_commit' => false,
         ],
 
     ],
@@ -85,12 +89,12 @@ return [
     'failed' => [
         'driver' => env('QUEUE_FAILED_DRIVER', 'database-uuids'),
         'database' => env('DB_CONNECTION', 'mysql'),
-        'table' => 'failed_queue_jobs',
+        'table' => 'queue_job_failures',
     ],
 
     'batching' => [
         'database' => env('DB_DATABASE', 'forge'),
-        'table' => 'job_batches',
+        'table' => 'queue_job_batches',
     ],
 
 ];

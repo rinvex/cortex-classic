@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('FILESYSTEM_DRIVER', 'local'),
+    'default' => env('FILESYSTEM_DISK', 'local'),
 
     /*
     |--------------------------------------------------------------------------
@@ -49,8 +49,10 @@ return [
             'url' => env('AWS_S3_URL'),
             'key' => env('AWS_S3_KEY'),
             'secret' => env('AWS_S3_SECRET'),
-            'region' => env('AWS_S3_REGION'),
+            'region' => env('AWS_S3_REGION', 'us-east-1'),
             'bucket' => env('AWS_S3_BUCKET'),
+            'endpoint' => env('AWS_S3_ENDPOINT'),
+            'use_path_style_endpoint' => env('AWS_S3_USE_PATH_STYLE_ENDPOINT', false),
         ],
 
         's3-public' => [
@@ -59,8 +61,10 @@ return [
             'url' => env('AWS_S3_URL'),
             'key' => env('AWS_S3_KEY'),
             'secret' => env('AWS_S3_SECRET'),
-            'region' => env('AWS_S3_REGION'),
+            'region' => env('AWS_S3_REGION', 'us-east-1'),
             'bucket' => env('AWS_S3_BUCKET'),
+            'endpoint' => env('AWS_S3_ENDPOINT'),
+            'use_path_style_endpoint' => env('AWS_S3_USE_PATH_STYLE_ENDPOINT', false),
         ],
 
         'snapshots' => [
