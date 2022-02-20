@@ -50,6 +50,7 @@ return [
             'use_bom' => false,
             'include_separator_line' => false,
             'excel_compatibility' => false,
+            'output_encoding' => '',
         ],
 
         /*
@@ -157,9 +158,8 @@ return [
     | Extension detector
     |--------------------------------------------------------------------------
     |
-    | Configure here which writer type should be used when
-    | the package needs to guess the correct type
-    | based on the extension alone.
+    | Configure here which writer/reader type should be used when the package
+    | needs to guess the correct type based on the extension alone.
     |
     */
     'extension_detector' => [
@@ -178,18 +178,18 @@ return [
         'html' => Excel::HTML,
         'csv' => Excel::CSV,
         'tsv' => Excel::TSV,
-    ],
 
-    /*
-    |--------------------------------------------------------------------------
-    | PDF Extension
-    |--------------------------------------------------------------------------
-    |
-    | Configure here which Pdf driver should be used by default.
-    | Available options: Excel::MPDF | Excel::TCPDF | Excel::DOMPDF
-    |
-    */
-    'pdf' => Excel::DOMPDF,
+        /*
+        |--------------------------------------------------------------------------
+        | PDF Extension
+        |--------------------------------------------------------------------------
+        |
+        | Configure here which Pdf driver should be used by default.
+        | Available options: Excel::MPDF | Excel::TCPDF | Excel::DOMPDF
+        |
+        */
+        'pdf' => Excel::DOMPDF,
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -279,6 +279,9 @@ return [
     */
     'transactions' => [
         'handler' => 'db',
+        'db' => [
+            'connection' => null,
+        ],
     ],
 
     'temporary_files' => [
@@ -292,7 +295,7 @@ return [
         | storing reading or downloading. Here you can customize that path.
         |
         */
-        'local_path' => storage_path('framework/laravel-excel'),
+        'local_path' => storage_path('framework/cache/laravel-excel'),
 
         /*
         |--------------------------------------------------------------------------
