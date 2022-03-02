@@ -3,8 +3,8 @@
     window.addEventListener('turbolinks:load', function () {
 
         jQuery(document).ready(function () {
-
-            $('<?php echo $validator['selector']; ?>').validate({
+        $('<?php echo $validator['selector']; ?>').each(function() {
+            $(this).validate({
                 errorElement: 'span',
                 errorClass: 'help-block error-help-block',
 
@@ -35,7 +35,7 @@
                     $(element).closest('.form-group').removeClass('has-error').addClass('has-success'); // remove the Boostrap error class from the control group
                 },
 
-                focusInvalid: false, // do not focus the last invalid input
+                focusInvalid: true,
                 <?php if (Config::get('jsvalidation.focus_on_error')): ?>
                 invalidHandler: function (form, validator) {
 
@@ -44,14 +44,15 @@
 
                     $('html, body').animate({
                         scrollTop: $(validator.errorList[0].element).offset().top
-                    }, <?php echo Config::get('jsvalidation.duration_animate') ?>);
-                    $(validator.errorList[0].element).focus();
+                    }, <?php echo config('jsvalidation.duration_animate') ?>);
 
                 },
                 <?php endif; ?>
 
                 rules: <?php echo json_encode($validator['rules']); ?>
             });
+        });
+
         });
 
     });
