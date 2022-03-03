@@ -87,7 +87,7 @@
         "barryvdh/laravel-ide-helper": "^2.12.0",
         "beyondcode/laravel-dump-server": "^1.7.0",
         "beyondcode/laravel-query-detector": "^1.6.0",
-        "codedungeon/phpunit-result-printer": "^0.31.0",
+        "codedungeon/phpunit-result-printer": "^0.32.0",
         "fakerphp/faker": "^1.19.0",
         "itsgoingd/clockwork": "^5.1.0",
         "mockery/mockery": "^1.5.0",
