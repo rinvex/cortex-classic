@@ -33,12 +33,7 @@
 
                 // Bind route domain parameters. Ex: {frontarea}, {adminarea} ..etc
                 if (this.absolute && this.isOtherHost(route)) {
-                    return '//' + this.replaceNamedParameters(route.host, {
-                        'frontarea': window.location.hostname,
-                        'adminarea': window.location.hostname,
-                        'tenantarea': window.location.hostname,
-                        'managerarea': window.location.hostname
-                    }) + '/' + uri + (qs ? '/' + qs : '');
+                    return '//' + this.replaceNamedParameters(route.host, window.Cortex.routeDomains) + '/' + uri + (qs ? '/' + qs : '');
                 }
 
                 return this.getCorrectUrl(uri + (qs ? '/' + qs : ''));
@@ -51,9 +46,7 @@
             replaceNamedParameters: function (uri, parameters) {
                 uri = uri.replace(/\{(.*?)\??\}/g, function (match, key) {
                     if (parameters.hasOwnProperty(key)) {
-                        var value = parameters[key];
-                        delete parameters[key];
-                        return value;
+                        return parameters[key];
                     } else {
                         return match;
                     }
