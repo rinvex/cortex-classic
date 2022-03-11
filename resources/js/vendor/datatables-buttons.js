@@ -130,13 +130,13 @@
     DataTable.ext.buttons.create = {
         className: 'buttons-create',
         text: (dt) => '<i class="fa fa-plus"></i> ' + dt.i18n('buttons.create', 'Create'),
-        action: (e, dt, button, config) => Turbolinks.visit(window.location.href.replace(/\/+$/, '') + '/create'),
+        action: (e, dt, button, config) => Turbolinks.visit(routes.route(window.Cortex.routePrefix+'.create')),
     };
 
     DataTable.ext.buttons.import = {
         className: 'buttons-import',
         text: (dt) => '<i class="fa fa-upload"></i> ' + dt.i18n('buttons.import', 'Import'),
-        action: (e, dt, button, config) => Turbolinks.visit(window.location.href.replace(/\/+$/, '') + '/import'),
+        action: (e, dt, button, config) => Turbolinks.visit(routes.route(window.Cortex.routePrefix+'.import')),
     };
 
     DataTable.ext.buttons.showSelected = {
