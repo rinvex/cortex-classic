@@ -46,7 +46,11 @@
             replaceNamedParameters: function (uri, parameters) {
                 uri = uri.replace(/\{(.*?)\??\}/g, function (match, key) {
                     if (parameters.hasOwnProperty(key)) {
-                        return parameters[key];
+                        var value = parameters[key];
+                        if (! (key in window.Cortex.routeDomains)) {
+                            delete parameters[key];
+                        }
+                        return value;
                     } else {
                         return match;
                     }
