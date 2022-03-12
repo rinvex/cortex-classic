@@ -93,7 +93,7 @@ return [
     ],
 
     'batching' => [
-        'database' => env('DB_DATABASE', 'forge'),
+        'database' => env('DB_CONNECTION', 'mysql'),
         'table' => 'queue_job_batches',
     ],
 

@@ -196,7 +196,7 @@ window.addEventListener('turbolinks:load', function() {
         init: function() {
             this.on('queuecomplete', function(file) {
                 window.location = routes.route(
-                    window.Accessarea + '.' + window.location.pathname.split('/')[2] + '.index'
+                    window.Cortex.accessarea + '.' + window.location.pathname.split('/')[2] + '.index'
                 );
             });
 
@@ -226,7 +226,7 @@ window.addEventListener('turbolinks:load', function() {
                 data: {
                     _token: window.Laravel.csrfToken,
                 },
-                url: routes.route('frontarea.country'),
+                url: routes.route(window.Cortex.accessarea + '.country'),
                 success: function(response) {
                     callback(response);
                 },

@@ -26,6 +26,7 @@
     let DataTable = $.fn.dataTable;
 
     let exportAction = function (e, dt, button, config, action) {
+        let visibleColumns = getVisibleColumns();
         let dataTableBuilder = $('.dataTableBuilder');
         let selectedIds = dataTableBuilder.DataTable().column(0).checkboxes.selected();
 
@@ -35,12 +36,28 @@
         $form.append('<input type="hidden" name="action" value="' + action + '" />');
         $form.append('<input type="hidden" name="_token" value="' + window.Laravel.csrfToken + '" />');
 
+        if (visibleColumns.length) {
+            visibleColumns.join(',').split(',').forEach((visibleColumn) => $form.append('<input type="hidden" name="visible_columns[]" value="' + visibleColumn + '" />'));
+        }
+
         if (selectedIds.length) {
             selectedIds.join(',').split(',').forEach((selectedId) => $form.append('<input type="hidden" name="selected_ids[]" value="' + selectedId + '" />'));
         }
 
         dataTableBuilder.append($form);
         $form.submit();
+    };
+
+    let getVisibleColumns = function () {
+        let visible_columns = [];
+
+        $.each(DataTable.settings[0].aoColumns, function (key, col) {
+            if (col.bVisible) {
+                visible_columns.push(col.name);
+            }
+        });
+
+        return visible_columns;
     };
 
     let bulkAction = function (e, dt, button, config, action) {
@@ -113,13 +130,13 @@
     DataTable.ext.buttons.create = {
         className: 'buttons-create',
         text: (dt) => '<i class="fa fa-plus"></i> ' + dt.i18n('buttons.create', 'Create'),
-        action: (e, dt, button, config) => Turbolinks.visit(window.location.href.replace(/\/+$/, '') + '/create'),
+        action: (e, dt, button, config) => Turbolinks.visit(routes.route(window.Cortex.routePrefix + '.create')),
     };
 
     DataTable.ext.buttons.import = {
         className: 'buttons-import',
         text: (dt) => '<i class="fa fa-upload"></i> ' + dt.i18n('buttons.import', 'Import'),
-        action: (e, dt, button, config) => Turbolinks.visit(window.location.href.replace(/\/+$/, '') + '/import'),
+        action: (e, dt, button, config) => Turbolinks.visit(routes.route(window.Cortex.routePrefix + '.import')),
     };
 
     DataTable.ext.buttons.showSelected = {
