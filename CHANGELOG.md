@@ -5,6 +5,26 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## [v6.1.2] - 2022-03-12
+- Update TailwindCSS config
+- Fix JS routes issue
+- Add datatables routePrefix support
+- Apply fixes from StyleCI (#152)
+- Update JS global variables & add routeDomains support
+- Update Datatables to export/print only visibleColumns
+- Update jQuery Validation Plugin to v1.19.3
+- Update jsvalidation to fix couple issues:
+  - Multiple forms with same selector (#337)
+  - focus resets the form #323
+- L9: update error blade files
+- Fix batching.database env variable to DB_CONNECTION
+- Disable MigrationsAreUpToDate self-diagnosis
+- Add Canadian English to laravel localization
+- Update tailwindcss to v3 config
+- L9: Update .env.example defaults
+- Update codedungeon/phpunit-result-printer requirement (#151)
+- Remove useless vuejs component
+
 ## [v6.1.1] - 2022-02-16
 - L9: Remove incompatible composer dependencies
 
@@ -290,6 +310,7 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v0.0.1 - 2017-03-13
 - First tagged beta release
 
+[v6.1.2]: https://github.com/rinvex/cortex/compare/v6.1.1...v6.1.2
 [v6.1.1]: https://github.com/rinvex/cortex/compare/v6.1.0...v6.1.1
 [v6.1.0]: https://github.com/rinvex/cortex/compare/v6.0.8...v6.1.0
 [v6.0.8]: https://github.com/rinvex/cortex/compare/v6.0.7...v6.0.8
