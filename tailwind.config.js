@@ -1,6 +1,6 @@
 module.exports = {
     content: [
-        "./app/**/*.blade.js",
+        "./app/**/*.js",
         "./app/**/*.blade.php",
         "./resources/**/*.blade.php",
         "./resources/**/*.js",
@@ -8,5 +8,7 @@ module.exports = {
     theme: {
         extend: {},
     },
-    plugins: [],
+    plugins: [
+        require('@tailwindcss/forms'),
+    ],
 }
