@@ -1,8 +1,11 @@
 $flagsImagePath: '../../build/img/';
 $icon-font-path: '../../fonts/bootstrap/';
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import '~bootstrap-daterangepicker/daterangepicker';
-@import '~bootstrap-sass/assets/stylesheets/_bootstrap';
 @import '~bootstrap-colorpicker/src/sass/_colorpicker';
 @import '~bootstrap-popover-picker/dist/css/bootstrap-picker';
 @import '~fontawesome-iconpicker/dist/css/fontawesome-iconpicker';
@@ -11,3 +14,4 @@ $icon-font-path: '../../fonts/bootstrap/';
 @import '~timepicker/jquery.timepicker';
 @import '~select2/src/scss/core';
 @import '~dropzone/dist/dropzone';
+
