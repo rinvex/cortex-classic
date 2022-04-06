@@ -12,6 +12,7 @@
     "devDependencies": {
         "@tailwindcss/forms": "^0.5.0",
         "admin-lte": "^2.4.0",
+        "alpinejs": "^3.9.5",
         "autoprefixer": "^10.4.0",
         "axios": "^0.25.0",
         "bootstrap-colorpicker": "^2.5.0",

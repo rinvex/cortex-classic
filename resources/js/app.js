@@ -42,6 +42,11 @@ import 'expose-loader?exposes=moment!moment';
 import 'expose-loader?exposes=pluralize!pluralize';
 import 'expose-loader?exposes=implicitForms!./vendor/jquery-implicitforms';
 
+//tailwindui components
+import './vendor/tailwindui-components';
+//Alpinejs
+import 'alpinejs/dist/cdn'
+
 // Translations
 import Lang from './vendor/lang';
 import messages from '../../public/js/messages';
