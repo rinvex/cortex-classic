@@ -155,5 +155,6 @@ return [
     'invalid_language' => 'Language must be valid!',
     'invalid_strip_tags' => 'HTML tags are not allowed!',
     'invalid_timeoffset' => 'Invalid time offset!',
+    'invalid_currency' => 'Currency must be valid!',
 
 ];
