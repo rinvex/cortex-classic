@@ -60,6 +60,7 @@
         return visible_columns;
     };
 
+    // @TODO: add support for additional parameter. Example: change status to xyz
     let bulkAction = function (e, dt, button, config, action) {
         if (confirm('Are you sure you want to ' + action + ' all selected records?')) {
             let selectedIds = $('.dataTableBuilder').DataTable().column(0).checkboxes.selected();
@@ -148,6 +149,7 @@
         },
     };
 
+    // @TODO: allow dynamic bulk actions, possibly use wildcard or filter button by name starting with bulk
     DataTable.ext.buttons.bulk = {
         extend: 'collection',
         className: 'buttons-bulk',
