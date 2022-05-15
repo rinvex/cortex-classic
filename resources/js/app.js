@@ -328,8 +328,8 @@ window.addEventListener('turbolinks:load', function() {
         placeholder: 'Select Option',
     });
 
-    // Configure datepicker
-    $('.datepicker')
+    // Configure daterangepicker
+    $('.daterangepicker')
         .attr('readonly', true)
         .daterangepicker();
 
