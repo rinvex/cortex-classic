@@ -4751,11 +4751,7 @@ $(function () {
                     var newResponse = ['Whoops, looks like something went wrong.'];
 
                     if ('responseText' in response) {
-                        var errorMsg = response.responseText.match(/<h1\s*>(.*)<\/h1\s*>/i);
-
-                        if (this.isArray(errorMsg)) {
-                            newResponse = [errorMsg[1]];
-                        }
+                        newResponse = [response.responseText.slice(1, -1).slice(1, -1)];
                     }
 
                     return newResponse;
