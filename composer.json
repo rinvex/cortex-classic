@@ -76,7 +76,7 @@
         "laravel/framework": "^9.0.0 || ^10.0.0",
         "laravel/tinker": "^2.7.0",
         "league/flysystem-aws-s3-v3": "^3.0.0",
-        "predis/predis": "^1.1.0",
+        "predis/predis": "^2.0.0",
         "pusher/pusher-php-server": "^7.0.0",
         "spatie/laravel-db-snapshots": "^2.2.0",
         "spatie/laravel-ignition": "^1.0.0"
