@@ -464,6 +464,14 @@ window.addEventListener('turbolinks:load', function() {
 
     // Autogenerate passwords
     $(':password.autogenerate').val(Math.random().toString(36));
+    
+    $(document).on('submit', 'form.cortex-form-loading', function (e) {
+        $(this).prepend(`<div class="overlay">
+            <div class="overlay__inner">
+                <div class="overlay__content"><span class="spinner"></span></div>
+            </div>
+        </div>`);
+    })
 });
 
 document.addEventListener('turbolinks:before-cache', function() {
