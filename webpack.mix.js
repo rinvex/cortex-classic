@@ -169,6 +169,9 @@ mix
     .webpackConfig({
         plugins: webpackPlugins,
         resolve: {alias: webpackAliases},
+        output: {
+            chunkFilename: 'js/chunks/[name].js'
+        }
     })
 
     .sass('resources/sass/app.scss', 'public/css/app.css')
