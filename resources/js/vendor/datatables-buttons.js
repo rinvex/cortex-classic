@@ -156,25 +156,25 @@
         text: (dt) => '<i class="fa fa-list"></i> ' + dt.i18n('buttons.bulk', 'Bulk') + '&nbsp;<span class="caret"/>',
     };
 
-    DataTable.ext.buttons.bulkDelete = {
+    DataTable.ext.buttons.delete = {
         className: 'buttons-bulk-delete',
         action: (e, dt, button, config) => bulkAction(e, dt, button, config, 'delete'),
         text: (dt) => '<i class="fa fa-trash"></i> ' + dt.i18n('buttons.bulkDelete', 'Delete'),
     };
 
-    DataTable.ext.buttons.bulkActivate = {
+    DataTable.ext.buttons.activate = {
         className: 'buttons-bulk-activate',
         action: (e, dt, button, config) => bulkAction(e, dt, button, config, 'activate'),
         text: (dt) => '<i class="fa fa-trash"></i> ' + dt.i18n('buttons.bulkActivate', 'Activate'),
     };
 
-    DataTable.ext.buttons.bulkDeactivate = {
+    DataTable.ext.buttons.deactivate = {
         className: 'buttons-bulk-deactivate',
         action: (e, dt, button, config) => bulkAction(e, dt, button, config, 'deactivate'),
         text: (dt) => '<i class="fa fa-trash"></i> ' + dt.i18n('buttons.bulkDeactivate', 'Deactivate'),
     };
 
-    DataTable.ext.buttons.bulkRevoke = {
+    DataTable.ext.buttons.revoke = {
         className: 'buttons-bulk-revoke',
         action: (e, dt, button, config) => bulkAction(e, dt, button, config, 'revoke'),
         text: (dt) => '<i class="fa fa-trash"></i> ' + dt.i18n('buttons.bulkRevoke', 'Revoke'),
