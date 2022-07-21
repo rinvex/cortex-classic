@@ -88,7 +88,7 @@ let scanForCssSelectors = [
     path.join(__dirname, 'node_modules/bootstrap-daterangepicker/**/*.js'),
 ];
 
-let safelist = [/select2/, /alert/, /turbolinks/, /iti/, /dt-/, /dataTable/, /text-/, /col-/, /btn-/, /dropdown/, /picker/, /dropzone/, /progress/, /sidebar/, /nav/, /fa-/];
+let safelist = [/select2/, /alert/, /turbolinks/, /iti/, /dt-/, /dataTable/, /text-/, /col-/, /btn-/, /dropdown/, /picker/, /dropzone/, /progress/, /sidebar/, /nav/, /fa-/, /select-item/];
 
 let webpackPlugins = [
     // Reduce bundle size by ignoring moment js local files

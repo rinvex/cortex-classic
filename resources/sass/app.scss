@@ -73,6 +73,11 @@ tr.details td.dt-details-control {
     background: url('../images/details_close.png') no-repeat center center;
 }
 
+.select-item {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 // Style select2 error
 .has-error .select2-selection {
     border: 1px solid #a94442;
