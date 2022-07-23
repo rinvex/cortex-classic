@@ -469,7 +469,7 @@ document.addEventListener('turbolinks:before-cache', function() {
 
 const files = require.context('../../app/', true, /resources\/js\/app\.js$/i);
 files.keys().forEach(function (key) {
-    files(key)();
+    files(key).default();
 });
 
 
