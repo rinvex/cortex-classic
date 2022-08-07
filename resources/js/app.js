@@ -463,7 +463,7 @@ document.addEventListener('turbolinks:before-cache', function() {
  * Purpose: application-wide js code, to be executed globally automatically.
  *
  * Path: ./app/cortex/auth/resources/js/app.js
- * Code: `module.exports = function () {};`
+ * Code: `export default function () {};`
  * Call: AUTOMATIC
  */
 
@@ -481,7 +481,7 @@ files.keys().forEach(function (key) {
  * Purpose: module-specific js code to be called explicitly when needed.
  *
  * Path: ./app/cortex/auth/resources/js/module.js
- * Code: `module.exports = function () {};`
+ * Code: `export default function () {};`
  * Call: module('cortex/auth');
  */
 window.module = async (module, ...param) => await import(/* webpackChunkName: "[request]" */ `../../app/${module}/resources/js/module`).then(res => res.default(...param));
