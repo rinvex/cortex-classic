@@ -60,7 +60,7 @@ window.Echo = new Echo({
     broadcaster: 'pusher',
     key: process.env.MIX_PUSHER_APP_KEY,
     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-    authEndpoint: routes.route('frontarea.broadcast'),
+    authEndpoint: routes.route(window.Cortex.accessarea + '.broadcast'),
     forceTLS: true
 });
 
