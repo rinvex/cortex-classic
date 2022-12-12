@@ -224,6 +224,7 @@ return [
             'nesbot/carbon',
             'spatie/',
             'yajra/',
+            'felixkiss/uniquewith-validator'
         ],
 
         'priority_3' => [
