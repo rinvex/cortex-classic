@@ -58,6 +58,7 @@ return [
         CensorRequestBodyFields::class => [
             'censor_fields' => [
                 'password',
+                'password_confirmation',
             ],
         ],
         CensorRequestHeaders::class => [
