@@ -50,7 +50,7 @@ return [
         'query' => \Yajra\DataTables\QueryDataTable::class,
         'collection' => \Yajra\DataTables\CollectionDataTable::class,
         'resource' => \Yajra\DataTables\ApiResourceDataTable::class,
-        'eloquent' => \Cortex\Foundation\Overrides\Yajra\DataTables\EloquentDataTable::class,
+        'eloquent' => \Yajra\DataTables\EloquentDataTable::class,
     ],
 
     /*
@@ -102,7 +102,7 @@ return [
         'raw' => ['action'],
 
         /*
-         * List of columns are are forbidden from being searched/sorted.
+         * List of columns are forbidden from being searched/sorted.
          */
         'blacklist' => ['password', 'remember_token'],
 

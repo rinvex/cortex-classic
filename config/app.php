@@ -252,7 +252,7 @@ return [
     |
     | Specify all the domains used by your application, with their accessible
     | accessareas, and the application router will take care of matching
-    | incoming requests appropriately. Also include default domain.
+    | incoming requests appropriately, including your default domain.
     |
     */
 

@@ -24,7 +24,8 @@ let postCssPlugins = [
  **************************/
 
 // Modules to skip compiling
-let dontDiscover = [];
+let dontDiscoverModules = [];
+let dontDiscoverAssets = [];
 
 // npm dependencies to be installed
 let moduleDependencies = [];
@@ -87,7 +88,7 @@ let scanForCssSelectors = [
     path.join(__dirname, 'node_modules/bootstrap-daterangepicker/**/*.js'),
 ];
 
-let safelist = [/select2/, /alert/, /turbolinks/, /iti/, /dt-/, /dataTable/, /text-/, /col-/, /btn-/, /dropdown/, /picker/, /dropzone/, /progress/, /sidebar/, /nav/, /fa-/];
+let safelist = [/select2/, /alert/, /turbolinks/, /iti/, /dt-/, /dataTable/, /text-/, /col-/, /btn-/, /dropdown/, /picker/, /dropzone/, /progress/, /sidebar/, /nav/, /fa-/, /select-item/];
 
 let webpackPlugins = [
     // Reduce bundle size by ignoring moment js local files
@@ -120,7 +121,7 @@ glob.sync('app/*/*/resources/js/webpack.mix.js').forEach(function (file) {
     let moduleName = file.split('/')[1] + '/' + file.split('/')[2];
 
     // Check if we need to skip this module
-    if (dontDiscover.includes(moduleName)) {
+    if (dontDiscoverModules.includes(moduleName)) {
         return;
     }
 
@@ -132,15 +133,21 @@ glob.sync('app/*/*/resources/js/webpack.mix.js').forEach(function (file) {
     webpackPlugins.push(...moduleWebpack.webpackPlugins || []);
 
     moduleWebpack.mix.js.forEach(function(dependency) {
-        mix.js(dependency.input, dependency.output);
+        if (! dontDiscoverAssets.includes(dependency.input)) {
+            mix.js(dependency.input, dependency.output);
+        }
     });
 
     moduleWebpack.mix.css.forEach(function(dependency) {
-        mix.sass(dependency.input, dependency.output);
+        if (! dontDiscoverAssets.includes(dependency.input)) {
+            mix.sass(dependency.input, dependency.output);
+        }
     });
 
     moduleWebpack.copy.forEach(function(path) {
-        mix.copyDirectory(path.from, path.to);
+        if (! dontDiscoverAssets.includes(path.from)) {
+            mix.copyDirectory(path.from, path.to);
+        }
     });
 });
 
@@ -162,6 +169,9 @@ mix
     .webpackConfig({
         plugins: webpackPlugins,
         resolve: {alias: webpackAliases},
+        output: {
+            chunkFilename: 'js/chunks/[name].js'
+        }
     })
 
     .sass('resources/sass/app.scss', 'public/css/app.css')

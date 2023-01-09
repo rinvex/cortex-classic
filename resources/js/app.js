@@ -60,7 +60,7 @@ window.Echo = new Echo({
     broadcaster: 'pusher',
     key: process.env.MIX_PUSHER_APP_KEY,
     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-    authEndpoint: routes.route('frontarea.broadcast'),
+    authEndpoint: routes.route(window.Cortex.accessarea + '.broadcast'),
     forceTLS: true
 });
 
@@ -122,35 +122,6 @@ window.highlight_required = function(){
 };
 
 let sidebarScrolPosition = 0;
-
-
-/**
- * The following block of code used to automatically register your module
- * app js code dynamically. It will recursively scan module directories
- * for the app js code and automatically register them respectively.
- *
- * Path: ./app/cortex/auth/resources/js/app.js
- * Code: `module.exports = function () {};`
- * Call: module('cortex/auth')();
- */
-
-let CortexModule = {};
-const files = require.context('../../app/', true, /app\.js$/i);
-files.keys().forEach(function (key) {
-    let segments = key.split('/');
-    CortexModule[segments[1] + '/' + segments[2]] = files(key);
-});
-
-/**
- * Retrieve module JS.
- *
- * @param namespace
- *
- * @return {*}
- */
-window.module = function (namespace) {
-    return CortexModule[namespace];
-};
 
 
 window.addEventListener('turbolinks:load', function() {
@@ -328,8 +299,8 @@ window.addEventListener('turbolinks:load', function() {
         placeholder: 'Select Option',
     });
 
-    // Configure datepicker
-    $('.datepicker')
+    // Configure daterangepicker
+    $('.daterangepicker')
         .attr('readonly', true)
         .daterangepicker();
 
@@ -482,3 +453,35 @@ document.addEventListener('turbolinks:before-cache', function() {
     //     $(item).DataTable().destroy();
     // });
 });
+
+
+/**
+ * The following block of code is being used to automatically execute your
+ * module global js code. It will recursively scan module directories
+ * for app.js files and automatically `execute` them respectively.
+ *
+ * Purpose: application-wide js code, to be executed globally automatically.
+ *
+ * Path: ./app/cortex/auth/resources/js/app.js
+ * Code: `export default function () {};`
+ * Call: AUTOMATIC
+ */
+
+const files = require.context('../../app/', true, /resources\/js\/app\.js$/i);
+files.keys().forEach(function (key) {
+    files(key).default();
+});
+
+
+/**
+ * The following block of code is being used to automatically register your
+ * module local js code. It will recursively scan module directories for
+ * module.js files and automatically `register` them respectively.
+ *
+ * Purpose: module-specific js code to be called explicitly when needed.
+ *
+ * Path: ./app/cortex/auth/resources/js/module.js
+ * Code: `export default function () {};`
+ * Call: module('cortex/auth');
+ */
+window.module = async (module, ...param) => await import(/* webpackChunkName: "[request]" */ `../../app/${module}/resources/js/module`).then(res => res.default(...param));

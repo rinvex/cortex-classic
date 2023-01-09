@@ -114,7 +114,7 @@ return [
     */
     'formats' => [
         'default' => [
-            'errors' => "<script>let notification = function() { $.notify({message: ':message'}, {type: 'danger', mouse_over: 'pause', z_index: 9999, animate:{enter: \"animated fadeIn\", exit: \"animated fadeOut\"}}); }; window.addEventListener('turbolinks:load', function () { if (typeof notification === 'function') { notification(); notification = null; } });</script>",
+            'errors' => "<script>if(!notification) var notification; notification = function() { $.notify({message: ':message'}, {type: 'danger', mouse_over: 'pause', z_index: 9999, animate:{enter: \"animated fadeIn\", exit: \"animated fadeOut\"}}); }; window.addEventListener('turbolinks:load', function () { if (typeof notification === 'function') { notification(); notification = null; } });</script>",
         ],
     ],
 

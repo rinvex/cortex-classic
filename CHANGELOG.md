@@ -5,6 +5,28 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## [v7.0.0] - 2023-01-10
+- Simplify encryption key paths
+- Drop PHP v8.0 support and update composer dependencies
+- Update config files
+- Fix datatables realtime authentication issues
+- Update module JS code example
+- Fix module app js execution
+- Fix datatables "selected row info" styling
+- Refactor datatables bulk actions and check if action is enabled and authorized
+- Fix notification JS error cases
+- Refactor module dynamic JS import
+- Update datatables config
+- Update composer dependencies predis/predis to ^2.0.0 from ^1.1.0
+- Fix correct naming for daterangepicker from datepicker
+- Update media-library config & override media model
+- Add support for skipping specific assets from being webpack compiled
+- Fix form ajax remote validation message on error status code
+- Fix code style of jquery validator
+- Update to jQuery Validation Plugin v1.19.4-pre to fix validation issues
+- Add comments for future features
+- add invalid_currency validation message (#155)
+
 ## [v6.1.2] - 2022-03-12
 - Update TailwindCSS config
 - Fix JS routes issue
@@ -310,6 +332,7 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v0.0.1 - 2017-03-13
 - First tagged beta release
 
+[v7.0.0]: https://github.com/rinvex/cortex/compare/v6.1.2...v7.0.0
 [v6.1.2]: https://github.com/rinvex/cortex/compare/v6.1.1...v6.1.2
 [v6.1.1]: https://github.com/rinvex/cortex/compare/v6.1.0...v6.1.1
 [v6.1.0]: https://github.com/rinvex/cortex/compare/v6.0.8...v6.1.0

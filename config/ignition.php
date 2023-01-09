@@ -14,6 +14,7 @@ use Spatie\LaravelIgnition\Solutions\SolutionProviders\TableNotFoundSolutionProv
 use Spatie\LaravelIgnition\Solutions\SolutionProviders\UnknownValidationSolutionProvider;
 use Spatie\LaravelIgnition\Solutions\SolutionProviders\InvalidRouteActionSolutionProvider;
 use Spatie\LaravelIgnition\Solutions\SolutionProviders\MissingMixManifestSolutionProvider;
+use Spatie\LaravelIgnition\Solutions\SolutionProviders\MissingViteManifestSolutionProvider;
 use Spatie\LaravelIgnition\Solutions\SolutionProviders\UndefinedViewVariableSolutionProvider;
 use Spatie\LaravelIgnition\Solutions\SolutionProviders\RunningLaravelDuskInProductionProvider;
 use Spatie\LaravelIgnition\Solutions\SolutionProviders\GenericLaravelExceptionSolutionProvider;
@@ -107,6 +108,7 @@ return [
         MissingColumnSolutionProvider::class,
         UnknownValidationSolutionProvider::class,
         MissingMixManifestSolutionProvider::class,
+        MissingViteManifestSolutionProvider::class,
         MissingLivewireComponentSolutionProvider::class,
         UndefinedViewVariableSolutionProvider::class,
         GenericLaravelExceptionSolutionProvider::class,
@@ -178,5 +180,29 @@ return [
     |
     */
     'housekeeping_endpoint_prefix' => '_ignition',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Settings File
+    |--------------------------------------------------------------------------
+    |
+    | Ignition allows you to save your settings to a specific global file.
+    |
+    | If no path is specified, a file with settings will be saved to the user's
+    | home directory. The directory depends on the OS and its settings but it's
+    | typically `~/.ignition.json`. In this case, the settings will be applied
+    | to all of your projects where Ignition is used and the path is not
+    | specified.
+    |
+    | However, if you want to store your settings on a project basis, or you
+    | want to keep them in another directory, you can specify a path where
+    | the settings file will be saved. The path should be an existing directory
+    | with correct write access.
+    | For example, create a new `ignition` folder in the storage directory and
+    | use `storage_path('ignition')` as the `settings_file_path`.
+    |
+    | Default value: '' (empty string)
+    */
+    'settings_file_path' => '',
 
 ];
