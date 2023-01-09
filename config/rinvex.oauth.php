@@ -33,9 +33,6 @@ return [
     // for example to add new extra parameters to support OpenID Connect flow
     'server_response_type' => null,
 
-    // The storage location of the encryption keys.
-    'key_path' => env('OAUTH_KEY_PATH'),
-
     // Database Tables
     'tables' => [
         'clients' => 'oauth_clients',
@@ -51,21 +48,6 @@ return [
         'access_token' => \Cortex\Oauth\Models\AccessToken::class,
         'refresh_token' => \Cortex\Oauth\Models\RefreshToken::class,
     ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Encryption Keys
-    |--------------------------------------------------------------------------
-    |
-    | We use encryption keys while generating secure access tokens for your
-    | application. By default, the keys are stored as local files but can
-    | be set via environment variables when that is more convenient.
-    |
-    */
-
-    'private_key' => env('OAUTH_PRIVATE_KEY'),
-
-    'public_key' => env('OAUTH_PUBLIC_KEY'),
 
     /*
     |--------------------------------------------------------------------------
