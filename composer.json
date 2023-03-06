@@ -91,7 +91,7 @@
         "fakerphp/faker": "^1.19.0",
         "itsgoingd/clockwork": "^5.1.0",
         "mockery/mockery": "^1.5.0",
-        "nunomaduro/collision": "^6.1.0",
+        "nunomaduro/collision": "^7.1.0",
         "phpunit/phpunit": "^9.5.0",
         "symfony/thanks": "^1.2.0"
     },
