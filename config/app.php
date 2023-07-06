@@ -174,7 +174,8 @@ return [
         Illuminate\Redis\RedisServiceProvider::class,
         //Illuminate\Auth\Passwords\PasswordResetServiceProvider::class,
         Cortex\Foundation\Providers\SessionServiceProvider::class,
-        Illuminate\Translation\TranslationServiceProvider::class,
+        Cortex\Foundation\Providers\TranslationServiceProvider::class,
+        //Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
@@ -256,30 +257,6 @@ return [
     |
     */
 
-    'domains' => [
-
-        'app.rinvex.test' => [
-            'frontarea',
-            'adminarea',
-            'managerarea',
-            //'tenantarea',
-        ],
-
-        'cortex.rinvex.test' => [
-            'frontarea',
-            'adminarea',
-            'managerarea',
-            'tenantarea',
-        ],
-
-        'tenantsdomain.test' => [
-            'tenantarea',
-        ],
-
-        'qweqwe.test' => [
-            'asdasd',
-        ],
-
-    ],
+    'domains' => array_reduce(explode(',', env('APP_DOMAINS')), fn($carry, $item) => $carry + [($temp = explode(';', $item))[0] => explode('|', $temp[1])], []),
 
 ];
