@@ -1,7 +1,5 @@
 <script>
 
-    window.addEventListener('turbolinks:load', function () {
-
         jQuery(document).ready(function () {
         $('<?php echo $validator['selector']; ?>').each(function() {
             $(this).validate({
@@ -54,7 +52,5 @@
         });
 
         });
-
-    });
 
 </script>
