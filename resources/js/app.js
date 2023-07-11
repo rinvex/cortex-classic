@@ -428,7 +428,7 @@ let sidebarScrolPosition = 0;
  * Call: AUTOMATIC
  */
 
-const files = require.context('../../app/', true, /resources\/js\/app\.js$/i);
+const files = require.context('../../app/modules/', true, /resources\/js\/app\.js$/i);
 files.keys().forEach(function (key) {
     files(key).default();
 });
@@ -445,4 +445,4 @@ files.keys().forEach(function (key) {
  * Code: `export default function () {};`
  * Call: module('cortex/auth');
  */
-window.module = async (module, ...param) => await import(/* webpackChunkName: "[request]" */ `../../app/${module}/resources/js/module`).then(res => res.default(...param));
+window.module = async (module, ...param) => await import(/* webpackChunkName: "[request]" */ `../../app/modules/${module}/resources/js/module`).then(res => res.default(...param));
