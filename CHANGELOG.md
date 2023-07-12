@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 
 
+## [v7.1.0] - 2023-07-12
+- Drop using Livewire
+- Drop using Turbolinks
+- Fix module asset paths
+- Drop using Turbolinks
+- Update phpunit file
+- Update config files
+- Update composer dependencies
+- Update default environment variables
+
 ## [v7.0.0] - 2023-01-10
 - Simplify encryption key paths
 - Drop PHP v8.0 support and update composer dependencies
@@ -332,6 +342,7 @@ This project adheres to [Semantic Versioning](CONTRIBUTING.md).
 ## v0.0.1 - 2017-03-13
 - First tagged beta release
 
+[v7.1.0]: https://github.com/rinvex/cortex/compare/v7.0.0...v7.1.0
 [v7.0.0]: https://github.com/rinvex/cortex/compare/v6.1.2...v7.0.0
 [v6.1.2]: https://github.com/rinvex/cortex/compare/v6.1.1...v6.1.2
 [v6.1.1]: https://github.com/rinvex/cortex/compare/v6.1.0...v6.1.1
