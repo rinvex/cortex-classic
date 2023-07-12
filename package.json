@@ -61,7 +61,6 @@
         "tailwindcss": "^3.0.0",
         "timepicker": "^1.13.0",
         "tinymce": "^5.10.0",
-        "turbolinks": "^5.2.0",
         "webpack-shell-plugin-next": "^2.2.0"
     }
 }
