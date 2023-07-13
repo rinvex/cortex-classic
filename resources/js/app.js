@@ -9,8 +9,8 @@ window.axios = require('axios');
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 // Bind variables to window object
-import 'expose-loader?exposes=$!expose-loader?exposes=jQuery!jquery';
-import 'expose-loader?exposes=routes!../../public/js/routes';
+import 'jquery';
+window.routes = require('../../public/js/routes');
 
 // Mouse interaction
 import 'jquery-mousewheel';

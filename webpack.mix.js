@@ -10,7 +10,12 @@ let tailwindcss = require('tailwindcss');
 
 require('laravel-mix-purgecss');
 
-let webpackAliases = {markjs: 'mark.js/dist/jquery.mark.js'};
+let webpackAliases = {
+    markjs: 'mark.js/dist/jquery.mark.js',
+    jquery: 'jquery/src/jquery',
+    $: 'jquery/src/jquery',
+};
+
 let WebpackShellPluginNext = require('webpack-shell-plugin-next');
 let Dependencies = require('laravel-mix/src/Dependencies.js');
 let postCssPlugins = [
