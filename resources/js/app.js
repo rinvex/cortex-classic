@@ -446,3 +446,4 @@ files.keys().forEach(function (key) {
  * Call: module('cortex/auth');
  */
 window.module = async (module, ...param) => await import(/* webpackChunkName: "[request]" */ `../../app/modules/${module}/resources/js/module`).then(res => res.default(...param));
+window.extension = async (extension, ...param) => await import(/* webpackChunkName: "[request]" */ `../../app/extensions/${extension}/resources/js/module`).then(res => res.default(...param));
