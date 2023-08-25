@@ -1,5 +1,6 @@
 @if ($routePrefix)window.Cortex.routePrefix = "{{ $routePrefix }}";@endif
 
+window.onload = function() {
     $(function() {
         window.{{ config('datatables-html.namespace', 'LaravelDataTables') }} = window.{{ config('datatables-html.namespace', 'LaravelDataTables') }} || {};
         window.{{ config('datatables-html.namespace', 'LaravelDataTables') }}["{{ $id }}"] = $("#{{ str_replace('.', '\\\.', $id) }}").DataTable({!! $options !!});
@@ -21,3 +22,4 @@
               window.LaravelDataTables["{{ $id }}"].draw();
           });
     @endif
+};

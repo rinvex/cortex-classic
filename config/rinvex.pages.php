@@ -15,7 +15,7 @@ return [
 
     // Pageable Models
     'models' => [
-        'page' => \Cortex\Pages\Models\Page::class,
+        'page' => \Cortex\Pages\Models\PageTenantable::class,
     ],
 
     // Register routes

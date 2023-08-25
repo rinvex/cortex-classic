@@ -73,11 +73,8 @@ import './datatables-buttons';
         return $table;
     };
 
-})();
-
-
-// Datatable Checkbox
-window.showSelected = false;
+    // Datatable Checkbox
+    window.showSelected = false;
 
     let dataTableBuilder = $('.dataTableBuilder');
 
@@ -89,3 +86,4 @@ window.showSelected = false;
             }
         });
     });
+})();

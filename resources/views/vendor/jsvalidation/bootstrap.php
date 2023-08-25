@@ -1,6 +1,5 @@
 <script>
-
-        jQuery(document).ready(function () {
+    window.onload = function() {
         $('<?php echo $validator['selector']; ?>').each(function() {
             $(this).validate({
                 errorElement: 'span',
@@ -50,7 +49,5 @@
                 rules: <?php echo json_encode($validator['rules']); ?>
             });
         });
-
-        });
-
+    };
 </script>

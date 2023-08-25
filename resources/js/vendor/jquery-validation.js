@@ -4750,7 +4750,9 @@ $(function () {
                 parseErrorResponse: function (response) {
                     var newResponse = ['Whoops, looks like something went wrong.'];
 
-                    if ('responseText' in response) {
+                    if ('responseJSON' in response && 'message' in response.responseJSON) {
+                        newResponse = [response.responseJSON.message];
+                    } else if ('responseText' in response) {
                         newResponse = [response.responseText.slice(1, -1).slice(1, -1)];
                     }
 
