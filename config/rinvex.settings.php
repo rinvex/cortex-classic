@@ -14,7 +14,7 @@ return [
 
     // Settings Models
     'models' => [
-        'setting' => \Cortex\Settings\Models\Setting::class,
+        'setting' => \Cortex\Settings\Models\SettingTenantable::class,
     ],
 
     // Loadsettings Bootstrap

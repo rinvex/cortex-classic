@@ -15,10 +15,7 @@ return [
                       ->numbers()
                       ->symbols()
                       ->uncompromised()
-            : Password::min(8)
-                      ->letters()
-                      ->mixedCase()
-                      ->numbers(),
+            : Password::min(8),
 
         'username' => [
             'alpha_dash',
