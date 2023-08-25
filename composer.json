@@ -60,26 +60,25 @@
         "ext-mbstring": "*",
         "ext-openssl": "*",
         "ext-pdo": "*",
-        "appstract/laravel-opcache": "^4.0.0",
         "aws/aws-sdk-php": "^3.200.0",
-        "beyondcode/laravel-self-diagnosis": "dev-l9-compatibility",
-        "cortex/auth": "^9.0.0",
+        "cortex/auth-tenantable": "^1.0.0",
         "cortex/categories": "^7.0.0",
         "cortex/foundation": "^8.0.0",
-        "cortex/oauth": "^4.0.0",
-        "cortex/pages": "^7.0.0",
+        "cortex/oauth-tenantable": "^1.0.0",
+        "cortex/pages-tenantable": "^1.0.0",
+        "cortex/settings-tenantable": "^1.0.0",
         "cortex/tags": "^7.0.0",
         "cortex/tenants": "^8.0.0",
         "doctrine/dbal": "^3.3.0",
         "guzzlehttp/guzzle": "^7.4.0",
         "laravel/envoy": "^2.8.0",
-        "laravel/framework": "^9.0.0 || ^10.0.0",
-        "laravel/tinker": "^2.7.0",
+        "laravel/framework": "^10.0.0 || ^11.0.0",
+        "laravel/tinker": "^2.8.0",
         "league/flysystem-aws-s3-v3": "^3.0.0",
         "predis/predis": "^2.0.0",
         "pusher/pusher-php-server": "^7.0.0",
-        "spatie/laravel-db-snapshots": "^2.2.0",
-        "spatie/laravel-ignition": "^1.0.0"
+        "spatie/laravel-db-snapshots": "^2.0.0",
+        "spatie/laravel-ignition": "^2.0.0"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master",
@@ -90,9 +89,9 @@
         "codedungeon/phpunit-result-printer": "^0.32.0",
         "fakerphp/faker": "^1.19.0",
         "itsgoingd/clockwork": "^5.1.0",
-        "mockery/mockery": "^1.5.0",
-        "nunomaduro/collision": "^6.1.0",
-        "phpunit/phpunit": "^9.5.0",
+        "mockery/mockery": "^1.6.0",
+        "nunomaduro/collision": "^7.5.0",
+        "phpunit/phpunit": "^10.1.0",
         "symfony/thanks": "^1.2.0"
     },
     "autoload-dev": {
@@ -102,17 +101,16 @@
     },
     "scripts": {
         "post-root-package-install": [
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+            "@php artisan key:generate --ansi --ifnot"
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi --ifnot"
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan key:generate --ansi --ifnot",
             "@php artisan package:discover --ansi",
-            "@php artisan cortex:generate:idehelper",
-            "@php artisan cortex:autoload --activate"
+            "@php artisan cortex:generate:idehelper"
         ]
     },
     "config": {

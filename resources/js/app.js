@@ -9,8 +9,8 @@ window.axios = require('axios');
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 // Bind variables to window object
-import 'expose-loader?exposes=$!expose-loader?exposes=jQuery!jquery';
-import 'expose-loader?exposes=routes!../../public/js/routes';
+import 'jquery';
+window.routes = require('../../public/js/routes');
 
 // Mouse interaction
 import 'jquery-mousewheel';
@@ -72,16 +72,6 @@ import TinyMCE from 'tinymce/tinymce';
 import 'tinymce/themes/silver/theme';
 import 'tinymce/icons/default';
 
-import Turbolinks from 'turbolinks';
-Turbolinks.start();
-
-// Persist page scroll position
-Turbolinks.scroll = {}
-document.addEventListener('click', function(event) {
-    if (event.target.getAttribute('data-turbolinks-scroll') !== 'false') return;
-    Turbolinks.scroll.top = document.documentElement.scrollTop;
-});
-
 Dropzone.autoDiscover = false;
 
 window.highlight_errored_accordion = function(){
@@ -124,7 +114,6 @@ window.highlight_required = function(){
 let sidebarScrolPosition = 0;
 
 
-window.addEventListener('turbolinks:load', function() {
     // Fake window onload trigger (dirty temp solution!)
     $(window).trigger('load');
 
@@ -134,16 +123,6 @@ window.addEventListener('turbolinks:load', function() {
     });
 
     $('.sidebar').animate({ scrollTop: sidebarScrolPosition }, 0);
-
-    // This is a workaround to handle the SPA nature of turbolinks
-    window.BookableRangeReady = true;
-    $(document).trigger('bookablerange.ready');
-
-    // Persist page scroll position
-    if (Turbolinks.scroll.top) {
-        document.documentElement.scrollTop = Turbolinks.scroll.top;
-        Turbolinks.scroll = {};
-    }
 
     // Initialize the tinymce
     TinyMCE.init({
@@ -435,24 +414,6 @@ window.addEventListener('turbolinks:load', function() {
 
     // Autogenerate passwords
     $(':password.autogenerate').val(Math.random().toString(36));
-});
-
-document.addEventListener('turbolinks:before-cache', function() {
-    TinyMCE.remove();
-
-    window.selectedCountry = null;
-    window.selectedCountries = null;
-
-    $('.select2')
-        .select2()
-        .each(function(i, item) {
-            $(item).select2('destroy');
-        });
-
-    // $('.dataTableBuilder').each(function(i, item){
-    //     $(item).DataTable().destroy();
-    // });
-});
 
 
 /**
@@ -467,7 +428,7 @@ document.addEventListener('turbolinks:before-cache', function() {
  * Call: AUTOMATIC
  */
 
-const files = require.context('../../app/', true, /resources\/js\/app\.js$/i);
+const files = require.context('../../app/modules/', true, /resources\/js\/app\.js$/i);
 files.keys().forEach(function (key) {
     files(key).default();
 });
@@ -484,4 +445,5 @@ files.keys().forEach(function (key) {
  * Code: `export default function () {};`
  * Call: module('cortex/auth');
  */
-window.module = async (module, ...param) => await import(/* webpackChunkName: "[request]" */ `../../app/${module}/resources/js/module`).then(res => res.default(...param));
+window.module = async (module, ...param) => await import(/* webpackChunkName: "[request]" */ `../../app/modules/${module}/resources/js/module`).then(res => res.default(...param));
+window.extension = async (extension, ...param) => await import(/* webpackChunkName: "[request]" */ `../../app/extensions/${extension}/resources/js/module`).then(res => res.default(...param));

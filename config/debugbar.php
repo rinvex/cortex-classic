@@ -173,7 +173,7 @@ return [
         'config' => true, // Display config settings
         'cache' => true, // Display cache events
         'models' => true,  // Display models
-        'livewire' => true,  // Display Livewire (when available)
+        'livewire' => false,  // Display Livewire (when available)
     ],
 
     /*
