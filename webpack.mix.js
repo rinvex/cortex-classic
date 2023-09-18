@@ -121,7 +121,7 @@ let purgeCssOptions = {
  **   Dynamic modules    **
  **************************/
 
-glob.sync('app/*/*/*/resources/js/webpack.mix.js').forEach(function (file) {
+glob.sync('app/{modules,extensions}/*/*/resources/js/webpack.mix.js').forEach(function (file) {
     let moduleName = file.split('/')[1] + '/' + file.split('/')[2];
 
     // Check if we need to skip this module
