@@ -91,7 +91,7 @@
         "itsgoingd/clockwork": "^5.1.0",
         "mockery/mockery": "^1.6.0",
         "nunomaduro/collision": "^7.5.0",
-        "phpunit/phpunit": "^10.1.0",
+        "phpunit/phpunit": "^11.2.8",
         "symfony/thanks": "^1.2.0"
     },
     "autoload-dev": {
